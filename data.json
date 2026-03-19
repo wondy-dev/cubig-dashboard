@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "collectedAt": "2026-03-19T06:41:32.009Z",
+    "collectedAt": "2026-03-19T09:58:51.312Z",
     "period": 7,
     "thisWeek": {
       "start": "2026-03-12",
@@ -23,12 +23,12 @@
             "date_range_0"
           ],
           "mets": [
-            728,
-            656,
-            636,
-            1796,
-            18479,
-            0.625
+            734,
+            662,
+            642,
+            1821,
+            18592,
+            0.6198910081743869
           ]
         },
         {
@@ -111,9 +111,74 @@
             "20260318"
           ],
           "mets": [
+            83,
             77,
-            71,
-            197
+            222
+          ]
+        }
+      ],
+      "dailyEngagement": [
+        {
+          "dims": [
+            "20260312"
+          ],
+          "mets": [
+            105,
+            2548
+          ]
+        },
+        {
+          "dims": [
+            "20260313"
+          ],
+          "mets": [
+            93,
+            1555
+          ]
+        },
+        {
+          "dims": [
+            "20260314"
+          ],
+          "mets": [
+            93,
+            1378
+          ]
+        },
+        {
+          "dims": [
+            "20260315"
+          ],
+          "mets": [
+            114,
+            2719
+          ]
+        },
+        {
+          "dims": [
+            "20260316"
+          ],
+          "mets": [
+            122,
+            3645
+          ]
+        },
+        {
+          "dims": [
+            "20260317"
+          ],
+          "mets": [
+            125,
+            4638
+          ]
+        },
+        {
+          "dims": [
+            "20260318"
+          ],
+          "mets": [
+            83,
+            2109
           ]
         }
       ],
@@ -183,9 +248,9 @@
             "20260318"
           ],
           "mets": [
-            21,
-            17,
-            32
+            22,
+            18,
+            37
           ]
         }
       ],
@@ -236,6 +301,17 @@
         },
         {
           "dims": [
+            "/blogs/differential-privacy-synthetic-data-using-llms-for-private-text-generation",
+            "Differential Privacy Synthetic Data Using LLMs for Private Text Generation - CUBIG Blogs"
+          ],
+          "mets": [
+            12,
+            3,
+            3.6077185
+          ]
+        },
+        {
+          "dims": [
             "/blogs/data-strategy-and-governance-frameworks-execution-and-real-world-examples-2",
             "Data Strategy and Governance: Frameworks, Execution, and Real-World Examples - CUBIG Blogs"
           ],
@@ -243,17 +319,6 @@
             8,
             3,
             45.861608999999994
-          ]
-        },
-        {
-          "dims": [
-            "/blogs/differential-privacy-synthetic-data-using-llms-for-private-text-generation",
-            "Differential Privacy Synthetic Data Using LLMs for Private Text Generation - CUBIG Blogs"
-          ],
-          "mets": [
-            7,
-            2,
-            4.810291333333333
           ]
         },
         {
@@ -418,8 +483,8 @@
             "date_range_0"
           ],
           "mets": [
-            582,
-            285
+            588,
+            288
           ]
         },
         {
@@ -539,8 +604,8 @@
             "United States"
           ],
           "mets": [
-            308,
-            313
+            311,
+            316
           ]
         },
         {
@@ -557,8 +622,8 @@
             "South Korea"
           ],
           "mets": [
-            84,
-            111
+            87,
+            114
           ]
         },
         {
@@ -688,9 +753,9 @@
             "date_range_0"
           ],
           "mets": [
-            219,
-            208,
-            476
+            220,
+            209,
+            477
           ]
         },
         {
@@ -699,9 +764,9 @@
             "date_range_0"
           ],
           "mets": [
-            151,
-            114,
-            416
+            152,
+            115,
+            417
           ]
         },
         {
@@ -732,9 +797,9 @@
             "date_range_0"
           ],
           "mets": [
-            57,
-            54,
-            90
+            63,
+            60,
+            98
           ]
         },
         {
@@ -754,9 +819,9 @@
             "date_range_0"
           ],
           "mets": [
-            33,
-            33,
-            56
+            37,
+            37,
+            71
           ]
         },
         {
@@ -855,8 +920,8 @@
             "date_range_0"
           ],
           "mets": [
-            1796,
-            649
+            1821,
+            655
           ]
         },
         {
@@ -875,8 +940,8 @@
             "date_range_0"
           ],
           "mets": [
-            723,
-            649
+            729,
+            655
           ]
         },
         {
@@ -885,8 +950,8 @@
             "date_range_0"
           ],
           "mets": [
-            704,
-            454
+            711,
+            459
           ]
         },
         {
@@ -895,8 +960,8 @@
             "date_range_0"
           ],
           "mets": [
-            636,
-            617
+            642,
+            623
           ]
         },
         {
@@ -991,22 +1056,22 @@
         },
         {
           "dims": [
+            "click",
+            "date_range_0"
+          ],
+          "mets": [
+            26,
+            19
+          ]
+        },
+        {
+          "dims": [
             "view_dataset_list",
             "date_range_1"
           ],
           "mets": [
             25,
             9
-          ]
-        },
-        {
-          "dims": [
-            "click",
-            "date_range_0"
-          ],
-          "mets": [
-            24,
-            18
           ]
         },
         {
@@ -1156,8 +1221,8 @@
             "date_range_1"
           ],
           "mets": [
-            35,
-            21
+            37,
+            29
           ]
         },
         {
@@ -1165,8 +1230,147 @@
             "date_range_0"
           ],
           "mets": [
-            12,
-            10
+            32,
+            22
+          ]
+        }
+      ],
+      "synFromCubigDaily": [
+        {
+          "dims": [
+            "20260312"
+          ],
+          "mets": [
+            7,
+            5
+          ]
+        },
+        {
+          "dims": [
+            "20260313"
+          ],
+          "mets": [
+            2,
+            2
+          ]
+        },
+        {
+          "dims": [
+            "20260314"
+          ],
+          "mets": [
+            2,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "20260315"
+          ],
+          "mets": [
+            6,
+            4
+          ]
+        },
+        {
+          "dims": [
+            "20260316"
+          ],
+          "mets": [
+            6,
+            6
+          ]
+        },
+        {
+          "dims": [
+            "20260317"
+          ],
+          "mets": [
+            6,
+            6
+          ]
+        },
+        {
+          "dims": [
+            "20260318"
+          ],
+          "mets": [
+            3,
+            3
+          ]
+        }
+      ],
+      "referralSources": [
+        {
+          "dims": [
+            "chatgpt.com"
+          ],
+          "mets": [
+            8,
+            6
+          ]
+        },
+        {
+          "dims": [
+            "datasetsearch.research.google.com"
+          ],
+          "mets": [
+            5,
+            5
+          ]
+        },
+        {
+          "dims": [
+            "notebooklm.google.com"
+          ],
+          "mets": [
+            2,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "blekko.com"
+          ],
+          "mets": [
+            1,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "ionastar.com"
+          ],
+          "mets": [
+            1,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "large-course-343408.framer.app"
+          ],
+          "mets": [
+            1,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "pcmap.place.naver.com"
+          ],
+          "mets": [
+            1,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "perplexity.ai"
+          ],
+          "mets": [
+            1,
+            1
           ]
         }
       ]
@@ -1178,12 +1382,12 @@
             "date_range_0"
           ],
           "mets": [
-            22,
-            17,
-            13,
-            137,
-            778,
-            0.8181818181818182
+            23,
+            18,
+            14,
+            147,
+            838,
+            0.782608695652174
           ]
         },
         {
@@ -1266,9 +1470,9 @@
             "20260318"
           ],
           "mets": [
-            4,
-            4,
-            39
+            5,
+            5,
+            49
           ]
         }
       ],
@@ -1279,9 +1483,9 @@
             "LLM Capsule - AI 기반 솔루션"
           ],
           "mets": [
-            81,
-            14,
-            3144.497826263158
+            91,
+            15,
+            3052.8143246500003
           ]
         },
         {
@@ -1379,8 +1583,8 @@
             "South Korea"
           ],
           "mets": [
-            13,
-            18
+            14,
+            19
           ]
         },
         {
@@ -1458,6 +1662,17 @@
         },
         {
           "dims": [
+            "Unassigned",
+            "date_range_0"
+          ],
+          "mets": [
+            4,
+            4,
+            18
+          ]
+        },
+        {
+          "dims": [
             "Direct",
             "date_range_1"
           ],
@@ -1465,17 +1680,6 @@
             3,
             3,
             12
-          ]
-        },
-        {
-          "dims": [
-            "Unassigned",
-            "date_range_0"
-          ],
-          "mets": [
-            3,
-            3,
-            18
           ]
         },
         {
@@ -1502,6 +1706,17 @@
         },
         {
           "dims": [
+            "Cross-network",
+            "date_range_0"
+          ],
+          "mets": [
+            1,
+            1,
+            10
+          ]
+        },
+        {
+          "dims": [
             "Referral",
             "date_range_1"
           ],
@@ -1509,6 +1724,17 @@
             1,
             1,
             74
+          ]
+        },
+        {
+          "dims": [
+            "Cross-network",
+            "date_range_1"
+          ],
+          "mets": [
+            0,
+            0,
+            0
           ]
         },
         {
@@ -2011,6 +2237,908 @@
           "position": 1
         }
       ],
+      "queriesPrev": [
+        {
+          "keys": [
+            "cubig"
+          ],
+          "clicks": 24,
+          "impressions": 137,
+          "ctr": 0.17518248175182483,
+          "position": 1.7153284671532847
+        },
+        {
+          "keys": [
+            "큐빅 ai"
+          ],
+          "clicks": 8,
+          "impressions": 14,
+          "ctr": 0.5714285714285714,
+          "position": 2.928571428571429
+        },
+        {
+          "keys": [
+            "cubig ai"
+          ],
+          "clicks": 4,
+          "impressions": 11,
+          "ctr": 0.36363636363636365,
+          "position": 12.909090909090908
+        },
+        {
+          "keys": [
+            "주식회사 큐빅"
+          ],
+          "clicks": 3,
+          "impressions": 17,
+          "ctr": 0.17647058823529413,
+          "position": 3.764705882352941
+        },
+        {
+          "keys": [
+            "data verified"
+          ],
+          "clicks": 2,
+          "impressions": 24,
+          "ctr": 0.08333333333333333,
+          "position": 8.916666666666668
+        },
+        {
+          "keys": [
+            "external data representation"
+          ],
+          "clicks": 2,
+          "impressions": 19,
+          "ctr": 0.10526315789473684,
+          "position": 5.421052631578948
+        },
+        {
+          "keys": [
+            "non tabular data"
+          ],
+          "clicks": 2,
+          "impressions": 11,
+          "ctr": 0.18181818181818182,
+          "position": 1.4545454545454546
+        },
+        {
+          "keys": [
+            "tabular data"
+          ],
+          "clicks": 2,
+          "impressions": 642,
+          "ctr": 0.003115264797507788,
+          "position": 6.014018691588785
+        },
+        {
+          "keys": [
+            "what does ai generated mean"
+          ],
+          "clicks": 2,
+          "impressions": 36,
+          "ctr": 0.05555555555555555,
+          "position": 5.083333333333333
+        },
+        {
+          "keys": [
+            "ai generated meaning"
+          ],
+          "clicks": 1,
+          "impressions": 122,
+          "ctr": 0.00819672131147541,
+          "position": 3.0491803278688523
+        },
+        {
+          "keys": [
+            "arrhythmia dataset"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 33
+        },
+        {
+          "keys": [
+            "azoo"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 1
+        },
+        {
+          "keys": [
+            "credit card transactions dataset"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 13
+        },
+        {
+          "keys": [
+            "cubig corp"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 1
+        },
+        {
+          "keys": [
+            "cubighub"
+          ],
+          "clicks": 1,
+          "impressions": 68,
+          "ctr": 0.014705882352941176,
+          "position": 5.073529411764706
+        },
+        {
+          "keys": [
+            "data tabular"
+          ],
+          "clicks": 1,
+          "impressions": 50,
+          "ctr": 0.02,
+          "position": 5.88
+        },
+        {
+          "keys": [
+            "data tabular adalah"
+          ],
+          "clicks": 1,
+          "impressions": 47,
+          "ctr": 0.02127659574468085,
+          "position": 3.9148936170212765
+        },
+        {
+          "keys": [
+            "external data representation in distributed system"
+          ],
+          "clicks": 1,
+          "impressions": 14,
+          "ctr": 0.07142857142857142,
+          "position": 7.857142857142857
+        },
+        {
+          "keys": [
+            "formato tabular"
+          ],
+          "clicks": 1,
+          "impressions": 14,
+          "ctr": 0.07142857142857142,
+          "position": 7.428571428571429
+        },
+        {
+          "keys": [
+            "healthcare data interoperability standards"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 1
+        },
+        {
+          "keys": [
+            "jewellery dataset"
+          ],
+          "clicks": 1,
+          "impressions": 4,
+          "ctr": 0.25,
+          "position": 7.5
+        },
+        {
+          "keys": [
+            "linkedin job posting dataset"
+          ],
+          "clicks": 1,
+          "impressions": 19,
+          "ctr": 0.05263157894736842,
+          "position": 15.31578947368421
+        },
+        {
+          "keys": [
+            "llm capsule"
+          ],
+          "clicks": 1,
+          "impressions": 6,
+          "ctr": 0.16666666666666666,
+          "position": 3
+        },
+        {
+          "keys": [
+            "meaning of privacy settings"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 5.333333333333333
+        },
+        {
+          "keys": [
+            "simulation in statistics example"
+          ],
+          "clicks": 1,
+          "impressions": 8,
+          "ctr": 0.125,
+          "position": 1.75
+        },
+        {
+          "keys": [
+            "source of data"
+          ],
+          "clicks": 1,
+          "impressions": 76,
+          "ctr": 0.013157894736842105,
+          "position": 2.6710526315789473
+        },
+        {
+          "keys": [
+            "source of data meaning"
+          ],
+          "clicks": 1,
+          "impressions": 5,
+          "ctr": 0.2,
+          "position": 8.4
+        },
+        {
+          "keys": [
+            "sources of data in research methodology"
+          ],
+          "clicks": 1,
+          "impressions": 25,
+          "ctr": 0.04,
+          "position": 4.92
+        },
+        {
+          "keys": [
+            "syntitan"
+          ],
+          "clicks": 1,
+          "impressions": 7,
+          "ctr": 0.14285714285714285,
+          "position": 5.285714285714286
+        },
+        {
+          "keys": [
+            "tabular format"
+          ],
+          "clicks": 1,
+          "impressions": 896,
+          "ctr": 0.0011160714285714285,
+          "position": 3.484375
+        },
+        {
+          "keys": [
+            "tabulated form example"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 9
+        },
+        {
+          "keys": [
+            "traffic prediction dataset"
+          ],
+          "clicks": 1,
+          "impressions": 2,
+          "ctr": 0.5,
+          "position": 6
+        },
+        {
+          "keys": [
+            "tripadvisor hotel reviews dataset"
+          ],
+          "clicks": 1,
+          "impressions": 4,
+          "ctr": 0.25,
+          "position": 15.5
+        },
+        {
+          "keys": [
+            "types and source of data"
+          ],
+          "clicks": 1,
+          "impressions": 10,
+          "ctr": 0.1,
+          "position": 1.8
+        },
+        {
+          "keys": [
+            "what is data generation"
+          ],
+          "clicks": 1,
+          "impressions": 21,
+          "ctr": 0.047619047619047616,
+          "position": 2.857142857142857
+        },
+        {
+          "keys": [
+            "what is data sources in research"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 4
+        },
+        {
+          "keys": [
+            "what is tabular data"
+          ],
+          "clicks": 1,
+          "impressions": 227,
+          "ctr": 0.004405286343612335,
+          "position": 3.4229074889867843
+        },
+        {
+          "keys": [
+            "\"advertising\" dataset tv radio newspaper sales"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 8.333333333333332
+        },
+        {
+          "keys": [
+            "\"ai-generated\""
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "keys": [
+            "\"data ingestion"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 75.75
+        },
+        {
+          "keys": [
+            "\"data ingestion from any source"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 88.5
+        },
+        {
+          "keys": [
+            "\"data privacy day\""
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 50
+        },
+        {
+          "keys": [
+            "\"kasprowski\" \"multi-class weather dataset\""
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 9.5
+        },
+        {
+          "keys": [
+            "\"multi-class weather dataset for image classification\" kasprowski"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 10.666666666666666
+        },
+        {
+          "keys": [
+            "\"multi-class weather dataset\" kasprowski"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 10
+        },
+        {
+          "keys": [
+            "\"raw h2\" \"raw ethanol\" iot sensor fire detection"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "keys": [
+            "\"raw h2\" \"raw ethanol\" sensor fire or smoke"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 8.5
+        },
+        {
+          "keys": [
+            "\"raw h2\" \"raw ethanol\" sensor fire or smoke or iot"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 9
+        },
+        {
+          "keys": [
+            "\"raw h2\" \"raw ethanol\" sensor iot fire detection"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "keys": [
+            "\"student performance dataset\" kaggle 10000 students"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 11
+        },
+        {
+          "keys": [
+            "\"train on synthetic, test on real\" tstr synthetic data"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "keys": [
+            "\"types of data source"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 13.142857142857142
+        },
+        {
+          "keys": [
+            "\"weather.zip\" \"multi-class weather dataset\""
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 9
+        },
+        {
+          "keys": [
+            "\"what is source data?\""
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "keys": [
+            "(ai-generated)"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "(주)큐빅"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 9.4
+        },
+        {
+          "keys": [
+            ". ml"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 68
+        },
+        {
+          "keys": [
+            ". simulator"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            ".ml"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 64.5
+        },
+        {
+          "keys": [
+            "10 more"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "10 sources of data in research"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "keys": [
+            "100% ai"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "3 sources of data"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 8.25
+        },
+        {
+          "keys": [
+            "5 sources of data"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "[ai generated"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "a data acquisition"
+          ],
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 83.3
+        },
+        {
+          "keys": [
+            "a i generated meaning"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 3.5
+        },
+        {
+          "keys": [
+            "a ovo?"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 28
+        },
+        {
+          "keys": [
+            "a tabular form"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 6.75
+        },
+        {
+          "keys": [
+            "a tabular format"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 1.8333333333333335
+        },
+        {
+          "keys": [
+            "a1 generated"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "about ml"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 83
+        },
+        {
+          "keys": [
+            "acquire data"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 35.5
+        },
+        {
+          "keys": [
+            "advantages and disadvantages of data acquisition system"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 90
+        },
+        {
+          "keys": [
+            "advantages of data acquisition system"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 92
+        },
+        {
+          "keys": [
+            "advertising data set"
+          ],
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 25.4
+        },
+        {
+          "keys": [
+            "advertising dataset"
+          ],
+          "clicks": 0,
+          "impressions": 33,
+          "ctr": 0,
+          "position": 25.303030303030305
+        },
+        {
+          "keys": [
+            "advertising datasets"
+          ],
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 19.9
+        },
+        {
+          "keys": [
+            "affordable digital twin software for electrical operations mid-sized companies"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 15.8
+        },
+        {
+          "keys": [
+            "ag news"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 6
+        },
+        {
+          "keys": [
+            "ag news classification dataset"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 9.833333333333334
+        },
+        {
+          "keys": [
+            "ag news corpus"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 10.5
+        },
+        {
+          "keys": [
+            "ag news corpus dataset"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 8.333333333333332
+        },
+        {
+          "keys": [
+            "ag news dataset"
+          ],
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 12.333333333333334
+        },
+        {
+          "keys": [
+            "ag news dataset 4 classes"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 9.777777777777779
+        },
+        {
+          "keys": [
+            "ag news dataset 4 classes world sports business sci/tech"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 7.857142857142857
+        },
+        {
+          "keys": [
+            "ag news dataset categories world sports business sci/tech"
+          ],
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 8.333333333333332
+        },
+        {
+          "keys": [
+            "ag news dataset classes world sports business sci/tech"
+          ],
+          "clicks": 0,
+          "impressions": 14,
+          "ctr": 0,
+          "position": 8.571428571428571
+        },
+        {
+          "keys": [
+            "ag news dataset number of classes"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 12
+        },
+        {
+          "keys": [
+            "ag news dataset number of classes 4"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 12
+        },
+        {
+          "keys": [
+            "ag news dataset sample size"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 6.666666666666667
+        },
+        {
+          "keys": [
+            "ag news dataset topic classification"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 9
+        },
+        {
+          "keys": [
+            "ag news topic classification dataset"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 8.833333333333332
+        },
+        {
+          "keys": [
+            "ag_news dataset"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 6
+        },
+        {
+          "keys": [
+            "agnews dataset"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 6.333333333333333
+        },
+        {
+          "keys": [
+            "ai alignment"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 69.33333333333333
+        },
+        {
+          "keys": [
+            "ai alignment definition"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 18.666666666666668
+        },
+        {
+          "keys": [
+            "ai artificial intelligence"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 94
+        },
+        {
+          "keys": [
+            "ai artificial intelligence definition"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 50
+        },
+        {
+          "keys": [
+            "ai artificial intelligence software"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 51
+        }
+      ],
       "blogPages": [
         {
           "keys": [
@@ -2148,6 +3276,1182 @@
           "position": 30.11764705882353
         }
       ],
+      "blogPagesPrev": [
+        {
+          "keys": [
+            "https://cubig.ai/blogs/tabular-data-definition-examples-formats-and-how-to-tabulate-effectively"
+          ],
+          "clicks": 20,
+          "impressions": 10090,
+          "ctr": 0.0019821605550049554,
+          "position": 5.20009910802775
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/sources-of-data-for-research-types-examples-tools-and-methodologies"
+          ],
+          "clicks": 19,
+          "impressions": 3001,
+          "ctr": 0.006331222925691436,
+          "position": 5.053315561479507
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/tabular-data-vs-non-tabular-data-ml-use-cases-and-key-differences"
+          ],
+          "clicks": 5,
+          "impressions": 1143,
+          "ctr": 0.004374453193350831,
+          "position": 4.666666666666666
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/data-monetization-top-platforms-unlocking-value-from-your-data-assets"
+          ],
+          "clicks": 3,
+          "impressions": 1065,
+          "ctr": 0.0028169014084507044,
+          "position": 11.074178403755868
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/example-of-a-simulation-what-is-data-simulation-in-statistics"
+          ],
+          "clicks": 3,
+          "impressions": 1056,
+          "ctr": 0.002840909090909091,
+          "position": 7.729166666666667
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/healthcare-data-interoperability-standards-examples-importance-explained"
+          ],
+          "clicks": 3,
+          "impressions": 1764,
+          "ctr": 0.0017006802721088435,
+          "position": 19.795351473922903
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/alternative-data-for-finance-market-overview-examples-providers"
+          ],
+          "clicks": 2,
+          "impressions": 3197,
+          "ctr": 0.0006255864873318737,
+          "position": 8.037222395996245
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/buying-and-selling-data"
+          ],
+          "clicks": 2,
+          "impressions": 201,
+          "ctr": 0.009950248756218905,
+          "position": 29.144278606965173
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/synthetic-data-generation-using-llms-techniques-benefits-and-use-cases-explained"
+          ],
+          "clicks": 2,
+          "impressions": 836,
+          "ctr": 0.0023923444976076554,
+          "position": 8.883971291866029
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/synthetic-tabular-data-generation-using-generative-ai-for-accurate-results"
+          ],
+          "clicks": 2,
+          "impressions": 159,
+          "ctr": 0.012578616352201259,
+          "position": 7.270440251572327
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/what-is-big-data-analytics-definition-types-9-key-technologies"
+          ],
+          "clicks": 2,
+          "impressions": 804,
+          "ctr": 0.0024875621890547263,
+          "position": 54.243781094527364
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/what-is-data-transformation-systems"
+          ],
+          "clicks": 2,
+          "impressions": 165,
+          "ctr": 0.012121212121212121,
+          "position": 17.793939393939393
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/cross-border-data-sharing-gdpr-regulations-transfer-safeguards-explained"
+          ],
+          "clicks": 1,
+          "impressions": 834,
+          "ctr": 0.001199040767386091,
+          "position": 8.185851318944845
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/data-augmentation-vs-synthetic-data-differences-benefits-and-use-cases"
+          ],
+          "clicks": 1,
+          "impressions": 375,
+          "ctr": 0.0026666666666666666,
+          "position": 7.152
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/data-privacy-5-quizzes-to-test-your-aptitude"
+          ],
+          "clicks": 1,
+          "impressions": 4,
+          "ctr": 0.25,
+          "position": 4.25
+        }
+      ],
+      "blogQueries": [
+        {
+          "keys": [
+            "que es tabular"
+          ],
+          "clicks": 2,
+          "impressions": 227,
+          "ctr": 0.00881057268722467,
+          "position": 9.806167400881057
+        },
+        {
+          "keys": [
+            "another name?"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 8
+        },
+        {
+          "keys": [
+            "data simulation"
+          ],
+          "clicks": 1,
+          "impressions": 37,
+          "ctr": 0.02702702702702703,
+          "position": 21.18918918918919
+        },
+        {
+          "keys": [
+            "examples of tabular data"
+          ],
+          "clicks": 1,
+          "impressions": 13,
+          "ctr": 0.07692307692307693,
+          "position": 3.769230769230769
+        },
+        {
+          "keys": [
+            "health data standards and interoperability"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 1
+        },
+        {
+          "keys": [
+            "que es tabular datos"
+          ],
+          "clicks": 1,
+          "impressions": 51,
+          "ctr": 0.0196078431372549,
+          "position": 5.137254901960785
+        },
+        {
+          "keys": [
+            "sources of data in research"
+          ],
+          "clicks": 1,
+          "impressions": 109,
+          "ctr": 0.009174311926605505,
+          "position": 3.1192660550458715
+        },
+        {
+          "keys": [
+            "tabular adalah"
+          ],
+          "clicks": 1,
+          "impressions": 27,
+          "ctr": 0.037037037037037035,
+          "position": 5.148148148148148
+        },
+        {
+          "keys": [
+            "tabulardata"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 15
+        },
+        {
+          "keys": [
+            "types of data sources in research"
+          ],
+          "clicks": 1,
+          "impressions": 6,
+          "ctr": 0.16666666666666666,
+          "position": 1
+        },
+        {
+          "keys": [
+            "\"data governance\" \"data-driven governance\" difference or vs"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 8
+        },
+        {
+          "keys": [
+            "\"data ingestion"
+          ],
+          "clicks": 0,
+          "impressions": 12,
+          "ctr": 0,
+          "position": 84.66666666666667
+        },
+        {
+          "keys": [
+            "\"data ingestion from any source"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 97.25
+        },
+        {
+          "keys": [
+            "\"data sources\""
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "\"different data sources"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 79.5
+        }
+      ],
+      "blogQueriesPrev": [
+        {
+          "keys": [
+            "non tabular data"
+          ],
+          "clicks": 2,
+          "impressions": 32,
+          "ctr": 0.0625,
+          "position": 3.5625
+        },
+        {
+          "keys": [
+            "tabular data"
+          ],
+          "clicks": 2,
+          "impressions": 718,
+          "ctr": 0.002785515320334262,
+          "position": 5.426183844011142
+        },
+        {
+          "keys": [
+            "data tabular"
+          ],
+          "clicks": 1,
+          "impressions": 52,
+          "ctr": 0.019230769230769232,
+          "position": 5.769230769230769
+        },
+        {
+          "keys": [
+            "data tabular adalah"
+          ],
+          "clicks": 1,
+          "impressions": 48,
+          "ctr": 0.020833333333333332,
+          "position": 4.083333333333334
+        },
+        {
+          "keys": [
+            "formato tabular"
+          ],
+          "clicks": 1,
+          "impressions": 14,
+          "ctr": 0.07142857142857142,
+          "position": 7.428571428571429
+        },
+        {
+          "keys": [
+            "healthcare data interoperability standards"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 1
+        },
+        {
+          "keys": [
+            "simulation in statistics example"
+          ],
+          "clicks": 1,
+          "impressions": 8,
+          "ctr": 0.125,
+          "position": 1.75
+        },
+        {
+          "keys": [
+            "source of data"
+          ],
+          "clicks": 1,
+          "impressions": 75,
+          "ctr": 0.013333333333333334,
+          "position": 2.533333333333333
+        },
+        {
+          "keys": [
+            "sources of data in research methodology"
+          ],
+          "clicks": 1,
+          "impressions": 25,
+          "ctr": 0.04,
+          "position": 4.92
+        },
+        {
+          "keys": [
+            "tabular format"
+          ],
+          "clicks": 1,
+          "impressions": 896,
+          "ctr": 0.0011160714285714285,
+          "position": 3.484375
+        },
+        {
+          "keys": [
+            "tabulated form example"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 9
+        },
+        {
+          "keys": [
+            "types and source of data"
+          ],
+          "clicks": 1,
+          "impressions": 10,
+          "ctr": 0.1,
+          "position": 1.8
+        },
+        {
+          "keys": [
+            "what is data sources in research"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 4
+        },
+        {
+          "keys": [
+            "what is tabular data"
+          ],
+          "clicks": 1,
+          "impressions": 263,
+          "ctr": 0.0038022813688212928,
+          "position": 3.9847908745247147
+        },
+        {
+          "keys": [
+            "\"data ingestion"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 75.75
+        },
+        {
+          "keys": [
+            "\"data ingestion from any source"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 88.5
+        },
+        {
+          "keys": [
+            "\"train on synthetic, test on real\" tstr synthetic data"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "keys": [
+            "\"types of data source"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 13.142857142857142
+        },
+        {
+          "keys": [
+            ". simulator"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "10 more"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "10 sources of data in research"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "keys": [
+            "3 sources of data"
+          ],
+          "clicks": 0,
+          "impressions": 8,
+          "ctr": 0,
+          "position": 8.25
+        },
+        {
+          "keys": [
+            "5 sources of data"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "a data acquisition"
+          ],
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 83.3
+        },
+        {
+          "keys": [
+            "a tabular form"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 6.75
+        },
+        {
+          "keys": [
+            "a tabular format"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 1.8333333333333335
+        },
+        {
+          "keys": [
+            "acquire data"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 35.5
+        },
+        {
+          "keys": [
+            "advantages and disadvantages of data acquisition system"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 90
+        },
+        {
+          "keys": [
+            "advantages of data acquisition system"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 92
+        },
+        {
+          "keys": [
+            "affordable digital twin software for electrical operations mid-sized companies"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 15.8
+        },
+        {
+          "keys": [
+            "ai computer vision datasets"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 41
+        },
+        {
+          "keys": [
+            "ai data augmentation"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 43
+        },
+        {
+          "keys": [
+            "ai data ingestion"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 64.33333333333334
+        },
+        {
+          "keys": [
+            "ai data ingestion solutions"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 43
+        },
+        {
+          "keys": [
+            "ai data sharing healthcare interoperability"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 20
+        },
+        {
+          "keys": [
+            "ai document ingestion tools for alternative data funds hedge funds"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 14
+        },
+        {
+          "keys": [
+            "ai for data generation"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "keys": [
+            "ai in simulation data management"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 58.666666666666664
+        },
+        {
+          "keys": [
+            "ai ingestion meaning"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 10
+        },
+        {
+          "keys": [
+            "ai model data ingestion"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 17
+        },
+        {
+          "keys": [
+            "ai semiology"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "ai synthetic data"
+          ],
+          "clicks": 0,
+          "impressions": 21,
+          "ctr": 0,
+          "position": 71.61904761904762
+        },
+        {
+          "keys": [
+            "ai synthetic data generation"
+          ],
+          "clicks": 0,
+          "impressions": 13,
+          "ctr": 0,
+          "position": 84.76923076923077
+        },
+        {
+          "keys": [
+            "ai time series forecasting"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "ai 의사결정의 설명 가능성을 보장하는 도구는 무엇인가요?"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "ai-driven data synthesis and augmentation"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 17
+        },
+        {
+          "keys": [
+            "ai-enhanced data synthesis methods"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 14
+        },
+        {
+          "keys": [
+            "alternative asset data providers"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 21
+        },
+        {
+          "keys": [
+            "alternative assets data platform"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 27
+        },
+        {
+          "keys": [
+            "alternative data aggregator"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 18
+        },
+        {
+          "keys": [
+            "alternative data api"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 27.666666666666668
+        },
+        {
+          "keys": [
+            "alternative data definition"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 86
+        },
+        {
+          "keys": [
+            "alternative data examples"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 20.11111111111111
+        },
+        {
+          "keys": [
+            "alternative data finance"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 29.5
+        },
+        {
+          "keys": [
+            "alternative data for investment decisions"
+          ],
+          "clicks": 0,
+          "impressions": 10,
+          "ctr": 0,
+          "position": 5.8
+        },
+        {
+          "keys": [
+            "alternative data for investors"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 35.5
+        },
+        {
+          "keys": [
+            "alternative data in asset management"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 22
+        },
+        {
+          "keys": [
+            "alternative data in finance"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 74
+        },
+        {
+          "keys": [
+            "alternative data integration"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 22
+        },
+        {
+          "keys": [
+            "alternative data market"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 46.285714285714285
+        },
+        {
+          "keys": [
+            "alternative data provider"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 26.8
+        },
+        {
+          "keys": [
+            "alternative data providers"
+          ],
+          "clicks": 0,
+          "impressions": 6,
+          "ctr": 0,
+          "position": 48
+        },
+        {
+          "keys": [
+            "alternative data satellite imagery finance"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "keys": [
+            "alternative data sources"
+          ],
+          "clicks": 0,
+          "impressions": 32,
+          "ctr": 0,
+          "position": 48.65625
+        },
+        {
+          "keys": [
+            "alternative data sources for financial forecasting"
+          ],
+          "clicks": 0,
+          "impressions": 30,
+          "ctr": 0,
+          "position": 6.966666666666667
+        },
+        {
+          "keys": [
+            "alternative data sources investors use to evaluate startups"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 18.333333333333332
+        },
+        {
+          "keys": [
+            "alternative data use cases"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 11
+        },
+        {
+          "keys": [
+            "alternative data vendors"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 17.5
+        },
+        {
+          "keys": [
+            "alternative data คือ"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "alternative finance data"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 19
+        },
+        {
+          "keys": [
+            "alternative macro signals"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 2
+        },
+        {
+          "keys": [
+            "and data security"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 62
+        },
+        {
+          "keys": [
+            "annonymizing"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 26
+        },
+        {
+          "keys": [
+            "ano ang tabular"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "answer in short"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "apa itu data tabular"
+          ],
+          "clicks": 0,
+          "impressions": 24,
+          "ctr": 0,
+          "position": 3.375
+        },
+        {
+          "keys": [
+            "apa itu ditabulasi"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 6
+        },
+        {
+          "keys": [
+            "apa itu tabular"
+          ],
+          "clicks": 0,
+          "impressions": 11,
+          "ctr": 0,
+          "position": 6.090909090909091
+        },
+        {
+          "keys": [
+            "api data ingestion"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 89
+        },
+        {
+          "keys": [
+            "aplikasi xai"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "application interoperability"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 48.5
+        },
+        {
+          "keys": [
+            "apply meet critical feasibility/risk item research data source insert text research data source remove applicable insert text additional data insert"
+          ],
+          "clicks": 0,
+          "impressions": 5,
+          "ctr": 0,
+          "position": 2.2
+        },
+        {
+          "keys": [
+            "approved models of interoperability in ehr"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 26
+        },
+        {
+          "keys": [
+            "artificial data generation"
+          ],
+          "clicks": 0,
+          "impressions": 27,
+          "ctr": 0,
+          "position": 64.37037037037038
+        },
+        {
+          "keys": [
+            "as a quantitative analyst, how can i leverage alternative data sources to enhance the accuracy of cash flow predictions for illiquid assets"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "keys": [
+            "aspects of an ehr systems interoperability"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 78
+        },
+        {
+          "keys": [
+            "asset vantage ai document ingestion features for alternative investments and fund data"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 19
+        },
+        {
+          "keys": [
+            "automated data acquisition"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 79
+        },
+        {
+          "keys": [
+            "automated data acquisition systems"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 97
+        },
+        {
+          "keys": [
+            "azoo"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "keys": [
+            "azoo cam"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 9
+        },
+        {
+          "keys": [
+            "batch data ingestion tools"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 98
+        },
+        {
+          "keys": [
+            "benefits of healthcare data standards"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 14.5
+        },
+        {
+          "keys": [
+            "benefits of rag over traditional llms"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 20
+        },
+        {
+          "keys": [
+            "bentuk tabular"
+          ],
+          "clicks": 0,
+          "impressions": 7,
+          "ctr": 0,
+          "position": 4
+        },
+        {
+          "keys": [
+            "bentuk tabulasi"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 12
+        },
+        {
+          "keys": [
+            "best alternative data providers for machine learning financial models transaction footfall credit card data 2025 2026"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 17
+        },
+        {
+          "keys": [
+            "best data marketplaces to monetize data"
+          ],
+          "clicks": 0,
+          "impressions": 9,
+          "ctr": 0,
+          "position": 7.444444444444445
+        },
+        {
+          "keys": [
+            "best data marketplaces to monetize data 2025 2026"
+          ],
+          "clicks": 0,
+          "impressions": 11,
+          "ctr": 0,
+          "position": 11.545454545454545
+        },
+        {
+          "keys": [
+            "best data monetization platforms"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 9
+        }
+      ],
       "daily": [
         {
           "keys": [
@@ -2268,6 +4572,62 @@
           "ctr": 0,
           "position": 1
         }
+      ],
+      "queriesPrev": [
+        {
+          "keys": [
+            "llm capsule"
+          ],
+          "clicks": 2,
+          "impressions": 6,
+          "ctr": 0.3333333333333333,
+          "position": 1
+        },
+        {
+          "keys": [
+            "capsules ai"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 7
+        },
+        {
+          "keys": [
+            "time capsule llm"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 36.5
+        },
+        {
+          "keys": [
+            "timecapsule llm"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 18.5
+        },
+        {
+          "keys": [
+            "www.llmcapsule.ai"
+          ],
+          "clicks": 0,
+          "impressions": 4,
+          "ctr": 0,
+          "position": 1
+        },
+        {
+          "keys": [
+            "기업별 맞춤 설정이 가능한가요"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 1
+        }
       ]
     },
     "syn": {
@@ -2295,56 +4655,133 @@
           "ctr": 0.5,
           "position": 4.5
         }
+      ],
+      "queriesPrev": [
+        {
+          "keys": [
+            "syntitan"
+          ],
+          "clicks": 3,
+          "impressions": 7,
+          "ctr": 0.42857142857142855,
+          "position": 2.2857142857142856
+        }
       ]
     }
   },
   "naver": {
     "campaigns": [
       {
-        "id": "cmp-a001-01-000000007432240",
-        "name": "파워링크#픽스에이드",
-        "type": "WEB_SITE",
-        "status": "PAUSED",
-        "dailyBudget": 1000
-      },
-      {
-        "id": "cmp-a001-01-000000008340700",
-        "name": "파워링크#DTS",
-        "type": "WEB_SITE",
-        "status": "PAUSED",
-        "dailyBudget": 50000
-      },
-      {
-        "id": "cmp-a001-01-000000008380657",
-        "name": "파워링크_cubig_검색광고",
-        "type": "WEB_SITE",
-        "status": "PAUSED",
-        "dailyBudget": 30000
-      },
-      {
-        "id": "cmp-a001-01-000000008381326",
-        "name": "파워링크#azoo",
-        "type": "WEB_SITE",
-        "status": "PAUSED",
-        "dailyBudget": 30000
-      },
-      {
-        "id": "cmp-a001-01-000000008544650",
-        "name": "파워링크#LLM서비스",
-        "type": "WEB_SITE",
-        "status": "PAUSED",
-        "dailyBudget": 50000
-      },
-      {
         "id": "cmp-a001-01-000000010083305",
-        "name": "국내_파워링크_제품",
+        "name": "국내_파워링크_CUBIG",
         "type": "WEB_SITE",
         "status": "ELIGIBLE",
         "dailyBudget": 33000
       }
     ],
-    "stats": [],
-    "statsPrev": []
+    "stats": [
+      {
+        "ctr": 0.25,
+        "id": "cmp-a001-01-000000010083305",
+        "clkCnt": 6,
+        "impCnt": 2483,
+        "cpc": 922,
+        "salesAmt": 5533,
+        "campaignName": "국내_파워링크_CUBIG",
+        "campaignId": "cmp-a001-01-000000010083305"
+      }
+    ],
+    "statsPrev": [
+      {
+        "ctr": 0.25,
+        "id": "cmp-a001-01-000000010083305",
+        "clkCnt": 5,
+        "impCnt": 2033,
+        "cpc": 722,
+        "salesAmt": 3608,
+        "campaignName": "국내_파워링크_CUBIG",
+        "campaignId": "cmp-a001-01-000000010083305"
+      }
+    ],
+    "statsDaily": [
+      {
+        "ctr": 0,
+        "id": "cmp-a001-01-000000010083305",
+        "clkCnt": 0,
+        "impCnt": 345,
+        "cpc": 0,
+        "salesAmt": 0,
+        "date": "2026-03-12",
+        "campaignName": "국내_파워링크_CUBIG",
+        "campaignId": "cmp-a001-01-000000010083305"
+      },
+      {
+        "ctr": 0,
+        "id": "cmp-a001-01-000000010083305",
+        "clkCnt": 0,
+        "impCnt": 313,
+        "cpc": 0,
+        "salesAmt": 0,
+        "date": "2026-03-13",
+        "campaignName": "국내_파워링크_CUBIG",
+        "campaignId": "cmp-a001-01-000000010083305"
+      },
+      {
+        "ctr": 1.12,
+        "id": "cmp-a001-01-000000010083305",
+        "clkCnt": 3,
+        "impCnt": 269,
+        "cpc": 1078,
+        "salesAmt": 3234,
+        "date": "2026-03-14",
+        "campaignName": "국내_파워링크_CUBIG",
+        "campaignId": "cmp-a001-01-000000010083305"
+      },
+      {
+        "ctr": 0,
+        "id": "cmp-a001-01-000000010083305",
+        "clkCnt": 0,
+        "impCnt": 295,
+        "cpc": 0,
+        "salesAmt": 0,
+        "date": "2026-03-15",
+        "campaignName": "국내_파워링크_CUBIG",
+        "campaignId": "cmp-a001-01-000000010083305"
+      },
+      {
+        "ctr": 0.24,
+        "id": "cmp-a001-01-000000010083305",
+        "clkCnt": 1,
+        "impCnt": 418,
+        "cpc": 396,
+        "salesAmt": 396,
+        "date": "2026-03-16",
+        "campaignName": "국내_파워링크_CUBIG",
+        "campaignId": "cmp-a001-01-000000010083305"
+      },
+      {
+        "ctr": 0.23,
+        "id": "cmp-a001-01-000000010083305",
+        "clkCnt": 1,
+        "impCnt": 435,
+        "cpc": 77,
+        "salesAmt": 77,
+        "date": "2026-03-17",
+        "campaignName": "국내_파워링크_CUBIG",
+        "campaignId": "cmp-a001-01-000000010083305"
+      },
+      {
+        "ctr": 0.25,
+        "id": "cmp-a001-01-000000010083305",
+        "clkCnt": 1,
+        "impCnt": 408,
+        "cpc": 1826,
+        "salesAmt": 1826,
+        "date": "2026-03-18",
+        "campaignName": "국내_파워링크_CUBIG",
+        "campaignId": "cmp-a001-01-000000010083305"
+      }
+    ]
   },
   "meta": {
     "campaigns": [
@@ -2595,6 +5032,116 @@
         "clicks": 94,
         "spend": 139521,
         "reach": 1782
+      }
+    ],
+    "campaignDaily": [
+      {
+        "date": "2026-03-12",
+        "campaignName": "데이터바우처_03_06",
+        "campaignId": "120242346462350287",
+        "impressions": 1452,
+        "clicks": 61,
+        "spend": 57666,
+        "cpc": 945.344262,
+        "ctr": 4.201102,
+        "reach": 1229,
+        "conversions": 6
+      },
+      {
+        "date": "2026-03-13",
+        "campaignName": "데이터바우처_03_06",
+        "campaignId": "120242346462350287",
+        "impressions": 1266,
+        "clicks": 39,
+        "spend": 52688,
+        "cpc": 1350.974359,
+        "ctr": 3.080569,
+        "reach": 1105,
+        "conversions": 6
+      },
+      {
+        "date": "2026-03-14",
+        "campaignName": "데이터바우처_03_06",
+        "campaignId": "120242346462350287",
+        "impressions": 1292,
+        "clicks": 46,
+        "spend": 64549,
+        "cpc": 1403.23913,
+        "ctr": 3.560372,
+        "reach": 1114,
+        "conversions": 2
+      },
+      {
+        "date": "2026-03-15",
+        "campaignName": "데이터바우처_03_06",
+        "campaignId": "120242346462350287",
+        "impressions": 1236,
+        "clicks": 49,
+        "spend": 56256,
+        "cpc": 1148.081633,
+        "ctr": 3.964401,
+        "reach": 1074,
+        "conversions": 6
+      },
+      {
+        "date": "2026-03-16",
+        "campaignName": "데이터바우처_03_06",
+        "campaignId": "120242346462350287",
+        "impressions": 1355,
+        "clicks": 47,
+        "spend": 61370,
+        "cpc": 1305.744681,
+        "ctr": 3.468635,
+        "reach": 1173,
+        "conversions": 7
+      },
+      {
+        "date": "2026-03-17",
+        "campaignName": "데이터바우처_03_06",
+        "campaignId": "120242346462350287",
+        "impressions": 1263,
+        "clicks": 34,
+        "spend": 54528,
+        "cpc": 1603.764706,
+        "ctr": 2.692003,
+        "reach": 1107,
+        "conversions": 4
+      },
+      {
+        "date": "2026-03-17",
+        "campaignName": "AI바우처_0316",
+        "campaignId": "120242783179740287",
+        "impressions": 1058,
+        "clicks": 36,
+        "spend": 52513,
+        "cpc": 1458.694444,
+        "ctr": 3.402647,
+        "reach": 744,
+        "conversions": 8
+      },
+      {
+        "date": "2026-03-18",
+        "campaignName": "데이터바우처_03_06",
+        "campaignId": "120242346462350287",
+        "impressions": 900,
+        "clicks": 29,
+        "spend": 53075,
+        "cpc": 1830.172414,
+        "ctr": 3.222222,
+        "reach": 757,
+        "conversions": 3
+      },
+      {
+        "date": "2026-03-18",
+        "campaignName": "AI바우처_0316",
+        "campaignId": "120242783179740287",
+        "impressions": 1603,
+        "clicks": 65,
+        "spend": 86446,
+        "cpc": 1329.938462,
+        "ctr": 4.054897,
+        "reach": 1162,
+        "conversions": 13
       }
     ]
   }
