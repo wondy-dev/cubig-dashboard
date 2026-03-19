@@ -1,0 +1,2286 @@
+{
+  "metadata": {
+    "collectedAt": "2026-03-19T06:23:02.420Z",
+    "period": 7,
+    "thisWeek": {
+      "start": "2026-03-12",
+      "end": "2026-03-18"
+    },
+    "lastWeek": {
+      "start": "2026-03-05",
+      "end": "2026-03-11"
+    },
+    "gscPeriod": {
+      "start": "2026-03-09",
+      "end": "2026-03-16"
+    }
+  },
+  "ga4": {
+    "cubig": {
+      "traffic": [
+        {
+          "dims": [
+            "date_range_0"
+          ],
+          "mets": [
+            728,
+            656,
+            636,
+            1795,
+            18208,
+            0.625
+          ]
+        },
+        {
+          "dims": [
+            "date_range_1"
+          ],
+          "mets": [
+            308,
+            275,
+            250,
+            1296,
+            22723,
+            0.788961038961039
+          ]
+        }
+      ],
+      "daily": [
+        {
+          "dims": [
+            "20260312"
+          ],
+          "mets": [
+            105,
+            97,
+            310
+          ]
+        },
+        {
+          "dims": [
+            "20260313"
+          ],
+          "mets": [
+            93,
+            90,
+            184
+          ]
+        },
+        {
+          "dims": [
+            "20260314"
+          ],
+          "mets": [
+            93,
+            91,
+            177
+          ]
+        },
+        {
+          "dims": [
+            "20260315"
+          ],
+          "mets": [
+            114,
+            107,
+            285
+          ]
+        },
+        {
+          "dims": [
+            "20260316"
+          ],
+          "mets": [
+            122,
+            112,
+            281
+          ]
+        },
+        {
+          "dims": [
+            "20260317"
+          ],
+          "mets": [
+            125,
+            113,
+            362
+          ]
+        },
+        {
+          "dims": [
+            "20260318"
+          ],
+          "mets": [
+            77,
+            71,
+            196
+          ]
+        }
+      ],
+      "blogDaily": [
+        {
+          "dims": [
+            "20260312"
+          ],
+          "mets": [
+            33,
+            28,
+            37
+          ]
+        },
+        {
+          "dims": [
+            "20260313"
+          ],
+          "mets": [
+            21,
+            18,
+            26
+          ]
+        },
+        {
+          "dims": [
+            "20260314"
+          ],
+          "mets": [
+            20,
+            19,
+            23
+          ]
+        },
+        {
+          "dims": [
+            "20260315"
+          ],
+          "mets": [
+            35,
+            31,
+            50
+          ]
+        },
+        {
+          "dims": [
+            "20260316"
+          ],
+          "mets": [
+            39,
+            31,
+            60
+          ]
+        },
+        {
+          "dims": [
+            "20260317"
+          ],
+          "mets": [
+            44,
+            35,
+            65
+          ]
+        },
+        {
+          "dims": [
+            "20260318"
+          ],
+          "mets": [
+            21,
+            17,
+            31
+          ]
+        }
+      ],
+      "blogPages": [
+        {
+          "dims": [
+            "/blogs/tabular-data-definition-examples-formats-and-how-to-tabulate-effectively",
+            "Tabular Data Definition, Examples, Formats, and How to Tabulate Effectively - CUBIG Blogs"
+          ],
+          "mets": [
+            58,
+            28,
+            572.2614275675676
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/",
+            "Data Science Blog | CUBIG"
+          ],
+          "mets": [
+            53,
+            36,
+            278.1349994318182
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/sources-of-data-for-research-types-examples-tools-and-methodologies",
+            "Sources of Data for Research: Types, Examples, Tools, and Methodologies - CUBIG Blogs"
+          ],
+          "mets": [
+            47,
+            17,
+            962.7040708888889
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/tabular-data-vs-non-tabular-data-ml-use-cases-and-key-differences",
+            "Tabular Data vs Non Tabular Data: ML Use Cases and Key Differences - CUBIG Blogs"
+          ],
+          "mets": [
+            16,
+            12,
+            17.18731514285714
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/data-strategy-and-governance-frameworks-execution-and-real-world-examples-2",
+            "Data Strategy and Governance: Frameworks, Execution, and Real-World Examples - CUBIG Blogs"
+          ],
+          "mets": [
+            8,
+            3,
+            45.861608999999994
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/differential-privacy-synthetic-data-using-llms-for-private-text-generation",
+            "Differential Privacy Synthetic Data Using LLMs for Private Text Generation - CUBIG Blogs"
+          ],
+          "mets": [
+            7,
+            2,
+            4.810291333333333
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/ai-agents-workplace-security-ai-ready",
+            "Are AI Agents Safe in the Workplace? Hidden Security Risks"
+          ],
+          "mets": [
+            6,
+            3,
+            2724.83434075
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/data-simulation-tools-software-big-data-simulation-data-collection-guide",
+            "Data Simulation: Tools, Software, Big Data Simulation & Data Collection Guide - CUBIG Blogs"
+          ],
+          "mets": [
+            6,
+            2,
+            33.18672733333333
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/cross-border-data-sharing-gdpr-regulations-transfer-safeguards-explained",
+            "Cross Border Data Sharing: GDPR Regulations & Transfer Safeguards Explained - CUBIG Blogs"
+          ],
+          "mets": [
+            5,
+            5,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/healthcare-data-interoperability-standards-examples-importance-explained",
+            "Healthcare Data Interoperability: Standards, Examples & Importance Explained - CUBIG Blogs"
+          ],
+          "mets": [
+            5,
+            3,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/",
+            "(not set)"
+          ],
+          "mets": [
+            4,
+            2,
+            0.193059
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/alternative-data-for-finance-market-overview-examples-providers",
+            "Alternative Data for Finance: Market Overview, Examples, Providers - CUBIG Blogs"
+          ],
+          "mets": [
+            4,
+            2,
+            5.5048315
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/page/13",
+            "Data Science Blog | CUBIG"
+          ],
+          "mets": [
+            4,
+            4,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/page/14",
+            "Data Science Blog | CUBIG"
+          ],
+          "mets": [
+            4,
+            4,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/tag/prompt-tuning",
+            "Prompt tuning - CUBIG Blogs"
+          ],
+          "mets": [
+            4,
+            4,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/mwc-2026-cubig",
+            "CUBIG Joins MWC Barcelona 2026 – Unveils AI-Ready Data OS, SynTitan - CUBIG Blogs"
+          ],
+          "mets": [
+            3,
+            1,
+            394.282403
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/page/2",
+            "Data Science Blog | CUBIG"
+          ],
+          "mets": [
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/page/5",
+            "Data Science Blog | CUBIG"
+          ],
+          "mets": [
+            3,
+            3,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/synthetic-tabular-data-generation-using-generative-ai-for-accurate-results",
+            "Synthetic Tabular Data Generation Using Generative AI for Accurate Results - CUBIG Blogs"
+          ],
+          "mets": [
+            3,
+            1,
+            123.13773
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/tag/data-leak",
+            "data leak - CUBIG Blogs"
+          ],
+          "mets": [
+            3,
+            3,
+            0
+          ]
+        }
+      ],
+      "syntitanPages": [
+        {
+          "dims": [
+            "/syntitan",
+            "date_range_0"
+          ],
+          "mets": [
+            582,
+            285
+          ]
+        },
+        {
+          "dims": [
+            "/syntitan",
+            "date_range_1"
+          ],
+          "mets": [
+            99,
+            44
+          ]
+        },
+        {
+          "dims": [
+            "/ko/syntitan",
+            "date_range_0"
+          ],
+          "mets": [
+            30,
+            7
+          ]
+        },
+        {
+          "dims": [
+            "/ko/syntitan",
+            "date_range_1"
+          ],
+          "mets": [
+            30,
+            11
+          ]
+        },
+        {
+          "dims": [
+            "/news/cubig-an-ai-ready-data-company-selected-as-the-only-korean-finalist-in-the-global-telecom-innovation-program-‘t-challenge-2026’",
+            "date_range_0"
+          ],
+          "mets": [
+            4,
+            2
+          ]
+        },
+        {
+          "dims": [
+            "/ko/news/cubig-an-ai-ready-data-company-selected-as-the-only-korean-finalist-in-the-global-telecom-innovation-program-‘t-challenge-2026’",
+            "date_range_1"
+          ],
+          "mets": [
+            2,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "/ko/news/cubig-launches-ai-ready-data-os-‘syntitan’",
+            "date_range_0"
+          ],
+          "mets": [
+            2,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "/ko/news/cubig-launches-ai-ready-data-os-‘syntitan’",
+            "date_range_1"
+          ],
+          "mets": [
+            2,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/why-ai-ready-data-matters-a-practical-guide-using-key-terms-from-nias-ai-glossary",
+            "date_range_0"
+          ],
+          "mets": [
+            1,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "/blogs/why-ai-ready-data-matters-a-practical-guide-using-key-terms-from-nias-ai-glossary",
+            "date_range_1"
+          ],
+          "mets": [
+            0,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "/ko/news/cubig-an-ai-ready-data-company-selected-as-the-only-korean-finalist-in-the-global-telecom-innovation-program-‘t-challenge-2026’",
+            "date_range_0"
+          ],
+          "mets": [
+            0,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "/news/cubig-an-ai-ready-data-company-selected-as-the-only-korean-finalist-in-the-global-telecom-innovation-program-‘t-challenge-2026’",
+            "date_range_1"
+          ],
+          "mets": [
+            0,
+            0
+          ]
+        }
+      ],
+      "countries": [
+        {
+          "dims": [
+            "United States"
+          ],
+          "mets": [
+            308,
+            313
+          ]
+        },
+        {
+          "dims": [
+            "Singapore"
+          ],
+          "mets": [
+            98,
+            98
+          ]
+        },
+        {
+          "dims": [
+            "South Korea"
+          ],
+          "mets": [
+            84,
+            111
+          ]
+        },
+        {
+          "dims": [
+            "India"
+          ],
+          "mets": [
+            23,
+            28
+          ]
+        },
+        {
+          "dims": [
+            "United Kingdom"
+          ],
+          "mets": [
+            20,
+            23
+          ]
+        },
+        {
+          "dims": [
+            "China"
+          ],
+          "mets": [
+            14,
+            14
+          ]
+        },
+        {
+          "dims": [
+            "Indonesia"
+          ],
+          "mets": [
+            9,
+            11
+          ]
+        },
+        {
+          "dims": [
+            "Canada"
+          ],
+          "mets": [
+            5,
+            7
+          ]
+        },
+        {
+          "dims": [
+            "Philippines"
+          ],
+          "mets": [
+            5,
+            7
+          ]
+        },
+        {
+          "dims": [
+            "Brazil"
+          ],
+          "mets": [
+            4,
+            4
+          ]
+        },
+        {
+          "dims": [
+            "France"
+          ],
+          "mets": [
+            4,
+            5
+          ]
+        },
+        {
+          "dims": [
+            "Mexico"
+          ],
+          "mets": [
+            4,
+            4
+          ]
+        },
+        {
+          "dims": [
+            "Pakistan"
+          ],
+          "mets": [
+            4,
+            4
+          ]
+        },
+        {
+          "dims": [
+            "Spain"
+          ],
+          "mets": [
+            4,
+            4
+          ]
+        },
+        {
+          "dims": [
+            "Thailand"
+          ],
+          "mets": [
+            4,
+            6
+          ]
+        }
+      ],
+      "channels": [
+        {
+          "dims": [
+            "Paid Search",
+            "date_range_0"
+          ],
+          "mets": [
+            269,
+            269,
+            577
+          ]
+        },
+        {
+          "dims": [
+            "Direct",
+            "date_range_0"
+          ],
+          "mets": [
+            219,
+            208,
+            476
+          ]
+        },
+        {
+          "dims": [
+            "Organic Search",
+            "date_range_0"
+          ],
+          "mets": [
+            151,
+            114,
+            416
+          ]
+        },
+        {
+          "dims": [
+            "Direct",
+            "date_range_1"
+          ],
+          "mets": [
+            126,
+            112,
+            584
+          ]
+        },
+        {
+          "dims": [
+            "Organic Search",
+            "date_range_1"
+          ],
+          "mets": [
+            94,
+            83,
+            383
+          ]
+        },
+        {
+          "dims": [
+            "Unassigned",
+            "date_range_0"
+          ],
+          "mets": [
+            57,
+            54,
+            90
+          ]
+        },
+        {
+          "dims": [
+            "Paid Search",
+            "date_range_1"
+          ],
+          "mets": [
+            44,
+            44,
+            151
+          ]
+        },
+        {
+          "dims": [
+            "Cross-network",
+            "date_range_0"
+          ],
+          "mets": [
+            33,
+            33,
+            55
+          ]
+        },
+        {
+          "dims": [
+            "Referral",
+            "date_range_1"
+          ],
+          "mets": [
+            22,
+            22,
+            97
+          ]
+        },
+        {
+          "dims": [
+            "Referral",
+            "date_range_0"
+          ],
+          "mets": [
+            20,
+            17,
+            113
+          ]
+        },
+        {
+          "dims": [
+            "Unassigned",
+            "date_range_1"
+          ],
+          "mets": [
+            16,
+            15,
+            51
+          ]
+        },
+        {
+          "dims": [
+            "Organic Social",
+            "date_range_0"
+          ],
+          "mets": [
+            15,
+            15,
+            43
+          ]
+        },
+        {
+          "dims": [
+            "Organic Social",
+            "date_range_1"
+          ],
+          "mets": [
+            6,
+            6,
+            30
+          ]
+        },
+        {
+          "dims": [
+            "Organic Shopping",
+            "date_range_0"
+          ],
+          "mets": [
+            3,
+            1,
+            25
+          ]
+        },
+        {
+          "dims": [
+            "Cross-network",
+            "date_range_1"
+          ],
+          "mets": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "dims": [
+            "Organic Shopping",
+            "date_range_1"
+          ],
+          "mets": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "events": [
+        {
+          "dims": [
+            "page_view",
+            "date_range_0"
+          ],
+          "mets": [
+            1795,
+            649
+          ]
+        },
+        {
+          "dims": [
+            "page_view",
+            "date_range_1"
+          ],
+          "mets": [
+            1296,
+            269
+          ]
+        },
+        {
+          "dims": [
+            "session_start",
+            "date_range_0"
+          ],
+          "mets": [
+            723,
+            649
+          ]
+        },
+        {
+          "dims": [
+            "user_engagement",
+            "date_range_0"
+          ],
+          "mets": [
+            704,
+            454
+          ]
+        },
+        {
+          "dims": [
+            "first_visit",
+            "date_range_0"
+          ],
+          "mets": [
+            636,
+            617
+          ]
+        },
+        {
+          "dims": [
+            "user_engagement",
+            "date_range_1"
+          ],
+          "mets": [
+            468,
+            220
+          ]
+        },
+        {
+          "dims": [
+            "session_start",
+            "date_range_1"
+          ],
+          "mets": [
+            301,
+            268
+          ]
+        },
+        {
+          "dims": [
+            "scroll",
+            "date_range_0"
+          ],
+          "mets": [
+            257,
+            69
+          ]
+        },
+        {
+          "dims": [
+            "first_visit",
+            "date_range_1"
+          ],
+          "mets": [
+            250,
+            246
+          ]
+        },
+        {
+          "dims": [
+            "scroll",
+            "date_range_1"
+          ],
+          "mets": [
+            233,
+            60
+          ]
+        },
+        {
+          "dims": [
+            "view_dataset_list",
+            "date_range_0"
+          ],
+          "mets": [
+            50,
+            10
+          ]
+        },
+        {
+          "dims": [
+            "click",
+            "date_range_1"
+          ],
+          "mets": [
+            45,
+            29
+          ]
+        },
+        {
+          "dims": [
+            "view_dataset",
+            "date_range_1"
+          ],
+          "mets": [
+            44,
+            34
+          ]
+        },
+        {
+          "dims": [
+            "view_dataset",
+            "date_range_0"
+          ],
+          "mets": [
+            30,
+            25
+          ]
+        },
+        {
+          "dims": [
+            "view_dataset_list",
+            "date_range_1"
+          ],
+          "mets": [
+            25,
+            9
+          ]
+        },
+        {
+          "dims": [
+            "click",
+            "date_range_0"
+          ],
+          "mets": [
+            24,
+            18
+          ]
+        },
+        {
+          "dims": [
+            "form_start",
+            "date_range_1"
+          ],
+          "mets": [
+            12,
+            8
+          ]
+        },
+        {
+          "dims": [
+            "click_dataset_request",
+            "date_range_0"
+          ],
+          "mets": [
+            7,
+            3
+          ]
+        },
+        {
+          "dims": [
+            "view_login",
+            "date_range_0"
+          ],
+          "mets": [
+            7,
+            3
+          ]
+        },
+        {
+          "dims": [
+            "ads_conversion_signup",
+            "date_range_0"
+          ],
+          "mets": [
+            6,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "click_format",
+            "date_range_0"
+          ],
+          "mets": [
+            5,
+            4
+          ]
+        },
+        {
+          "dims": [
+            "form_start",
+            "date_range_0"
+          ],
+          "mets": [
+            5,
+            4
+          ]
+        },
+        {
+          "dims": [
+            "CubigLead",
+            "date_range_1"
+          ],
+          "mets": [
+            4,
+            3
+          ]
+        },
+        {
+          "dims": [
+            "search",
+            "date_range_0"
+          ],
+          "mets": [
+            4,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "view_login",
+            "date_range_1"
+          ],
+          "mets": [
+            4,
+            2
+          ]
+        },
+        {
+          "dims": [
+            "CubigLead",
+            "date_range_0"
+          ],
+          "mets": [
+            3,
+            2
+          ]
+        },
+        {
+          "dims": [
+            "click_format",
+            "date_range_1"
+          ],
+          "mets": [
+            3,
+            2
+          ]
+        },
+        {
+          "dims": [
+            "search",
+            "date_range_1"
+          ],
+          "mets": [
+            3,
+            2
+          ]
+        },
+        {
+          "dims": [
+            "click_dataset_request",
+            "date_range_1"
+          ],
+          "mets": [
+            2,
+            2
+          ]
+        },
+        {
+          "dims": [
+            "ads_conversion_signup",
+            "date_range_1"
+          ],
+          "mets": [
+            0,
+            0
+          ]
+        }
+      ],
+      "syntitanClicks": [
+        {
+          "dims": [
+            "date_range_1"
+          ],
+          "mets": [
+            35,
+            21
+          ]
+        },
+        {
+          "dims": [
+            "date_range_0"
+          ],
+          "mets": [
+            12,
+            10
+          ]
+        }
+      ]
+    },
+    "llm": {
+      "traffic": [
+        {
+          "dims": [
+            "date_range_0"
+          ],
+          "mets": [
+            22,
+            17,
+            13,
+            137,
+            778,
+            0.8181818181818182
+          ]
+        },
+        {
+          "dims": [
+            "date_range_1"
+          ],
+          "mets": [
+            17,
+            11,
+            10,
+            190,
+            1281,
+            0.9411764705882353
+          ]
+        }
+      ],
+      "daily": [
+        {
+          "dims": [
+            "20260312"
+          ],
+          "mets": [
+            3,
+            2,
+            42
+          ]
+        },
+        {
+          "dims": [
+            "20260313"
+          ],
+          "mets": [
+            6,
+            6,
+            10
+          ]
+        },
+        {
+          "dims": [
+            "20260314"
+          ],
+          "mets": [
+            1,
+            1,
+            13
+          ]
+        },
+        {
+          "dims": [
+            "20260315"
+          ],
+          "mets": [
+            2,
+            2,
+            6
+          ]
+        },
+        {
+          "dims": [
+            "20260316"
+          ],
+          "mets": [
+            6,
+            6,
+            23
+          ]
+        },
+        {
+          "dims": [
+            "20260317"
+          ],
+          "mets": [
+            2,
+            1,
+            4
+          ]
+        },
+        {
+          "dims": [
+            "20260318"
+          ],
+          "mets": [
+            4,
+            4,
+            39
+          ]
+        }
+      ],
+      "blogPages": [
+        {
+          "dims": [
+            "/ko",
+            "LLM Capsule - AI 기반 솔루션"
+          ],
+          "mets": [
+            81,
+            14,
+            3144.497826263158
+          ]
+        },
+        {
+          "dims": [
+            "/ko/login",
+            "LLM Capsule - AI 기반 솔루션"
+          ],
+          "mets": [
+            19,
+            5,
+            196.53378279999998
+          ]
+        },
+        {
+          "dims": [
+            "/en",
+            "LLM Capsule - AI-Powered Solution"
+          ],
+          "mets": [
+            14,
+            4,
+            194.56324
+          ]
+        },
+        {
+          "dims": [
+            "/ko/signup",
+            "LLM Capsule - AI 기반 솔루션"
+          ],
+          "mets": [
+            9,
+            3,
+            457.3100866666667
+          ]
+        },
+        {
+          "dims": [
+            "/ko/signup/verify",
+            "LLM Capsule - AI 기반 솔루션"
+          ],
+          "mets": [
+            8,
+            1,
+            338.232405
+          ]
+        },
+        {
+          "dims": [
+            "/ko/checkout/business",
+            "LLM Capsule - AI 기반 솔루션"
+          ],
+          "mets": [
+            2,
+            1,
+            1.014034
+          ]
+        },
+        {
+          "dims": [
+            "/ko/signin",
+            ""
+          ],
+          "mets": [
+            2,
+            1,
+            195.501466
+          ]
+        },
+        {
+          "dims": [
+            "/en",
+            "LLM Capsule - AI 기반 솔루션"
+          ],
+          "mets": [
+            1,
+            1,
+            3.954764
+          ]
+        },
+        {
+          "dims": [
+            "/ko/checkout",
+            "LLM Capsule - AI 기반 솔루션"
+          ],
+          "mets": [
+            1,
+            1,
+            2.287407
+          ]
+        }
+      ],
+      "countries": [
+        {
+          "dims": [
+            "South Korea"
+          ],
+          "mets": [
+            13,
+            18
+          ]
+        },
+        {
+          "dims": [
+            "United Kingdom"
+          ],
+          "mets": [
+            2,
+            2
+          ]
+        },
+        {
+          "dims": [
+            "India"
+          ],
+          "mets": [
+            1,
+            1
+          ]
+        },
+        {
+          "dims": [
+            "Italy"
+          ],
+          "mets": [
+            1,
+            1
+          ]
+        }
+      ],
+      "channels": [
+        {
+          "dims": [
+            "Organic Search",
+            "date_range_1"
+          ],
+          "mets": [
+            11,
+            6,
+            100
+          ]
+        },
+        {
+          "dims": [
+            "Referral",
+            "date_range_0"
+          ],
+          "mets": [
+            8,
+            7,
+            79
+          ]
+        },
+        {
+          "dims": [
+            "Organic Search",
+            "date_range_0"
+          ],
+          "mets": [
+            5,
+            2,
+            10
+          ]
+        },
+        {
+          "dims": [
+            "Paid Search",
+            "date_range_0"
+          ],
+          "mets": [
+            5,
+            5,
+            22
+          ]
+        },
+        {
+          "dims": [
+            "Direct",
+            "date_range_1"
+          ],
+          "mets": [
+            3,
+            3,
+            12
+          ]
+        },
+        {
+          "dims": [
+            "Unassigned",
+            "date_range_0"
+          ],
+          "mets": [
+            3,
+            3,
+            18
+          ]
+        },
+        {
+          "dims": [
+            "Direct",
+            "date_range_0"
+          ],
+          "mets": [
+            2,
+            2,
+            8
+          ]
+        },
+        {
+          "dims": [
+            "Paid Search",
+            "date_range_1"
+          ],
+          "mets": [
+            2,
+            2,
+            4
+          ]
+        },
+        {
+          "dims": [
+            "Referral",
+            "date_range_1"
+          ],
+          "mets": [
+            1,
+            1,
+            74
+          ]
+        },
+        {
+          "dims": [
+            "Unassigned",
+            "date_range_1"
+          ],
+          "mets": [
+            0,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "gsc": {
+    "cubig": {
+      "overview": {
+        "keys": [],
+        "clicks": 167,
+        "impressions": 35285,
+        "ctr": 0.004732889329743517,
+        "position": 17.470568230126116
+      },
+      "overviewPrev": {
+        "keys": [],
+        "clicks": 215,
+        "impressions": 45423,
+        "ctr": 0.004733284899720406,
+        "position": 15.204037602095854
+      },
+      "queries": [
+        {
+          "keys": [
+            "cubig"
+          ],
+          "clicks": 19,
+          "impressions": 133,
+          "ctr": 0.14285714285714285,
+          "position": 3.488721804511278
+        },
+        {
+          "keys": [
+            "큐빅 ai"
+          ],
+          "clicks": 4,
+          "impressions": 12,
+          "ctr": 0.3333333333333333,
+          "position": 1.5
+        },
+        {
+          "keys": [
+            "syntitan"
+          ],
+          "clicks": 3,
+          "impressions": 7,
+          "ctr": 0.42857142857142855,
+          "position": 2.428571428571429
+        },
+        {
+          "keys": [
+            "callcenteren"
+          ],
+          "clicks": 2,
+          "impressions": 12,
+          "ctr": 0.16666666666666666,
+          "position": 6.333333333333333
+        },
+        {
+          "keys": [
+            "cubig ai"
+          ],
+          "clicks": 2,
+          "impressions": 3,
+          "ctr": 0.6666666666666666,
+          "position": 1
+        },
+        {
+          "keys": [
+            "garbage classification dataset"
+          ],
+          "clicks": 2,
+          "impressions": 6,
+          "ctr": 0.3333333333333333,
+          "position": 6.5
+        },
+        {
+          "keys": [
+            "meaning of statistical data"
+          ],
+          "clicks": 2,
+          "impressions": 23,
+          "ctr": 0.08695652173913043,
+          "position": 2.6956521739130435
+        },
+        {
+          "keys": [
+            "que es tabular"
+          ],
+          "clicks": 2,
+          "impressions": 227,
+          "ctr": 0.00881057268722467,
+          "position": 9.806167400881057
+        },
+        {
+          "keys": [
+            "#aigenerated"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 1
+        },
+        {
+          "keys": [
+            "(주)큐빅"
+          ],
+          "clicks": 1,
+          "impressions": 2,
+          "ctr": 0.5,
+          "position": 8.5
+        },
+        {
+          "keys": [
+            "ai generated"
+          ],
+          "clicks": 1,
+          "impressions": 682,
+          "ctr": 0.001466275659824047,
+          "position": 3.407624633431085
+        },
+        {
+          "keys": [
+            "animal dataset"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 30.333333333333332
+        },
+        {
+          "keys": [
+            "another name?"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 8
+        },
+        {
+          "keys": [
+            "aí generated"
+          ],
+          "clicks": 1,
+          "impressions": 7,
+          "ctr": 0.14285714285714285,
+          "position": 2.7142857142857144
+        },
+        {
+          "keys": [
+            "crunchbase dataset"
+          ],
+          "clicks": 1,
+          "impressions": 7,
+          "ctr": 0.14285714285714285,
+          "position": 22.857142857142858
+        },
+        {
+          "keys": [
+            "cubig corp"
+          ],
+          "clicks": 1,
+          "impressions": 1,
+          "ctr": 1,
+          "position": 1
+        },
+        {
+          "keys": [
+            "cubig login"
+          ],
+          "clicks": 1,
+          "impressions": 59,
+          "ctr": 0.01694915254237288,
+          "position": 7.11864406779661
+        },
+        {
+          "keys": [
+            "data generation definition"
+          ],
+          "clicks": 1,
+          "impressions": 5,
+          "ctr": 0.2,
+          "position": 1.6
+        },
+        {
+          "keys": [
+            "data simulation"
+          ],
+          "clicks": 1,
+          "impressions": 36,
+          "ctr": 0.027777777777777776,
+          "position": 19.583333333333332
+        },
+        {
+          "keys": [
+            "examples of tabular data"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 1
+        }
+      ],
+      "blogPages": [
+        {
+          "keys": [
+            "https://cubig.ai/blogs/tabular-data-definition-examples-formats-and-how-to-tabulate-effectively"
+          ],
+          "clicks": 15,
+          "impressions": 5434,
+          "ctr": 0.0027603974972396023,
+          "position": 5.1682002208318
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/sources-of-data-for-research-types-examples-tools-and-methodologies"
+          ],
+          "clicks": 8,
+          "impressions": 2216,
+          "ctr": 0.0036101083032490976,
+          "position": 6.647111913357401
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/tabular-data-vs-non-tabular-data-ml-use-cases-and-key-differences"
+          ],
+          "clicks": 5,
+          "impressions": 1195,
+          "ctr": 0.0041841004184100415,
+          "position": 4.445188284518828
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/healthcare-data-interoperability-standards-examples-importance-explained"
+          ],
+          "clicks": 4,
+          "impressions": 1350,
+          "ctr": 0.002962962962962963,
+          "position": 26.094814814814814
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/data-simulation-tools-software-big-data-simulation-data-collection-guide"
+          ],
+          "clicks": 2,
+          "impressions": 403,
+          "ctr": 0.004962779156327543,
+          "position": 12.218362282878411
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/example-of-a-simulation-what-is-data-simulation-in-statistics"
+          ],
+          "clicks": 2,
+          "impressions": 1301,
+          "ctr": 0.0015372790161414297,
+          "position": 7.380476556495004
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/synthetic-ehr-data-patient-data-healthcare-use-cases-ml-in-medicine"
+          ],
+          "clicks": 2,
+          "impressions": 243,
+          "ctr": 0.00823045267489712,
+          "position": 19.329218106995885
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/explainable-ai-xai-models-examples-techniques-tools-key-projects"
+          ],
+          "clicks": 1,
+          "impressions": 872,
+          "ctr": 0.0011467889908256881,
+          "position": 22.386467889908257
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/https-azoo-ai-27"
+          ],
+          "clicks": 1,
+          "impressions": 3,
+          "ctr": 0.3333333333333333,
+          "position": 1
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/https-azoo-ai-76"
+          ],
+          "clicks": 1,
+          "impressions": 15,
+          "ctr": 0.06666666666666667,
+          "position": 6.266666666666667
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/what-is-data-ingestion-definition-pipeline-tools-how-to-ingest-data-azoo-ai"
+          ],
+          "clicks": 1,
+          "impressions": 688,
+          "ctr": 0.0014534883720930232,
+          "position": 60.71511627906977
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/what-is-data-transformation-systems"
+          ],
+          "clicks": 1,
+          "impressions": 137,
+          "ctr": 0.0072992700729927005,
+          "position": 18.124087591240876
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/"
+          ],
+          "clicks": 0,
+          "impressions": 22,
+          "ctr": 0,
+          "position": 8.318181818181818
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/2-reasons-why-anonymity-is-not-anonymous"
+          ],
+          "clicks": 0,
+          "impressions": 18,
+          "ctr": 0,
+          "position": 8.61111111111111
+        },
+        {
+          "keys": [
+            "https://cubig.ai/blogs/3-best-datasets-for-computer-vision"
+          ],
+          "clicks": 0,
+          "impressions": 34,
+          "ctr": 0,
+          "position": 30.11764705882353
+        }
+      ],
+      "daily": [
+        {
+          "keys": [
+            "2026-03-09"
+          ],
+          "clicks": 27,
+          "impressions": 6692,
+          "ctr": 0.004034668260609683,
+          "position": 15.507322175732218
+        },
+        {
+          "keys": [
+            "2026-03-10"
+          ],
+          "clicks": 40,
+          "impressions": 6532,
+          "ctr": 0.00612369871402327,
+          "position": 17.72565829761176
+        },
+        {
+          "keys": [
+            "2026-03-11"
+          ],
+          "clicks": 33,
+          "impressions": 6201,
+          "ctr": 0.005321722302854378,
+          "position": 17.971294952427026
+        },
+        {
+          "keys": [
+            "2026-03-12"
+          ],
+          "clicks": 31,
+          "impressions": 5870,
+          "ctr": 0.005281090289608177,
+          "position": 17.114991482112437
+        },
+        {
+          "keys": [
+            "2026-03-13"
+          ],
+          "clicks": 19,
+          "impressions": 5778,
+          "ctr": 0.0032883350640359986,
+          "position": 17.509865005192108
+        },
+        {
+          "keys": [
+            "2026-03-14"
+          ],
+          "clicks": 17,
+          "impressions": 4212,
+          "ctr": 0.004036087369420703,
+          "position": 19.898622981956315
+        }
+      ],
+      "syntitanQueries": [
+        {
+          "keys": [
+            "syntitan"
+          ],
+          "clicks": 3,
+          "impressions": 7,
+          "ctr": 0.42857142857142855,
+          "position": 2.428571428571429
+        }
+      ]
+    },
+    "llm": {
+      "overview": {
+        "keys": [],
+        "clicks": 9,
+        "impressions": 52,
+        "ctr": 0.17307692307692307,
+        "position": 7.211538461538462
+      },
+      "overviewPrev": {
+        "keys": [],
+        "clicks": 9,
+        "impressions": 77,
+        "ctr": 0.11688311688311688,
+        "position": 5.675324675324675
+      },
+      "queries": [
+        {
+          "keys": [
+            "llm capsule"
+          ],
+          "clicks": 6,
+          "impressions": 7,
+          "ctr": 0.8571428571428571,
+          "position": 1
+        },
+        {
+          "keys": [
+            "time capsule llm"
+          ],
+          "clicks": 0,
+          "impressions": 1,
+          "ctr": 0,
+          "position": 49
+        },
+        {
+          "keys": [
+            "timecapsule llm"
+          ],
+          "clicks": 0,
+          "impressions": 2,
+          "ctr": 0,
+          "position": 21.5
+        },
+        {
+          "keys": [
+            "www.llmcapsule.ai"
+          ],
+          "clicks": 0,
+          "impressions": 3,
+          "ctr": 0,
+          "position": 1
+        }
+      ]
+    }
+  },
+  "naver": {
+    "campaigns": [
+      {
+        "id": "cmp-a001-01-000000007432240",
+        "name": "파워링크#픽스에이드",
+        "type": "WEB_SITE",
+        "status": "PAUSED",
+        "dailyBudget": 1000
+      },
+      {
+        "id": "cmp-a001-01-000000008340700",
+        "name": "파워링크#DTS",
+        "type": "WEB_SITE",
+        "status": "PAUSED",
+        "dailyBudget": 50000
+      },
+      {
+        "id": "cmp-a001-01-000000008380657",
+        "name": "파워링크_cubig_검색광고",
+        "type": "WEB_SITE",
+        "status": "PAUSED",
+        "dailyBudget": 30000
+      },
+      {
+        "id": "cmp-a001-01-000000008381326",
+        "name": "파워링크#azoo",
+        "type": "WEB_SITE",
+        "status": "PAUSED",
+        "dailyBudget": 30000
+      },
+      {
+        "id": "cmp-a001-01-000000008544650",
+        "name": "파워링크#LLM서비스",
+        "type": "WEB_SITE",
+        "status": "PAUSED",
+        "dailyBudget": 50000
+      },
+      {
+        "id": "cmp-a001-01-000000010083305",
+        "name": "국내_파워링크_제품",
+        "type": "WEB_SITE",
+        "status": "ELIGIBLE",
+        "dailyBudget": 33000
+      }
+    ],
+    "stats": [],
+    "statsPrev": []
+  },
+  "meta": {
+    "campaigns": [
+      {
+        "id": "120242783179740287",
+        "name": "AI바우처_0316",
+        "status": "ACTIVE",
+        "objective": "OUTCOME_LEADS",
+        "dailyBudget": null,
+        "lifetimeBudget": 5000
+      },
+      {
+        "id": "120242346462350287",
+        "name": "데이터바우처_03_06",
+        "status": "ACTIVE",
+        "objective": "OUTCOME_LEADS",
+        "dailyBudget": null,
+        "lifetimeBudget": 10000
+      },
+      {
+        "id": "120233441601980287",
+        "name": "25_09_META_트래픽",
+        "status": "PAUSED",
+        "objective": "OUTCOME_TRAFFIC",
+        "dailyBudget": null,
+        "lifetimeBudget": null
+      }
+    ],
+    "insights": [
+      {
+        "campaignName": "데이터바우처_03_06",
+        "campaignId": "120242346462350287",
+        "impressions": 8764,
+        "clicks": 305,
+        "spend": 400132,
+        "cpc": 1311.908197,
+        "ctr": 3.480146,
+        "reach": 4412,
+        "conversions": 34,
+        "actions": [
+          {
+            "action_type": "offsite_complete_registration_add_meta_leads",
+            "value": "34"
+          },
+          {
+            "action_type": "link_click",
+            "value": "223"
+          },
+          {
+            "action_type": "page_engagement",
+            "value": "249"
+          },
+          {
+            "action_type": "landing_page_view",
+            "value": "3"
+          },
+          {
+            "action_type": "omni_landing_page_view",
+            "value": "3"
+          },
+          {
+            "action_type": "post_interaction_gross",
+            "value": "26"
+          },
+          {
+            "action_type": "post",
+            "value": "3"
+          },
+          {
+            "action_type": "onsite_conversion.post_save",
+            "value": "5"
+          },
+          {
+            "action_type": "post_engagement",
+            "value": "249"
+          },
+          {
+            "action_type": "offsite_search_add_meta_leads",
+            "value": "34"
+          },
+          {
+            "action_type": "onsite_conversion.post_net_like",
+            "value": "18"
+          },
+          {
+            "action_type": "onsite_conversion.post_net_save",
+            "value": "5"
+          },
+          {
+            "action_type": "lead",
+            "value": "34"
+          },
+          {
+            "action_type": "offsite_content_view_add_meta_leads",
+            "value": "34"
+          },
+          {
+            "action_type": "onsite_conversion.lead_grouped",
+            "value": "34"
+          },
+          {
+            "action_type": "post_reaction",
+            "value": "18"
+          }
+        ]
+      },
+      {
+        "campaignName": "AI바우처_0316",
+        "campaignId": "120242783179740287",
+        "impressions": 2661,
+        "clicks": 101,
+        "spend": 138959,
+        "cpc": 1375.831683,
+        "ctr": 3.795566,
+        "reach": 1582,
+        "conversions": 21,
+        "actions": [
+          {
+            "action_type": "offsite_complete_registration_add_meta_leads",
+            "value": "21"
+          },
+          {
+            "action_type": "link_click",
+            "value": "69"
+          },
+          {
+            "action_type": "page_engagement",
+            "value": "74"
+          },
+          {
+            "action_type": "landing_page_view",
+            "value": "2"
+          },
+          {
+            "action_type": "omni_landing_page_view",
+            "value": "2"
+          },
+          {
+            "action_type": "post_interaction_gross",
+            "value": "4"
+          },
+          {
+            "action_type": "post",
+            "value": "2"
+          },
+          {
+            "action_type": "onsite_conversion.post_save",
+            "value": "1"
+          },
+          {
+            "action_type": "post_engagement",
+            "value": "74"
+          },
+          {
+            "action_type": "offsite_search_add_meta_leads",
+            "value": "21"
+          },
+          {
+            "action_type": "onsite_conversion.post_net_like",
+            "value": "1"
+          },
+          {
+            "action_type": "onsite_conversion.post_net_save",
+            "value": "1"
+          },
+          {
+            "action_type": "lead",
+            "value": "21"
+          },
+          {
+            "action_type": "offsite_content_view_add_meta_leads",
+            "value": "21"
+          },
+          {
+            "action_type": "onsite_conversion.lead_grouped",
+            "value": "21"
+          },
+          {
+            "action_type": "video_view",
+            "value": "1"
+          },
+          {
+            "action_type": "post_reaction",
+            "value": "1"
+          }
+        ]
+      }
+    ],
+    "insightsPrev": [
+      {
+        "campaignName": "데이터바우처_03_06",
+        "campaignId": "120242346462350287",
+        "impressions": 8341,
+        "clicks": 316,
+        "spend": 326280,
+        "cpc": 1032.531646,
+        "ctr": 3.788515,
+        "reach": 4062,
+        "conversions": 36
+      }
+    ],
+    "daily": [
+      {
+        "date": "2026-03-12",
+        "impressions": 1452,
+        "clicks": 61,
+        "spend": 57666,
+        "reach": 1229
+      },
+      {
+        "date": "2026-03-13",
+        "impressions": 1266,
+        "clicks": 39,
+        "spend": 52688,
+        "reach": 1105
+      },
+      {
+        "date": "2026-03-14",
+        "impressions": 1292,
+        "clicks": 46,
+        "spend": 64549,
+        "reach": 1114
+      },
+      {
+        "date": "2026-03-15",
+        "impressions": 1236,
+        "clicks": 49,
+        "spend": 56256,
+        "reach": 1074
+      },
+      {
+        "date": "2026-03-16",
+        "impressions": 1355,
+        "clicks": 47,
+        "spend": 61370,
+        "reach": 1173
+      },
+      {
+        "date": "2026-03-17",
+        "impressions": 2321,
+        "clicks": 70,
+        "spend": 107041,
+        "reach": 1693
+      },
+      {
+        "date": "2026-03-18",
+        "impressions": 2503,
+        "clicks": 94,
+        "spend": 139521,
+        "reach": 1782
+      }
+    ]
+  }
+}
