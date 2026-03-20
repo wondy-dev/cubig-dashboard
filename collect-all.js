@@ -551,9 +551,9 @@ async function collectGSC(auth) {
 // ========== Naver Ads 수집 ==========
 async function collectNaverAds() {
   console.log('  [Naver Ads] 수집 시작...');
-  const API_KEY = ENV.NAVER_ADS_API_KEY;
-  const SECRET_KEY = ENV.NAVER_ADS_SECRET_KEY;
-  const CUSTOMER_ID = ENV.NAVER_ADS_CUSTOMER_ID;
+  const API_KEY = (ENV.NAVER_ADS_API_KEY || '').trim();
+  const SECRET_KEY = (ENV.NAVER_ADS_SECRET_KEY || '').trim();
+  const CUSTOMER_ID = (ENV.NAVER_ADS_CUSTOMER_ID || '').trim();
   const BASE_URL = 'api.searchad.naver.com';
 
   if (!API_KEY || !SECRET_KEY || !CUSTOMER_ID) {
@@ -777,9 +777,11 @@ async function collectMetaAds() {
 // ========== Google Ads 수집 (google-ads-api 패키지 사용) ==========
 async function collectGoogleAds() {
   console.log('  [Google Ads] 수집 시작...');
-  const DEVELOPER_TOKEN = ENV.GOOGLE_ADS_DEVELOPER_TOKEN;
-  const CUSTOMER_ID = (ENV.GOOGLE_ADS_CUSTOMER_ID || '').replace(/-/g, '');
-  const MCC_ID = (ENV.GOOGLE_ADS_MCC_ID || '').replace(/-/g, '');
+  const DEVELOPER_TOKEN = (ENV.GOOGLE_ADS_DEVELOPER_TOKEN || '').trim();
+  const CUSTOMER_ID = (ENV.GOOGLE_ADS_CUSTOMER_ID || '').trim().replace(/-/g, '');
+  const MCC_ID = (ENV.GOOGLE_ADS_MCC_ID || '').trim().replace(/-/g, '');
+
+  if (IS_CI) console.log('    CI env check: DEV_TOKEN=' + (DEVELOPER_TOKEN ? 'SET(' + DEVELOPER_TOKEN.length + ')' : 'EMPTY') + ', CUST=' + (CUSTOMER_ID || 'EMPTY') + ', MCC=' + (MCC_ID || 'EMPTY'));
 
   if (!DEVELOPER_TOKEN || !CUSTOMER_ID) {
     console.log('    Google Ads 환경변수 누락 - 스킵');
