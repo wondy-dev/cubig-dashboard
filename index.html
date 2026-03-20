@@ -74,7 +74,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 </head>
 <body>
 <div class="header">
-  <div class="header-left"><h1>CUBIG Marketing Dashboard</h1><span class="badge">v2.1</span></div>
+  <div class="header-left"><h1>CUBIG Marketing Dashboard</h1><span class="badge">v2.4</span></div>
   <div class="header-right">
     <span class="last-updated" id="lastUpdated"></span>
     <input type="text" class="date-input" id="dateRange" placeholder="날짜 선택">
@@ -253,10 +253,10 @@ function renderOverview(){
   var llmDailyMap={};filteredLlmDaily.forEach(function(d){llmDailyMap[d.dims[0]]=d.mets[0];});
   destroyChart('dailyTraffic');
   chartInstances['dailyTraffic']=new Chart(document.getElementById('dailyTrafficChart'),{type:'line',data:{labels:dLabels,datasets:[
-    {label:'Cubig (\uBE14\uB85C\uADF8 \uC81C\uC678)',data:filteredCubigDaily.map(function(d){return Math.max(0,d.mets[0]-(blogDailyMap[d.dims[0]]||0));}),borderColor:COLORS.blue,backgroundColor:COLORS.blue+'15',fill:true,tension:.3,pointRadius:4,borderWidth:2.5},
-    {label:'Blog',data:filteredCubigDaily.map(function(d){return blogDailyMap[d.dims[0]]||0;}),borderColor:COLORS.green,backgroundColor:COLORS.green+'15',fill:true,tension:.3,pointRadius:4,borderWidth:2.5},
-    {label:'LLMCapsule',data:filteredCubigDaily.map(function(d){return llmDailyMap[d.dims[0]]||0;}),borderColor:COLORS.purple,backgroundColor:COLORS.purple+'15',fill:true,tension:.3,pointRadius:4,borderWidth:2.5},
-    {label:'SynTitan',data:filteredCubigDaily.map(function(d){return synDailyMap[d.dims[0]]||0;}),borderColor:COLORS.orange,backgroundColor:COLORS.orange+'15',fill:true,tension:.3,pointRadius:4,borderWidth:2.5}
+    {label:'Cubig (\uBE14\uB85C\uADF8 \uC81C\uC678)',data:filteredCubigDaily.map(function(d){return Math.max(0,d.mets[0]-(blogDailyMap[d.dims[0]]||0));}),borderColor:COLORS.blue,fill:false,tension:.3,pointRadius:4,borderWidth:2.5},
+    {label:'Blog',data:filteredCubigDaily.map(function(d){return blogDailyMap[d.dims[0]]||0;}),borderColor:COLORS.green,fill:false,tension:.3,pointRadius:4,borderWidth:2.5},
+    {label:'LLMCapsule',data:filteredCubigDaily.map(function(d){return llmDailyMap[d.dims[0]]||0;}),borderColor:COLORS.purple,fill:false,tension:.3,pointRadius:4,borderWidth:2.5},
+    {label:'SynTitan',data:filteredCubigDaily.map(function(d){return synDailyMap[d.dims[0]]||0;}),borderColor:COLORS.orange,fill:false,tension:.3,pointRadius:4,borderWidth:2.5}
   ]},options:{responsive:true,maintainAspectRatio:false,interaction:{intersect:false,mode:'index'},plugins:{legend:{position:'top'},tooltip:{callbacks:{label:function(ctx){return ctx.dataset.label+': '+fmt(ctx.parsed.y)+'\uC138\uC158';}}}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:'#f3f4f6'}}}}});
 
   // ---- Channel Donut (initial: cubig) ----
@@ -304,11 +304,11 @@ function renderOverview(){
 
   // ---- Ad Charts (line chart) — META + Naver 일별 ----
   var adDailyLabels=filteredMetaDaily.map(function(d){return parseDate(d.date);});
-  var adDatasets=[{label:'META',data:filteredMetaDaily.map(function(d){return d.spend;}),borderColor:'#1877f2',backgroundColor:'#1877f215',fill:true,tension:.3,pointRadius:4,borderWidth:2.5}];
+  var adDatasets=[{label:'META',data:filteredMetaDaily.map(function(d){return d.spend;}),borderColor:'#1877f2',fill:false,tension:.3,pointRadius:4,borderWidth:2.5}];
   // Naver 일별 지출 추가
   if(filteredNaverDaily.length>0){
     var naverDailyMap={};filteredNaverDaily.forEach(function(r){naverDailyMap[r.date]=(naverDailyMap[r.date]||0)+(r.salesAmt||0);});
-    adDatasets.push({label:'Naver',data:filteredMetaDaily.map(function(d){return naverDailyMap[d.date]||0;}),borderColor:'#03c75a',backgroundColor:'#03c75a15',fill:true,tension:.3,pointRadius:4,borderWidth:2.5});
+    adDatasets.push({label:'Naver',data:filteredMetaDaily.map(function(d){return naverDailyMap[d.date]||0;}),borderColor:'#03c75a',fill:false,tension:.3,pointRadius:4,borderWidth:2.5});
   }
   destroyChart('adDailySpend');
   chartInstances['adDailySpend']=new Chart(document.getElementById('adDailySpend'),{type:'line',data:{labels:adDailyLabels,datasets:adDatasets},options:{responsive:true,maintainAspectRatio:false,interaction:{intersect:false,mode:'index'},plugins:{legend:{position:'top'},tooltip:{callbacks:{label:function(ctx){return ctx.dataset.label+': '+fmtWon(ctx.raw);}}}},scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:'#f3f4f6'},ticks:{callback:function(v){return fmtWonShort(v);}}}}}});
