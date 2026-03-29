@@ -16,7 +16,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;b
 .header-left h1{font-size:18px;font-weight:700}
 .header-left .badge{background:var(--accent-light);color:var(--accent);font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600}
 .header-right{display:flex;align-items:center;gap:12px;position:absolute;right:32px;top:50%;transform:translateY(-50%)}
-.date-input{padding:8px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-size:13px;cursor:pointer;width:220px;text-align:center}
+.date-input{padding:8px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-size:13px;cursor:pointer;width:auto;min-width:100px;text-align:center}
 .header-right button{padding:8px 14px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-size:13px;cursor:pointer}
 .header-right button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 .last-updated{font-size:11px;color:var(--text-sub)}
@@ -86,7 +86,7 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
   <div class="header-left"><h1>CUBIG Marketing Dashboard</h1><span class="badge">v3.0</span></div>
   <div class="header-right">
     <span class="last-updated" id="lastUpdated"></span>
-    <input type="text" class="date-input" id="dateRange" placeholder="날짜 선택">
+    <input type="text" class="date-input" id="dateRange" placeholder="최근 7일" readonly style="cursor:pointer">
     <button onclick="location.reload()">&#8635; 새로고침</button>
   </div>
 </div>
@@ -124,12 +124,120 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
   <div class="tab-content" id="tab-seo"><div class="insight-box" style="opacity:.7"><h3>SEO / Search tab &mdash; coming soon</h3></div></div>
 </div>
 <script>
-var DATA=null,chartInstances={},selectedRange=null,_dateInRange=null,_dateInPrevRange=null;
+var DATA=null,chartInstances={},selectedRange=null,compareRange=null,_dateInRange=null,_dateInPrevRange=null,_pickerPhase='base';
 async function loadData(){try{var r=await fetch('data.enc');var b64=await r.text();if(b64.startsWith('{')){DATA=JSON.parse(b64);renderOverview();return;}var buf=Uint8Array.from(atob(b64),c=>c.charCodeAt(0));var salt=buf.slice(0,16);var iv=buf.slice(16,28);var authTag=buf.slice(buf.length-16);var enc=buf.slice(28,buf.length-16);var combined=new Uint8Array(enc.length+16);combined.set(enc);combined.set(authTag,enc.length);var keyMaterial=await crypto.subtle.importKey('raw',new TextEncoder().encode(DECRYPTION_KEY),{name:'PBKDF2'},false,['deriveBits','deriveKey']);var key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:100000,hash:'SHA-256'},keyMaterial,{name:'AES-GCM',length:256},false,['decrypt']);var dec=await crypto.subtle.decrypt({name:'AES-GCM',iv:iv},key,combined);DATA=JSON.parse(new TextDecoder().decode(dec));renderOverview();}catch(e){try{var r2=await fetch('data.json');DATA=await r2.json();renderOverview();}catch(e2){console.error('Dashboard error:',e2);document.getElementById('insightBox').innerHTML='<h3>데이터 로딩 실패: '+e2.message+'</h3>';}}}
 document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});document.querySelectorAll('.tab-content').forEach(function(x){x.classList.remove('active');});t.classList.add('active');document.getElementById('tab-'+t.dataset.tab).classList.add('active');});});
 var _defaultStart=new Date(new Date().setDate(new Date().getDate()-7)),_defaultEnd=new Date(new Date().setDate(new Date().getDate()-1));
 selectedRange=[_defaultStart,_defaultEnd];
-flatpickr('#dateRange',{mode:'range',dateFormat:'Y-m-d',defaultDate:[_defaultStart,_defaultEnd],minDate:new Date(new Date().setDate(new Date().getDate()-90)),maxDate:new Date(new Date().setDate(new Date().getDate()-1)),locale:{rangeSeparator:'  ~  '},onChange:function(dates){if(dates.length===2&&DATA){selectedRange=dates;renderOverview();}}});
+var _minDate=new Date(new Date().setDate(new Date().getDate()-90)),_maxDate=new Date(new Date().setDate(new Date().getDate()-1));
+function _fmtD(d){var y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),dd=String(d.getDate()).padStart(2,'0');return y+'-'+m+'-'+dd;}
+function _autoCompare(){
+  if(!selectedRange)return;
+  var days=Math.round((selectedRange[1]-selectedRange[0])/(864e5))+1;
+  var pe=new Date(selectedRange[0]);pe.setDate(pe.getDate()-1);
+  var ps=new Date(pe);ps.setDate(ps.getDate()-days+1);
+  compareRange=[ps,pe];
+}
+_autoCompare();
+var _isCustomRange=false;
+function _updateDateLabel(){
+  var el=document.getElementById('dateRange');
+  if(_isCustomRange&&selectedRange&&compareRange){
+    el.value=_fmtD(selectedRange[0])+' ~ '+_fmtD(selectedRange[1])+'  vs  '+_fmtD(compareRange[0])+' ~ '+_fmtD(compareRange[1]);
+  }else if(_isCustomRange&&selectedRange){
+    el.value=_fmtD(selectedRange[0])+' ~ '+_fmtD(selectedRange[1]);
+  }else{
+    el.value='최근 7일';
+  }
+  // 내용 길이에 맞게 너비 자동 조절
+  el.style.width=(el.value.length*8+32)+'px';
+}
+_updateDateLabel();
+// 4클릭 커스텀 달력: 기준 시작→끝 → 비교 시작→끝
+var _clicks=[],_clickPhase=0; // 0=기준시작,1=기준끝,2=비교시작,3=비교끝
+var _phaseLabels=['\u2460 \uAE30\uC900 \uC2DC\uC791\uC77C \uC120\uD0DD','\u2461 \uAE30\uC900 \uC885\uB8CC\uC77C \uC120\uD0DD','\u2462 \uBE44\uAD50 \uC2DC\uC791\uC77C \uC120\uD0DD','\u2463 \uBE44\uAD50 \uC885\uB8CC\uC77C \uC120\uD0DD'];
+function _inRange(d,s,e){var t=new Date(d.getFullYear(),d.getMonth(),d.getDate()).getTime(),a=new Date(s.getFullYear(),s.getMonth(),s.getDate()).getTime(),b=new Date(e.getFullYear(),e.getMonth(),e.getDate()).getTime();return t>=a&&t<=b;}
+function _refreshHighlights(fp){
+  var days=fp.calendarContainer.querySelectorAll('.flatpickr-day');
+  for(var i=0;i<days.length;i++){
+    var el=days[i],dt=el.dateObj;
+    if(!dt)continue;
+    el.classList.remove('base-range','base-end','comp-range','comp-end');
+    if(selectedRange&&selectedRange[0]&&selectedRange[1]&&_inRange(dt,selectedRange[0],selectedRange[1])){
+      el.classList.add('base-range');
+      if(dt.toDateString()===selectedRange[0].toDateString()||dt.toDateString()===selectedRange[1].toDateString())el.classList.add('base-end');
+    }
+    if(compareRange&&compareRange[0]&&compareRange[1]&&_inRange(dt,compareRange[0],compareRange[1])){
+      el.classList.add('comp-range');
+      if(dt.toDateString()===compareRange[0].toDateString()||dt.toDateString()===compareRange[1].toDateString())el.classList.add('comp-end');
+    }
+    if(_clickPhase>=1&&_clicks[0]&&dt.toDateString()===_clicks[0].toDateString())el.classList.add('base-end');
+    if(_clickPhase>=3&&_clicks[2]&&dt.toDateString()===_clicks[2].toDateString())el.classList.add('comp-end');
+  }
+}
+var _fp=flatpickr('#dateRange',{mode:'single',dateFormat:'Y-m-d',minDate:_minDate,maxDate:_maxDate,closeOnSelect:false,
+  onReady:function(s,d,fp){
+    var st=document.createElement('style');
+    st.textContent='.dp-hint{padding:8px 12px;font-size:12px;font-weight:600;text-align:center;border-bottom:1px solid #e8eaed;color:#2563eb;transition:color .15s}.dp-hint.compare{color:#f59e0b}.flatpickr-day.base-range{background:rgba(37,99,235,.12)!important;border-color:transparent!important}.flatpickr-day.base-end{background:#2563eb!important;color:#fff!important;border-color:#2563eb!important}.flatpickr-day.comp-range{background:rgba(245,158,11,.12)!important;border-color:transparent!important}.flatpickr-day.comp-end{background:#f59e0b!important;color:#fff!important;border-color:#f59e0b!important}';
+    document.head.appendChild(st);
+    var hint=document.createElement('div');hint.className='dp-hint';hint.id='dpHint';hint.textContent=_phaseLabels[0];
+    fp.calendarContainer.insertBefore(hint,fp.calendarContainer.firstChild);
+  },
+  onDayCreate:function(d,ds,fp,dayElem){
+    var dt=dayElem.dateObj;
+    if(selectedRange&&selectedRange[0]&&selectedRange[1]&&_inRange(dt,selectedRange[0],selectedRange[1])){
+      dayElem.classList.add('base-range');
+      if(dt.toDateString()===selectedRange[0].toDateString()||dt.toDateString()===selectedRange[1].toDateString())dayElem.classList.add('base-end');
+    }
+    if(compareRange&&compareRange[0]&&compareRange[1]&&_inRange(dt,compareRange[0],compareRange[1])){
+      dayElem.classList.add('comp-range');
+      if(dt.toDateString()===compareRange[0].toDateString()||dt.toDateString()===compareRange[1].toDateString())dayElem.classList.add('comp-end');
+    }
+    // 클릭 중간 상태에서 이미 선택된 날짜 표시
+    if(_clickPhase>=1&&_clicks[0]&&dt.toDateString()===_clicks[0].toDateString())dayElem.classList.add('base-end');
+    if(_clickPhase>=3&&_clicks[2]&&dt.toDateString()===_clicks[2].toDateString())dayElem.classList.add('comp-end');
+  },
+  onChange:function(dates,ds,fp){
+    if(!dates[0])return;
+    var _d=dates[0];var picked=new Date(_d.getFullYear(),_d.getMonth(),_d.getDate());
+    _clicks[_clickPhase]=picked;
+    _clickPhase++;
+    if(_clickPhase===1){
+      // 기준 시작 선택됨
+      selectedRange=[picked,null];compareRange=null;
+    }else if(_clickPhase===2){
+      // 기준 끝 선택됨 — 시작>끝이면 swap
+      if(_clicks[0]>_clicks[1]){var tmp=_clicks[0];_clicks[0]=_clicks[1];_clicks[1]=tmp;}
+      selectedRange=[_clicks[0],_clicks[1]];
+      _autoCompare(); // 기본 비교 기간 미리 계산
+    }else if(_clickPhase===3){
+      // 비교 시작 선택됨
+      compareRange=[picked,null];
+    }else if(_clickPhase===4){
+      // 비교 끝 선택됨 — swap if needed
+      if(_clicks[2]>_clicks[3]){var tmp2=_clicks[2];_clicks[2]=_clicks[3];_clicks[3]=tmp2;}
+      compareRange=[_clicks[2],_clicks[3]];
+      _clickPhase=0;_clicks=[];
+      _isCustomRange=true;
+      _updateDateLabel();
+      fp.close();
+      if(DATA)renderOverview();
+      return;
+    }
+    // 힌트 업데이트
+    var h=document.getElementById('dpHint');
+    if(h){h.textContent=_phaseLabels[_clickPhase]||'';h.className='dp-hint'+(_clickPhase>=2?' compare':'');}
+    _updateDateLabel();
+    fp.clear();// 선택 초기화 (다음 클릭 받기 위해)
+    _refreshHighlights(fp);// 하이라이트 갱신
+  },
+  onOpen:function(d,ds,fp){_clickPhase=0;_clicks=[];var h=document.getElementById('dpHint');if(h){h.textContent=_phaseLabels[0];h.className='dp-hint';}setTimeout(function(){_refreshHighlights(fp);},50);},
+  onClose:function(){
+    // 4클릭 미완료 시: 기준 2클릭 완료됐으면 자동비교로 적용, 아니면 기존 유지
+    if(_clickPhase>=2&&_clickPhase<4){_isCustomRange=true;_clickPhase=0;_clicks=[];_updateDateLabel();if(DATA)renderOverview();}
+    else if(_clickPhase>0&&_clickPhase<2){_clickPhase=0;_clicks=[];_updateDateLabel();}
+  }
+});
 
 function fmt(n){if(n==null)return'-';if(n>=1e6)return(n/1e6).toFixed(1)+'M';if(n>=1e4)return(n/1e4).toFixed(1)+'\uB9CC';if(n>=1e3)return n.toLocaleString();if(typeof n==='number'&&!Number.isInteger(n))return n.toFixed(1);return String(n);}
 function fmtWon(n){if(n==null)return'-';return Math.round(n).toLocaleString('ko-KR')+'\uC6D0';}
@@ -152,8 +260,8 @@ function renderOverview(){
   function dateInRange(dateStr){
     var ds=dateStr.length===8?dateStr.slice(0,4)+'-'+dateStr.slice(4,6)+'-'+dateStr.slice(6,8):dateStr;
     var t=new Date(ds).getTime();
-    var s0=new Date(selectedRange[0].toISOString().split('T')[0]).getTime();
-    var s1=new Date(selectedRange[1].toISOString().split('T')[0]).getTime();
+    var s0=new Date(selectedRange[0].getFullYear(),selectedRange[0].getMonth(),selectedRange[0].getDate()).getTime();
+    var s1=new Date(selectedRange[1].getFullYear(),selectedRange[1].getMonth(),selectedRange[1].getDate()).getTime();
     return t>=s0&&t<=s1;
   }
   _dateInRange=dateInRange;
@@ -170,19 +278,19 @@ function renderOverview(){
   var filteredGadsDaily=(gads.daily||[]).filter(function(r){return dateInRange(r.date);});
 
   // 날짜 범위 표시
-  var periodStart=selectedRange[0].toISOString().split('T')[0];
-  var periodEnd=selectedRange[1].toISOString().split('T')[0];
+  var periodStart=_fmtD(selectedRange[0]);
+  var periodEnd=_fmtD(selectedRange[1]);
   document.getElementById('insightPeriod').textContent=periodStart+' ~ '+periodEnd;
 
-  // 비교 기간: 선택 기간과 동일한 길이의 직전 기간
-  var rangeDays=Math.round((selectedRange[1]-selectedRange[0])/(1000*60*60*24))+1;
-  var prevEnd=new Date(selectedRange[0]);prevEnd.setDate(prevEnd.getDate()-1);
-  var prevStart=new Date(prevEnd);prevStart.setDate(prevStart.getDate()-rangeDays+1);
+  // 비교 기간: compareRange가 있으면 사용, 없으면 직전 동일 기간
+  var prevStart,prevEnd;
+  if(compareRange&&compareRange.length===2){prevStart=compareRange[0];prevEnd=compareRange[1];}
+  else{var rangeDays=Math.round((selectedRange[1]-selectedRange[0])/(1000*60*60*24))+1;prevEnd=new Date(selectedRange[0]);prevEnd.setDate(prevEnd.getDate()-1);prevStart=new Date(prevEnd);prevStart.setDate(prevStart.getDate()-rangeDays+1);}
   function dateInPrevRange(dateStr){
     var ds=dateStr.length===8?dateStr.slice(0,4)+'-'+dateStr.slice(4,6)+'-'+dateStr.slice(6,8):dateStr;
     var t=new Date(ds).getTime();
-    var s0=new Date(prevStart.toISOString().split('T')[0]).getTime();
-    var s1=new Date(prevEnd.toISOString().split('T')[0]).getTime();
+    var s0=new Date(prevStart.getFullYear(),prevStart.getMonth(),prevStart.getDate()).getTime();
+    var s1=new Date(prevEnd.getFullYear(),prevEnd.getMonth(),prevEnd.getDate()).getTime();
     return t>=s0&&t<=s1;
   }
   _dateInPrevRange=dateInPrevRange;
