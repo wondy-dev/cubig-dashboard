@@ -867,6 +867,36 @@ async function collectGoogleAds() {
   }
 }
 
+// ========== WordPress 블로그 게시일 수집 ==========
+async function collectBlogDates() {
+  console.log('  [WP] 블로그 게시일 수집...');
+  function fetchPage(page) {
+    return new Promise((resolve) => {
+      https.get(`https://cubig.ai/blogs/wp-json/wp/v2/posts?per_page=100&page=${page}&_fields=link,date&orderby=date&order=desc`, (res) => {
+        let data = '';
+        res.on('data', c => data += c);
+        res.on('end', () => {
+          try { resolve(JSON.parse(data)); } catch (e) { resolve([]); }
+        });
+      }).on('error', () => resolve([]));
+    });
+  }
+  const dateMap = {};
+  for (let page = 1; page <= 5; page++) {
+    const posts = await fetchPage(page);
+    if (!Array.isArray(posts) || posts.length === 0) break;
+    for (const p of posts) {
+      try {
+        const u = new URL(p.link);
+        dateMap[u.pathname] = p.date.split('T')[0];
+      } catch (e) {}
+    }
+    if (posts.length < 100) break;
+  }
+  console.log(`  [WP] ${Object.keys(dateMap).length}개 게시일 수집 완료`);
+  return dateMap;
+}
+
 // ========== 메인 ==========
 async function main() {
   console.log(`\n========================================`);
@@ -878,12 +908,13 @@ async function main() {
   const auth = await getGoogleAuth();
 
   // 병렬 수집 (Google API는 같은 auth, Naver/META는 독립)
-  const [ga4, gsc, googleAds, naver, meta] = await Promise.all([
+  const [ga4, gsc, googleAds, naver, meta, blogDates] = await Promise.all([
     collectGA4(auth),
     collectGSC(auth),
     collectGoogleAds(),
     collectNaverAds(),
-    collectMetaAds()
+    collectMetaAds(),
+    collectBlogDates()
   ]);
 
   const data = {
@@ -898,7 +929,8 @@ async function main() {
     gsc,
     googleAds,
     naver,
-    meta
+    meta,
+    blogDates: blogDates || {}
   };
 
   // 출력 디렉토리 생성
