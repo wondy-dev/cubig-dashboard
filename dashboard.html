@@ -121,12 +121,39 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
   </div>
   <div class="tab-content" id="tab-website"><div class="insight-box" style="opacity:.7"><h3>Website tab &mdash; coming soon</h3></div></div>
   <div class="tab-content" id="tab-ads"><div class="insight-box" style="opacity:.7"><h3>Ads tab &mdash; coming soon</h3></div></div>
-  <div class="tab-content" id="tab-seo"><div class="insight-box" style="opacity:.7"><h3>SEO / Search tab &mdash; coming soon</h3></div></div>
+  <div class="tab-content" id="tab-seo">
+    <!-- SEO KPI -->
+    <div class="kpi-grid" id="seoKpiGrid"></div>
+    <!-- 일별 검색 트렌드 -->
+    <div class="section-header"><span class="tt" data-tooltip="GSC 기준 cubig.ai 일별 클릭·노출 추이">SEARCH TREND</span></div>
+    <div class="chart-row single"><div class="chart-card"><h4>일별 검색 트렌드</h4><div class="chart-container h250"><canvas id="seoTrendChart"></canvas></div></div></div>
+    <!-- 유입 경로 분석 -->
+    <div class="section-header"><span class="tt" data-tooltip="GA4 sessionSource / sessionMedium 기준 유입 분석">TRAFFIC SOURCES</span></div>
+    <div class="chart-row">
+      <div class="chart-card"><h4>소스/매체 비율</h4><div class="chart-container h300"><canvas id="seoSourceDonut"></canvas></div></div>
+      <div class="chart-card"><h4>소스/매체 상세</h4><div style="overflow-x:auto;max-height:340px"><table class="data-table" id="seoSourceTable"><thead><tr><th>소스</th><th>매체</th><th class="num">세션</th><th class="num">사용자</th><th class="num">PV</th><th class="num">전주 대비</th></tr></thead><tbody id="seoSourceBody"></tbody></table></div></div>
+    </div>
+    <!-- UTM 캠페인 -->
+    <div class="section-header"><span class="tt" data-tooltip="UTM campaign 파라미터 기준 유입 추적 · (not set) 제외">UTM CAMPAIGNS</span></div>
+    <div class="chart-row single"><div class="chart-card"><h4>UTM 캠페인 추적</h4><div style="overflow-x:auto"><table class="data-table" id="seoCampaignTable"><thead><tr><th>캠페인</th><th>소스</th><th>매체</th><th class="num">세션</th><th class="num">사용자</th><th class="num">PV</th></tr></thead><tbody id="seoCampaignBody"></tbody></table></div></div></div>
+    <!-- 유입 퍼널 -->
+    <div class="section-header"><span class="tt" data-tooltip="채널별 Top 랜딩페이지 · 어떤 채널로 어떤 페이지에 도착하는지">CHANNEL FUNNEL</span></div>
+    <div class="chart-row single"><div class="chart-card"><h4>채널 &rarr; 랜딩페이지</h4><div style="overflow-x:auto;max-height:400px"><table class="data-table" id="seoFunnelTable"><thead><tr><th>채널</th><th>랜딩페이지</th><th class="num">세션</th><th class="num">사용자</th></tr></thead><tbody id="seoFunnelBody"></tbody></table></div></div></div>
+    <!-- 검색 키워드 -->
+    <div class="section-header"><span class="tt" data-tooltip="GSC 기준 검색 키워드 성과 · NEW = 최근 90일 내 신규">SEARCH KEYWORDS</span></div>
+    <div class="chart-row single"><div class="chart-card"><h4><span>검색 키워드</span><div class="filter-group"><button class="filter-btn active" data-filter="seokw" data-value="cubig">Cubig</button><button class="filter-btn" data-filter="seokw" data-value="llm">LLMCapsule</button><button class="filter-btn" data-filter="seokw" data-value="syn">SynTitan</button><button class="filter-btn" data-filter="seokw" data-value="blog">Blog</button></div></h4><div style="overflow-x:auto"><table class="data-table" id="seoKwTable"><thead><tr><th>키워드</th><th class="num">클릭</th><th class="num">노출</th><th class="num">CTR</th><th class="num">순위</th></tr></thead><tbody id="seoKwBody"></tbody></table></div></div></div>
+    <!-- 국가별 키워드 순위 -->
+    <div class="section-header"><span class="tt" data-tooltip="GSC 국가 필터 기준 cubig.ai 키워드 평균 게재순위 · 5개국 추적">KEYWORD RANKING BY COUNTRY</span></div>
+    <div class="chart-row single"><div class="chart-card"><h4>국가별 키워드 순위</h4><div style="overflow-x:auto"><table class="data-table" id="seoCountryRankTable"><thead><tr><th>키워드</th><th class="num">US</th><th class="num">KR</th><th class="num">UK</th><th class="num">FR</th><th class="num">DE</th></tr></thead><tbody id="seoCountryRankBody"></tbody></table></div></div></div>
+    <!-- AEO: AI 검색 노출 -->
+    <div class="section-header"><span class="tt" data-tooltip="Gemini(Google Search), GPT, Tavily(Perplexity 대체)에서 키워드 질문 시 CUBIG 도메인 노출 여부">AEO: AI SEARCH VISIBILITY</span></div>
+    <div class="chart-row single"><div class="chart-card"><h4>AI 검색 노출 현황</h4><div id="aeoStatus" style="font-size:12px;color:var(--text-sub);margin-bottom:8px"></div><div style="overflow-x:auto"><table class="data-table" id="seoAeoTable"><thead><tr><th>키워드</th><th class="num">Gemini</th><th class="num">GPT</th><th class="num">Tavily</th></tr></thead><tbody id="seoAeoBody"></tbody></table></div></div></div>
+  </div>
 </div>
 <script>
 var DATA=null,chartInstances={},selectedRange=null,compareRange=null,_dateInRange=null,_dateInPrevRange=null,_pickerPhase='base';
 async function loadData(){try{var r=await fetch('data.enc');var b64=await r.text();if(b64.startsWith('{')){DATA=JSON.parse(b64);renderOverview();return;}var buf=Uint8Array.from(atob(b64),c=>c.charCodeAt(0));var salt=buf.slice(0,16);var iv=buf.slice(16,28);var authTag=buf.slice(buf.length-16);var enc=buf.slice(28,buf.length-16);var combined=new Uint8Array(enc.length+16);combined.set(enc);combined.set(authTag,enc.length);var keyMaterial=await crypto.subtle.importKey('raw',new TextEncoder().encode(DECRYPTION_KEY),{name:'PBKDF2'},false,['deriveBits','deriveKey']);var key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:100000,hash:'SHA-256'},keyMaterial,{name:'AES-GCM',length:256},false,['decrypt']);var dec=await crypto.subtle.decrypt({name:'AES-GCM',iv:iv},key,combined);DATA=JSON.parse(new TextDecoder().decode(dec));renderOverview();}catch(e){try{var r2=await fetch('data.json');DATA=await r2.json();renderOverview();}catch(e2){console.error('Dashboard error:',e2);document.getElementById('insightBox').innerHTML='<h3>데이터 로딩 실패: '+e2.message+'</h3>';}}}
-document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});document.querySelectorAll('.tab-content').forEach(function(x){x.classList.remove('active');});t.classList.add('active');document.getElementById('tab-'+t.dataset.tab).classList.add('active');});});
+document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active');});document.querySelectorAll('.tab-content').forEach(function(x){x.classList.remove('active');});t.classList.add('active');document.getElementById('tab-'+t.dataset.tab).classList.add('active');if(t.dataset.tab==='seo'&&DATA)renderSEO();});});
 var _defaultStart=new Date(new Date().setDate(new Date().getDate()-7)),_defaultEnd=new Date(new Date().setDate(new Date().getDate()-1));
 selectedRange=[_defaultStart,_defaultEnd];
 var _minDate=new Date(new Date().setDate(new Date().getDate()-90)),_maxDate=new Date(new Date().setDate(new Date().getDate()-1));
@@ -541,6 +568,193 @@ function renderQueryTable(src){
     var isNew=checkIsNew(q.keys[0]);
     var newBadge=isNew?'<span class="new-badge">NEW</span>':'';
     return'<tr><td style="max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+q.keys[0]+'">'+q.keys[0]+newBadge+'</td><td class="num">'+q.clicks+'</td><td class="num">'+fmt(q.impressions)+'</td><td class="num">'+(q.ctr*100).toFixed(2)+'%</td><td class="num">'+q.position.toFixed(1)+'</td></tr>';
+  }).join('');
+}
+
+// ========== SEO 탭 렌더링 ==========
+var _seoRendered=false, AEO_DATA=null;
+async function loadAeoData(){
+  try{var r=await fetch('aeo-data.json');AEO_DATA=await r.json();}catch(e){AEO_DATA=null;}
+}
+loadAeoData();
+
+function renderSEO(){
+  var d=DATA;if(!d)return;
+  var gsc=d.gsc.cubig,ga4=d.ga4.cubig;
+
+  // === 1. KPI Cards ===
+  var ov=gsc.overview||{clicks:0,impressions:0,ctr:0,position:0};
+  var ovP=gsc.overviewPrev||{clicks:0,impressions:0,ctr:0,position:0};
+  var seoKpis=[
+    {label:'검색 클릭',value:fmt(ov.clicks),change:pctChange(ov.clicks,ovP.clicks),color:COLORS.blue,tip:'GSC 기준 전체 검색 클릭수'},
+    {label:'검색 노출',value:fmt(ov.impressions),change:pctChange(ov.impressions,ovP.impressions),color:COLORS.green,tip:'GSC 기준 전체 검색 노출수'},
+    {label:'평균 CTR',value:(ov.ctr*100).toFixed(2)+'%',change:pctChange(ov.ctr,ovP.ctr),color:COLORS.purple,tip:'클릭률 (클릭/노출)'},
+    {label:'평균 순위',value:ov.position?ov.position.toFixed(1):'-',change:ovP.position?pctChange(ovP.position,ov.position):{val:'-',cls:'neutral'},color:COLORS.orange,tip:'낮을수록 좋음 · 전체 평균 게재순위'}
+  ];
+  var kpiGrid=document.getElementById('seoKpiGrid');
+  kpiGrid.innerHTML='';
+  seoKpis.forEach(function(k){
+    var card=document.createElement('div');card.className='kpi-card';
+    card.innerHTML='<div class="kpi-label" title="'+k.tip+'">'+k.label+'</div><div class="kpi-value">'+k.value+'</div><div class="kpi-change '+k.change.cls+'">'+k.change.val+'</div>';
+    kpiGrid.appendChild(card);
+  });
+
+  // === 2. 일별 검색 트렌드 ===
+  var daily=gsc.daily||[];
+  if(daily.length>0){
+    var dLabels=daily.map(function(r){return parseDate(r.keys[0]);});
+    var dClicks=daily.map(function(r){return r.clicks;});
+    var dImps=daily.map(function(r){return r.impressions;});
+    if(chartInstances.seoTrend)chartInstances.seoTrend.destroy();
+    chartInstances.seoTrend=new Chart(document.getElementById('seoTrendChart'),{
+      type:'line',
+      data:{labels:dLabels,datasets:[
+        {label:'클릭',data:dClicks,borderColor:COLORS.blue,backgroundColor:'rgba(37,99,235,.08)',fill:true,tension:.3,pointRadius:3,borderWidth:2,yAxisID:'y'},
+        {label:'노출',data:dImps,borderColor:COLORS.green,borderDash:[5,3],fill:false,tension:.3,pointRadius:2,borderWidth:1.5,yAxisID:'y1'}
+      ]},
+      options:{responsive:true,maintainAspectRatio:false,interaction:{intersect:false,mode:'index'},
+        plugins:{legend:{position:'top'},tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+fmt(c.raw);}}}},
+        scales:{x:{grid:{display:false}},y:{beginAtZero:true,grid:{color:'#f3f4f6'},title:{display:true,text:'클릭'}},y1:{position:'right',beginAtZero:true,grid:{display:false},title:{display:true,text:'노출'}}}
+      }
+    });
+  }
+
+  // === 3. 유입 경로 (Source/Medium) ===
+  var sm=ga4.sourceMedium||[];
+  // thisWeek만 필터 (date_range_0)
+  var smThis=sm.filter(function(r){return r.dims[2]==='date_range_0';}).slice(0,15);
+  var smPrev={};sm.filter(function(r){return r.dims[2]==='date_range_1';}).forEach(function(r){smPrev[r.dims[0]+'/'+r.dims[1]]=r.mets[0];});
+
+  // 도넛
+  if(smThis.length>0){
+    var smLabels=smThis.map(function(r){return r.dims[0]+' / '+r.dims[1];});
+    var smData=smThis.map(function(r){return r.mets[0];});
+    var smColors=[COLORS.blue,COLORS.green,COLORS.orange,COLORS.purple,COLORS.pink,COLORS.teal,COLORS.red,'#d1d5db','#6366f1','#84cc16','#f97316','#06b6d4','#a855f7','#ec4899','#14b8a6'];
+    if(chartInstances.seoSourceDonut)chartInstances.seoSourceDonut.destroy();
+    chartInstances.seoSourceDonut=new Chart(document.getElementById('seoSourceDonut'),{
+      type:'doughnut',
+      data:{labels:smLabels,datasets:[{data:smData,backgroundColor:smColors.slice(0,smLabels.length),borderWidth:2,borderColor:'#fff'}]},
+      options:{responsive:true,maintainAspectRatio:false,cutout:'50%',plugins:{legend:{position:'right',labels:{padding:10,font:{size:11}}}}}
+    });
+  }
+
+  // 테이블
+  document.getElementById('seoSourceBody').innerHTML=smThis.map(function(r){
+    var key=r.dims[0]+'/'+r.dims[1];var prev=smPrev[key]||0;var ch=pctChange(r.mets[0],prev);
+    return'<tr><td>'+r.dims[0]+'</td><td>'+r.dims[1]+'</td><td class="num">'+fmt(r.mets[0])+'</td><td class="num">'+fmt(r.mets[1])+'</td><td class="num">'+fmt(r.mets[2])+'</td><td class="num '+ch.cls+'">'+ch.val+'</td></tr>';
+  }).join('');
+
+  // === 4. UTM 캠페인 ===
+  var camps=ga4.campaigns||[];
+  var campsThis=camps.filter(function(r){return r.dims[3]==='date_range_0'&&r.dims[0]!=='(not set)'&&r.dims[0]!=='(direct)';});
+  document.getElementById('seoCampaignBody').innerHTML=campsThis.length>0?campsThis.map(function(r){
+    return'<tr><td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+r.dims[0]+'">'+r.dims[0]+'</td><td>'+r.dims[1]+'</td><td>'+r.dims[2]+'</td><td class="num">'+fmt(r.mets[0])+'</td><td class="num">'+fmt(r.mets[1])+'</td><td class="num">'+fmt(r.mets[2])+'</td></tr>';
+  }).join(''):'<tr><td colspan="6" style="text-align:center;color:var(--text-sub)">UTM 캠페인 데이터 없음</td></tr>';
+
+  // === 5. 채널 → 랜딩페이지 퍼널 ===
+  var cl=ga4.channelLanding||[];
+  document.getElementById('seoFunnelBody').innerHTML=cl.slice(0,30).map(function(r){
+    var pg=r.dims[1].length>50?r.dims[1].slice(0,50)+'...':r.dims[1];
+    return'<tr><td><span class="platform-badge" style="font-size:11px">'+r.dims[0]+'</span></td><td style="max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+r.dims[1]+'">'+pg+'</td><td class="num">'+fmt(r.mets[0])+'</td><td class="num">'+fmt(r.mets[1])+'</td></tr>';
+  }).join('');
+
+  // === 6. 검색 키워드 (기존 renderQueryTable 재활용) ===
+  renderSeoKeywords('cubig');
+
+  // === 7. 국가별 키워드 순위 ===
+  renderCountryRank();
+
+  // === 8. AEO ===
+  renderAeo();
+
+  // 필터 이벤트
+  document.querySelectorAll('[data-filter="seokw"]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('[data-filter="seokw"]').forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      renderSeoKeywords(btn.dataset.value);
+    });
+  });
+
+  // 테이블 정렬
+  document.querySelectorAll('#tab-seo .data-table thead th').forEach(function(th){
+    th.addEventListener('click',function(){
+      var table=th.closest('table');var tbody=table.querySelector('tbody');
+      var rows=Array.from(tbody.querySelectorAll('tr'));
+      var idx=Array.from(th.parentNode.children).indexOf(th);
+      var isNum=th.classList.contains('num');
+      var asc=th.dataset.sort==='asc';th.dataset.sort=asc?'desc':'asc';
+      rows.sort(function(a,b){
+        var av=a.children[idx]?a.children[idx].textContent:'';
+        var bv=b.children[idx]?b.children[idx].textContent:'';
+        if(isNum){av=parseFloat(av.replace(/[^0-9.\-]/g,''))||0;bv=parseFloat(bv.replace(/[^0-9.\-]/g,''))||0;}
+        return asc?(av>bv?1:-1):(av<bv?1:-1);
+      });
+      rows.forEach(function(r){tbody.appendChild(r);});
+    });
+  });
+
+  _seoRendered=true;
+}
+
+function renderSeoKeywords(source){
+  var gsc=DATA.gsc;var queries,recent2w;
+  if(source==='cubig'){queries=gsc.cubig.queries||[];recent2w=gsc.cubig.recent2w||[];}
+  else if(source==='llm'){queries=gsc.llm.queries||[];recent2w=gsc.llm.recent2w||[];}
+  else if(source==='syn'){queries=gsc.syn.queries||[];recent2w=gsc.syn.recent2w||[];}
+  else if(source==='blog'){queries=gsc.cubig.blogQueries||[];recent2w=gsc.cubig.blogRecent2w||[];}
+  else{queries=[];recent2w=[];}
+  var r2wSet={};recent2w.forEach(function(q){r2wSet[q.keys[0]]=true;});
+  document.getElementById('seoKwBody').innerHTML=queries.map(function(q){
+    var isNew=!r2wSet[q.keys[0]]?'<span style="background:#dcfce7;color:#166534;font-size:10px;padding:1px 6px;border-radius:8px;margin-left:4px">NEW</span>':'';
+    return'<tr><td style="max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+q.keys[0]+'">'+q.keys[0]+isNew+'</td><td class="num">'+q.clicks+'</td><td class="num">'+fmt(q.impressions)+'</td><td class="num">'+(q.ctr*100).toFixed(2)+'%</td><td class="num">'+q.position.toFixed(1)+'</td></tr>';
+  }).join('');
+}
+
+function renderCountryRank(){
+  var cq=DATA.gsc.cubig.countryQueries||{};
+  var countries=['usa','kor','gbr','fra','deu'];
+  // 모든 키워드를 합친 유니크 리스트
+  var kwSet={};
+  countries.forEach(function(c){(cq[c]||[]).forEach(function(q){
+    if(!kwSet[q.keys[0]])kwSet[q.keys[0]]={clicks:0};
+    kwSet[q.keys[0]][c]=q.position;
+    kwSet[q.keys[0]].clicks+=q.clicks;
+  });});
+  var kwList=Object.entries(kwSet).sort(function(a,b){return b[1].clicks-a[1].clicks;}).slice(0,25);
+
+  function posCell(pos){
+    if(!pos&&pos!==0)return'<td class="num" style="color:#d1d5db">-</td>';
+    var p=pos.toFixed(1);
+    var bg=pos<=3?'#dcfce7':pos<=10?'#fef9c3':pos<=20?'#fed7aa':'#fecaca';
+    var color=pos<=3?'#166534':pos<=10?'#854d0e':pos<=20?'#9a3412':'#991b1b';
+    return'<td class="num" style="background:'+bg+';color:'+color+';font-weight:600">'+p+'</td>';
+  }
+
+  document.getElementById('seoCountryRankBody').innerHTML=kwList.map(function(kv){
+    var kw=kv[0],data=kv[1];
+    return'<tr><td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+kw+'">'+kw+'</td>'+posCell(data.usa)+posCell(data.kor)+posCell(data.gbr)+posCell(data.fra)+posCell(data.deu)+'</tr>';
+  }).join('');
+}
+
+function renderAeo(){
+  if(!AEO_DATA||!AEO_DATA.results){
+    document.getElementById('aeoStatus').textContent='AEO 데이터 없음 — collect-aeo.js 실행 필요';
+    document.getElementById('seoAeoBody').innerHTML='<tr><td colspan="4" style="text-align:center;color:var(--text-sub)">aeo-data.json 파일을 찾을 수 없습니다</td></tr>';
+    return;
+  }
+  var ts=new Date(AEO_DATA.checkedAt);
+  document.getElementById('aeoStatus').textContent='마지막 체크: '+ts.toLocaleString('ko-KR');
+
+  function statusIcon(s){
+    if(s==='mentioned')return'<span style="color:#166534;font-weight:700">&#10003; 노출</span>';
+    if(s==='indirect')return'<span style="color:#854d0e;font-weight:600">&#9670; 간접</span>';
+    if(s==='error'||s==='skip')return'<span style="color:#9ca3af">- 스킵</span>';
+    return'<span style="color:#991b1b">&#10007; 미노출</span>';
+  }
+
+  document.getElementById('seoAeoBody').innerHTML=AEO_DATA.results.map(function(r){
+    return'<tr><td style="max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+r.keyword+'">'+r.keyword+'</td><td class="num">'+statusIcon(r.gemini.status)+'</td><td class="num">'+statusIcon(r.gpt.status)+'</td><td class="num">'+statusIcon(r.tavily.status)+'</td></tr>';
   }).join('');
 }
 

@@ -1,0 +1,236 @@
+{
+  "checkedAt": "2026-03-29T05:42:55.766Z",
+  "keywordCount": 12,
+  "domains": [
+    "cubig.ai",
+    "syntitan.ai",
+    "llmcapsule.ai"
+  ],
+  "results": [
+    {
+      "keyword": "synthetic data generation",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "indirect",
+        "snippet": "synthetic data generation refers to the process of creating artificial data that mimics real-world data but does not contain any actual personal or sensitive information. this technique is often used in machine learning and data analysis to train models without the privacy concerns associated with u"
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "synthetic data generation creates artificial data that mimics real-world data for use in ai and machine learning, often to protect privacy or when real data is unavailable. techniques include statistical modeling and machine learning methods like gans. tools like tonic.ai help generate realistic syn",
+        "matchedUrls": [],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:41:07.692Z"
+    },
+    {
+      "keyword": "AI-ready data",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "not_found",
+        "snippet": "\"ai-ready data\" refers to data that is well-organized, clean, and structured in a way that makes it suitable for training artificial intelligence (ai) models. this type of data is essential for developing effective machine learning algorithms and ai applications. key characteristics of ai-ready data"
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "ai-ready data is clean, structured, and accessible for machine learning and ai applications. it ensures reliable, unbiased, and actionable insights. proper data governance is essential for ai readiness.",
+        "matchedUrls": [],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:41:18.457Z"
+    },
+    {
+      "keyword": "data OS for enterprise",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "not_found",
+        "snippet": "\"data os for enterprise\" refers to a comprehensive data management platform designed to facilitate the integration, processing, analysis, and governance of data across an organization. these platforms aim to create a unified data environment that enables businesses to leverage their data assets effe"
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "dataos is an enterprise-grade platform for building and managing data products, integrating seamlessly with existing data stacks to enhance data usability and accelerate business outcomes. it focuses on bringing software engineering best practices to data, ensuring real-time performance and governan",
+        "matchedUrls": [],
+        "totalResults": 9
+      },
+      "timestamp": "2026-03-29T05:41:28.961Z"
+    },
+    {
+      "keyword": "automated data curation",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "not_found",
+        "snippet": "automated data curation refers to the process of using algorithms and software tools to collect, organize, and manage data in a way that enhances its usability and accessibility without requiring extensive human intervention. this process often involves data cleaning, integration, enrichment, and va"
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "automated data curation involves using ai and machine learning to manage and refine data throughout its lifecycle, reducing manual effort and improving data quality. it includes processes like metadata generation, data standardization, and dataset curation for machine learning models.",
+        "matchedUrls": [],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:41:38.234Z"
+    },
+    {
+      "keyword": "LLM security gateway",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "not_found",
+        "snippet": "an \"llm security gateway\" refers to a security solution designed to manage and protect the use of large language models (llms) within organizations. these gateways typically focus on ensuring that the deployment and utilization of llms comply with security protocols, data privacy regulations, and or"
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "an llm security gateway manages interactions with large language models, enforces security, and ensures compliance. it routes requests dynamically and protects against data leaks. it centralizes control and monitoring for ai deployments.",
+        "matchedUrls": [],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:41:48.320Z"
+    },
+    {
+      "keyword": "enterprise LLM data protection",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "not_found",
+        "snippet": "\"enterprise llm data protection\" refers to the strategies, technologies, and practices that organizations implement to safeguard sensitive data when using large language models (llms) in enterprise settings. this is particularly important as llms can process and generate text based on the data they "
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "enterprises use private llms to protect sensitive data, ensuring it's not used for training and maintaining strict privacy controls. confidential ai platforms offer end-to-end data protection during llm interactions. protopia ai's stained glass transform converts data to a secure, non-reversible for",
+        "matchedUrls": [],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:41:59.678Z"
+    },
+    {
+      "keyword": "cross-domain data joining",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "not_found",
+        "snippet": "cross-domain data joining refers to the process of integrating and analyzing data from different sources or domains to gain insights that would not be possible when looking at each data source in isolation. this technique is particularly useful in fields like data analytics, business intelligence, a"
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "cross-domain data joining secures and facilitates communication between different classified data environments, employing advanced methodologies like stage-based, feature-level, and semantic meaning-based data fusion. it ensures secure data sharing while maintaining privacy and confidentiality.",
+        "matchedUrls": [],
+        "totalResults": 9
+      },
+      "timestamp": "2026-03-29T05:42:09.223Z"
+    },
+    {
+      "keyword": "synthetic data marketplace",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "indirect",
+        "snippet": "a synthetic data marketplace is a platform or service that provides synthetic data, which is artificially generated data that mimics real-world data but does not contain any actual personal or sensitive information. this type of data is used for various purposes, including training machine learning "
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "synthetic data marketplaces offer privacy-compliant, ai-generated data for various applications, including market research and product testing. they provide accurate, diverse datasets that enhance innovation while safeguarding privacy. leading providers include syntho ai and datarade.",
+        "matchedUrls": [],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:42:18.764Z"
+    },
+    {
+      "keyword": "unusable to usable data",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "not_found",
+        "snippet": "\"unusable to usable data\" refers to the process of transforming raw, unstructured, or poorly formatted data into a structured and meaningful format that can be effectively analyzed and utilized for decision-making. this transformation often involves data cleaning, normalization, integration, and enr"
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "an unusable index must be rebuilt or dropped and re-created to become usable again. this applies to databases like oracle. the process ensures optimal performance.",
+        "matchedUrls": [],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:42:27.713Z"
+    },
+    {
+      "keyword": "CUBIG AI data platform",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "mentioned",
+        "snippet": "cubig ai is a data platform that focuses on leveraging artificial intelligence to enhance data management and analytics. it is designed to help businesses make data-driven decisions by providing tools for data integration, analysis, and visualization. cubig ai typically aims to simplify the process "
+      },
+      "tavily": {
+        "status": "mentioned",
+        "snippet": "cubig is an ai-ready data infrastructure platform that enables secure, reproducible, and production-ready ai operations. it generates private synthetic data to facilitate secure data sharing. cubig supports all data types and industries.",
+        "matchedUrls": [
+          "https://cubig.ai/azoo",
+          "https://cubig.ai/",
+          "https://www.crunchbase.com/organization/cubig-82e6",
+          "https://medium.com/iona-star-inferences/quenching-ais-thirst-for-data-our-investment-in-cubig-0eb52d5aebcf",
+          "https://www.facebook.com/cubigcorp/"
+        ],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:42:37.256Z"
+    },
+    {
+      "keyword": "합성데이터 생성 플랫폼",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "indirect",
+        "snippet": "\"합성데이터 생성 플랫폼\" translates to \"synthetic data generation platform\" in english. these platforms are designed to create artificial data that mimics real-world data, which can be used for various purposes such as training machine learning models, testing software, and ensuring privacy compliance.\n\nnotab"
+      },
+      "tavily": {
+        "status": "not_found",
+        "snippet": "합성데이터 생성 플랫폼은 실제 데이터를 안전하게 모방하여 개인정보를 보호하고 효율적으로 관리합니다. 합성데이터는 원본 데이터의 통계적 특성을 유지하면서 새로운 데이터셋을 생성합니다. 이를 통해 인공지능 훈련에 필요한 데이터를 확장할 수 있습니다.",
+        "matchedUrls": [],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:42:44.730Z"
+    },
+    {
+      "keyword": "LLM 캡슐",
+      "gemini": {
+        "status": "error",
+        "reason": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent: [404 Not Found] models/gemini-2.5-flash-preview-05-20 is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods."
+      },
+      "gpt": {
+        "status": "mentioned",
+        "snippet": "\"llm 캡슐\" translates to \"llm capsule\" in english, which likely refers to a concept or product related to large language models (llms) in the context of artificial intelligence. while there may not be a specific product known as \"llm 캡슐,\" the term could be used to describe a compact or modular impleme"
+      },
+      "tavily": {
+        "status": "mentioned",
+        "snippet": "llm capsule is an ai security solution that protects against data leaks and ensures compliance. it enhances the safe use of large language models. it's designed for businesses to securely connect with ai.",
+        "matchedUrls": [
+          "https://cubig.ai/ko/llmcapsule",
+          "https://llmcapsule.ai/ko"
+        ],
+        "totalResults": 10
+      },
+      "timestamp": "2026-03-29T05:42:55.766Z"
+    }
+  ]
+}
