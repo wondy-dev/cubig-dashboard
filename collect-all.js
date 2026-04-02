@@ -18,7 +18,7 @@ const https = require('https');
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
-const { safeParallel } = require('../core/safe-parallel');
+const { safeParallel } = require('./core/safe-parallel');
 
 // ========== 환경변수 (.env 수동 파싱 또는 process.env에서 읽기) ==========
 function loadEnv() {
