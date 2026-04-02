@@ -18,6 +18,7 @@ const https = require('https');
 const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
+const { safeParallel } = require('../core/safe-parallel');
 
 // ========== 환경변수 (.env 수동 파싱 또는 process.env에서 읽기) ==========
 function loadEnv() {
@@ -64,12 +65,19 @@ const args = process.argv.slice(2);
 const periodIdx = args.indexOf('--period');
 const PERIOD = periodIdx !== -1 ? parseInt(args[periodIdx + 1]) || 7 : 7;
 
-// 이번주/지난주 기간 계산
+// 일별 데이터 보관 일수 (기본 90일 — 날짜 변경 시 비교 기간 충분히 확보)
+const collectIdx = args.indexOf('--collect-days');
+const COLLECT_DAYS = collectIdx !== -1 ? parseInt(args[collectIdx + 1]) || 90 : 90;
+
+// 이번주/지난주 기간 계산 (집계 쿼리용)
 const TODAY = new Date();
 const THIS_WEEK_END = daysAgo(1); // 어제까지
 const THIS_WEEK_START = daysAgo(PERIOD);
 const LAST_WEEK_END = daysAgo(PERIOD + 1);
 const LAST_WEEK_START = daysAgo(PERIOD * 2);
+
+// 일별 데이터 수집 범위 (90일)
+const DAILY_DATA_START = daysAgo(COLLECT_DAYS);
 
 // GSC는 2-3일 딜레이
 const GSC_END = daysAgo(3);
@@ -128,6 +136,8 @@ async function collectGA4(auth) {
 
   const thisWeek = { startDate: fmt(THIS_WEEK_START), endDate: fmt(THIS_WEEK_END) };
   const lastWeek = { startDate: fmt(LAST_WEEK_START), endDate: fmt(LAST_WEEK_END) };
+  // 일별 데이터 수집 범위 (90일 — 날짜 변경 시 비교 기간 충분히 확보)
+  const bothWeeks = { startDate: fmt(DAILY_DATA_START), endDate: fmt(THIS_WEEK_END) };
 
   // --- CUBIG 공홈 (SynTitan + MKT) ---
   // 전체 트래픽 (이번주 + 지난주)
@@ -141,7 +151,7 @@ async function collectGA4(auth) {
 
   // 일별 트래픽 추이
   const cubigDaily = await runReport(CUBIG_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }],
     metrics: [{ name: 'sessions' }, { name: 'totalUsers' }, { name: 'screenPageViews' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }]
@@ -149,7 +159,7 @@ async function collectGA4(auth) {
 
   // 일별 참여시간 (날짜 필터링용)
   const cubigDailyEngagement = await runReport(CUBIG_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }],
     metrics: [{ name: 'sessions' }, { name: 'userEngagementDuration' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }]
@@ -157,7 +167,7 @@ async function collectGA4(auth) {
 
   // 블로그 일별 트래픽 (cubig.ai/blogs/ 전용)
   const cubigBlogDaily = await runReport(CUBIG_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }],
     metrics: [{ name: 'sessions' }, { name: 'totalUsers' }, { name: 'screenPageViews' }],
     dimensionFilter: {
@@ -180,7 +190,7 @@ async function collectGA4(auth) {
 
   // 일별 블로그 페이지 (날짜 필터용)
   const cubigDailyBlogPages = await runReport(CUBIG_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }, { name: 'pagePath' }, { name: 'pageTitle' }],
     metrics: [{ name: 'screenPageViews' }, { name: 'totalUsers' }, { name: 'averageSessionDuration' }],
     dimensionFilter: {
@@ -244,7 +254,7 @@ async function collectGA4(auth) {
 
   // SynTitan ← cubig.ai 일별 (날짜 필터용)
   const synFromCubigDaily = await runReport(SYNTITAN_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }],
     metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
     dimensionFilter: {
@@ -263,7 +273,7 @@ async function collectGA4(auth) {
   });
 
   const llmDaily = await runReport(LLM_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }],
     metrics: [{ name: 'sessions' }, { name: 'totalUsers' }, { name: 'screenPageViews' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }]
@@ -304,7 +314,7 @@ async function collectGA4(auth) {
   });
 
   const synDaily = await runReport(SYNTITAN_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }],
     metrics: [{ name: 'sessions' }, { name: 'totalUsers' }, { name: 'screenPageViews' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }]
@@ -327,53 +337,103 @@ async function collectGA4(auth) {
 
   // 일별 채널 (날짜 필터용) — cubig, llm, syn
   const cubigDailyChannels = await runReport(CUBIG_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }, { name: 'sessionDefaultChannelGroup' }],
     metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }],
     limit: 50000
   });
   const llmDailyChannels = await runReport(LLM_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }, { name: 'sessionDefaultChannelGroup' }],
     metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }],
     limit: 50000
   });
   const synDailyChannels = await runReport(SYNTITAN_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }, { name: 'sessionDefaultChannelGroup' }],
     metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }],
     limit: 50000
   });
 
+  // Blog 전용 채널 (랜딩페이지 /blogs/ 기준)
+  const cubigBlogDailyChannels = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [bothWeeks],
+    dimensions: [{ name: 'date' }, { name: 'sessionDefaultChannelGroup' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    dimensionFilter: {
+      filter: { fieldName: 'landingPage', stringFilter: { matchType: 'BEGINS_WITH', value: '/blogs/' } }
+    },
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+    limit: 50000
+  });
+  // Cubig (Blog 제외) 채널
+  const cubigNoBlogDailyChannels = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [bothWeeks],
+    dimensions: [{ name: 'date' }, { name: 'sessionDefaultChannelGroup' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    dimensionFilter: {
+      notExpression: {
+        filter: { fieldName: 'landingPage', stringFilter: { matchType: 'BEGINS_WITH', value: '/blogs/' } }
+      }
+    },
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+    limit: 50000
+  });
+
   // 일별 국가 (날짜 필터용) — cubig, llm, syn
   const cubigDailyCountries = await runReport(CUBIG_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }, { name: 'country' }],
     metrics: [{ name: 'totalUsers' }, { name: 'sessions' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }],
     limit: 50000
   });
   const llmDailyCountries = await runReport(LLM_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }, { name: 'country' }],
     metrics: [{ name: 'totalUsers' }, { name: 'sessions' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }],
     limit: 50000
   });
   const synDailyCountries = await runReport(SYNTITAN_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }, { name: 'country' }],
     metrics: [{ name: 'totalUsers' }, { name: 'sessions' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }],
     limit: 50000
   });
 
+  // Blog 전용 국가 (랜딩페이지 /blogs/ 기준)
+  const cubigBlogDailyCountries = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [bothWeeks],
+    dimensions: [{ name: 'date' }, { name: 'country' }],
+    metrics: [{ name: 'totalUsers' }, { name: 'sessions' }],
+    dimensionFilter: {
+      filter: { fieldName: 'landingPage', stringFilter: { matchType: 'BEGINS_WITH', value: '/blogs/' } }
+    },
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+    limit: 50000
+  });
+  // Cubig (Blog 제외) 국가
+  const cubigNoBlogDailyCountries = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [bothWeeks],
+    dimensions: [{ name: 'date' }, { name: 'country' }],
+    metrics: [{ name: 'totalUsers' }, { name: 'sessions' }],
+    dimensionFilter: {
+      notExpression: {
+        filter: { fieldName: 'landingPage', stringFilter: { matchType: 'BEGINS_WITH', value: '/blogs/' } }
+      }
+    },
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+    limit: 50000
+  });
+
   // 일별 Referral 소스 (날짜 필터용)
   const cubigDailyReferral = await runReport(CUBIG_PROPERTY, {
-    dateRanges: [thisWeek],
+    dateRanges: [bothWeeks],
     dimensions: [{ name: 'date' }, { name: 'sessionSource' }],
     metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
     dimensionFilter: {
@@ -381,6 +441,89 @@ async function collectGA4(auth) {
     },
     orderBys: [{ dimension: { dimensionName: 'date' } }],
     limit: 50000
+  });
+
+  // Blog Referral (랜딩페이지 /blogs/ 기준)
+  const cubigBlogDailyReferral = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [bothWeeks],
+    dimensions: [{ name: 'date' }, { name: 'sessionSource' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    dimensionFilter: {
+      andGroup: {
+        expressions: [
+          { filter: { fieldName: 'sessionDefaultChannelGroup', stringFilter: { matchType: 'EXACT', value: 'Referral' } } },
+          { filter: { fieldName: 'landingPage', stringFilter: { matchType: 'BEGINS_WITH', value: '/blogs/' } } }
+        ]
+      }
+    },
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+    limit: 50000
+  });
+
+  // LLM Capsule Referral
+  const llmDailyReferral = await runReport(LLM_PROPERTY, {
+    dateRanges: [bothWeeks],
+    dimensions: [{ name: 'date' }, { name: 'sessionSource' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    dimensionFilter: {
+      filter: { fieldName: 'sessionDefaultChannelGroup', stringFilter: { matchType: 'EXACT', value: 'Referral' } }
+    },
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+    limit: 50000
+  });
+
+  // SynTitan Referral
+  const synDailyReferral = await runReport(SYNTITAN_PROPERTY, {
+    dateRanges: [bothWeeks],
+    dimensions: [{ name: 'date' }, { name: 'sessionSource' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    dimensionFilter: {
+      filter: { fieldName: 'sessionDefaultChannelGroup', stringFilter: { matchType: 'EXACT', value: 'Referral' } }
+    },
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+    limit: 50000
+  });
+
+  // === SEO 탭: UTM / Source / Medium / Landing ===
+  // Source/Medium 전체
+  const cubigSourceMedium = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [thisWeek, lastWeek],
+    dimensions: [{ name: 'sessionSource' }, { name: 'sessionMedium' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }, { name: 'screenPageViews' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 30
+  });
+  // Source/Medium 일별
+  const cubigSourceMediumDaily = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [bothWeeks],
+    dimensions: [{ name: 'date' }, { name: 'sessionSource' }, { name: 'sessionMedium' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+    limit: 50000
+  });
+  // UTM Campaign별
+  const cubigCampaigns = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [thisWeek, lastWeek],
+    dimensions: [{ name: 'sessionCampaignName' }, { name: 'sessionSource' }, { name: 'sessionMedium' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }, { name: 'screenPageViews' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 30
+  });
+  // 전체 랜딩페이지
+  const cubigLandingPages = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [thisWeek, lastWeek],
+    dimensions: [{ name: 'landingPage' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }, { name: 'averageSessionDuration' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 30
+  });
+  // 채널 → 랜딩페이지 퍼널
+  const cubigChannelLanding = await runReport(CUBIG_PROPERTY, {
+    dateRanges: [thisWeek],
+    dimensions: [{ name: 'sessionDefaultChannelGroup' }, { name: 'landingPage' }],
+    metrics: [{ name: 'sessions' }, { name: 'totalUsers' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 50
   });
 
   // Referral 소스 세분화 (채널=Referral인 경우의 sessionSource)
@@ -413,8 +556,18 @@ async function collectGA4(auth) {
       synFromCubigDaily: parseRows(synFromCubigDaily),
       referralSources: parseRows(cubigReferralSources),
       dailyChannels: parseRows(cubigDailyChannels),
+      blogDailyChannels: parseRows(cubigBlogDailyChannels),
+      noBlogDailyChannels: parseRows(cubigNoBlogDailyChannels),
       dailyCountries: parseRows(cubigDailyCountries),
-      dailyReferral: parseRows(cubigDailyReferral)
+      blogDailyCountries: parseRows(cubigBlogDailyCountries),
+      noBlogDailyCountries: parseRows(cubigNoBlogDailyCountries),
+      dailyReferral: parseRows(cubigDailyReferral),
+      blogDailyReferral: parseRows(cubigBlogDailyReferral),
+      sourceMedium: parseRows(cubigSourceMedium),
+      sourceMediumDaily: parseRows(cubigSourceMediumDaily),
+      campaigns: parseRows(cubigCampaigns),
+      landingPages: parseRows(cubigLandingPages),
+      channelLanding: parseRows(cubigChannelLanding)
     },
     llm: {
       traffic: parseRows(llmTraffic),
@@ -423,7 +576,8 @@ async function collectGA4(auth) {
       countries: parseRows(llmCountries),
       channels: parseRows(llmChannels),
       dailyChannels: parseRows(llmDailyChannels),
-      dailyCountries: parseRows(llmDailyCountries)
+      dailyCountries: parseRows(llmDailyCountries),
+      dailyReferral: parseRows(llmDailyReferral)
     },
     syn: {
       traffic: parseRows(synTraffic),
@@ -431,7 +585,8 @@ async function collectGA4(auth) {
       countries: parseRows(synCountries),
       channels: parseRows(synChannels),
       dailyChannels: parseRows(synDailyChannels),
-      dailyCountries: parseRows(synDailyCountries)
+      dailyCountries: parseRows(synDailyCountries),
+      dailyReferral: parseRows(synDailyReferral)
     }
   };
 }
@@ -489,7 +644,7 @@ async function collectGSC(auth) {
   // 전기간 쿼리 (신규 키워드 비교용)
   const cubigQueriesPrev = await query('sc-domain:cubig.ai', { ...lastWeek, dimensions: ['query'], type: 'web', rowLimit: 100 });
   // 최근 2주 쿼리 (NEW 뱃지 기준: 2주간 없던 키워드만 NEW)
-  const twoWeeksAgo = { startDate: fmt(daysAgo(17)), endDate: fmt(daysAgo(3)) };
+  const twoWeeksAgo = { startDate: fmt(daysAgo(COLLECT_DAYS)), endDate: fmt(daysAgo(3)) };
   const cubigRecent2w = await query('sc-domain:cubig.ai', { ...twoWeeksAgo, dimensions: ['query'], type: 'web', rowLimit: 200 });
   const cubigBlogRecent2w = await query('sc-domain:cubig.ai', {
     ...twoWeeksAgo, dimensions: ['query'], type: 'web', rowLimit: 200,
@@ -514,6 +669,16 @@ async function collectGSC(auth) {
   const synQueries = await query('https://syntitan.ai/', { ...thisWeek, dimensions: ['query'], type: 'web', rowLimit: 15 });
   const synQueriesPrev = await query('https://syntitan.ai/', { ...lastWeek, dimensions: ['query'], type: 'web', rowLimit: 100 });
 
+  // === 국가별 키워드 순위 (US, KR, UK, FR, DE) ===
+  const COUNTRIES = ['usa', 'kor', 'gbr', 'fra', 'deu'];
+  const countryQueries = {};
+  for (const country of COUNTRIES) {
+    countryQueries[country] = await query('sc-domain:cubig.ai', {
+      ...thisWeek, dimensions: ['query'], type: 'web', rowLimit: 20,
+      dimensionFilterGroups: [{ filters: [{ dimension: 'country', operator: 'equals', expression: country }] }]
+    });
+  }
+
   console.log('  [GSC] 수집 완료');
 
   return {
@@ -529,7 +694,8 @@ async function collectGSC(auth) {
       recent2w: cubigRecent2w,
       blogRecent2w: cubigBlogRecent2w,
       daily: cubigDaily,
-      syntitanQueries
+      syntitanQueries,
+      countryQueries
     },
     llm: {
       overview: llmOverview[0] || null,
@@ -646,7 +812,7 @@ async function collectNaverAds() {
     const statsDaily = [];
     const activeCampaigns = campaigns.filter(c => c.status === 'ELIGIBLE' || c.status === 'ACTIVE');
     for (const c of activeCampaigns) {
-      const d = new Date(THIS_WEEK_START);
+      const d = new Date(DAILY_DATA_START);
       while (d <= THIS_WEEK_END) {
         const dayStr = fmt(d);
         try {
@@ -742,7 +908,7 @@ async function collectMetaAds() {
     }));
 
     // 일별 추이 (계정 전체)
-    const dailyRes = await metaApiGet(`/${AD_ACCOUNT_ID}/insights?fields=impressions,clicks,spend,reach&time_increment=1&time_range={"since":"${fmt(THIS_WEEK_START)}","until":"${fmt(THIS_WEEK_END)}"}`);
+    const dailyRes = await metaApiGet(`/${AD_ACCOUNT_ID}/insights?fields=impressions,clicks,spend,reach&time_increment=1&time_range={"since":"${fmt(DAILY_DATA_START)}","until":"${fmt(THIS_WEEK_END)}"}`);
     const daily = (dailyRes.data || []).map(row => ({
       date: row.date_start,
       impressions: Number(row.impressions || 0),
@@ -752,7 +918,7 @@ async function collectMetaAds() {
     }));
 
     // 일별 캠페인별 인사이트 (날짜 필터 시 광고 테이블 재집계용)
-    const campaignDailyRes = await metaApiGet(`/${AD_ACCOUNT_ID}/insights?fields=campaign_name,campaign_id,impressions,clicks,spend,cpc,ctr,reach,actions&level=campaign&time_increment=1&time_range={"since":"${fmt(THIS_WEEK_START)}","until":"${fmt(THIS_WEEK_END)}"}&limit=100`);
+    const campaignDailyRes = await metaApiGet(`/${AD_ACCOUNT_ID}/insights?fields=campaign_name,campaign_id,impressions,clicks,spend,cpc,ctr,reach,actions&level=campaign&time_increment=1&time_range={"since":"${fmt(DAILY_DATA_START)}","until":"${fmt(THIS_WEEK_END)}"}&limit=200`);
     const campaignDaily = (campaignDailyRes.data || []).map(row => ({
       date: row.date_start,
       campaignName: row.campaign_name,
@@ -807,25 +973,14 @@ async function collectGoogleAds() {
       refresh_token: token.refresh_token
     });
 
-    // 이번 기간 일별 성과
+    // 전체 기간 일별 성과 (선택 + 비교 기간 충분히 포함)
     const dailyRows = await customer.query(`
       SELECT campaign.name, campaign.id, campaign.status,
              metrics.impressions, metrics.clicks, metrics.cost_micros,
              metrics.ctr, metrics.average_cpc, metrics.conversions,
              segments.date
       FROM campaign
-      WHERE segments.date BETWEEN '${fmt(THIS_WEEK_START)}' AND '${fmt(THIS_WEEK_END)}'
-      ORDER BY segments.date ASC
-    `);
-
-    // 비교 기간 일별 성과
-    const dailyPrevRows = await customer.query(`
-      SELECT campaign.name, campaign.id, campaign.status,
-             metrics.impressions, metrics.clicks, metrics.cost_micros,
-             metrics.ctr, metrics.average_cpc, metrics.conversions,
-             segments.date
-      FROM campaign
-      WHERE segments.date BETWEEN '${fmt(LAST_WEEK_START)}' AND '${fmt(LAST_WEEK_END)}'
+      WHERE segments.date BETWEEN '${fmt(DAILY_DATA_START)}' AND '${fmt(THIS_WEEK_END)}'
       ORDER BY segments.date ASC
     `);
 
@@ -845,7 +1000,6 @@ async function collectGoogleAds() {
     }
 
     const daily = dailyRows.map(parseRow);
-    const dailyPrev = dailyPrevRows.map(parseRow);
 
     // 캠페인 목록 (중복 제거)
     const campaignMap = {};
@@ -859,7 +1013,7 @@ async function collectGoogleAds() {
     const campaigns = Object.values(campaignMap);
 
     console.log(`  [Google Ads] 수집 완료 (캠페인 ${campaigns.length}개, 일별 ${daily.length}건)`);
-    return { campaigns, daily, dailyPrev };
+    return { campaigns, daily };
   } catch (err) {
     console.error('    Google Ads 오류:', err.message);
     if (err.errors) console.error('    상세:', JSON.stringify(err.errors).substring(0, 300));
@@ -901,21 +1055,36 @@ async function collectBlogDates() {
 async function main() {
   console.log(`\n========================================`);
   console.log(`  CUBIG 마케팅 대시보드 데이터 수집`);
-  console.log(`  기간: ${fmt(THIS_WEEK_START)} ~ ${fmt(THIS_WEEK_END)} (${PERIOD}일)`);
-  console.log(`  비교: ${fmt(LAST_WEEK_START)} ~ ${fmt(LAST_WEEK_END)}`);
+  console.log(`  기본 기간: ${fmt(THIS_WEEK_START)} ~ ${fmt(THIS_WEEK_END)} (${PERIOD}일)`);
+  console.log(`  일별 데이터: ${fmt(DAILY_DATA_START)} ~ ${fmt(THIS_WEEK_END)} (${COLLECT_DAYS}일 보관)`);
   console.log(`========================================\n`);
 
   const auth = await getGoogleAuth();
+  const pipelineStart = Date.now();
 
-  // 병렬 수집 (Google API는 같은 auth, Naver/META는 독립)
-  const [ga4, gsc, googleAds, naver, meta, blogDates] = await Promise.all([
-    collectGA4(auth),
-    collectGSC(auth),
-    collectGoogleAds(),
-    collectNaverAds(),
-    collectMetaAds(),
-    collectBlogDates()
-  ]);
+  // 병렬 수집 with safeParallel (타임아웃 + 에러 격리)
+  const collectors = [
+    { name: 'GA4', fn: () => collectGA4(auth) },
+    { name: 'GSC', fn: () => collectGSC(auth) },
+    { name: 'Google Ads', fn: () => collectGoogleAds() },
+    { name: 'Naver Ads', fn: () => collectNaverAds() },
+    { name: 'META Ads', fn: () => collectMetaAds() },
+    { name: 'Blog Dates', fn: () => collectBlogDates() }
+  ];
+
+  const results = await safeParallel(
+    collectors.map(c => c.fn),
+    { concurrency: 5, timeout: 120000, label: 'dashboard-collect' }
+  );
+
+  // 결과 매핑 (실패한 API는 빈 객체로 대체)
+  const [ga4, gsc, googleAds, naver, meta, blogDates] = results.map((r, i) => {
+    if (r.error) {
+      console.error(`  ⚠️ ${collectors[i].name} 실패: ${r.error}`);
+      return {};
+    }
+    return r.value;
+  });
 
   const data = {
     metadata: {
@@ -923,7 +1092,8 @@ async function main() {
       period: PERIOD,
       thisWeek: { start: fmt(THIS_WEEK_START), end: fmt(THIS_WEEK_END) },
       lastWeek: { start: fmt(LAST_WEEK_START), end: fmt(LAST_WEEK_END) },
-      gscPeriod: { start: fmt(GSC_START), end: fmt(GSC_END) }
+      gscPeriod: { start: fmt(GSC_START), end: fmt(GSC_END) },
+      pipelineMs: Date.now() - pipelineStart
     },
     ga4,
     gsc,
@@ -939,8 +1109,10 @@ async function main() {
   }
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(data, null, 2), 'utf8');
-  console.log(`\n✅ 데이터 수집 완료! → ${OUTPUT_FILE}`);
+  const elapsed = ((Date.now() - pipelineStart) / 1000).toFixed(1);
+  console.log(`\n✅ 데이터 수집 완료! → ${OUTPUT_FILE} (${elapsed}s)`);
   console.log(`   파일 크기: ${(fs.statSync(OUTPUT_FILE).size / 1024).toFixed(1)} KB`);
+  console.log(`   성공: ${results.filter(r => !r.error).length}/6 API`);
 }
 
 main().catch(err => {
