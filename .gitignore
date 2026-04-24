@@ -6,3 +6,5 @@ node_modules/
 outputs/
 google_credentials.json
 drive_token.json
+# plaintext market-intel JSON (암호화 후 .enc만 사용)
+market-intel-*.json
