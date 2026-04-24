@@ -79,11 +79,237 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
 .insight-box [data-tooltip]:hover::after{background:rgba(255,255,255,.75);color:#1a1a2e}
 .insight-box [data-tooltip]:hover::before{border-bottom-color:rgba(255,255,255,.75)}
 @media(max-width:1024px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.chart-row{grid-template-columns:1fr}.content{padding:16px}.header{padding:12px 16px}.tabs{padding:0 16px}}
+
+/* ===== MARKET INTEL TAB — R7 Design (Linear/Attio tone) ===== */
+:root{--n-bg:#fafbfc;--n-card:#ffffff;--n-border:#e5e8ef;--n-text:#111827;--n-text2:#6b7280;--n-accent:#2563eb;--n-hover:#f5f7fb;--n-radius:12px;--sidebar-w:200px;--topbar-h:56px;--shadow-card:0 1px 4px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);--shadow-hover:0 4px 16px rgba(0,0,0,.10);--z-sidebar:10;--z-detail:5;--badge-llm-bg:#dbeafe;--badge-llm-fg:#1e40af;--badge-syn-bg:#ede9fe;--badge-syn-fg:#5b21b6;--badge-azoo-bg:#ccfbf1;--badge-azoo-fg:#0f766e;--badge-both-bg:#f3f4f6;--badge-both-fg:#374151;--grad-lavender-from:#f3f0ff;--grad-lavender-to:#ede9fe;--grad-sky-from:#e0f2fe;--grad-sky-to:#bae6fd;--grad-amber-from:#fef3c7;--grad-amber-to:#fde68a;--grad-sage-from:#d1fae5;--grad-sage-to:#a7f3d0;--grad-blush-from:#ffe4e6;--grad-blush-to:#fecdd3;--grad-neutral-from:#f3f4f6;--grad-neutral-to:#e5e7eb}
+#tab-market-intel>*{margin-bottom:48px}
+#tab-market-intel{background:var(--n-bg);color:var(--n-text);min-height:80vh}
+#tab-market-intel.r7-active{margin:-24px -32px}
+@media(max-width:1024px){#tab-market-intel.r7-active{margin:-16px}}
+.r7-shell{display:flex;min-height:calc(100vh - var(--topbar-h));background:var(--bg);max-width:none}
+.r7-sidebar{width:var(--sidebar-w);flex-shrink:0;background:#ffffff;border-right:1px solid var(--border);position:sticky;top:0;height:100vh;display:flex;flex-direction:column;overflow-y:auto;z-index:var(--z-sidebar);contain:layout paint style}
+.r7-sidebar-logo{padding:16px 20px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px}
+.r7-sidebar-logo-mark{width:28px;height:28px;border-radius:7px;background:var(--accent);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;letter-spacing:-.3px}
+.r7-sidebar-logo-text{font-size:13px;font-weight:700;color:var(--text);letter-spacing:-.2px}
+.r7-nav{flex:1;padding:12px 0}
+.r7-nav-label{font-size:10px;font-weight:700;color:var(--text-sub);letter-spacing:.8px;text-transform:uppercase;padding:0 20px;margin-bottom:4px;margin-top:8px;display:block}
+.r7-nav-item{display:flex;align-items:center;gap:8px;padding:8px 20px;font-size:13px;font-weight:500;color:var(--text-sub);cursor:pointer;border:none;background:none;width:100%;text-align:left;border-left:3px solid transparent;transition:color .15s,background .15s,border-color .15s;line-height:1.4;position:relative}
+.r7-nav-item:hover{color:var(--text);background:#f5f7fb}
+.r7-nav-item.active{color:var(--accent);background:#f0f4ff;border-left-color:var(--accent);font-weight:600}
+.r7-nav-icon{width:16px;height:16px;flex-shrink:0;opacity:.7}
+.r7-nav-item.active .r7-nav-icon{opacity:1}
+.r7-nav-badge{margin-left:auto;font-size:10px;font-weight:700;background:var(--accent-light);color:var(--accent);padding:1px 6px;border-radius:10px}
+.r7-sidebar-footer{padding:12px 20px;border-top:1px solid var(--border);font-size:11px;color:var(--text-sub);line-height:1.6}
+.r7-sidebar-footer-label{font-size:10px;font-weight:600;color:var(--text-sub);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:2px}
+.r7-main{flex:1;min-width:0;overflow-x:hidden}
+.r7-topbar{height:var(--topbar-h);background:#ffffff;border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 32px;gap:16px;position:sticky;top:0;z-index:calc(var(--z-sidebar) - 1)}
+.r7-topbar-title{font-size:15px;font-weight:700;color:var(--text);white-space:nowrap}
+.r7-topbar-week-select{padding:6px 10px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-size:12px;color:var(--text-body,#374151);cursor:pointer;outline:none;transition:border-color .15s}
+.r7-topbar-week-select:focus{border-color:var(--accent)}
+.r7-topbar-search{flex:1;max-width:260px;padding:7px 12px;border:1px solid var(--border);border-radius:8px;background:var(--card);font-size:12px;color:var(--text);outline:none;transition:border-color .15s}
+.r7-topbar-search:focus{border-color:var(--accent)}
+.r7-topbar-product-group{display:flex;gap:4px;align-items:center}
+.r7-topbar-product-btn{padding:4px 10px;border:1px solid var(--border);border-radius:6px;font-size:11px;font-weight:600;cursor:pointer;background:var(--card);color:var(--text-sub);transition:all .15s}
+.r7-topbar-product-btn:hover{border-color:var(--accent);color:var(--accent)}
+.r7-topbar-product-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.r7-topbar-right{margin-left:auto;display:flex;align-items:center;gap:8px}
+.r7-view{display:none}.r7-view.active{display:block}
+.r7-feed-3pane{display:grid;grid-template-columns:220px 1fr 340px;height:calc(100vh - var(--topbar-h));overflow:hidden}
+.r7-filter-panel{background:#ffffff;border-right:1px solid var(--border);overflow-y:auto;padding:20px 0}
+.r7-filter-section{padding:0 16px 16px;border-bottom:1px solid var(--border)}
+.r7-filter-section:last-child{border-bottom:none}
+.r7-filter-section-title{font-size:11px;font-weight:700;color:var(--text-sub);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px;margin-top:16px;display:block}
+.r7-filter-check-item{display:flex;align-items:center;gap:8px;padding:4px 0;font-size:12px;color:var(--text-sub,#374151);cursor:pointer}
+.r7-filter-check-item input[type="checkbox"],.r7-filter-check-item input[type="radio"]{accent-color:var(--accent);width:14px;height:14px;flex-shrink:0;cursor:pointer}
+.r7-filter-source-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.r7-filter-count{margin-left:auto;font-size:10px;color:var(--text-sub);background:var(--bg);padding:1px 5px;border-radius:4px}
+.r7-filter-clear-btn{width:100%;padding:7px;background:none;border:1px solid var(--border);border-radius:6px;font-size:11px;font-weight:600;color:var(--text-sub);cursor:pointer;margin-top:8px;transition:border-color .15s,color .15s}
+.r7-filter-clear-btn:hover{border-color:var(--accent);color:var(--accent)}
+.r7-feed-center{overflow-y:auto;padding:24px;background:var(--bg)}
+.r7-feed-center-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;gap:12px;flex-wrap:wrap}
+.r7-feed-center-title{font-size:14px;font-weight:700;color:var(--text)}
+.r7-feed-count-badge{font-size:11px;font-weight:600;background:var(--accent-light);color:var(--accent);padding:2px 8px;border-radius:10px;margin-left:6px}
+.r7-feed-sort-select{font-size:12px;padding:5px 8px;border:1px solid var(--border);border-radius:6px;background:var(--card);color:var(--text-sub,#374151);cursor:pointer;outline:none}
+.r7-feed-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.r7-detail-panel{background:#ffffff;border-left:1px solid var(--border);overflow-y:auto;position:relative}
+.r7-detail-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;color:var(--text-sub);font-size:13px;text-align:center;padding:32px;gap:8px}
+.r7-detail-empty-icon{font-size:32px;opacity:.3}
+.r7-detail-content{padding:24px;display:none}
+.r7-detail-content.visible{display:block}
+.r7-detail-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:18px;color:var(--text-sub);cursor:pointer;padding:4px 8px;border-radius:4px}
+.r7-detail-close:hover{background:#f5f7fb}
+.r7-detail-source-row{display:flex;align-items:center;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.r7-detail-title{font-size:16px;font-weight:700;color:var(--text);line-height:1.4;margin-bottom:12px}
+.r7-detail-summary{font-size:14px;color:var(--text-sub,#374151);line-height:1.7;margin-bottom:16px}
+.r7-detail-section{border-radius:8px;padding:12px;margin-bottom:12px}
+.r7-detail-section-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:6px}
+.r7-detail-impl{background:#fffbeb;border-left:3px solid var(--orange)}
+.r7-detail-impl .r7-detail-section-label{color:var(--orange)}
+.r7-detail-cubig{background:var(--accent-light)}
+.r7-detail-cubig .r7-detail-section-label{color:var(--accent)}
+.r7-detail-hook{background:var(--bg);border:1px solid var(--border)}
+.r7-detail-hook .r7-detail-section-label{color:var(--text-sub)}
+.r7-detail-section-body{font-size:13px;color:var(--text-sub,#374151);line-height:1.65}
+.r7-detail-link-btn{display:block;width:100%;padding:10px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;text-align:center;text-decoration:none;cursor:pointer;margin-top:8px;transition:background .15s}
+.r7-detail-link-btn:hover{background:var(--accent-hover,#1d4ed8);color:#fff}
+.r7-feed-card{background:var(--card);border-radius:12px;box-shadow:var(--shadow-card);overflow:hidden;cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;contain:layout paint style}
+.r7-feed-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+.r7-feed-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.r7-card-colorbar{height:8px;flex-shrink:0}
+.r7-card-colorbar.cat-ai{background:linear-gradient(90deg,var(--grad-lavender-from),var(--grad-lavender-to))}
+.r7-card-colorbar.cat-privacy{background:linear-gradient(90deg,var(--grad-sky-from),var(--grad-sky-to))}
+.r7-card-colorbar.cat-regulation{background:linear-gradient(90deg,var(--grad-amber-from),var(--grad-amber-to))}
+.r7-card-colorbar.cat-market{background:linear-gradient(90deg,var(--grad-sage-from),var(--grad-sage-to))}
+.r7-card-colorbar.cat-competitor{background:linear-gradient(90deg,var(--grad-blush-from),var(--grad-blush-to))}
+.r7-card-colorbar.cat-tech{background:linear-gradient(90deg,var(--grad-sage-from),#d1fae5)}
+.r7-card-colorbar.cat-default{background:linear-gradient(90deg,var(--grad-neutral-from),var(--grad-neutral-to))}
+.r7-card-body{padding:16px 18px 14px;flex:1;display:flex;flex-direction:column}
+.r7-card-meta-row{display:flex;align-items:center;gap:6px;margin-bottom:8px;flex-wrap:wrap}
+.r7-card-source-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:6px;font-size:11px;font-weight:700}
+.r7-src-reddit{background:#fff1e6;color:#c2410c}.r7-src-hackernews{background:#fff5ec;color:#b35000}.r7-src-linkedin{background:#eff8ff;color:#1d4ed8}.r7-src-medium{background:#e8faf2;color:#007a4d}.r7-src-youtube{background:#fff0f0;color:#dc2626}.r7-src-x{background:#f3f4f6;color:#111827}.r7-src-producthunt{background:#fff2ee;color:#b33300}.r7-src-default{background:#f3f4f6;color:#374151}
+.r7-card-date{font-size:11px;color:var(--text-sub);margin-left:auto;font-weight:500}
+.r7-card-title{font-size:14px;font-weight:600;color:var(--text);line-height:1.45;margin-bottom:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.r7-card-summary{font-size:13px;color:var(--text-sub,#374151);line-height:1.7;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;margin-bottom:10px;flex:1}
+.r7-card-divider{height:1px;background:var(--border);margin:10px 0}
+.r7-card-impl{background:#fffbeb;border-left:3px solid var(--orange);border-radius:0 6px 6px 0;padding:8px 10px;margin-bottom:10px;font-size:12px;line-height:1.65;color:var(--text-sub,#374151)}
+.r7-card-impl-label{font-size:10px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.4px;display:block;margin-bottom:3px}
+.r7-card-tag-row{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:4px}
+.r7-product-badge{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:700;letter-spacing:.3px}
+.r7-badge-llm{background:var(--badge-llm-bg);color:var(--badge-llm-fg)}.r7-badge-syn{background:var(--badge-syn-bg);color:var(--badge-syn-fg)}.r7-badge-azoo{background:var(--badge-azoo-bg);color:var(--badge-azoo-fg)}.r7-badge-both{background:var(--badge-both-bg);color:var(--badge-both-fg)}
+.r7-hook-chip{display:inline-block;background:#f0f4ff;color:#4f46e5;font-size:10px;font-weight:600;padding:2px 7px;border-radius:6px;max-width:140px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.r7-cat-chip{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:6px}
+.r7-cat-ai{background:#f3f0ff;color:#6d28d9}.r7-cat-privacy{background:#eff8ff;color:#0369a1}.r7-cat-regulation{background:#fffbeb;color:#92400e}.r7-cat-market{background:#edfdf4;color:#065f46}.r7-cat-competitor{background:#fff0f3;color:#9f1239}.r7-cat-tech{background:#f0fdf4;color:#166534}.r7-cat-default{background:#f3f4f6;color:#374151}
+.r7-feed-card.selected{box-shadow:0 0 0 2px var(--accent),var(--shadow-hover)}
+.r7-active .mi-filter-bar{display:none!important}
+/* R7-2 Overview/Topics/Summary */
+.r72-section-label{font-size:11px;font-weight:700;color:var(--text-sub);letter-spacing:.8px;text-transform:uppercase}
+.r72-overview-wrap{padding:24px 28px;display:flex;flex-direction:column;gap:24px}
+.r72-kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1200px){.r72-kpi-row{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.r72-kpi-row{grid-template-columns:1fr}}
+.r72-kpi-card{position:relative;padding:20px 22px;border-radius:14px;background:rgba(255,255,255,.72);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.55);box-shadow:0 2px 12px rgba(37,99,235,.06),inset 0 1px 0 rgba(255,255,255,.8);overflow:hidden;contain:layout paint style;transition:transform .2s,box-shadow .2s}
+.r72-kpi-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(37,99,235,.10),inset 0 1px 0 rgba(255,255,255,.8)}
+.r72-kpi-accent{position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0}
+.r72-kpi-label{font-size:11px;font-weight:600;color:var(--text-sub);text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
+.r72-kpi-value{font-size:32px;font-weight:800;color:var(--text);line-height:1;letter-spacing:-1px;margin-bottom:6px;font-variant-numeric:tabular-nums}
+.r72-kpi-sub{font-size:12px;color:var(--text-sub);line-height:1.4}
+.r72-kpi-trend{display:inline-flex;align-items:center;gap:3px;font-size:11px;font-weight:700;padding:2px 7px;border-radius:20px;margin-top:6px}
+.r72-kpi-trend.up{background:#d1fae5;color:#065f46}.r72-kpi-trend.down{background:#fee2e2;color:#991b1b}.r72-kpi-trend.neu{background:#f3f4f6;color:#6b7280}
+.r72-dist-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:768px){.r72-dist-row{grid-template-columns:1fr}}
+.r72-dist-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;contain:layout paint style}
+.r72-dist-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:14px}
+.r72-bar-list{display:flex;flex-direction:column;gap:8px}
+.r72-bar-item{display:flex;align-items:center;gap:10px}
+.r72-bar-label{font-size:12px;color:var(--text-sub,#374151);width:96px;flex-shrink:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.r72-bar-track{flex:1;height:8px;background:var(--bg);border-radius:4px;overflow:hidden}
+.r72-bar-fill{height:100%;border-radius:4px;transition:width .4s cubic-bezier(.4,0,.2,1)}
+.r72-bar-count{font-size:11px;font-weight:700;color:var(--text-sub);width:28px;text-align:right;flex-shrink:0}
+.r72-top-section{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.r72-top-list{display:flex;flex-direction:column;gap:0;margin-top:12px}
+.r72-top-item{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .15s;border-radius:4px}
+.r72-top-item:last-child{border-bottom:none}
+.r72-top-item:hover{background:var(--bg);padding-left:6px}
+.r72-top-rank{width:22px;height:22px;border-radius:6px;background:var(--accent-light);color:var(--accent);font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.r72-top-content{flex:1;min-width:0}
+.r72-top-title{font-size:13px;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:4px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.r72-top-meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.r72-top-score{font-size:10px;font-weight:700;padding:1px 6px;background:var(--accent-light);color:var(--accent);border-radius:4px}
+.r72-topics-wrap{padding:24px 28px}
+.r72-topics-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;gap:12px}
+.r72-topics-week-label{font-size:12px;color:var(--text-sub)}
+.r72-topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:1100px){.r72-topics-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.r72-topics-grid{grid-template-columns:1fr}}
+.r72-topic-group{border-radius:12px;border:1px solid var(--border);overflow:hidden;contain:layout paint style;display:flex;flex-direction:column}
+.r72-topic-group-header{padding:12px 16px;font-size:12px;font-weight:700;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
+.r72-topic-group-count{margin-left:auto;font-size:10px;font-weight:700;opacity:.75;background:rgba(255,255,255,.35);padding:1px 7px;border-radius:10px}
+.r72-topic-group-body{padding:10px 14px;background:var(--card);flex:1}
+.r72-topic-item{padding:8px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:flex-start;cursor:pointer;transition:background .15s;border-radius:4px}
+.r72-topic-item:last-child{border-bottom:none}
+.r72-topic-item:hover{background:var(--bg);padding-left:4px}
+.r72-topic-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.r72-topic-text{font-size:12px;color:var(--text-sub,#374151);line-height:1.45;flex:1;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.r72-topic-badge{font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;flex-shrink:0;white-space:nowrap;align-self:flex-start;margin-top:2px}
+.r72-cat-bg-ai{background:linear-gradient(90deg,var(--grad-lavender-from),var(--grad-lavender-to));color:#5b21b6}.r72-cat-bg-privacy{background:linear-gradient(90deg,var(--grad-sky-from),var(--grad-sky-to));color:#0369a1}.r72-cat-bg-regulation{background:linear-gradient(90deg,var(--grad-amber-from),var(--grad-amber-to));color:#92400e}.r72-cat-bg-market{background:linear-gradient(90deg,var(--grad-sage-from),var(--grad-sage-to));color:#065f46}.r72-cat-bg-competitor{background:linear-gradient(90deg,var(--grad-blush-from),var(--grad-blush-to));color:#9f1239}.r72-cat-bg-tech{background:linear-gradient(90deg,#ecfdf5,#d1fae5);color:#065f46}.r72-cat-bg-default{background:linear-gradient(90deg,var(--grad-neutral-from),var(--grad-neutral-to));color:#374151}
+.r72-cat-dot-ai{background:#8b5cf6}.r72-cat-dot-privacy{background:#0ea5e9}.r72-cat-dot-regulation{background:#f59e0b}.r72-cat-dot-market{background:#10b981}.r72-cat-dot-competitor{background:#f43f5e}.r72-cat-dot-tech{background:#34d399}.r72-cat-dot-default{background:#9ca3af}
+.r72-cat-badge-ai{background:#ede9fe;color:#5b21b6}.r72-cat-badge-privacy{background:#e0f2fe;color:#0369a1}.r72-cat-badge-regulation{background:#fef3c7;color:#92400e}.r72-cat-badge-market{background:#d1fae5;color:#065f46}.r72-cat-badge-competitor{background:#ffe4e6;color:#9f1239}.r72-cat-badge-tech{background:#ecfdf5;color:#065f46}.r72-cat-badge-default{background:#f3f4f6;color:#374151}
+.r72-summary-wrap{padding:24px 28px;display:flex;flex-direction:column;gap:24px}
+.r72-summary-3col{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+@media(max-width:1100px){.r72-summary-3col{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.r72-summary-3col{grid-template-columns:1fr}}
+.r72-sum-col{border-radius:12px;border:1px solid var(--border);overflow:hidden;contain:layout paint style}
+.r72-sum-col-header{padding:12px 16px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px}
+.r72-sum-col-header--blue{background:linear-gradient(135deg,#dbeafe,#eff6ff);color:#1e40af}.r72-sum-col-header--purple{background:linear-gradient(135deg,#ede9fe,#f5f3ff);color:#5b21b6}.r72-sum-col-header--teal{background:linear-gradient(135deg,#ccfbf1,#f0fdfa);color:#0f766e}
+.r72-sum-col-body{padding:14px 16px;background:var(--card);display:flex;flex-direction:column;gap:10px}
+.r72-sum-item{padding:10px 12px;background:var(--bg);border-radius:8px;font-size:12px;color:var(--text-sub,#374151);line-height:1.55;border-left:3px solid transparent;transition:border-color .15s}
+.r72-sum-item:hover{border-left-color:var(--accent)}
+.r72-sum-item-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text-sub);margin-bottom:4px}
+.r72-sum-item-text{color:var(--text-sub,#374151)}
+.r72-sum-empty{font-size:12px;color:var(--text-sub);padding:12px;text-align:center;border:1px dashed var(--border);border-radius:8px}
+.r72-sum-topics{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
+.r72-topic-chips{display:flex;flex-wrap:wrap;gap:10px}
+.r72-topic-chip{display:flex;align-items:flex-start;flex-direction:column;gap:2px;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:10px;font-size:12px;transition:border-color .15s,box-shadow .15s;min-width:160px;max-width:260px;flex:1}
+.r72-topic-chip:hover{border-color:var(--accent);box-shadow:0 2px 8px rgba(37,99,235,.08)}
+.r72-topic-chip-num{font-size:10px;color:var(--text-sub);font-weight:700}
+.r72-topic-chip-title{font-weight:700;color:var(--text);line-height:1.3}
+.r72-topic-chip-why{font-size:11px;color:var(--text-sub);line-height:1.4;margin-top:2px}
+.r72-topic-chip-trend{margin-top:4px;font-size:10px;font-weight:700;padding:1px 7px;border-radius:10px;display:inline-block}
+.r72-chip-hot{background:#fee2e2;color:#991b1b}.r72-chip-rising{background:#fef3c7;color:#92400e}.r72-chip-steady{background:#d1fae5;color:#065f46}
+.r7-section-slot{min-height:0}
+/* Archive styles */
+.archive-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:12px}
+.archive-header{width:100%;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:var(--card);border:none;cursor:pointer;text-align:left;gap:12px}
+.archive-header:hover{background:var(--bg)}
+.archive-week-label{font-size:14px;font-weight:700;color:var(--text)}
+.archive-meta{font-size:12px;color:var(--text-sub)}
+.archive-toggle{font-size:12px;color:var(--text-sub);transition:transform .2s}
+.archive-item.open .archive-toggle{transform:rotate(180deg)}
+.archive-body{display:none;padding:20px;border-top:1px solid var(--border)}
+.archive-item.open .archive-body{display:block}
+.archive-block{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px}
+.archive-block summary{cursor:pointer;font-weight:700;font-size:13px;padding:6px 0}
+.archive-links{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+.archive-links a{color:var(--accent);text-decoration:none;font-size:13px}
+/* MI section wrappers (legacy) */
+.mi-section-wrapper{border-radius:10px;padding:20px 24px;margin-bottom:0}
+.mi-section-white{background:#ffffff}.mi-section-ivory{background:#fafaf9}.mi-section-ivory2{background:#fafaf5}.mi-section-salmon{background:#fdf6f2}.mi-section-feed-bg{background:#ffffff}
+.mi-section-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:16px;margin-top:0;display:flex;align-items:center;gap:10px;line-height:1.3}
+.mi-section-title .mi-line{flex:1;height:1px;background:var(--border)}
+.mi-no-data{background:var(--bg);border:1px dashed var(--border);border-radius:12px;padding:24px;text-align:center;color:var(--text-sub);font-size:13px}
+.mi-pagination{display:flex;gap:4px;flex-wrap:wrap;margin-top:16px}
+.mi-page-btn{padding:4px 10px;border:1px solid var(--border);border-radius:6px;font-size:12px;cursor:pointer;background:var(--card);color:var(--text-sub);transition:all .15s}
+.mi-page-btn:hover{border-color:var(--accent);color:var(--accent)}
+.mi-page-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+/* Modal */
+.n-modal-overlay{display:none;position:fixed;inset:0;background:rgba(55,53,47,.4);z-index:1000;align-items:center;justify-content:center}
+.n-modal-overlay.open{display:flex}
+.n-modal{background:#fff;border-radius:8px;width:min(760px,90vw);max-height:80vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(55,53,47,.18);overflow:hidden}
+.n-modal-head{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.n-modal-title{font-size:16px;font-weight:700;color:#37352f}
+.n-modal-close{background:none;border:none;font-size:20px;cursor:pointer;color:var(--text-sub);padding:4px 8px;border-radius:4px;line-height:1}
+.n-modal-close:hover{background:rgba(55,53,47,.06)}
+.n-modal-body{padding:20px 24px;overflow-y:auto;flex:1}
+.n-modal-link-item{display:flex;align-items:flex-start;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+.n-modal-link-item:last-child{border-bottom:none}
+.n-modal-ch-badge{font-size:9px;font-weight:700;color:#fff;padding:2px 5px;border-radius:3px;flex-shrink:0;margin-top:2px}
+.n-modal-link-title{font-size:13px;font-weight:500;color:#37352f;flex:1;line-height:1.5}
+.n-modal-link-title a{color:inherit;text-decoration:none}
+.n-modal-link-title a:hover{color:var(--accent);text-decoration:underline}
+.n-modal-meta{font-size:12px;color:var(--text-sub);margin-top:3px}
+/* pain / opportunity cards (used in archive) */
+.pain-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:16px}
+.opportunity-card{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:16px}
+.r5-view-all-btn{display:inline-flex;align-items:center;padding:4px 10px;border:1px solid var(--border);border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;background:var(--card);color:var(--text-sub);transition:all .15s;text-decoration:none}
+.r5-view-all-btn:hover{border-color:var(--accent);color:var(--accent)}
+.archive-subsection-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+/* Responsive */
+@media(max-width:480px){.r72-overview-wrap,.r72-topics-wrap,.r72-summary-wrap{padding:14px 12px;gap:14px}.r72-kpi-row{grid-template-columns:1fr 1fr;gap:10px}.r72-kpi-value{font-size:24px}.r72-summary-3col{grid-template-columns:1fr}.r72-dist-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <div class="header">
-  <div class="header-left"><h1>CUBIG Marketing Dashboard</h1><span class="badge">v3.0</span></div>
+  <div class="header-left"><h1>CUBIG Marketing Dashboard</h1><span class="badge">v4.0</span></div>
   <div class="header-right">
     <span class="last-updated" id="lastUpdated"></span>
     <input type="text" class="date-input" id="dateRange" placeholder="최근 7일" readonly style="cursor:pointer">
@@ -95,6 +321,7 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
   <div class="tab" data-tab="website">Website</div>
   <div class="tab" data-tab="ads">Ads</div>
   <div class="tab" data-tab="seo">SEO / Search</div>
+  <div class="tab" data-tab="market-intel">리서치</div>
 </div>
 <div class="content">
   <div class="tab-content active" id="tab-overview">
@@ -121,6 +348,244 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
   </div>
   <div class="tab-content" id="tab-website"><div class="insight-box" style="opacity:.7"><h3>Website tab &mdash; coming soon</h3></div></div>
   <div class="tab-content" id="tab-ads"><div class="insight-box" style="opacity:.7"><h3>Ads tab &mdash; coming soon</h3></div></div>
+
+  <!-- ===== 리서치 탭 (R7) ===== -->
+  <div class="tab-content r7-active" id="tab-market-intel">
+    <div class="r7-shell">
+      <!-- R7 Sidebar -->
+      <aside class="r7-sidebar" role="navigation" aria-label="리서치 대시보드 네비게이션">
+        <div class="r7-sidebar-logo">
+          <div class="r7-sidebar-logo-mark" aria-hidden="true">CB</div>
+          <span class="r7-sidebar-logo-text">Research</span>
+        </div>
+        <nav class="r7-nav">
+          <span class="r7-nav-label">메인</span>
+          <button class="r7-nav-item active" data-r7view="overview" aria-label="Overview" aria-current="page">
+            <svg class="r7-nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1" y="1" width="6" height="6" rx="1.5"/><rect x="9" y="1" width="6" height="6" rx="1.5"/><rect x="1" y="9" width="6" height="6" rx="1.5"/><rect x="9" y="9" width="6" height="6" rx="1.5"/></svg>
+            Overview
+          </button>
+          <button class="r7-nav-item" data-r7view="topics" aria-label="Topics">
+            <svg class="r7-nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4h12M2 8h8M2 12h10"/></svg>
+            Topics
+          </button>
+          <button class="r7-nav-item" data-r7view="summary" aria-label="Summary">
+            <svg class="r7-nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 2h10a1 1 0 011 1v10a1 1 0 01-1 1H3a1 1 0 01-1-1V3a1 1 0 011-1z"/><path d="M5 6h6M5 9h4"/></svg>
+            Summary
+          </button>
+          <button class="r7-nav-item" data-r7view="players" aria-label="Players">
+            <svg class="r7-nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="5" cy="5" r="2.5"/><circle cx="11" cy="5" r="2.5"/><path d="M1 14c0-2.2 1.8-4 4-4s4 1.8 4 4M9.5 11.5c.5-.3 1-.5 1.5-.5 2.2 0 4 1.8 4 4"/></svg>
+            Players
+          </button>
+          <button class="r7-nav-item" data-r7view="feed" aria-label="Feed">
+            <svg class="r7-nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 3a1 1 0 011-1h10a1 1 0 011 1v2a1 1 0 01-1 1H3a1 1 0 01-1-1V3zM2 9a1 1 0 011-1h10a1 1 0 011 1v2a1 1 0 01-1 1H3a1 1 0 01-1-1V9z"/></svg>
+            Feed
+            <span class="r7-nav-badge" id="r7-feed-count-badge">—</span>
+          </button>
+          <button class="r7-nav-item" data-r7view="archive" aria-label="Archive">
+            <svg class="r7-nav-icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4h12v1.5H2zM3.5 5.5v7a1 1 0 001 1h7a1 1 0 001-1v-7"/><path d="M6 8h4"/></svg>
+            Archive
+          </button>
+        </nav>
+        <div class="r7-sidebar-footer" role="status" aria-live="polite">
+          <span class="r7-sidebar-footer-label">마지막 수집</span>
+          <span id="r7-last-collect">—</span>
+        </div>
+      </aside>
+
+      <!-- R7 Main Area -->
+      <div class="r7-main" role="main">
+        <!-- R7 Topbar -->
+        <header class="r7-topbar">
+          <span class="r7-topbar-title" id="r7-topbar-title">Overview</span>
+          <select id="r7-week-select" class="r7-topbar-week-select" title="주차 선택" onchange="onR7WeekChange(this)" aria-label="주차 선택">
+            <option value="current">이번 주 (최신)</option>
+          </select>
+          <div class="r7-topbar-product-group" role="group" aria-label="제품 필터">
+            <button class="r7-topbar-product-btn active" data-r7product="all" aria-pressed="true">All</button>
+            <button class="r7-topbar-product-btn" data-r7product="syntitan" aria-pressed="false">SynTitan</button>
+            <button class="r7-topbar-product-btn" data-r7product="llmcapsule" aria-pressed="false">LLM Capsule</button>
+            <button class="r7-topbar-product-btn" data-r7product="azoo" aria-pressed="false">azoo</button>
+          </div>
+          <input class="r7-topbar-search" id="r7-search-input" type="search" placeholder="키워드 검색..." aria-label="피드 검색">
+          <div class="r7-topbar-right">
+            <span class="last-updated" id="r7-last-updated" style="font-size:11px;color:var(--text-sub)"></span>
+          </div>
+        </header>
+
+        <!-- Feed View -->
+        <div class="r7-view" id="r7-view-feed" role="region" aria-label="Activity Feed">
+          <div class="r7-feed-3pane">
+            <aside class="r7-filter-panel" role="complementary" aria-label="피드 필터">
+              <div class="r7-filter-section">
+                <span class="r7-filter-section-title">출처</span>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-src-filter" value="reddit" checked aria-label="Reddit 필터"><span class="r7-filter-source-dot" style="background:#ff4500"></span>Reddit<span class="r7-filter-count" id="r7-fc-reddit">—</span></label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-src-filter" value="hackernews" checked aria-label="HackerNews 필터"><span class="r7-filter-source-dot" style="background:#FF6600"></span>HackerNews<span class="r7-filter-count" id="r7-fc-hackernews">—</span></label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-src-filter" value="linkedin" checked aria-label="LinkedIn 필터"><span class="r7-filter-source-dot" style="background:#0a66c2"></span>LinkedIn<span class="r7-filter-count" id="r7-fc-linkedin">—</span></label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-src-filter" value="medium" checked aria-label="Medium 필터"><span class="r7-filter-source-dot" style="background:#00AB6C"></span>Medium<span class="r7-filter-count" id="r7-fc-medium">—</span></label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-src-filter" value="youtube" checked aria-label="YouTube 필터"><span class="r7-filter-source-dot" style="background:#ff0000"></span>YouTube<span class="r7-filter-count" id="r7-fc-youtube">—</span></label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-src-filter" value="x" checked aria-label="X 필터"><span class="r7-filter-source-dot" style="background:#000000"></span>X<span class="r7-filter-count" id="r7-fc-x">—</span></label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-src-filter" value="producthunt" checked aria-label="ProductHunt 필터"><span class="r7-filter-source-dot" style="background:#DA552F"></span>ProductHunt<span class="r7-filter-count" id="r7-fc-producthunt">—</span></label>
+              </div>
+              <div class="r7-filter-section">
+                <span class="r7-filter-section-title">제품 라인</span>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-product-filter" value="syntitan" aria-label="SynTitan 필터">SynTitan</label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-product-filter" value="llmcapsule" aria-label="LLM Capsule 필터">LLM Capsule</label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-product-filter" value="azoo" aria-label="azoo 필터">azoo</label>
+              </div>
+              <div class="r7-filter-section">
+                <span class="r7-filter-section-title">관련도</span>
+                <label class="r7-filter-check-item"><input type="radio" name="r7-rel-filter" value="all" checked aria-label="전체 관련도">전체</label>
+                <label class="r7-filter-check-item"><input type="radio" name="r7-rel-filter" value="0.9" aria-label="관련도 0.9 이상">0.9+ 높음</label>
+                <label class="r7-filter-check-item"><input type="radio" name="r7-rel-filter" value="0.7" aria-label="관련도 0.7 이상">0.7+ 중간</label>
+                <label class="r7-filter-check-item"><input type="radio" name="r7-rel-filter" value="0.5" aria-label="관련도 0.5 이상">0.5+ 낮음</label>
+              </div>
+              <div class="r7-filter-section">
+                <span class="r7-filter-section-title">감성</span>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-sent-filter" value="positive" checked aria-label="긍정 감성 필터">긍정</label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-sent-filter" value="neutral" checked aria-label="중립 감성 필터">중립</label>
+                <label class="r7-filter-check-item"><input type="checkbox" class="r7-sent-filter" value="negative" checked aria-label="부정 감성 필터">부정</label>
+              </div>
+              <div class="r7-filter-section">
+                <button class="r7-filter-clear-btn" id="r7-filter-clear-btn" aria-label="필터 초기화">필터 초기화</button>
+              </div>
+            </aside>
+            <section class="r7-feed-center" aria-label="피드 카드 목록">
+              <div class="r7-feed-center-header">
+                <div><span class="r7-feed-center-title">Activity Feed</span><span class="r7-feed-count-badge" id="r7-feed-total-count">0</span></div>
+                <select class="r7-feed-sort-select" id="r7-feed-sort" aria-label="정렬 방식">
+                  <option value="ai">AI 추천순</option>
+                  <option value="latest">최신순</option>
+                  <option value="engage">인기순</option>
+                </select>
+              </div>
+              <div class="r7-feed-grid" id="r7-feed-grid" role="list"></div>
+              <div class="mi-pagination" id="r7-pagination" role="navigation" aria-label="페이지 네비게이션"></div>
+            </section>
+            <aside class="r7-detail-panel" role="complementary" aria-label="상세 정보" id="r7-detail-panel">
+              <div class="r7-detail-empty" id="r7-detail-empty" aria-live="polite">
+                <span class="r7-detail-empty-icon" aria-hidden="true">&#9654;</span>
+                카드를 클릭하면<br>상세 내용이 표시됩니다
+              </div>
+              <div class="r7-detail-content" id="r7-detail-content" aria-live="polite">
+                <button class="r7-detail-close" id="r7-detail-close" aria-label="상세 패널 닫기">&#215;</button>
+                <div class="r7-detail-source-row" id="r7-detail-source-row"></div>
+                <h2 class="r7-detail-title" id="r7-detail-title"></h2>
+                <p class="r7-detail-summary" id="r7-detail-summary"></p>
+                <div class="r7-detail-section r7-detail-impl" id="r7-detail-impl-section">
+                  <span class="r7-detail-section-label">시사점</span>
+                  <p class="r7-detail-section-body" id="r7-detail-impl-body"></p>
+                </div>
+                <div class="r7-detail-section r7-detail-cubig" id="r7-detail-cubig-section">
+                  <span class="r7-detail-section-label">CUBIG 연관성</span>
+                  <div id="r7-detail-cubig-badges" style="margin-bottom:6px;display:flex;gap:4px;flex-wrap:wrap;"></div>
+                  <p class="r7-detail-section-body" id="r7-detail-cubig-body"></p>
+                </div>
+                <div class="r7-detail-section r7-detail-hook" id="r7-detail-hook-section">
+                  <span class="r7-detail-section-label">콘텐츠 연계</span>
+                  <p class="r7-detail-section-body" id="r7-detail-hook-body"></p>
+                </div>
+                <a class="r7-detail-link-btn" id="r7-detail-link-btn" href="#" target="_blank" rel="noopener noreferrer">원문 보기 &#8599;</a>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <!-- Overview View -->
+        <div class="r7-view active" id="r7-view-overview" role="region" aria-label="Overview">
+          <div class="r72-overview-wrap">
+            <section class="r72-kpi-row" aria-label="핵심 지표" id="r72-kpi-row"></section>
+            <div class="r72-dist-row">
+              <div class="r72-dist-card"><div class="r72-dist-title">채널별 수집 분포</div><div class="r72-bar-list" id="r72-channel-bars" role="list"></div></div>
+              <div class="r72-dist-card"><div class="r72-dist-title">카테고리별 분포</div><div class="r72-bar-list" id="r72-category-bars" role="list"></div></div>
+            </div>
+            <div class="r72-top-section">
+              <div class="r72-section-label">AI 적합도 Top 5</div>
+              <div class="r72-top-list" id="r72-top-list" role="list"></div>
+            </div>
+            <div id="r7-overview-summary-slot" class="r7-section-slot"></div>
+            <div id="r7-overview-ranking-slot" class="r7-section-slot"></div>
+          </div>
+        </div>
+
+        <!-- Topics View -->
+        <div class="r7-view" id="r7-view-topics" role="region" aria-label="Topics">
+          <div class="r72-topics-wrap">
+            <div class="r72-topics-header">
+              <span class="r72-section-label">이번 주 콘텐츠 주제 제안</span>
+              <span class="r72-topics-week-label" id="r72-topics-week">—</span>
+            </div>
+            <div class="r72-topics-grid" id="r72-topics-grid" role="list"></div>
+            <div id="r7-topics-slot" class="r7-section-slot"></div>
+          </div>
+        </div>
+
+        <!-- Summary View -->
+        <div class="r7-view" id="r7-view-summary" role="region" aria-label="Summary">
+          <div class="r72-summary-wrap">
+            <div class="r72-summary-3col">
+              <div class="r72-sum-col">
+                <div class="r72-sum-col-header r72-sum-col-header--blue">&#128200; 이번 주 하이라이트</div>
+                <div class="r72-sum-col-body" id="r72-sum-highlights-body"></div>
+              </div>
+              <div class="r72-sum-col">
+                <div class="r72-sum-col-header r72-sum-col-header--purple">&#128293; 트렌드 &amp; 언급</div>
+                <div class="r72-sum-col-body" id="r72-sum-trends-body"></div>
+              </div>
+              <div class="r72-sum-col">
+                <div class="r72-sum-col-header r72-sum-col-header--teal">&#127919; CUBIG 연관 포인트</div>
+                <div class="r72-sum-col-body" id="r72-sum-cubig-body"></div>
+              </div>
+            </div>
+            <div class="r72-sum-topics">
+              <div class="r72-section-label" style="margin-bottom:12px">콘텐츠 제안 키워드</div>
+              <div class="r72-topic-chips" id="r72-topic-chips" role="list"></div>
+            </div>
+            <div id="r7-summary-pain-slot" class="r7-section-slot"></div>
+            <div id="r7-summary-conversion-slot" class="r7-section-slot"></div>
+            <div id="r7-summary-opportunity-slot" class="r7-section-slot"></div>
+            <div id="r7-summary-sentiment-slot" class="r7-section-slot"></div>
+          </div>
+        </div>
+
+        <!-- Players View -->
+        <div class="r7-view" id="r7-view-players" role="region" aria-label="Market Players">
+          <div class="r72-overview-wrap">
+            <div id="r7-players-slot" class="r7-section-slot"></div>
+          </div>
+        </div>
+
+        <!-- Archive View -->
+        <div class="r7-view" id="r7-view-archive" role="region" aria-label="Archive" style="padding:32px;">
+          <div id="r7-archive-container">
+            <div class="mi-section-title" style="margin-bottom:24px;">Weekly Archive <span class="mi-line"></span></div>
+            <div id="mi-archive-wrap"></div>
+          </div>
+        </div>
+
+      </div><!-- /r7-main -->
+    </div><!-- /r7-shell -->
+
+    <!-- LEGACY DOM nodes (hidden, kept for JS compat) -->
+    <div style="display:none">
+      <div id="n-section-summary"><div class="mi-section-wrapper mi-section-ivory"><div id="mi-weekly-summary-wrap"></div></div></div>
+      <div id="n-section-ranking"><div class="mi-section-wrapper mi-section-ivory2"><div class="mi-section-title">주제별 언급 랭킹 <span class="mi-line"></span></div><div id="mi-topic-ranking-wrap"></div></div></div>
+      <div id="n-section-topics"><div id="mi-section-topic-suggestions" class="mi-section-wrapper"><div class="mi-section-title">이번 주 콘텐츠 주제 제안 <span class="mi-line"></span></div><div id="mi-topic-suggestions-wrap"></div></div></div>
+      <div id="n-section-pain"><div id="mi-section-pain" class="mi-section-wrapper mi-section-salmon"><div class="mi-section-title">산업별 Pain Point <span class="mi-line"></span></div><div id="mi-pain-map"></div></div></div>
+      <div id="n-section-conversion"><div id="mi-section-conversion" class="mi-section-wrapper mi-section-white"><div class="mi-section-title">고객 전환 신호 <span class="mi-line"></span></div><div id="mi-conversion-wrap"></div></div></div>
+      <div id="n-section-opportunity"><div id="mi-section-opportunity" class="mi-section-wrapper mi-section-ivory"><div class="mi-section-title">기회 영역 <span class="mi-line"></span></div><div id="mi-opportunity-wrap"></div></div></div>
+      <div id="n-section-sentiment"><div class="mi-section-wrapper"><div class="mi-section-title">Market Sentiment <span class="mi-line"></span></div><div id="mi-sentiment-wrap"></div></div></div>
+      <div id="n-section-players"><div id="mi-section-players" class="mi-section-wrapper mi-section-ivory"><div class="mi-section-title">Market Players <span class="mi-line"></span></div><div id="mi-profiles-grid"></div></div></div>
+      <select id="mi-week-select" onchange="onWeekSelectChange(this)"><option value="current">이번 주 (최신)</option></select>
+      <div id="mi-trend-direction-wrap"></div>
+      <div id="mi-recommend-wrap"></div>
+      <div id="mi-feed-grid" class="feed-grid"></div>
+      <div id="mi-pagination"></div>
+      <canvas id="mi-mindshareChart"></canvas>
+      <div id="mi-conversion-funnel"></div>
+      <div id="mi-archive-wrap-legacy"></div>
+      <span id="r5-week-label"></span>
+    </div>
+  </div><!-- /tab-market-intel -->
   <div class="tab-content" id="tab-seo">
     <!-- SEO KPI -->
     <div class="kpi-grid" id="seoKpiGrid"></div>
@@ -759,6 +1224,598 @@ function renderAeo(){
 }
 
 loadData();
+
+// ===== MARKET INTEL — v4.0 (R7) =====
+// 탭 전환 핸들러에 market-intel 추가 (기존 핸들러와 별도 확장)
+(function(){
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click',function(){
+      if(t.dataset.tab==='market-intel'&&!MI_DATA){
+        loadMarketIntel();
+      }
+    });
+  });
+})();
+
+var MI_DATA=null,MI_ANALYZED=null;
+var MI_FILTER={product:'all',search:'',feedTab:'all'};
+var MI_FEED_PAGE=1,MI_FEED_PAGE_SIZE=6,MI_ALL_ITEMS=[];
+var MI_ARCHIVE_WEEKS=[];
+
+/* --- AES-256-GCM + PBKDF2 복호화 (data.enc와 동일 알고리즘) --- */
+async function decryptEnc(b64, key){
+  var buf=Uint8Array.from(atob(b64),function(c){return c.charCodeAt(0);});
+  var salt=buf.slice(0,16);
+  var iv=buf.slice(16,28);
+  var authTag=buf.slice(buf.length-16);
+  var enc=buf.slice(28,buf.length-16);
+  var combined=new Uint8Array(enc.length+16);
+  combined.set(enc);combined.set(authTag,enc.length);
+  var keyMat=await crypto.subtle.importKey('raw',new TextEncoder().encode(key),{name:'PBKDF2'},false,['deriveBits','deriveKey']);
+  var aesKey=await crypto.subtle.deriveKey({name:'PBKDF2',salt:salt,iterations:100000,hash:'SHA-256'},keyMat,{name:'AES-GCM',length:256},false,['decrypt']);
+  var dec=await crypto.subtle.decrypt({name:'AES-GCM',iv:iv},aesKey,combined);
+  return new TextDecoder().decode(dec);
+}
+
+async function loadMarketIntel(){
+  var miWrap=document.getElementById('mi-weekly-summary-wrap');
+  try{
+    var key=typeof DECRYPTION_KEY!=='undefined'?DECRYPTION_KEY:'';
+    // market-intel-data.enc 복호화
+    var r1=await fetch('market-intel-data.enc');
+    if(!r1.ok)throw new Error('market-intel-data.enc not found ('+r1.status+')');
+    var b641=await r1.text();
+    var json1=b641.trimStart().startsWith('{')?b641:await decryptEnc(b641,key);
+    MI_DATA=JSON.parse(json1);
+
+    // market-intel-analyzed.enc 복호화 (선택적)
+    try{
+      var r2=await fetch('market-intel-analyzed.enc');
+      if(r2.ok){
+        var b642=await r2.text();
+        var json2=b642.trimStart().startsWith('{')?b642:await decryptEnc(b642,key);
+        MI_ANALYZED=JSON.parse(json2);
+        MI_DATA=mergeMIAnalyzedData(MI_DATA,MI_ANALYZED);
+      }
+    }catch(_){/* analyzed.enc 없으면 무시 */}
+
+    renderMarketIntel();
+    discoverArchiveWeeks();
+  }catch(e){
+    console.error('Market Intel 로딩 실패:',e);
+    if(miWrap)miWrap.innerHTML='<div class="mi-no-data">리서치 데이터 로딩 실패: '+escapeHtml(e.message)+'</div>';
+  }
+}
+
+async function onWeekSelectChange(sel){
+  var val=sel.value;
+  var key=typeof DECRYPTION_KEY!=='undefined'?DECRYPTION_KEY:'';
+  try{
+    var path=(!val||val==='current')?'market-intel-data.enc':'archive/market-intel-'+val+'.enc';
+    var r=await fetch(path);
+    if(!r.ok){
+      // fallback: .json 시도
+      var rj=await fetch(path.replace('.enc','.json'));
+      if(!rj.ok)throw new Error('데이터 없음: '+path);
+      MI_DATA=await rj.json();
+    } else {
+      var b64=await r.text();
+      var json=b64.trimStart().startsWith('{')?b64:await decryptEnc(b64,key);
+      MI_DATA=JSON.parse(json);
+    }
+    renderMarketIntel();
+  }catch(e){alert('아카이브 데이터 없음: '+e.message);sel.value='current';}
+}
+
+function onR7WeekChange(sel){
+  var legacySel=document.getElementById('mi-week-select');
+  if(legacySel)legacySel.value=sel.value;
+  onWeekSelectChange(sel);
+}
+
+async function discoverArchiveWeeks(){
+  function getISOWeekStr(date){var d=new Date(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate()));var dayNum=d.getUTCDay()||7;d.setUTCDate(d.getUTCDate()+4-dayNum);var yearStart=new Date(Date.UTC(d.getUTCFullYear(),0,1));var weekNo=Math.ceil((((d-yearStart)/86400000)+1)/7);return d.getUTCFullYear()+'-W'+(weekNo<10?'0':'')+weekNo;}
+  function populateSel(weeks){
+    ['r7-week-select','mi-week-select'].forEach(function(id){
+      var sel=document.getElementById(id);if(!sel)return;
+      while(sel.options.length>1)sel.remove(1);
+      (weeks||[]).forEach(function(w){var opt=document.createElement('option');opt.value=w;opt.textContent=w;sel.appendChild(opt);});
+    });
+  }
+  try{var r=await fetch('archive/index.json');if(r.ok){var idx=await r.json();MI_ARCHIVE_WEEKS=idx.weeks||[];populateSel(MI_ARCHIVE_WEEKS);return;}}catch(_){}
+  var found=[],now=new Date();
+  var probes=[];for(var i=1;i<=8;i++)probes.push(getISOWeekStr(new Date(now.getTime()-i*7*24*3600*1000)));
+  await Promise.all(probes.map(async function(wk){try{var r=await fetch('archive/market-intel-'+wk+'.enc',{method:'HEAD'});if(r.ok)found.push(wk);}catch(_){}try{var rj=await fetch('archive/market-intel-'+wk+'.json',{method:'HEAD'});if(rj.ok&&found.indexOf(wk)<0)found.push(wk);}catch(_){}}));
+  MI_ARCHIVE_WEEKS=found.sort().reverse();
+  populateSel(MI_ARCHIVE_WEEKS);
+}
+
+function mergeMIAnalyzedData(baseData,analyzedData){
+  if(!baseData||!analyzedData||!Array.isArray(analyzedData.items))return baseData;
+  var byId={};
+  analyzedData.items.forEach(function(item){if(item&&item.id)byId[item.id]=item;});
+  var nextWeeks=(baseData.weeks||[]).map(function(week){
+    var feedItems=(week.feedItems||[]).map(function(item){
+      var extra=byId[item.id]||{};
+      return Object.assign({},extra,item,{author:item.author||extra.author||'',content_snippet:item.content_snippet||extra.content_snippet||'',media:item.media||extra.media||{images:[],videos:[],thumbnails:[]},tags:item.tags||extra.tags||[],category:item.category||extra.category||'content',benchmark_note:item.benchmark_note||extra.benchmark_note||'',summary_ko:item.summary_ko||extra.summary_ko||extra.content_snippet||''});
+    });
+    return Object.assign({},week,{feedItems:feedItems});
+  });
+  return Object.assign({},baseData,{weeks:nextWeeks});
+}
+
+function escapeHtml(value){return String(value==null?'':value).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');}
+
+function getMIDomain(url){try{return new URL(url).hostname.replace(/^www\./,'');}catch(_){return '';}}
+
+function getMIItems(){
+  if(!MI_DATA)return[];
+  var weeks=MI_DATA.weeks||[];
+  var w=weeks[0]||{};
+  var items=w.feedItems||[];
+  var p=MI_FILTER.product;
+  if(p&&p!=='all'){
+    items=items.filter(function(it){
+      var rel=(it.cubig_relevance||it.cubig_angle||it.product_line||'').toLowerCase();
+      if(p==='syntitan')return rel.includes('syntitan')||rel.includes('syn titan');
+      if(p==='llmcapsule')return rel.includes('llm capsule')||rel.includes('llmcapsule');
+      if(p==='azoo')return rel.includes('azoo');
+      return true;
+    });
+  }
+  return items;
+}
+
+function getFilteredWeek(){
+  if(!MI_DATA)return null;
+  var weeks=MI_DATA.weeks||[];
+  var sel=document.getElementById('mi-week-select');
+  if(!sel||!sel.value||sel.value==='current')return weeks[0]||null;
+  return weeks.find(function(w){return w.week===sel.value;})||weeks[0]||null;
+}
+
+function applyMIFilters(items){
+  var q=(MI_FILTER.search||'').toLowerCase();
+  return items.filter(function(it){
+    if(!q)return true;
+    var hay=((it.title||'')+(it.summary_ko||'')+(it.category||'')).toLowerCase();
+    return hay.includes(q);
+  });
+}
+
+function formatMIArchiveLine(key,item){
+  if(typeof item==='string')return item;
+  if(typeof item==='object'&&item!==null){
+    if(item.text)return item.text;
+    if(item.title)return item.title;
+    if(item.direction)return item.direction;
+    if(item.signal)return item.signal;
+    return JSON.stringify(item).slice(0,80);
+  }
+  return String(item);
+}
+
+function bindMIArchiveAccordions(){
+  document.querySelectorAll('.archive-header').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var item=btn.closest('.archive-item');
+      if(!item)return;
+      var open=item.classList.contains('open');
+      item.classList.toggle('open',!open);
+      btn.setAttribute('aria-expanded',String(!open));
+    });
+  });
+}
+
+function getMIUserVoiceCount(week){
+  return (week.feedItems||[]).filter(function(it){return it.source_type==='user_voice'||it.source_type==='market';}).length;
+}
+
+function renderMarketIntel(){
+  if(!MI_DATA)return;
+  var weeks=MI_DATA.weeks||[];
+  if(!weeks.length)return;
+  var w=getFilteredWeek()||weeks[0];
+
+  // Weekly Summary
+  var sumWrap=document.getElementById('mi-weekly-summary-wrap');
+  if(sumWrap){
+    var summary=w.weeklySummary||w.executiveSummary||w.summary||'';
+    var dateRange=w.dateRange||w.week||'';
+    var totalItems=w.totalItems||(w.feedItems||[]).length||0;
+    sumWrap.innerHTML='<div class="mi-weekly-summary-v3"><div class="section-title">이번 주 리서치 요약 — '+escapeHtml(dateRange)+'</div><div class="body">'+escapeHtml(typeof summary==='string'?summary:(summary.body||summary.text||JSON.stringify(summary)))+'</div></div>';
+  }
+
+  // Topic suggestions
+  renderMITopicSuggestions&&renderMITopicSuggestions();
+  renderMITopicRanking&&renderMITopicRanking();
+  renderMIIndustryPain&&renderMIIndustryPain();
+  renderMIConversion&&renderMIConversion();
+  renderMIOpportunity&&renderMIOpportunity();
+  renderMIWeeklySummary&&renderMIWeeklySummary();
+  renderMISentiment&&renderMISentiment();
+  renderMIProfiles&&renderMIProfiles();
+  renderMIFeed&&renderMIFeed();
+
+  // Sync R7 week selectors
+  if(MI_ARCHIVE_WEEKS.length){
+    ['r7-week-select','mi-week-select'].forEach(function(id){
+      var sel=document.getElementById(id);if(!sel)return;
+      while(sel.options.length>1)sel.remove(1);
+      MI_ARCHIVE_WEEKS.forEach(function(wk){var opt=document.createElement('option');opt.value=wk;opt.textContent=wk;sel.appendChild(opt);});
+    });
+  }
+
+  // R7 sidebar info
+  var lastEl=document.getElementById('r7-last-collect');
+  var luEl=document.getElementById('r7-last-updated');
+  if(w.week||w.dateRange){var info=w.week||w.dateRange;if(lastEl)lastEl.textContent=info;if(luEl)luEl.textContent=info;}
+
+  // Feed count badge
+  var allItems=getMIItems();
+  var feedBadge=document.getElementById('r7-feed-count-badge');
+  if(feedBadge)feedBadge.textContent=allItems.length;
+
+  // Mount legacy sections into R7 slots
+  r7MountSections();
+
+  // Render current R7 view
+  if(R7_STATE.currentView==='overview')r72RenderOverview();
+  if(R7_STATE.currentView==='topics')r72RenderTopics();
+  if(R7_STATE.currentView==='summary')r72RenderSummary();
+  if(R7_STATE.currentView==='feed')r7RenderFeed();
+}
+
+function renderMITopicSuggestions(){
+  var w=getFilteredWeek();if(!w)return;
+  var wrap=document.getElementById('mi-topic-suggestions-wrap');if(!wrap)return;
+  var suggs=w.topicSuggestions||[];
+  if(!suggs.length){wrap.innerHTML='<div class="mi-no-data">주제 제안 없음</div>';return;}
+  wrap.innerHTML='<div style="display:flex;flex-wrap:wrap;gap:10px">'+suggs.map(function(t,i){return'<div class="r72-topic-chip"><span class="r72-topic-chip-num">#'+(i+1)+'</span><span class="r72-topic-chip-title">'+escapeHtml(t.title||'')+'</span>'+(t.why?'<span class="r72-topic-chip-why">'+escapeHtml(t.why.slice(0,60))+'</span>':'')+'</div>';}).join('')+'</div>';
+}
+
+function renderMITopicRanking(){
+  var w=getFilteredWeek();if(!w)return;
+  var wrap=document.getElementById('mi-topic-ranking-wrap');if(!wrap)return;
+  var ranking=w.topicMentionRanking||[];
+  if(!ranking.length){wrap.innerHTML='<div class="mi-no-data">랭킹 데이터 없음</div>';return;}
+  wrap.innerHTML='<ol class="ranking-list" style="list-style:none;padding:0">'+ranking.slice(0,10).map(function(t){
+    var m=(t.mentions&&t.mentions[0])||{};
+    return'<li style="display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--border)"><span class="cnt" style="font-weight:700;color:var(--accent);min-width:20px">'+(m.count||0)+'</span><span class="src">'+escapeHtml(t.keyword||t.topic||'')+'</span><span style="font-size:11px;color:var(--text-sub)">'+(m.source||'')+'</span></li>';
+  }).join('')+'</ol>';
+}
+
+function renderMIIndustryPain(){
+  var w=getFilteredWeek();if(!w)return;
+  var wrap=document.getElementById('mi-pain-map');if(!wrap)return;
+  var pts=w.industryPainPoints||w.painPoints||[];
+  if(!pts.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  wrap.innerHTML='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px">'+pts.map(function(p){
+    var txt=typeof p==='string'?p:(p.painPoint||p.text||JSON.stringify(p));
+    return'<div class="pain-card"><div style="font-weight:700;font-size:13px;margin-bottom:8px">'+escapeHtml(typeof p==='string'?'':p.industry||'')+'</div><div style="font-size:12px;color:var(--text-sub)">'+escapeHtml(txt)+'</div></div>';
+  }).join('')+'</div>';
+}
+
+function renderMIConversion(){
+  var w=getFilteredWeek();if(!w)return;
+  var wrap=document.getElementById('mi-conversion-wrap');if(!wrap)return;
+  var signals=w.conversionSignals||[];
+  if(!signals.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  wrap.innerHTML='<ul style="list-style:none;padding:0">'+signals.map(function(s){return'<li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">'+escapeHtml(typeof s==='string'?s:(s.text||s.signal||JSON.stringify(s)))+'</li>';}).join('')+'</ul>';
+}
+
+function renderMIOpportunity(){
+  var w=getFilteredWeek();if(!w)return;
+  var wrap=document.getElementById('mi-opportunity-wrap');if(!wrap)return;
+  var opps=w.opportunityAreas||[];
+  if(!opps.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  wrap.innerHTML='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">'+opps.map(function(o){return'<div class="opportunity-card"><div style="font-weight:700;font-size:13px;margin-bottom:6px">'+escapeHtml(o.area||'')+'</div><div style="font-size:12px;color:var(--text-sub)">'+escapeHtml(o.cubigFit||o.why||'')+'</div></div>';}).join('')+'</div>';
+}
+
+function renderMIWeeklySummary(){}// already rendered in renderMarketIntel
+
+function renderMISentiment(){
+  var w=getFilteredWeek();if(!w)return;
+  var wrap=document.getElementById('mi-sentiment-wrap');if(!wrap)return;
+  var items=w.marketSentiment||w.sentiment||[];
+  if(!items.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  if(typeof items==='string'){wrap.innerHTML='<div style="font-size:13px;line-height:1.7">'+escapeHtml(items)+'</div>';return;}
+  if(Array.isArray(items)){wrap.innerHTML='<ul style="list-style:none;padding:0">'+items.map(function(s){return'<li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">'+escapeHtml(typeof s==='string'?s:(s.text||s.summary||JSON.stringify(s)))+'</li>';}).join('')+'</ul>';return;}
+  wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';
+}
+
+function renderMIProfiles(){
+  var w=getFilteredWeek();if(!w)return;
+  var wrap=document.getElementById('mi-profiles-grid');if(!wrap)return;
+  var comps=w.competitors||w.marketPlayers||[];
+  var entries=Array.isArray(comps)?comps:(typeof comps==='object'?Object.values(comps):[]);
+  if(!entries.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  wrap.innerHTML='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">'+entries.slice(0,12).map(function(c){
+    var name=typeof c==='string'?c:(c.name||c.company||'');
+    var cnt=c.count||c.mentions||'';
+    return'<div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px"><div class="mi-player-initial" style="width:32px;height:32px;border-radius:8px;background:var(--accent-light);color:var(--accent);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:8px">'+escapeHtml(name.slice(0,2).toUpperCase())+'</div><div style="font-size:13px;font-weight:600">'+escapeHtml(name)+'</div>'+(cnt?'<div style="font-size:11px;color:var(--text-sub);margin-top:2px">'+cnt+'건</div>':'')+'</div>';
+  }).join('')+'</div>';
+}
+
+function renderMIFeed(){
+  var allItems=getMIItems();
+  var filtered=applyMIFilters(allItems);
+  var grid=document.getElementById('mi-feed-grid');
+  if(!grid)return;
+  if(!filtered.length){grid.innerHTML='<div class="mi-no-data">피드 없음</div>';return;}
+  var total=Math.ceil(filtered.length/MI_FEED_PAGE_SIZE);
+  if(MI_FEED_PAGE>total)MI_FEED_PAGE=1;
+  var start=(MI_FEED_PAGE-1)*MI_FEED_PAGE_SIZE;
+  grid.innerHTML=filtered.slice(start,start+MI_FEED_PAGE_SIZE).map(buildFeedCard).join('');
+}
+
+function buildFeedCard(it){
+  var channel=it.channel||'';var chBgMap={hackernews:'#FF6600',reddit:'#FF4500',medium:'#00AB6C',linkedin:'#0A66C2',x:'#888',producthunt:'#DA552F',youtube:'#FF0000'};
+  var chBg=chBgMap[channel.toLowerCase()]||'#555';
+  var url=it.url||'#';var title=it.title||'(제목 없음)';
+  var summary=it.summary_ko||it.content_snippet||'';
+  var implication=it.implication||'';
+  return'<div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px;font-size:13px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="background:'+chBg+';color:#fff;font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px">'+escapeHtml(channel.slice(0,2).toUpperCase()||'MI')+'</span><span style="font-weight:600;color:'+chBg+'">'+escapeHtml(channel)+'</span></div><div style="font-weight:600;margin-bottom:6px"><a href="'+escapeHtml(url)+'" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none">'+escapeHtml(title)+'</a></div>'+(summary?'<div style="color:var(--text-sub);line-height:1.6;margin-bottom:6px">'+escapeHtml(summary.slice(0,150))+'</div>':'')+(implication?'<div style="background:#fffbeb;border-left:3px solid var(--orange);padding:6px 8px;border-radius:0 4px 4px 0;font-size:11px;color:var(--text-sub)"><strong style="color:var(--orange);font-size:10px;text-transform:uppercase">시사점</strong><br>'+escapeHtml(implication.slice(0,100))+'</div>':'')+'</div>';
+}
+
+function renderMIArchive(){
+  var weeks=MI_DATA&&MI_DATA.weeks||[];
+  var wrap=document.getElementById('mi-archive-wrap');if(!wrap)return;
+  if(!weeks.length){wrap.innerHTML='<div class="mi-no-data">아카이브 없음</div>';return;}
+  window._archiveWeeks={};
+  weeks.forEach(function(w){window._archiveWeeks[w.week]=w;});
+  wrap.innerHTML=weeks.map(function(w,i){
+    var totalCnt=w.totalItems||(w.feedItems||[]).length||0;
+    var topEvents=(w.topEvents||w.top_events||[]).slice(0,5).map(function(e){return'<li><strong>'+escapeHtml(e.title||String(e))+'</strong>'+(e.cubig_action?'<br><span style="color:var(--text-sub);font-size:12px">→ '+escapeHtml(e.cubig_action)+'</span>':'')+'</li>';}).join('');
+    var topicSugg=(w.topicSuggestions||[]).map(function(t,idx){return'<li><strong>#'+(idx+1)+' '+escapeHtml(t.title||'')+'</strong> <span style="color:var(--text-sub);font-size:12px">— '+escapeHtml((t.why||'').slice(0,80))+'</span></li>';}).join('');
+    var top10=(w.feedItems||[]).slice().sort(function(a,b){return(b.relevance_score||0)-(a.relevance_score||0);}).slice(0,10).map(function(it){return'<li><a href="'+escapeHtml(it.url||'#')+'" target="_blank" rel="noopener">'+escapeHtml(it.title||'')+'</a> <span style="color:var(--text-sub);font-size:11px">· '+escapeHtml(it.channel||'')+'</span></li>';}).join('');
+    return'<div class="archive-item'+(i===0?' open':'')+'">'+
+      '<button class="archive-header" type="button" aria-expanded="'+(i===0?'true':'false')+'">'+
+        '<span class="archive-week-label">'+escapeHtml(w.week||'')+' ('+escapeHtml(w.dateRange||'')+')</span>'+
+        '<span class="archive-meta">'+totalCnt+' items</span>'+
+        '<span class="archive-toggle">▼</span>'+
+      '</button>'+
+      '<div class="archive-body">'+
+        (topEvents?'<details class="archive-block"><summary>📌 핵심 요약 ('+totalCnt+'건)</summary><ul style="margin-top:8px">'+topEvents+'</ul></details>':'')+
+        (topicSugg?'<details class="archive-block"><summary>💡 주제 제안 ('+(w.topicSuggestions||[]).length+'건)</summary><ul style="margin-top:8px">'+topicSugg+'</ul></details>':'')+
+        (top10?'<details class="archive-block"><summary>🔗 원문 Top 10</summary><ul style="margin-top:8px">'+top10+'</ul></details>':'')+
+        (w.driveUrl?'<div class="archive-links"><a href="'+escapeHtml(w.driveUrl)+'" target="_blank">📄 원본 대시보드 보기 ↗</a></div>':'')+
+      '</div>'+
+    '</div>';
+  }).join('');
+  bindMIArchiveAccordions();
+}
+
+function openArchiveModal(btnEl,weekKey,type){
+  var w=window._archiveWeeks&&window._archiveWeeks[weekKey];
+  var feedItems=(w&&w.feedItems)||[];
+  var items=type==='top10'?feedItems.slice().sort(function(a,b){return(b.relevance_score||0)-(a.relevance_score||0);}).slice(0,10):feedItems;
+  var listHtml=items.map(function(it){
+    var ch=(it.channel||'').toLowerCase();
+    var chBgMap={hackernews:'#FF6600',reddit:'#FF4500',medium:'#00AB6C',linkedin:'#0A66C2',x:'#888',producthunt:'#DA552F',youtube:'#FF0000'};
+    var abbr={hackernews:'HN',reddit:'Re',medium:'Me',linkedin:'Li',x:'X',youtube:'YT',producthunt:'PH'};
+    return'<div class="n-modal-link-item"><span class="n-modal-ch-badge" style="background:'+(chBgMap[ch]||'#555')+'">'+escapeHtml(abbr[ch]||ch.slice(0,2).toUpperCase()||'MI')+'</span><div class="n-modal-link-title"><a href="'+escapeHtml(it.url||'#')+'" target="_blank" rel="noopener">'+escapeHtml(it.title||'(제목 없음)')+'</a><div class="n-modal-meta">'+(it.channel?escapeHtml(it.channel):'')+'</div></div></div>';
+  }).join('');
+  document.getElementById('n-modal-title').textContent=weekKey+' '+(type==='top10'?'Top 10':'전체')+'('+items.length+'건)';
+  document.getElementById('n-modal-body').innerHTML=listHtml||'<div class="mi-no-data">피드 없음</div>';
+  document.getElementById('n-archive-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeArchiveModal(){document.getElementById('n-archive-modal').classList.remove('open');document.body.style.overflow='';}
+
+/* ========== R7 LAYER ========== */
+var R7_STATE={currentView:'overview',product:'all',search:'',srcFilters:[],productFilters:[],relFilter:'all',sentFilters:[],page:1,pageSize:6,selectedItem:null,sortMode:'ai'};
+
+function r7ShowView(viewId){
+  R7_STATE.currentView=viewId;
+  document.querySelectorAll('.r7-view').forEach(function(v){v.classList.remove('active');});
+  var el=document.getElementById('r7-view-'+viewId);if(el)el.classList.add('active');
+  document.querySelectorAll('.r7-nav-item').forEach(function(b){var a=b.getAttribute('data-r7view')===viewId;b.classList.toggle('active',a);b.setAttribute('aria-current',a?'page':'false');});
+  var titles={overview:'Overview',topics:'Topics',summary:'Summary',players:'Market Players',feed:'Activity Feed',archive:'Weekly Archive'};
+  var titleEl=document.getElementById('r7-topbar-title');if(titleEl)titleEl.textContent=titles[viewId]||viewId;
+  if(MI_DATA)r7MountSections();
+  if(viewId==='feed'&&MI_DATA)r7RenderFeed();
+  if(viewId==='archive')r7RenderArchive();
+  if(viewId==='overview'&&MI_DATA)r72RenderOverview();
+  if(viewId==='topics'&&MI_DATA)r72RenderTopics();
+  if(viewId==='summary'&&MI_DATA)r72RenderSummary();
+}
+
+document.querySelectorAll('.r7-nav-item[data-r7view]').forEach(function(btn){
+  btn.addEventListener('click',function(){r7ShowView(btn.getAttribute('data-r7view'));});
+});
+
+document.querySelectorAll('.r7-topbar-product-btn').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.r7-topbar-product-btn').forEach(function(b){b.classList.remove('active');b.setAttribute('aria-pressed','false');});
+    btn.classList.add('active');btn.setAttribute('aria-pressed','true');
+    R7_STATE.product=btn.getAttribute('data-r7product');R7_STATE.page=1;
+    if(MI_DATA)r7RenderFeed();
+  });
+});
+
+(function(){var inp=document.getElementById('r7-search-input');if(!inp)return;inp.addEventListener('input',function(){R7_STATE.search=inp.value.trim().toLowerCase();R7_STATE.page=1;if(MI_DATA)r7RenderFeed();});})();
+(function(){var sel=document.getElementById('r7-feed-sort');if(!sel)return;sel.addEventListener('change',function(){R7_STATE.sortMode=sel.value;R7_STATE.page=1;if(MI_DATA)r7RenderFeed();});})();
+
+function r7InitFilters(){
+  R7_STATE.srcFilters=[];document.querySelectorAll('.r7-src-filter:checked').forEach(function(c){R7_STATE.srcFilters.push(c.value.toLowerCase());});
+  R7_STATE.productFilters=[];document.querySelectorAll('.r7-product-filter:checked').forEach(function(c){R7_STATE.productFilters.push(c.value);});
+  R7_STATE.sentFilters=[];document.querySelectorAll('.r7-sent-filter:checked').forEach(function(c){R7_STATE.sentFilters.push(c.value);});
+  var rel=document.querySelector('input[name="r7-rel-filter"]:checked');
+  R7_STATE.relFilter=rel?rel.value:'all';
+}
+
+document.querySelectorAll('.r7-src-filter,.r7-product-filter,.r7-sent-filter').forEach(function(inp){inp.addEventListener('change',function(){r7InitFilters();R7_STATE.page=1;if(MI_DATA)r7RenderFeed();});});
+document.querySelectorAll('input[name="r7-rel-filter"]').forEach(function(inp){inp.addEventListener('change',function(){r7InitFilters();R7_STATE.page=1;if(MI_DATA)r7RenderFeed();});});
+(function(){var btn=document.getElementById('r7-filter-clear-btn');if(!btn)return;btn.addEventListener('click',function(){document.querySelectorAll('.r7-src-filter,.r7-sent-filter').forEach(function(c){c.checked=true;});document.querySelectorAll('.r7-product-filter').forEach(function(c){c.checked=false;});var allRel=document.querySelector('input[name="r7-rel-filter"][value="all"]');if(allRel)allRel.checked=true;r7InitFilters();R7_STATE.page=1;if(MI_DATA)r7RenderFeed();});})();
+
+(function(){var closeBtn=document.getElementById('r7-detail-close');if(closeBtn)closeBtn.addEventListener('click',r7CloseDetail);})();
+function r7CloseDetail(){var empty=document.getElementById('r7-detail-empty');var content=document.getElementById('r7-detail-content');if(empty)empty.style.display='';if(content)content.classList.remove('visible');R7_STATE.selectedItem=null;document.querySelectorAll('.r7-feed-card').forEach(function(c){c.classList.remove('selected');});}
+
+function r7OpenDetail(item){
+  R7_STATE.selectedItem=item;
+  var empty=document.getElementById('r7-detail-empty');var content=document.getElementById('r7-detail-content');
+  if(!empty||!content)return;
+  empty.style.display='none';content.classList.add('visible');
+  var srcRow=document.getElementById('r7-detail-source-row');var channel=item.channel||'';
+  var dateStr=item.published_at?new Date(item.published_at).toLocaleDateString('ko-KR',{year:'numeric',month:'short',day:'numeric'}):'';
+  srcRow.innerHTML=r7SourceBadgeHtml(channel)+(dateStr?'<span style="font-size:12px;color:var(--text-sub)">'+escapeHtml(dateStr)+'</span>':'');
+  document.getElementById('r7-detail-title').textContent=item.title||'';
+  document.getElementById('r7-detail-summary').textContent=item.summary_ko||item.content_snippet||'';
+  var impl=item.implication||'';var implBody=document.getElementById('r7-detail-impl-body');if(implBody)implBody.textContent=impl||'—';
+  var cubigBadges=document.getElementById('r7-detail-cubig-badges');if(cubigBadges)cubigBadges.innerHTML=r7ProductBadgesHtml((item.cubig_relevance||item.cubig_angle||'')+(item.product_line||''));
+  var cubigBody=document.getElementById('r7-detail-cubig-body');if(cubigBody)cubigBody.textContent=item.cubig_relevance||item.cubig_angle||'—';
+  var hookBody=document.getElementById('r7-detail-hook-body');if(hookBody)hookBody.textContent=item.message_hook||'—';
+  var linkBtn=document.getElementById('r7-detail-link-btn');if(linkBtn)linkBtn.href=item.url||'#';
+}
+
+function r7GetCategory(item){var cat=(item.category||item.source_type||'').toLowerCase();if(cat.includes('ai')||cat.includes('llm'))return'ai';if(cat.includes('privacy'))return'privacy';if(cat.includes('regulation')||cat.includes('규제'))return'regulation';if(cat.includes('market'))return'market';if(cat.includes('competitor')||cat.includes('경쟁'))return'competitor';if(cat.includes('tech'))return'tech';return'default';}
+function r7SourceKey(channel){var ch=(channel||'').toLowerCase();if(ch==='reddit')return'reddit';if(ch==='hackernews'||ch==='hn')return'hackernews';if(ch==='linkedin')return'linkedin';if(ch==='medium')return'medium';if(ch==='youtube'||ch==='yt')return'youtube';if(ch==='x'||ch==='twitter')return'x';if(ch==='producthunt'||ch==='ph')return'producthunt';return'default';}
+function r7SourceBadgeHtml(channel){var key=r7SourceKey(channel);var labels={reddit:'Reddit',hackernews:'HackerNews',linkedin:'LinkedIn',medium:'Medium',youtube:'YouTube',x:'X',producthunt:'ProductHunt',default:channel||'—'};return'<span class="r7-card-source-badge r7-src-'+key+'">'+escapeHtml(labels[key]||channel)+'</span>';}
+function r7ProductBadgesHtml(text){var badges=[];var t=(text||'').toLowerCase();if(t.includes('syntitan')||t.includes('syn titan'))badges.push('<span class="r7-product-badge r7-badge-syn">SynTitan</span>');if(t.includes('llm capsule')||t.includes('llmcapsule'))badges.push('<span class="r7-product-badge r7-badge-llm">LLM Capsule</span>');if(t.includes('azoo'))badges.push('<span class="r7-product-badge r7-badge-azoo">azoo</span>');return badges.join('');}
+
+function r7BuildFeedCard(item,idx){
+  var cat=r7GetCategory(item);var channel=item.channel||'';var title=item.title||'';var summary=item.summary_ko||item.content_snippet||'';var implication=item.implication||'';var messageHook=item.message_hook||'';var cubigRelevance=item.cubig_relevance||item.cubig_angle||'';var dateStr=item.published_at?new Date(item.published_at).toLocaleDateString('ko-KR',{month:'short',day:'numeric'}):'';
+  var catLabels={ai:'AI',privacy:'Privacy',regulation:'Regulation',market:'Market',competitor:'Competitor',tech:'Tech',default:''};
+  var catChip=(catLabels[cat]&&catLabels[cat]!=='')?'<span class="r7-cat-chip r7-cat-'+cat+'">'+catLabels[cat]+'</span>':'';
+  var productBadges=r7ProductBadgesHtml(cubigRelevance+' '+(item.product_line||''));
+  var hookChip=messageHook?'<span class="r7-hook-chip" title="'+escapeHtml(messageHook)+'">'+escapeHtml(messageHook.slice(0,25)+(messageHook.length>25?'…':''))+'</span>':'';
+  return'<article class="r7-feed-card" role="listitem" tabindex="0" data-r7idx="'+idx+'" aria-label="'+escapeHtml(title)+'">'+'<div class="r7-card-colorbar cat-'+cat+'" aria-hidden="true"></div>'+'<div class="r7-card-body">'+'<div class="r7-card-meta-row">'+r7SourceBadgeHtml(channel)+(dateStr?'<span class="r7-card-date">'+escapeHtml(dateStr)+'</span>':'')+'</div>'+'<h3 class="r7-card-title">'+escapeHtml(title)+'</h3>'+'<p class="r7-card-summary">'+escapeHtml(summary)+'</p>'+(implication?'<div class="r7-card-divider" aria-hidden="true"></div><div class="r7-card-impl"><span class="r7-card-impl-label">시사점</span>'+escapeHtml(implication)+'</div>':'')+'<div class="r7-card-tag-row">'+productBadges+hookChip+catChip+'</div>'+'</div>'+'</article>';
+}
+
+function r7FilterItems(items){
+  r7InitFilters();var p=R7_STATE.product;var q=R7_STATE.search;
+  return items.filter(function(it){
+    if(p!=='all'){var rel=(it.cubig_relevance||it.cubig_angle||it.product_line||'').toLowerCase();if(p==='syntitan'&&!rel.includes('syntitan')&&!rel.includes('syn titan'))return false;if(p==='llmcapsule'&&!rel.includes('llm capsule')&&!rel.includes('llmcapsule'))return false;if(p==='azoo'&&!rel.includes('azoo'))return false;}
+    var srcKeys=R7_STATE.srcFilters;if(srcKeys.length>0){var chKey=(it.channel||'').toLowerCase();if(srcKeys.indexOf(chKey)<0)return false;}
+    if(R7_STATE.productFilters.length>0){var rel2=(it.cubig_relevance||it.cubig_angle||it.product_line||'').toLowerCase();var match=R7_STATE.productFilters.some(function(pf){if(pf==='syntitan')return rel2.includes('syntitan')||rel2.includes('syn titan');if(pf==='llmcapsule')return rel2.includes('llm capsule')||rel2.includes('llmcapsule');if(pf==='azoo')return rel2.includes('azoo');return false;});if(!match)return false;}
+    if(R7_STATE.relFilter!=='all'){var minScore=parseFloat(R7_STATE.relFilter);if((it.relevance_score||0)<minScore)return false;}
+    if(R7_STATE.sentFilters.length>0){var sent=(it.sentiment||'neutral').toLowerCase();if(R7_STATE.sentFilters.indexOf(sent)<0)return false;}
+    if(q){var haystack=((it.title||'')+(it.summary_ko||'')+(it.category||'')).toLowerCase();if(haystack.indexOf(q)<0)return false;}
+    return true;
+  });
+}
+
+function r7SortItems(items){var mode=R7_STATE.sortMode;if(mode==='latest')return items.slice().sort(function(a,b){return(new Date(b.published_at||0))-(new Date(a.published_at||0));});if(mode==='engage')return items.slice().sort(function(a,b){var aE=(a.engagement&&a.engagement.upvotes||0)+(a.upvotes||0);var bE=(b.engagement&&b.engagement.upvotes||0)+(b.upvotes||0);return bE-aE;});return items.slice().sort(function(a,b){return(b.relevance_score||0)-(a.relevance_score||0);});}
+
+function r7RenderFeed(){
+  if(!MI_DATA)return;
+  var allItems=getMIItems();var filtered=r7FilterItems(allItems);var sorted=r7SortItems(filtered);
+  var feedBadge=document.getElementById('r7-feed-count-badge');if(feedBadge)feedBadge.textContent=sorted.length;
+  var totalBadge=document.getElementById('r7-feed-total-count');if(totalBadge)totalBadge.textContent=sorted.length;
+  var grid=document.getElementById('r7-feed-grid');
+  if(!grid)return;
+  // Source count badges
+  ['reddit','hackernews','linkedin','medium','youtube','x','producthunt'].forEach(function(src){var el=document.getElementById('r7-fc-'+src);if(el)el.textContent=allItems.filter(function(it){return(it.channel||'').toLowerCase()===src;}).length;});
+  if(!sorted.length){grid.innerHTML='<div class="mi-no-data" style="grid-column:1/-1">필터 조건에 맞는 항목 없음</div>';return;}
+  var totalPages=Math.ceil(sorted.length/R7_STATE.pageSize);
+  if(R7_STATE.page>totalPages)R7_STATE.page=1;
+  var start=(R7_STATE.page-1)*R7_STATE.pageSize;
+  var pageItems=sorted.slice(start,start+R7_STATE.pageSize);
+  grid.innerHTML=pageItems.map(function(it,i){return r7BuildFeedCard(it,start+i);}).join('');
+  grid.querySelectorAll('.r7-feed-card').forEach(function(card){
+    card.addEventListener('click',function(){
+      var idx=parseInt(card.getAttribute('data-r7idx'));
+      var item=sorted[idx];if(!item)return;
+      grid.querySelectorAll('.r7-feed-card').forEach(function(c){c.classList.remove('selected');});
+      card.classList.add('selected');
+      r7OpenDetail(item);
+    });
+  });
+  r7RenderPagination(totalPages,sorted);
+}
+
+function r7RenderPagination(totalPages,sorted){
+  var pag=document.getElementById('r7-pagination');if(!pag)return;
+  if(totalPages<=1){pag.innerHTML='';return;}
+  var cur=R7_STATE.page;
+  function btn(label,page,extra){var disabled=extra&&extra.disabled?' disabled':'';var active=page===cur?' active':'';if(extra&&extra.ellipsis)return'<span class="mi-page-btn ellipsis">'+label+'</span>';return'<button class="mi-page-btn'+active+'"'+disabled+' onclick="R7_STATE.page='+page+';r7RenderFeed();document.getElementById(\'r7-feed-grid\').scrollIntoView({behavior:\'smooth\',block:\'start\'})">'+label+'</button>';}
+  var html=btn('‹',Math.max(1,cur-1),{disabled:cur===1});
+  var pages=new Set([1,totalPages,cur,cur-1,cur+1,cur-2,cur+2]);var list=[...pages].filter(function(p){return p>=1&&p<=totalPages;}).sort(function(a,b){return a-b;});
+  var prev=0;list.forEach(function(p){if(p-prev>1)html+=btn('…',0,{ellipsis:true});html+=btn(String(p),p);prev=p;});
+  html+=btn('›',Math.min(totalPages,cur+1),{disabled:cur===totalPages});
+  pag.innerHTML=html;
+}
+
+function r7RenderArchive(){
+  renderMIArchive();
+}
+
+function r7MountSections(){
+  var mounts=[['n-section-summary','r7-overview-summary-slot'],['n-section-ranking','r7-overview-ranking-slot'],['n-section-topics','r7-topics-slot'],['n-section-pain','r7-summary-pain-slot'],['n-section-conversion','r7-summary-conversion-slot'],['n-section-opportunity','r7-summary-opportunity-slot'],['n-section-sentiment','r7-summary-sentiment-slot'],['n-section-players','r7-players-slot']];
+  mounts.forEach(function(pair){var src=document.getElementById(pair[0]);var tgt=document.getElementById(pair[1]);if(src&&tgt&&!tgt.contains(src))tgt.appendChild(src);});
+}
+
+/* R7-2 Render Functions */
+var R72_CH_COLORS={reddit:'#ff4500',hackernews:'#FF6600',linkedin:'#0a66c2',medium:'#00AB6C',youtube:'#ff0000',x:'#000000',producthunt:'#DA552F'};
+var R72_CAT_ORDER=['ai','privacy','regulation','market','competitor','tech','default'];
+var R72_CAT_LABELS={ai:'AI',privacy:'Privacy',regulation:'Regulation',market:'Market',competitor:'Competitor',tech:'Tech',default:'기타'};
+
+function r72RenderOverview(){
+  if(!MI_DATA)return;
+  var allItems=getMIItems();var w0=(MI_DATA.weeks&&MI_DATA.weeks[0])||{};
+  var totalItems=allItems.length;var channels={};
+  allItems.forEach(function(it){var k=(it.channel||'기타').toLowerCase();channels[k]=(channels[k]||0)+1;});
+  var channelCount=Object.keys(channels).length;
+  var avgScore=totalItems>0?(allItems.reduce(function(s,it){return s+(it.relevance_score||0);},0)/totalItems):0;
+  var topicSuggCount=(w0.topicSuggestions||[]).length;
+  var kpis=[
+    {label:'총 수집 항목',value:totalItems,sub:w0.week||'',accent:'#2563eb',trend:'neu',trendTxt:'이번 주'},
+    {label:'활성 채널',value:channelCount,sub:'채널 종류',accent:'#8b5cf6',trend:'up',trendTxt:'multi-source'},
+    {label:'AI 평균 적합도',value:Math.round(avgScore*100)+'%',sub:'relevance_score 평균',accent:'#10b981',trend:avgScore>=0.7?'up':'neu',trendTxt:avgScore>=0.7?'높음':'보통'},
+    {label:'콘텐츠 제안',value:topicSuggCount||'—',sub:'주제 제안 건수',accent:'#f59e0b',trend:'neu',trendTxt:'이번 주'}
+  ];
+  var kpiRow=document.getElementById('r72-kpi-row');if(!kpiRow)return;
+  kpiRow.innerHTML=kpis.map(function(k){return'<article class="r72-kpi-card" role="status" aria-label="'+escapeHtml(k.label)+'">'+'<div class="r72-kpi-accent" style="background:'+k.accent+'"></div>'+'<div class="r72-kpi-label">'+escapeHtml(k.label)+'</div>'+'<div class="r72-kpi-value">'+escapeHtml(String(k.value))+'</div>'+'<div class="r72-kpi-sub">'+escapeHtml(k.sub)+'</div>'+'<div class="r72-kpi-trend '+k.trend+'">'+escapeHtml(k.trendTxt)+'</div>'+'</article>';}).join('');
+  var chBarEl=document.getElementById('r72-channel-bars');
+  if(chBarEl){var maxCh=Math.max.apply(null,Object.values(channels).concat([1]));var chSorted=Object.keys(channels).sort(function(a,b){return channels[b]-channels[a];}).slice(0,8);chBarEl.innerHTML=chSorted.map(function(ch){var cnt=channels[ch];var pct=Math.round((cnt/maxCh)*100);var color=R72_CH_COLORS[ch]||'#9ca3af';var label=ch.charAt(0).toUpperCase()+ch.slice(1);return'<div class="r72-bar-item" role="listitem"><span class="r72-bar-label">'+escapeHtml(label)+'</span><div class="r72-bar-track"><div class="r72-bar-fill" style="width:'+pct+'%;background:'+color+'"></div></div><span class="r72-bar-count">'+cnt+'</span></div>';}).join('');}
+  var catBarEl=document.getElementById('r72-category-bars');
+  if(catBarEl){var cats={};allItems.forEach(function(it){var k=r7GetCategory(it);cats[k]=(cats[k]||0)+1;});var maxCat=Math.max.apply(null,Object.values(cats).concat([1]));var catColors={ai:'#8b5cf6',privacy:'#0ea5e9',regulation:'#f59e0b',market:'#10b981',competitor:'#f43f5e',tech:'#34d399',default:'#9ca3af'};catBarEl.innerHTML=Object.keys(cats).sort(function(a,b){return cats[b]-cats[a];}).map(function(cat){var cnt=cats[cat];var pct=Math.round((cnt/maxCat)*100);return'<div class="r72-bar-item" role="listitem"><span class="r72-bar-label">'+escapeHtml(R72_CAT_LABELS[cat]||cat)+'</span><div class="r72-bar-track"><div class="r72-bar-fill" style="width:'+pct+'%;background:'+(catColors[cat]||'#9ca3af')+'"></div></div><span class="r72-bar-count">'+cnt+'</span></div>';}).join('');}
+  var topListEl=document.getElementById('r72-top-list');
+  if(topListEl){var top5=allItems.slice().sort(function(a,b){return(b.relevance_score||0)-(a.relevance_score||0);}).slice(0,5);topListEl.innerHTML=top5.map(function(it,i){var score=it.relevance_score!=null?Math.round(it.relevance_score*100)+'점':'—';var dateStr=it.published_at?new Date(it.published_at).toLocaleDateString('ko-KR',{month:'short',day:'numeric'}):'';return'<div class="r72-top-item" role="listitem" tabindex="0"><div class="r72-top-rank" aria-hidden="true">'+(i+1)+'</div><div class="r72-top-content"><div class="r72-top-title">'+escapeHtml(it.title||'(제목 없음)')+'</div><div class="r72-top-meta">'+r7SourceBadgeHtml(it.channel||'')+(dateStr?'<span style="font-size:11px;color:var(--text-sub)">'+escapeHtml(dateStr)+'</span>':'')+'<span class="r72-top-score">AI '+score+'</span></div></div></div>';}).join('');}
+}
+
+function r72RenderTopics(){
+  if(!MI_DATA)return;
+  var allItems=getMIItems();var w0=(MI_DATA.weeks&&MI_DATA.weeks[0])||{};
+  var weekLabel=document.getElementById('r72-topics-week');if(weekLabel)weekLabel.textContent=w0.week||'—';
+  var catGroups={};allItems.forEach(function(it){var cat=r7GetCategory(it);if(!catGroups[cat])catGroups[cat]=[];catGroups[cat].push(it);});
+  var grid=document.getElementById('r72-topics-grid');if(!grid)return;
+  var orderedCats=R72_CAT_ORDER.filter(function(c){return catGroups[c]&&catGroups[c].length;});
+  Object.keys(catGroups).forEach(function(c){if(orderedCats.indexOf(c)<0)orderedCats.push(c);});
+  grid.innerHTML=orderedCats.map(function(cat){
+    var items=catGroups[cat];var label=R72_CAT_LABELS[cat]||cat;
+    var topItems=items.slice().sort(function(a,b){return(b.relevance_score||0)-(a.relevance_score||0);}).slice(0,5);
+    var dotCls='r72-cat-dot-'+cat;var badgeCls='r72-cat-badge-'+cat;
+    var itemsHtml=topItems.map(function(it){var score=it.relevance_score!=null?Math.round(it.relevance_score*100):null;return'<div class="r72-topic-item" role="listitem" tabindex="0"><div class="r72-topic-dot '+dotCls+'" aria-hidden="true"></div><div class="r72-topic-text">'+escapeHtml((it.title||'').slice(0,80)+((it.title||'').length>80?'…':''))+'</div>'+(score!=null?'<span class="r72-topic-badge '+badgeCls+'">'+score+'점</span>':'')+'</div>';}).join('');
+    return'<article class="r72-topic-group" role="listitem" aria-label="'+escapeHtml(label)+' 카테고리"><div class="r72-topic-group-header r72-cat-bg-'+cat+'">'+escapeHtml(label)+'<span class="r72-topic-group-count">'+items.length+'건</span></div><div class="r72-topic-group-body">'+itemsHtml+'</div></article>';
+  }).join('');
+}
+
+function r72RenderSummary(){
+  if(!MI_DATA)return;
+  var allItems=getMIItems();var w0=(MI_DATA.weeks&&MI_DATA.weeks[0])||{};
+  var highlightsEl=document.getElementById('r72-sum-highlights-body');
+  if(highlightsEl){var topEvents=(w0.topEvents||w0.top_events||[]).slice(0,5);if(topEvents.length){highlightsEl.innerHTML=topEvents.map(function(e){return'<div class="r72-sum-item"><div class="r72-sum-item-label">하이라이트</div><div class="r72-sum-item-text">'+escapeHtml(e.title||String(e))+'</div>'+(e.cubig_action?'<div style="font-size:11px;color:var(--accent);margin-top:4px;font-weight:600">→ '+escapeHtml(e.cubig_action)+'</div>':'')+'</div>';}).join('');}else{var fallback=allItems.slice().sort(function(a,b){return(b.relevance_score||0)-(a.relevance_score||0);}).slice(0,5);highlightsEl.innerHTML=fallback.length?fallback.map(function(it){return'<div class="r72-sum-item">'+r7SourceBadgeHtml(it.channel||'')+'<div class="r72-sum-item-text" style="margin-top:6px">'+escapeHtml((it.title||'').slice(0,90))+'</div></div>';}).join(''):'<div class="r72-sum-empty">이번 주 데이터 없음</div>';}}
+  var trendsEl=document.getElementById('r72-sum-trends-body');
+  if(trendsEl){var ranking=(w0.topicMentionRanking||[]).slice(0,5);var trendItems=[];ranking.forEach(function(t){var mentions=(t.mentions&&t.mentions[0])||{};trendItems.push('<div class="r72-sum-item"><div class="r72-sum-item-label">언급 트렌드</div><div class="r72-sum-item-text"><strong>'+escapeHtml(t.keyword||t.topic||'')+'</strong>'+(mentions.count?' — '+mentions.count+'건':'')+'</div></div>');});trendsEl.innerHTML=trendItems.length?trendItems.join(''):'<div class="r72-sum-empty">트렌드 데이터 없음</div>';}
+  var cubigEl=document.getElementById('r72-sum-cubig-body');
+  if(cubigEl){var opps=(w0.opportunityAreas||[]).slice(0,4);var cubigItems=opps.map(function(o){return'<div class="r72-sum-item"><div class="r72-sum-item-label">기회 영역 ['+escapeHtml(String(o.marketDemand||'MEDIUM').toUpperCase())+']</div><div class="r72-sum-item-text"><strong>'+escapeHtml(o.area||'')+'</strong>'+(o.why?'<br><span style="font-size:11px">'+escapeHtml(o.why.slice(0,80))+'</span>':'')+'</div></div>';});if(!cubigItems.length){var withAngle=allItems.filter(function(it){return!!(it.cubig_relevance||it.cubig_angle||it.message_hook);}).slice(0,5);cubigItems=withAngle.map(function(it){var angle=it.cubig_relevance||it.cubig_angle||it.message_hook||'';return'<div class="r72-sum-item">'+r7SourceBadgeHtml(it.channel||'')+'<div class="r72-sum-item-text" style="margin-top:6px">'+escapeHtml((it.title||'').slice(0,60))+'</div><div style="font-size:11px;color:var(--accent);margin-top:4px">'+escapeHtml(angle.slice(0,70))+'</div></div>';});}cubigEl.innerHTML=cubigItems.length?cubigItems.join(''):'<div class="r72-sum-empty">CUBIG 연관 데이터 없음</div>';}
+  var chipsEl=document.getElementById('r72-topic-chips');
+  if(chipsEl){var suggestions=(w0.topicSuggestions||[]);if(suggestions.length){chipsEl.innerHTML=suggestions.map(function(t,i){var hot=i<2?'r72-chip-hot':(i<4?'r72-chip-rising':'r72-chip-steady');var hotLabel=i<2?'HOT':(i<4?'RISING':'STEADY');return'<div class="r72-topic-chip" role="listitem"><span class="r72-topic-chip-num">#'+(i+1)+'</span><span class="r72-topic-chip-title">'+escapeHtml(t.title||'')+'</span>'+(t.why?'<span class="r72-topic-chip-why">'+escapeHtml(t.why.slice(0,70))+'</span>':'')+'<span class="r72-topic-chip-trend '+hot+'">'+hotLabel+'</span></div>';}).join('');}else{chipsEl.innerHTML='<div class="r72-sum-empty" style="width:100%">콘텐츠 제안 데이터 없음</div>';}}
+}
+
+r7InitFilters();
 </script>
+<!-- Archive Modal -->
+<div class="n-modal-overlay" id="n-archive-modal" onclick="if(event.target===this)closeArchiveModal()">
+  <div class="n-modal">
+    <div class="n-modal-head">
+      <div class="n-modal-title" id="n-modal-title">원문 링크</div>
+      <button class="n-modal-close" onclick="closeArchiveModal()">&#x00D7;</button>
+    </div>
+    <div class="n-modal-body" id="n-modal-body"></div>
+  </div>
+</div>
 </body>
 </html>
