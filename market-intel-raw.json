@@ -1,7 +1,7 @@
 {
   "metadata": {
     "week": "2026-W17",
-    "collected_at": "2026-04-24T04:48:12.215Z",
+    "collected_at": "2026-04-24T05:26:39.911Z",
     "channels": [
       "reddit",
       "medium",
@@ -22,21 +22,21 @@
       "prompt-security",
       "calypsoai"
     ],
-    "total_items": 199,
-    "duration_ms": 72150
+    "total_items": 197,
+    "duration_ms": 98042
   },
   "items": [
     {
-      "id": "reddit_tavily_4cb1afb5eec076e8",
+      "id": "reddit_tavily_c1a57a90855e4c94",
       "channel": "reddit",
-      "source": "r/LLMDevs",
+      "source": "r/computervision",
       "competitor": null,
       "product_line": null,
-      "title": "Synthetic Data: The best tool that we don't use enough - Reddit",
-      "url": "https://www.reddit.com/r/LLMDevs/comments/1k7dmi4/synthetic_data_the_best_tool_that_we_dont_use/",
+      "title": "Anyone using synthetic data with success? : r/computervision - Reddit",
+      "url": "https://www.reddit.com/r/computervision/comments/1oknlqs/anyone_using_synthetic_data_with_success/",
       "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
-      "content_snippet": "Synthetic data is the future. No privacy concerns, no costly data collection. It's cheap, fast, and scalable. It cuts bias and keeps you",
+      "published_at": "2026-04-24T05:26:40.812Z",
+      "content_snippet": "The synthetic data in this case is easy enough to generate on your own with python or even opengl and phong reflection and transfers over",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -59,7 +59,7 @@
       "title": "What areas does synthetic data generation has usecases? - Reddit",
       "url": "https://www.reddit.com/r/datascience/comments/1igo4dh/what_areas_does_synthetic_data_generation_has/",
       "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
+      "published_at": "2026-04-24T05:26:40.812Z",
       "content_snippet": "Some ideas behind synthetic data is to allow the development of projects otherwise not viable, to prototype solutions, or to work in parallel",
       "engagement": {
         "upvotes": null,
@@ -83,7 +83,7 @@
       "title": "[D] Is Synthetic Data a Reliable Option for Training Machine ... - Reddit",
       "url": "https://www.reddit.com/r/MachineLearning/comments/1bosj2t/d_is_synthetic_data_a_reliable_option_for/",
       "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
+      "published_at": "2026-04-24T05:26:40.812Z",
       "content_snippet": "General rule of thumb is synthetic data alone is never enough for models, if combined with real data you can do better than real data alone in some cases.",
       "engagement": {
         "upvotes": null,
@@ -107,7 +107,7 @@
       "title": "Is using synthetic data for portfolio projects worthwhile? - Reddit",
       "url": "https://www.reddit.com/r/dataanalysis/comments/1qox87g/is_using_synthetic_data_for_portfolio_projects/",
       "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
+      "published_at": "2026-04-24T05:26:40.812Z",
       "content_snippet": "Synthetic data is totally fine for portfolio projects, honestly. Real insurance or healthcare datasets are usually hard to access because of",
       "engagement": {
         "upvotes": null,
@@ -131,8 +131,32 @@
       "title": "Synthetic data for AI training—worth it or just hype? - Reddit",
       "url": "https://www.reddit.com/r/machinelearningnews/comments/1jaaimj/synthetic_data_for_ai_trainingworth_it_or_just/",
       "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
+      "published_at": "2026-04-24T05:26:40.812Z",
       "content_snippet": "I keep hearing about synthetic data being the future of AI training, but does it actually replace real-world data effectively?",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_1eece18af79cf24d",
+      "channel": "reddit",
+      "source": "r/singularity",
+      "competitor": null,
+      "product_line": null,
+      "title": "Is synthetic data ultimately what is needed for AGI? - Reddit",
+      "url": "https://www.reddit.com/r/singularity/comments/187gr2t/is_synthetic_data_ultimately_what_is_needed_for/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:40.812Z",
+      "content_snippet": "synthetic data is another way of saying \"AI thinking for itself, and expanding on its artificial thought\". When you combine certain elements",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -155,7 +179,7 @@
       "title": "How does synthetic data work? : r/singularity - Reddit",
       "url": "https://www.reddit.com/r/singularity/comments/1e6osh7/how_does_synthetic_data_work/",
       "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
+      "published_at": "2026-04-24T05:26:40.812Z",
       "content_snippet": "This kind of data trains models on how to search in conceptual space, what reasoning steps are \"good\" or \"bad\", and given enough diverse examples, what sorts",
       "engagement": {
         "upvotes": null,
@@ -179,7 +203,7 @@
       "title": "what is synthetic data : r/MLQuestions - Reddit",
       "url": "https://www.reddit.com/r/MLQuestions/comments/vcnb33/what_is_synthetic_data/",
       "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
+      "published_at": "2026-04-24T05:26:40.812Z",
       "content_snippet": "What I understand as synthetic data is data generated from scratch which matches the size/dimensions of the real data. It doesn't mean it is",
       "engagement": {
         "upvotes": null,
@@ -203,7 +227,7 @@
       "title": "Can synthetic data ever fully replace real-world datasets? - Reddit",
       "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1otic12/can_synthetic_data_ever_fully_replace_realworld/",
       "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
+      "published_at": "2026-04-24T05:26:40.812Z",
       "content_snippet": "Synthetic data is powerful, but not a full replacement yet. It's excellent for augmenting scarce or sensitive datasets and for controlled",
       "engagement": {
         "upvotes": null,
@@ -219,64 +243,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_7803965c343e5f8c",
+      "id": "reddit_tavily_ca263fdc07650814",
       "channel": "reddit",
-      "source": "r/datascience",
+      "source": "r/computervision",
       "competitor": null,
       "product_line": null,
-      "title": "Company have no data so 80% of my role is creating synthetic data ...",
-      "url": "https://www.reddit.com/r/datascience/comments/147l18l/company_have_no_data_so_80_of_my_role_is_creating/",
+      "title": "What are the limits of synthetic data generation? - Reddit",
+      "url": "https://www.reddit.com/r/computervision/comments/1czdyyi/what_are_the_limits_of_synthetic_data_generation/",
       "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
-      "content_snippet": "Synthetic data can help you design good visualizations, training pipelines as well as inference pipelines that have a good chance of working",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_bf37187b826f1754",
-      "channel": "reddit",
-      "source": "r/learnmachinelearning",
-      "competitor": null,
-      "product_line": null,
-      "title": "What's the safest way to generate synthetic data? - Reddit",
-      "url": "https://www.reddit.com/r/learnmachinelearning/comments/1g17d99/whats_the_safest_way_to_generate_synthetic_data/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:13.505Z",
-      "content_snippet": "The \"safest\" data generation technique will always be to collect more data from your original source(s) as whatever process(es) generating the data will",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_91f5b44954de8b25",
-      "channel": "reddit",
-      "source": "r/dataengineering",
-      "competitor": null,
-      "product_line": null,
-      "title": "Data Quality : r/dataengineering - Reddit",
-      "url": "https://www.reddit.com/r/dataengineering/comments/18iqbbp/data_quality/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:14.767Z",
-      "content_snippet": "When talking abount data quality, you have to figure out if it's defined as difference between upstream data source and reports, or the",
+      "published_at": "2026-04-24T05:26:40.813Z",
+      "content_snippet": "I am trying to do some extreme model training and I would like to know the current limits of easily accessible and packaged open source resources.",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -299,7 +275,7 @@
       "title": "Data Quality : r/dataengineering - Reddit",
       "url": "https://www.reddit.com/r/dataengineering/comments/15zay7u/data_quality/",
       "author": null,
-      "published_at": "2026-04-24T04:48:14.767Z",
+      "published_at": "2026-04-24T05:26:42.147Z",
       "content_snippet": "Data Quality is a measure of the correctness, definition, and rules defined for your data given your overall analytics/reporting needs. This can",
       "engagement": {
         "upvotes": null,
@@ -323,7 +299,7 @@
       "title": "Data quality : r/dataengineering - Reddit",
       "url": "https://www.reddit.com/r/dataengineering/comments/1ctbfun/data_quality/",
       "author": null,
-      "published_at": "2026-04-24T04:48:14.767Z",
+      "published_at": "2026-04-24T05:26:42.147Z",
       "content_snippet": "I'd consider the data quality part of this as validating its correctly loaded with some daily aggregations matching source/target. There are",
       "engagement": {
         "upvotes": null,
@@ -339,112 +315,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_e5d57f55d339cc3f",
+      "id": "reddit_tavily_91f5b44954de8b25",
       "channel": "reddit",
       "source": "r/dataengineering",
       "competitor": null,
       "product_line": null,
-      "title": "Is data quality still a real problem? : r/dataengineering - Reddit",
-      "url": "https://www.reddit.com/r/dataengineering/comments/1gw03r5/is_data_quality_still_a_real_problem/",
+      "title": "Data Quality : r/dataengineering - Reddit",
+      "url": "https://www.reddit.com/r/dataengineering/comments/18iqbbp/data_quality/",
       "author": null,
-      "published_at": "2026-04-24T04:48:14.767Z",
-      "content_snippet": "Is this a real question? Of course it's still a problem. As long as there are human beings entering data into systems, data quality is going to",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_4e68f40c797f9809",
-      "channel": "reddit",
-      "source": "r/dataengineering",
-      "competitor": null,
-      "product_line": null,
-      "title": "What's Your Data Quality Strategy : r/dataengineering - Reddit",
-      "url": "https://www.reddit.com/r/dataengineering/comments/14cdr4i/whats_your_data_quality_strategy/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:14.767Z",
-      "content_snippet": "I'm currently working on developing a data quality strategy for my organization and would love to hear your opinions and insights on this topic.",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_a26d57b0e9b9d272",
-      "channel": "reddit",
-      "source": "r/dataengineering",
-      "competitor": null,
-      "product_line": null,
-      "title": "Data Quality: Horror Stories (And How You Fixed It) : r/dataengineering",
-      "url": "https://www.reddit.com/r/dataengineering/comments/16jqwut/data_quality_horror_stories_and_how_you_fixed_it/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:14.768Z",
-      "content_snippet": "My story: Last year, I was handed a dataset to analyze and forecast our Q4 sales. I didn't double-check the data source and ran my models. Predictions were off",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_4e07529fa0f26eca",
-      "channel": "reddit",
-      "source": "r/analytics",
-      "competitor": null,
-      "product_line": null,
-      "title": "How has your organization effectively managed data quality? - Reddit",
-      "url": "https://www.reddit.com/r/analytics/comments/1hpvjny/how_has_your_organization_effectively_managed/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:14.768Z",
-      "content_snippet": "My question is: what has your organization done to effectively combat poor data quality? What type of data governance protocols did you employ that was useful?",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_1bffb3cb711f1fa3",
-      "channel": "reddit",
-      "source": "r/dataengineering",
-      "competitor": null,
-      "product_line": null,
-      "title": "Survey: What tools are your companies using for data quality? - Reddit",
-      "url": "https://www.reddit.com/r/dataengineering/comments/1g2hcd3/survey_what_tools_are_your_companies_using_for/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:14.768Z",
-      "content_snippet": "Data quality frameworks like Great Expectations and dbt-expectations allow you to work with customized SQL statement anyway, so you might as",
+      "published_at": "2026-04-24T05:26:42.147Z",
+      "content_snippet": "When talking abount data quality, you have to figure out if it's defined as difference between upstream data source and reports, or the",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -467,7 +347,7 @@
       "title": "Getting started with data quality management : r/dataengineering",
       "url": "https://www.reddit.com/r/dataengineering/comments/1czogaq/getting_started_with_data_quality_management/",
       "author": null,
-      "published_at": "2026-04-24T04:48:14.768Z",
+      "published_at": "2026-04-24T05:26:42.147Z",
       "content_snippet": "Data quality isn't about pristine data, it's about \"fitness of use for your data consumer.\" This means it's very subjective and thus you need to",
       "engagement": {
         "upvotes": null,
@@ -483,16 +363,136 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_16f05df2769431ef",
+      "id": "reddit_tavily_4acf2803624cb2c4",
       "channel": "reddit",
       "source": "r/dataengineering",
       "competitor": null,
       "product_line": null,
-      "title": "What are the most challenging data quality issues you face frequently?",
-      "url": "https://www.reddit.com/r/dataengineering/comments/1c8dy1r/what_are_the_most_challenging_data_quality_issues/",
+      "title": "Data Quality is a product management problem, not an engineering ...",
+      "url": "https://www.reddit.com/r/dataengineering/comments/1opz0ve/unpopular_opinion_data_quality_is_a_product/",
       "author": null,
-      "published_at": "2026-04-24T04:48:14.768Z",
-      "content_snippet": "Data quality challenges are a common issue for many organizations, often hindering advanced analytics and AI capabilities. Common challenges",
+      "published_at": "2026-04-24T05:26:42.147Z",
+      "content_snippet": "Data quality improves dramatically when product, engineering, and analytics own it together. Holding data engineers solely responsible is a",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_4e68f40c797f9809",
+      "channel": "reddit",
+      "source": "r/dataengineering",
+      "competitor": null,
+      "product_line": null,
+      "title": "What's Your Data Quality Strategy : r/dataengineering - Reddit",
+      "url": "https://www.reddit.com/r/dataengineering/comments/14cdr4i/whats_your_data_quality_strategy/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:42.147Z",
+      "content_snippet": "I'm currently working on developing a data quality strategy for my organization and would love to hear your opinions and insights on this topic.",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_1bffb3cb711f1fa3",
+      "channel": "reddit",
+      "source": "r/dataengineering",
+      "competitor": null,
+      "product_line": null,
+      "title": "Survey: What tools are your companies using for data quality? - Reddit",
+      "url": "https://www.reddit.com/r/dataengineering/comments/1g2hcd3/survey_what_tools_are_your_companies_using_for/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:42.147Z",
+      "content_snippet": "Data quality frameworks like Great Expectations and dbt-expectations allow you to work with customized SQL statement anyway, so you might as",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_f51c5d88ff516f6a",
+      "channel": "reddit",
+      "source": "r/dataengineering",
+      "competitor": null,
+      "product_line": null,
+      "title": "What exactly are the purpose of Data quality tools? : r/dataengineering",
+      "url": "https://www.reddit.com/r/dataengineering/comments/10a1y8k/what_exactly_are_the_purpose_of_data_quality_tools/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:42.147Z",
+      "content_snippet": "Data quality is often sold as checking column formats and schemas, but we have to do a bunch of rule based testing to make sure the data is correct as well.",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_d3b0ee8d8cf8fa4a",
+      "channel": "reddit",
+      "source": "r/dataengineering",
+      "competitor": null,
+      "product_line": null,
+      "title": "How serious is your org about Data Quality? : r/dataengineering",
+      "url": "https://www.reddit.com/r/dataengineering/comments/1f5lqfi/how_serious_is_your_org_about_data_quality/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:42.147Z",
+      "content_snippet": "In my organization everyone recognizes data quality is an issue, but very little is being done to address it holistically. For us, there is no urgency.",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_97f0ce646b08753e",
+      "channel": "reddit",
+      "source": "r/dataengineering",
+      "competitor": null,
+      "product_line": null,
+      "title": "Which data quality tool do you use? : r/dataengineering - Reddit",
+      "url": "https://www.reddit.com/r/dataengineering/comments/1rg6fjo/which_data_quality_tool_do_you_use/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:42.147Z",
+      "content_snippet": "Essentially it breaks down your data products into layers (sources, transformation, mart) and you run tests on models tailored to the layer.",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -515,7 +515,7 @@
       "title": "LLM security : r/ArtificialInteligence - Reddit",
       "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1l6oaq7/llm_security/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.005Z",
+      "published_at": "2026-04-24T05:26:44.230Z",
       "content_snippet": "The post below explores the under-discussed risks of large language models (LLMs), especially when they're granted tool access.",
       "engagement": {
         "upvotes": null,
@@ -539,7 +539,7 @@
       "title": "LLM security : r/LLMDevs - Reddit",
       "url": "https://www.reddit.com/r/LLMDevs/comments/1ol1ysf/llm_security/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.005Z",
+      "published_at": "2026-04-24T05:26:44.230Z",
       "content_snippet": "Has the level of importance that the market has been giving to LLM security, been increasing? Or are we still in the “early SQL injection”",
       "engagement": {
         "upvotes": null,
@@ -563,7 +563,7 @@
       "title": "How Are You Tackling LLM Security Risks? : r/ciso - Reddit",
       "url": "https://www.reddit.com/r/ciso/comments/1hcnhwd/how_are_you_tackling_llm_security_risks/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.005Z",
+      "published_at": "2026-04-24T05:26:44.230Z",
       "content_snippet": "To tackle LLM security risks like data leakage, adversarial attacks, model inversion, and prompt injections, key measures include: Data Privacy",
       "engagement": {
         "upvotes": null,
@@ -587,7 +587,7 @@
       "title": "How Are You Tackling LLM Security Risks? : r/PowerPlatform - Reddit",
       "url": "https://www.reddit.com/r/PowerPlatform/comments/1hcotvf/how_are_you_tackling_llm_security_risks/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.005Z",
+      "published_at": "2026-04-24T05:26:44.230Z",
       "content_snippet": "I think LLMs are finally making the security risks of low-code platforms a serious enough topic to gain both awareness as well as hopefully",
       "engagement": {
         "upvotes": null,
@@ -611,7 +611,7 @@
       "title": "Best LLM security and safety tools for protecting enterprise AI apps ...",
       "url": "https://www.reddit.com/r/AskNetsec/comments/1rvyepq/best_llm_security_and_safety_tools_for_protecting/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.005Z",
+      "published_at": "2026-04-24T05:26:44.230Z",
       "content_snippet": "From what I understand, proper LLM security should cover the full lifecycle. like Pre-deployment red-teaming, runtime guardrails, and continuous",
       "engagement": {
         "upvotes": null,
@@ -635,7 +635,7 @@
       "title": "Where are the discussions about security for LLM use? - Reddit",
       "url": "https://www.reddit.com/r/cybersecurity/comments/18ypjoq/where_are_the_discussions_about_security_for_llm/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.005Z",
+      "published_at": "2026-04-24T05:26:44.231Z",
       "content_snippet": "I'm implementing an LLM policy at my company and am concerned about the security risks involved from my own research, particularly around ChatGPT's training",
       "engagement": {
         "upvotes": null,
@@ -659,7 +659,7 @@
       "title": "Shipping LLM features exposed security issues I wasn't expecting",
       "url": "https://www.reddit.com/r/SaaS/comments/1qxlh9b/shipping_llm_features_exposed_security_issues_i/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.006Z",
+      "published_at": "2026-04-24T05:26:44.231Z",
       "content_snippet": "We treat LLMs like an untrusted microservice: never call before auth, only pass minimum fields, and wrap every call in a server-side “policy",
       "engagement": {
         "upvotes": null,
@@ -683,7 +683,7 @@
       "title": "Is anyone here specializing in LLM or generative AI security? - Reddit",
       "url": "https://www.reddit.com/r/cybersecurity/comments/1da7hp2/is_anyone_here_specializing_in_llm_or_generative/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.006Z",
+      "published_at": "2026-04-24T05:26:44.231Z",
       "content_snippet": "First things first, you're gonna get a lot of people saying LLMs are not novel and contain no new security threats or vulnerabilities - you can",
       "engagement": {
         "upvotes": null,
@@ -707,7 +707,7 @@
       "title": "What are your thoughts on the safety of using these LLMs ... - Reddit",
       "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1kd3o5y/what_are_your_thoughts_on_the_safety_of_using/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.006Z",
+      "published_at": "2026-04-24T05:26:44.231Z",
       "content_snippet": "The security of using LLMs on your codebase often depends on your specific regulatory needs and how you manage access and data handling. When",
       "engagement": {
         "upvotes": null,
@@ -731,7 +731,7 @@
       "title": "Any training that covers OWASP-style LLM security testing (model ...",
       "url": "https://www.reddit.com/r/cybersecurity/comments/1rlavyv/any_training_that_covers_owaspstyle_llm_security/",
       "author": null,
-      "published_at": "2026-04-24T04:48:16.006Z",
+      "published_at": "2026-04-24T05:26:44.231Z",
       "content_snippet": "Most of the courses I've seen so far (e.g., HTB AI/LLM modules) mainly focus on application-level attacks like prompt injection, jailbreaks,",
       "engagement": {
         "upvotes": null,
@@ -755,7 +755,7 @@
       "title": "AI compliance certification? : r/ITCareerQuestions - Reddit",
       "url": "https://www.reddit.com/r/ITCareerQuestions/comments/1lebmvr/ai_compliance_certification/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
+      "published_at": "2026-04-24T05:26:45.466Z",
       "content_snippet": "I was wondering if anyone knows any good AI compliance certifications? Focused on compliance with the AI act and for example the GDPR etc?",
       "engagement": {
         "upvotes": null,
@@ -779,7 +779,7 @@
       "title": "AI for compliance & reporting : r/smallbusiness - Reddit",
       "url": "https://www.reddit.com/r/smallbusiness/comments/1n5voqi/ai_for_compliance_reporting/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
+      "published_at": "2026-04-24T05:26:45.466Z",
       "content_snippet": "It pulls info from our internal sheets, formats it against whatever regulation we set (GDPR, SOX, HIPAA, etc.), and highlights missing fields",
       "engagement": {
         "upvotes": null,
@@ -803,7 +803,7 @@
       "title": "Building a project around AI compliance - seeking advice : r/SaaS",
       "url": "https://www.reddit.com/r/SaaS/comments/1sd9u6c/building_a_project_around_ai_compliance_seeking/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
+      "published_at": "2026-04-24T05:26:45.466Z",
       "content_snippet": "The basic idea is to make AI compliance less messy for teams building around AI which I guess everyone does it these days, especially when GDPR",
       "engagement": {
         "upvotes": null,
@@ -827,7 +827,7 @@
       "title": "Looking for recommendations on AI powered compliance ... - Reddit",
       "url": "https://www.reddit.com/r/fintech/comments/1p19p3c/looking_for_recommendations_on_ai_powered/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
+      "published_at": "2026-04-24T05:26:45.466Z",
       "content_snippet": "Platforms worth evaluating: Unit21 for transaction monitoring, Alloy or Sardine for identity and fraud, Inscribe for document verification. All",
       "engagement": {
         "upvotes": null,
@@ -851,7 +851,7 @@
       "title": "Showing proof of AI compliance to clients : r/legaltech - Reddit",
       "url": "https://www.reddit.com/r/legaltech/comments/1p1qq9a/showing_proof_of_ai_compliance_to_clients/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
+      "published_at": "2026-04-24T05:26:45.466Z",
       "content_snippet": "You can show compliance by your sharing internal AI policies, and your MSA with your AI provider. It also doesn't hurt to have the technical",
       "engagement": {
         "upvotes": null,
@@ -875,7 +875,7 @@
       "title": "trying to wrap my head around AI compliance agents, what ... - Reddit",
       "url": "https://www.reddit.com/r/AMLCompliance/comments/1p6iu7z/trying_to_wrap_my_head_around_ai_compliance/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
+      "published_at": "2026-04-24T05:26:45.466Z",
       "content_snippet": "The biggest difference is that they automate the grunt work analysts usually do, like pulling documents, checking them against an SOP and",
       "engagement": {
         "upvotes": null,
@@ -899,7 +899,7 @@
       "title": "Anyone using AI to automate compliance stuff? - Reddit",
       "url": "https://www.reddit.com/r/automation/comments/1mq3hh7/anyone_using_ai_to_automate_compliance_stuff/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
+      "published_at": "2026-04-24T05:26:45.466Z",
       "content_snippet": "The AI handles the what and how of remediation automatically, but your team still owns the why — risk appetite, business context, strategic",
       "engagement": {
         "upvotes": null,
@@ -923,7 +923,7 @@
       "title": "r/AI_Regulation - Reddit",
       "url": "https://www.reddit.com/r/AI_Regulation/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
+      "published_at": "2026-04-24T05:26:45.466Z",
       "content_snippet": "r/AI_Regulation: A community interested in the laws and regulations which affect the development or deployment of AI/ML algorithms.",
       "engagement": {
         "upvotes": null,
@@ -947,7 +947,7 @@
       "title": "Will AI make Compliance Officer roles obsolete? : r/careerguidance",
       "url": "https://www.reddit.com/r/careerguidance/comments/1puec26/will_ai_make_compliance_officer_roles_obsolete/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
+      "published_at": "2026-04-24T05:26:45.466Z",
       "content_snippet": "AI will absolutely change compliance roles, but “obsolete” is unlikely - especially in tech/fintech - because so much of the job is judgment +",
       "engagement": {
         "upvotes": null,
@@ -963,16 +963,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_592ea6362b2cbef2",
+      "id": "reddit_tavily_574c7a1973c56feb",
       "channel": "reddit",
-      "source": "r/cybersecurity",
+      "source": "r/computervision",
       "competitor": null,
       "product_line": null,
-      "title": "AI adoption / compliance: how are you keeping usage risks in check?",
-      "url": "https://www.reddit.com/r/cybersecurity/comments/1nopg2k/ai_adoption_compliance_how_are_you_keeping_usage/",
+      "title": "Software For Data Labelling : r/computervision - Reddit",
+      "url": "https://www.reddit.com/r/computervision/comments/15f395w/software_for_data_labelling/",
       "author": null,
-      "published_at": "2026-04-24T04:48:17.727Z",
-      "content_snippet": "Most compliance frameworks (SOX, PCI, etc.) already have the bones for this but they just haven't caught up to AI being another data",
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "As a researcher working on developing an autonomous vehicle, I am facing a critical need for a reliable computer vision data labeling",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -987,16 +987,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_0ecd1b4817e88be9",
+      "id": "reddit_tavily_3c0f2e7ff2db27cf",
       "channel": "reddit",
       "source": "r/MachineLearning",
       "competitor": null,
       "product_line": null,
-      "title": "[P] Label Studio v1.0 – an open source data labeling tool that helps ...",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/m6eoru/p_label_studio_v10_an_open_source_data_labeling/",
+      "title": "[R] Data Annotation & Data Labeling with AI : r/MachineLearning",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/11y2mmi/r_data_annotation_data_labeling_with_ai/",
       "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "[P] Label Studio v1.0 – an open source data labeling tool that helps you prepare ML training data and improve the quality of your datasets, works for computer vision, NLP, speech processing, time series analysis, and more : r/MachineLearning. Skip to main content[P] Label Studio v1.0 – an open sourc",
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "The nice thing is that it is really, really fast to label a bunch of data with turbo and GPT-4, analyze the quality of the results, iterate with",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1011,16 +1011,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_fbe78f4a76893954",
+      "id": "reddit_tavily_26d23ca5550e07fc",
       "channel": "reddit",
-      "source": "r/gis",
+      "source": "r/alignerr",
       "competitor": null,
       "product_line": null,
-      "title": "GIS data labeling tool for building a small machine learning dataset",
-      "url": "https://www.reddit.com/r/gis/comments/we6018/gis_data_labeling_tool_for_building_a_small/",
+      "title": "Not Biased- Alignerr is the best Data Labeling Company - Reddit",
+      "url": "https://www.reddit.com/r/alignerr/comments/1oysm3h/not_biased_alignerr_is_the_best_data_labeling/",
       "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "GIS data labeling tool for building a small machine learning dataset : r/gis Skip to main contentGIS data labeling tool for building a small machine learning dataset : r/gis Open menu Open navigationGo to Reddit Home r/gis A chip A close button Log InLog in to Reddit Expand user menu Open settings m",
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "They don't stress you out about hours, tasks are there and you just do them if you want. If not, they'll likely add you to something else that",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1035,16 +1035,40 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_c6be3de4f15bfa9c",
+      "id": "reddit_tavily_c36ba4831e65de34",
+      "channel": "reddit",
+      "source": "r/computervision",
+      "competitor": null,
+      "product_line": null,
+      "title": "Best data labeling tools (covering all modality, industry and team ...",
+      "url": "https://www.reddit.com/r/computervision/comments/1f4bhv5/best_data_labeling_tools_covering_all_modality/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "I would say LabelStudio. It's east to set-up, flexible and can be deeply customized. Tracks a lot of info about each image/annotator that could be useful in",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_77d330cba98d4339",
       "channel": "reddit",
       "source": "r/learnmachinelearning",
       "competitor": null,
       "product_line": null,
-      "title": "AI Teams Looking for Data Annotation and Data Labeling - Reddit",
-      "url": "https://www.reddit.com/r/learnmachinelearning/comments/1i8k7am/ai_teams_looking_for_data_annotation_and_data/",
+      "title": "Can data labeling be a stable job with AI moving so fast? - Reddit",
+      "url": "https://www.reddit.com/r/learnmachinelearning/comments/1lakyav/can_data_labeling_be_a_stable_job_with_ai_moving/",
       "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "AI Teams Looking for Data Annotation and Data Labeling : r/learnmachinelearning. Skip to main contentAI Teams Looking for Data Annotation and Data Labeling : r/learnmachinelearning. Open menu Open navigationGo to Reddit Home. r/learnmachinelearning A chip A close button. Log InLog in to Reddit. Expa",
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "With how fast AI is improving, especially in automating simple tasks, will data annotation jobs still be around in a few years?",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1059,112 +1083,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_7b4267687208ce90",
-      "channel": "reddit",
-      "source": "r/remotework",
-      "competitor": null,
-      "product_line": null,
-      "title": "Meta Data Labeling Analyst interview? : r/remotework",
-      "url": "https://www.reddit.com/r/remotework/comments/1m4sflv/meta_data_labeling_analyst_interview",
-      "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "Meta Data Labeling Analyst interview? Skip to main contentMeta Data Labeling Analyst interview? Open menu Open navigationGo to Reddit Home. Get App Get the Reddit app Log InLog in to Reddit. Expand user menu Open settings menu. Meta Data Labeling Analyst interview? Has anyone ever interviewed for th",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_fe544917469c265d",
-      "channel": "reddit",
-      "source": "reddit",
-      "competitor": null,
-      "product_line": null,
-      "title": "Reddit - The heart of the internet",
-      "url": "https://www.reddit.com/user/RogermaxUSA/comments/1l3rx2i/top_data_labeling_companies_in_2025",
-      "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "However, the success of AI development depends on the quality of large volumes of training datasets, which require data annotation and labeling (DAL) services.*. Since data annotation is both time- and resource-intensive, AI developers often outsource it to specialized providers. # Best Data Labelin",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_69ec7729db13d2c6",
-      "channel": "reddit",
-      "source": "r/MachineLearning",
-      "competitor": "scale-ai",
-      "product_line": "syntitan",
-      "title": "[Discussion] What is your go to technique for labelling data? : r/MachineLearning",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/powmw5/discussion_what_is_your_go_to_technique_for",
-      "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "# [Discussion] What is your go to technique for labelling data? # [Discussion] What is your go to technique for labelling data? Top data labeling tools for Machine Learning. Data labeling is a crucial step in machine learning, and choosing the right tool can significantly impact the efficiency and a",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_8c1db32f16c1dead",
-      "channel": "reddit",
-      "source": "r/MLQuestions",
-      "competitor": null,
-      "product_line": null,
-      "title": "How did you approach large-scale data labeling? What challenges do you face? : r/MLQuestions",
-      "url": "https://www.reddit.com/r/MLQuestions/comments/1gxdd8i/how_did_you_approach_largescale_data_labeling",
-      "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "# How did you approach large-scale data labeling? What challenges do you face? Skip to main contentHow did you approach large-scale data labeling? What challenges do you face? Open menu Open navigationGo to Reddit Home. Get App Get the Reddit app Log InLog in to Reddit. Expand user menu Open setting",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_58ddef3f45b2a979",
+      "id": "reddit_tavily_a347394512323112",
       "channel": "reddit",
       "source": "r/MachineLearning",
       "competitor": null,
       "product_line": null,
-      "title": "[P] Adala – an open source Autonomous DAta (Labeling) Agent ...",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/17g9ec6/p_adala_an_open_source_autonomous_data_labeling/",
+      "title": "[D]Has anyone here worked with third party data labelling services?",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1lzil1y/dhas_anyone_here_worked_with_third_party_data/",
       "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "[P] Adala – an open source Autonomous DAta (Labeling) Agent framework that helps you automate data processing and data labeling : r/MachineLearning Skip to main content[P] Adala – an open source Autonomous DAta (Labeling) Agent framework that helps you automate data processing and data labeling : r/",
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "They were flexible with project scale and handled edge cases better than we expected. What helped was setting clear labeling guidelines and",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1179,16 +1107,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_2463a0700937f6d2",
+      "id": "reddit_tavily_d8f5c3adf89bbfbc",
       "channel": "reddit",
-      "source": "reddit",
+      "source": "r/datascience",
       "competitor": null,
       "product_line": null,
-      "title": "Reddit - The heart of the internet",
-      "url": "https://www.reddit.com/user/RogermaxUSA/comments/1nwqk1x/top_data_labeling_companies_powering_financial_ai",
+      "title": "How does your organization label data? : r/datascience - Reddit",
+      "url": "https://www.reddit.com/r/datascience/comments/1m0dxsm/how_does_your_organization_label_data/",
       "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "# Top Data Labeling Companies Powering Financial AI in 2025. This means data labeling is mission-critical for financial institutions as data remains diverse, regulated, and highly sensitive in this industry. Fintechs, insurers, and banks increasingly turn to the best data labeling companies that com",
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "SMEs can label data using structured pages and labels that reflect fraud typologies, risk signals, or investigation outcomes, without forcing",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1203,16 +1131,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_2d4aece11af087a6",
+      "id": "reddit_tavily_92fcab127b0c8965",
       "channel": "reddit",
-      "source": "r/machinelearningnews",
+      "source": "r/MachineLearning",
       "competitor": null,
       "product_line": null,
-      "title": "A keynote from V7 - the company shifts from data labeling to LLMs and AI task automation : r/machinelearningnews",
-      "url": "https://www.reddit.com/r/machinelearningnews/comments/1c0pxvs/a_keynote_from_v7_the_company_shifts_from_data",
+      "title": "[D] Manually labelling my own data for a research paper - Reddit",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/1auq3e3/d_manually_labelling_my_own_data_for_a_research/",
       "author": null,
-      "published_at": "2026-04-24T04:48:20.426Z",
-      "content_snippet": "Title: A keynote from V7 - the company shifts from data labeling to LLMs and AI task automation : r/machinelearningnews\nA keynote from V7 - the company shifts from data labeling to LLMs and AI task automation : r/machinelearningnews. Skip to main contentA keynote from V7 - the company shifts from da",
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "You must clearly express the labeling protocol. If there any subjectivity, then have more than 1 person label and measure agreement to convince",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1227,16 +1155,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_7cfd2c2a97860e8d",
+      "id": "reddit_tavily_f611ff58bd1cfd1f",
       "channel": "reddit",
-      "source": "r/rva",
+      "source": "r/computervision",
       "competitor": null,
       "product_line": null,
-      "title": "AI Ready RVA - Reddit",
-      "url": "https://www.reddit.com/r/rva/comments/1rmegk7/ai_ready_rva/",
+      "title": "Need help identifying a good open source data annotation tool",
+      "url": "https://www.reddit.com/r/computervision/comments/18d3jmk/need_help_identifying_a_good_open_source_data/",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.099Z",
-      "content_snippet": "AI Ready RVA works to help community members and businesses move beyond basic AI use. Last November, they partnered with the Mark Cuban",
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "I need to identify an open source annotation / labeling tool that can be integrated into a new site/app that my company is building.",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1251,16 +1179,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_ebf4da6cf8668ccf",
+      "id": "reddit_tavily_e3500fc455c44532",
       "channel": "reddit",
-      "source": "r/developersIndia",
+      "source": "r/MachineLearning",
       "competitor": null,
       "product_line": null,
-      "title": "My company has stopped product work to become AI-ready and I ...",
-      "url": "https://www.reddit.com/r/developersIndia/comments/1sp164x/my_company_has_stopped_product_work_to_become/",
+      "title": "[Discussion] What is your go to technique for labelling data? - Reddit",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/powmw5/discussion_what_is_your_go_to_technique_for/",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.100Z",
-      "content_snippet": "My company just told all the techies to stop working on product/tech for the next 1-2 months and to refactor the codebase to be \"AI-ready.\"",
+      "published_at": "2026-04-24T05:26:46.674Z",
+      "content_snippet": "Say you have 10,000 image files on disk, what is your preferred approach for going through and labelling each as \"hot dog\" or \"not hot dog\",",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1275,16 +1203,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_8db87e59bd952110",
+      "id": "reddit_tavily_acc4e1fdb743e8c5",
       "channel": "reddit",
-      "source": "r/datasets",
+      "source": "r/accelerate",
       "competitor": null,
       "product_line": null,
-      "title": "r/datasets on Reddit: Discussion about creating structured, AI-ready ...",
-      "url": "https://www.reddit.com/r/datasets/comments/1p64gpi/discussion_about_creating_structured_aiready/",
+      "title": "AI is finally ready to take my job : r/accelerate",
+      "url": "https://www.reddit.com/r/accelerate/comments/1mujhf1/ai_is_finally_ready_to_take_my_job/",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.100Z",
-      "content_snippet": "I'm working on a project, that turns raw, unstructured data into structured, AI-ready data in form of Dataset, which can then be used by AI",
+      "published_at": "2026-04-24T05:26:49.286Z",
+      "content_snippet": "AI is finally ready to take my job : r/accelerate. We're an Epistemic Community that excludes those advocating for slowing, stopping, or reversing technological progress, AGI/ASI, the singularity, or the growth of humanity; and those who believe that technological progress and AI are fundamentally b",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1299,16 +1227,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_1b405d42cdde49d1",
+      "id": "reddit_tavily_e2193a3d60c10296",
       "channel": "reddit",
-      "source": "r/platformengineering",
+      "source": "r/librarians",
       "competitor": null,
       "product_line": null,
-      "title": "How do we make our Platform AI-Ready or integrate AI into it? - Reddit",
-      "url": "https://www.reddit.com/r/platformengineering/comments/1sk92de/how_do_we_make_our_platform_aiready_or_integrate/",
+      "title": "AI and why we, librarians, need to be ready - Reddit",
+      "url": "https://www.reddit.com/r/librarians/comments/1d4004h/ai_and_why_we_librarians_need_to_be_ready/",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.100Z",
-      "content_snippet": "I know theres kserver e.g. but what else is there to either integrate ai into it or to make it ai-ready? Like what do you do in your company?",
+      "published_at": "2026-04-24T05:26:49.287Z",
+      "content_snippet": "AI and why we, librarians, need to be ready : r/librarians Skip to main contentAI and why we, librarians, need to be ready : r/librarians Open menu Open navigationGo to Reddit Home r/librarians A chip A close button Log InLog in to Reddit Expand user menu Open settings menu For public, academic, spe",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1323,16 +1251,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_886fe53ed43f8499",
+      "id": "reddit_tavily_4ceb06ac302181a1",
       "channel": "reddit",
-      "source": "r/ChatGPTCoding",
+      "source": "r/content_marketing",
       "competitor": null,
       "product_line": null,
-      "title": "r/ChatGPTCoding on Reddit: Introducing the AI-Ready React Template",
-      "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1jxzwez/introducing_the_aiready_react_template_a/",
+      "title": "Built a tool to check if your website is ready for AI search ... - Reddit",
+      "url": "https://www.reddit.com/r/content_marketing/comments/1lm08de/built_a_tool_to_check_if_your_website_is_ready/",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.100Z",
-      "content_snippet": "It's a meticulously crafted development framework designed to optimize AI-assisted coding workflows while maintaining rock-solid development",
+      "published_at": "2026-04-24T05:26:49.287Z",
+      "content_snippet": "Built a tool to check if your website is ready for AI search (like ChatGPT, Perplexity) – would love feedback! Built a tool to check if your website is ready for AI search (like ChatGPT, Perplexity) – would love feedback! Built a tool to check if your website is ready for AI search (like ChatGPT, Pe",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1347,16 +1275,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_1acbe9f2976cacf8",
+      "id": "reddit_tavily_7ada2b5e5bb10167",
       "channel": "reddit",
-      "source": "r/indiehackers",
+      "source": "r/AI_Agents",
       "competitor": null,
       "product_line": null,
-      "title": "Built a tool to check how AI ready a web page is - would love feedback",
-      "url": "https://www.reddit.com/r/indiehackers/comments/1kry1ph/built_a_tool_to_check_how_ai_ready_a_web_page_is/",
+      "title": "Are AI Voice Agents Ready for Prime Time or Still Too Clunky? : r/AI_Agents",
+      "url": "https://www.reddit.com/r/AI_Agents/comments/1ju6r0m/are_ai_voice_agents_ready_for_prime_time_or_still",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.100Z",
-      "content_snippet": "I just launched a tool called AI Page Ready that helps websites get discovered better by AI assistants like ChatGPT, Claude, and Perplexity.",
+      "published_at": "2026-04-24T05:26:49.287Z",
+      "content_snippet": "Are AI Voice Agents Ready for Prime Time or Still Too Clunky? Skip to main contentAre AI Voice Agents Ready for Prime Time or Still Too Clunky? Open menu Open navigationGo to Reddit Home. Get App Get the Reddit app Log InLog in to Reddit. Expand user menu Open settings menu. Are AI Voice Agents Read",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1371,16 +1299,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_7161474d4708dbf9",
+      "id": "reddit_tavily_bbc9785d6d97ffe9",
       "channel": "reddit",
-      "source": "r/ArtificialInteligence",
+      "source": "r/technology",
       "competitor": null,
       "product_line": null,
-      "title": "Make America AI Ready? : r/ArtificialInteligence - Reddit",
-      "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1s2e7tm/make_america_ai_ready/",
+      "title": "Are AI agents ready for the workplace? A new benchmark raises doubts : r/technology",
+      "url": "https://www.reddit.com/r/technology/comments/1qkazjh/are_ai_agents_ready_for_the_workplace_a_new",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.100Z",
-      "content_snippet": "https://beta.dol.gov/ai-ready. EDIT: This is a link to a program by the federal government that encourages people to learn more about",
+      "published_at": "2026-04-24T05:26:49.287Z",
+      "content_snippet": "Are AI agents ready for the workplace? A new benchmark raises doubts : r/technology. Skip to main contentAre AI agents ready for the workplace? A new benchmark raises doubts : r/technology. Open menu Open navigationGo to Reddit Home. Get App Get the Reddit app Log InLog in to Reddit. Expand user men",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1395,16 +1323,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_e721c8d22b5112db",
+      "id": "reddit_tavily_3ad0bd77d27a6967",
       "channel": "reddit",
-      "source": "r/BlackboxAI_",
+      "source": "r/AI_Agents",
       "competitor": null,
       "product_line": null,
-      "title": "Discussion about structured, AI-ready data/knowledge AI tools ...",
-      "url": "https://www.reddit.com/r/BlackboxAI_/comments/1p5aihk/discussion_about_structured_aiready_dataknowledge/",
+      "title": "Voice AI Agent - SAAS is ready",
+      "url": "https://www.reddit.com/r/AI_Agents/comments/1metb7w/voice_ai_agent_saas_is_ready_marketing_is_a",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.100Z",
-      "content_snippet": "I'm working on a project called Inflectiv, which turns unstructured and scattered data/knowledge into structured and AI-ready data/knowledge.",
+      "published_at": "2026-04-24T05:26:49.287Z",
+      "content_snippet": "Voice AI Agent - SAAS is ready - Marketing is a Challenge. Skip to main contentVoice AI Agent - SAAS is ready - Marketing is a Challenge. Open menu Open navigationGo to Reddit Home. Get App Get the Reddit app Log InLog in to Reddit. Expand user menu Open settings menu. Voice AI Agent - SAAS is ready",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1419,16 +1347,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_7f5112b1db709eaa",
+      "id": "reddit_tavily_c08f07f6b41e5e70",
       "channel": "reddit",
-      "source": "r/laptops",
+      "source": "r/AzureCertification",
       "competitor": null,
       "product_line": null,
-      "title": "What does it mean “ai” laptop - Reddit",
-      "url": "https://www.reddit.com/r/laptops/comments/1lben6s/what_does_it_mean_ai_laptop/",
+      "title": "Am I ready for exam AI-900? : r/AzureCertification",
+      "url": "https://www.reddit.com/r/AzureCertification/comments/1h1756k/am_i_ready_for_exam_ai900/",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.100Z",
-      "content_snippet": "It just means its Windows \"AI ready,\" being able to run Copilot and other AI features. It's not a big deal and can be turned off.",
+      "published_at": "2026-04-24T05:26:49.287Z",
+      "content_snippet": "Am I ready for exam AI-900? Skip to main contentAm I ready for exam AI-900? Open menu Open navigationGo to Reddit Home r/AzureCertification A chip A close button Get App Get the Reddit app Log InLog in to Reddit Expand user menu Open settings menu Welcome to AzureCertification sub where we focus on ",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1443,16 +1371,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_9cf46889106a9ad3",
+      "id": "reddit_tavily_1b082be71dc2d8be",
       "channel": "reddit",
-      "source": "r/agiledatamodeling",
+      "source": "r/hypeurls",
       "competitor": null,
       "product_line": null,
-      "title": "What AI ready BI data means in practice : r/agiledatamodeling - Reddit",
-      "url": "https://www.reddit.com/r/agiledatamodeling/comments/1r12tjw/what_ai_ready_bi_data_means_in_practice/",
+      "title": "Now Google's Gemini AI is ready to fill in those empty cells ... - Reddit",
+      "url": "https://www.reddit.com/r/hypeurls/comments/1ll4gf8/now_googles_gemini_ai_is_ready_to_fill_in_those/",
       "author": null,
-      "published_at": "2026-04-24T04:48:22.100Z",
-      "content_snippet": "AI ready BI data is less about tools and more about disciplined data modeling and consistency.",
+      "published_at": "2026-04-24T05:26:49.287Z",
+      "content_snippet": "Now Google’s Gemini AI is ready to fill in those empty cells in your spreadsheet : r/hypeurls Skip to main contentNow Google’s Gemini AI is ready to fill in those empty cells in your spreadsheet : r/hypeurls Open menu Open navigationGo to Reddit Home r/hypeurls A chip A close button Get App Get the ",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1467,40 +1395,64 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_35f12fa9291ef97a",
+      "id": "reddit_tavily_dcc4497f8605e189",
       "channel": "reddit",
-      "source": "r/stocks",
+      "source": "r/Futurology",
+      "competitor": null,
+      "product_line": null,
+      "title": "Are we ready to hand AI agents the keys? We're starting to give AI ...",
+      "url": "https://www.reddit.com/r/Futurology/comments/1lb9o65/are_we_ready_to_hand_ai_agents_the_keys_were/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:49.287Z",
+      "content_snippet": "Are we ready to hand AI agents the keys? We’re starting to give AI agents real autonomy, and we’re not prepared for what could happen next. Skip to main contentAre we ready to hand AI agents the keys? We’re starting to give AI agents real autonomy, and we’re not prepared for what could happen next. ",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_0105532fa1ba2779",
+      "channel": "reddit",
+      "source": "r/legaltech",
+      "competitor": null,
+      "product_line": null,
+      "title": "Is anyone actually ready for the EU AI Act? : r/legaltech",
+      "url": "https://www.reddit.com/r/legaltech/comments/1izi7bh/is_anyone_actually_ready_for_the_eu_ai_act/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:49.287Z",
+      "content_snippet": "Is anyone actually ready for the EU AI Act? Skip to main contentIs anyone actually ready for the EU AI Act? Open menu Open navigationGo to Reddit Home r/legaltech A chip A close button Get App Get the Reddit app Log InLog in to Reddit Expand user menu Open settings menu This subreddit is for those i",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_2e2949b71f9c2719",
+      "channel": "reddit",
+      "source": "r/technology",
       "competitor": "scale-ai",
       "product_line": "syntitan",
-      "title": "Meta reportedly in talks to invest over $10B in Scale AI - Reddit",
-      "url": "https://www.reddit.com/r/stocks/comments/1l6dktt/meta_reportedly_in_talks_to_invest_over_10b_in/",
+      "title": "Scale AI's 30-year-old billionaire cofounder has a warning ... - Reddit",
+      "url": "https://www.reddit.com/r/technology/comments/1lhm90u/scale_ais_30yearold_billionaire_cofounder_has_a/",
       "author": null,
-      "published_at": "2026-04-24T04:48:23.351Z",
-      "content_snippet": "Scale AI is a fraud company like c3ai. They are a work platform that manages contractor work in the Philippines doing manual data review and",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_7e1624d5e4a0a162",
-      "channel": "reddit",
-      "source": "r/outlier_ai",
-      "competitor": null,
-      "product_line": null,
-      "title": "Scale has already scaled up AI : r/outlier_ai - Reddit",
-      "url": "https://www.reddit.com/r/outlier_ai/comments/1ly3sgd/scale_has_already_scaled_up_ai/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:23.352Z",
-      "content_snippet": "AIs are out dated within a few years. The major thing solving this issue is the AIs that can trigger search to retrieve recent accurate",
+      "published_at": "2026-04-24T05:26:50.598Z",
+      "content_snippet": "“Billionaire who wakes up @ 5:30 a.m. & goes to bed @ midnight daily, claims she's 'working' the entire time and you should too!”.",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1523,7 +1475,7 @@
       "title": "What is your takeaway on ScaleAI? : r/ycombinator - Reddit",
       "url": "https://www.reddit.com/r/ycombinator/comments/1fd7f75/what_is_your_takeaway_on_scaleai/",
       "author": null,
-      "published_at": "2026-04-24T04:48:23.352Z",
+      "published_at": "2026-04-24T05:26:50.598Z",
       "content_snippet": "Companies like Scale.ai provide labeling or annotation expertise, and a workforce. You can label your own data with your own employees, or build a bespoke team.",
       "engagement": {
         "upvotes": null,
@@ -1539,112 +1491,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_40ec9bb9045c32f2",
+      "id": "reddit_tavily_c2d5062074c65c7e",
       "channel": "reddit",
-      "source": "r/devops",
+      "source": "r/Upwork",
       "competitor": "scale-ai",
       "product_line": "syntitan",
-      "title": "How To Scale AI Models Without Huge Upfront Investment? : r/devops",
-      "url": "https://www.reddit.com/r/devops/comments/1kwha0l/seeking_advice_how_to_scale_ai_models_without/",
+      "title": "Scale AI Upwork : r/Upwork",
+      "url": "https://www.reddit.com/r/Upwork/comments/1pf03kk/scale_ai_upwork/",
       "author": null,
-      "published_at": "2026-04-24T04:48:23.352Z",
-      "content_snippet": "Start with hosted APIs: OpenAI, Anthropic, Google's Vertex AI, and AWS Bedrock all let you call powerful models without touching infra.",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_4fc03a8c27066c19",
-      "channel": "reddit",
-      "source": "r/technology",
-      "competitor": "scale-ai",
-      "product_line": "syntitan",
-      "title": "Scale AI lays off 200 employees, 'We ramped up our GenAI capacity ...",
-      "url": "https://www.reddit.com/r/technology/comments/1m1idii/scale_ai_lays_off_200_employees_we_ramped_up_our/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:23.352Z",
-      "content_snippet": "Scale plans to increase investment and hire hundreds of new employees in areas like enterprise, public sector, and international public sector, in the second",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_25a7d7efef04805e",
-      "channel": "reddit",
-      "source": "r/GenAI4all",
-      "competitor": "scale-ai",
-      "product_line": "syntitan",
-      "title": "First, Scale AI's CEO, Alexandr Wang, is just 28-year-old ... - Reddit",
-      "url": "https://www.reddit.com/r/GenAI4all/comments/1leoopi/okay_2_things_are_bothering_me_here_first_scale/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:23.352Z",
-      "content_snippet": "First, Scale AI's CEO, Alexandr Wang, is just 28-year-old and has already achieved so much. Hence, questioning my life rn. And Meta AI has struck gold once",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_f6cd047d2ce88f6b",
-      "channel": "reddit",
-      "source": "r/MachineLearning",
-      "competitor": "scale-ai",
-      "product_line": "syntitan",
-      "title": "[Research] Has anyone here used Scale AI's service, and if ... - Reddit",
-      "url": "https://www.reddit.com/r/MachineLearning/comments/13g2qdn/research_has_anyone_here_used_scale_ais_service/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:23.352Z",
-      "content_snippet": "Overall I'd say if you're looking to them to give you labelling support and have a lot of cash - great option, they really know what they're doing.",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_50cd2425125a38a9",
-      "channel": "reddit",
-      "source": "r/linkedin",
-      "competitor": "scale-ai",
-      "product_line": "syntitan",
-      "title": "Scale AI post legit? : r/linkedin - Reddit",
-      "url": "https://www.reddit.com/r/linkedin/comments/1989kbz/scale_ai_post_legit/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:23.352Z",
-      "content_snippet": "I have looked into Scale AI and it seems like they are one of those positions that you have to do an unreasonable sum of work to reach the pay that they give.",
+      "published_at": "2026-04-24T05:26:50.599Z",
+      "content_snippet": "# Scale AI Upwork : r/Upwork. Skip to main contentScale AI Upwork : r/Upwork. Open menu Open navigationGo to Reddit Home. Get App Get the Reddit app Log InLog in to Reddit. Expand user menu Open settings menu. # Scale AI Upwork. I got invited to work with Scale AI to help train AI. It kind of feels ",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1667,8 +1523,128 @@
       "title": "Scale AI vs Google : r/cscareerquestions - Reddit",
       "url": "https://www.reddit.com/r/cscareerquestions/comments/1s82lyu/scale_ai_vs_google/",
       "author": null,
-      "published_at": "2026-04-24T04:48:23.352Z",
+      "published_at": "2026-04-24T05:26:50.599Z",
       "content_snippet": "After Scale AI, another startup is helping AI labs train models, hitting $100M ARR. I will not promote. 0. 2. [Research] Has anyone here",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_50cd2425125a38a9",
+      "channel": "reddit",
+      "source": "r/linkedin",
+      "competitor": "scale-ai",
+      "product_line": "syntitan",
+      "title": "Scale AI post legit? : r/linkedin - Reddit",
+      "url": "https://www.reddit.com/r/linkedin/comments/1989kbz/scale_ai_post_legit/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:50.599Z",
+      "content_snippet": "I have looked into Scale AI and it seems like they are one of those positions that you have to do an unreasonable sum of work to reach the pay that they give.",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_7e1624d5e4a0a162",
+      "channel": "reddit",
+      "source": "r/outlier_ai",
+      "competitor": null,
+      "product_line": null,
+      "title": "Scale has already scaled up AI : r/outlier_ai - Reddit",
+      "url": "https://www.reddit.com/r/outlier_ai/comments/1ly3sgd/scale_has_already_scaled_up_ai/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:50.599Z",
+      "content_snippet": "AIs are out dated within a few years. The major thing solving this issue is the AIs that can trigger search to retrieve recent accurate",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_1da5ba304432073c",
+      "channel": "reddit",
+      "source": "r/outlier_ai",
+      "competitor": "scale-ai",
+      "product_line": "syntitan",
+      "title": "Scale AI labor investigation (San Francisco only) : r/outlier_ai - Reddit",
+      "url": "https://www.reddit.com/r/outlier_ai/comments/1n7u9nb/scale_ai_labor_investigation_san_francisco_only/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:50.599Z",
+      "content_snippet": "We need to have a better understanding of the overall landscape and figure out why companies like Scale and Outlier act the way they do. The",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_704382afa3a7513b",
+      "channel": "reddit",
+      "source": "r/outlier_ai",
+      "competitor": "scale-ai",
+      "product_line": "syntitan",
+      "title": "Scale AI is cutting 14% of staff - uh oh : r/outlier_ai - Reddit",
+      "url": "https://www.reddit.com/r/outlier_ai/comments/1m1fv2d/scale_ai_is_cutting_14_of_staff_uh_oh/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:50.599Z",
+      "content_snippet": "The article from Bloomberg stated that 200 FTEs were cut (in addition to 500 contractors), amounting to 14% of the workforce. Ok_Aspect4845. •",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_4fc03a8c27066c19",
+      "channel": "reddit",
+      "source": "r/technology",
+      "competitor": "scale-ai",
+      "product_line": "syntitan",
+      "title": "Scale AI lays off 200 employees, 'We ramped up our GenAI capacity ...",
+      "url": "https://www.reddit.com/r/technology/comments/1m1idii/scale_ai_lays_off_200_employees_we_ramped_up_our/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:50.599Z",
+      "content_snippet": "Scale plans to increase investment and hire hundreds of new employees in areas like enterprise, public sector, and international public sector, in the second",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1691,7 +1667,7 @@
       "title": "[D] Scale AI- what separates them, and why are they worth $1 billion?",
       "url": "https://www.reddit.com/r/MachineLearning/comments/g6r0yv/d_scale_ai_what_separates_them_and_why_are_they/",
       "author": null,
-      "published_at": "2026-04-24T04:48:23.352Z",
+      "published_at": "2026-04-24T05:26:50.599Z",
       "content_snippet": "They help you create training data by providing accurate labels for your images, videos, and text. You send data via an API call, their system makes a guess,",
       "engagement": {
         "upvotes": null,
@@ -1715,7 +1691,7 @@
       "title": "Tonic.ai : r/datascience - Reddit",
       "url": "https://www.reddit.com/r/datascience/comments/sq0rnh/tonicai/",
       "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
+      "published_at": "2026-04-24T05:26:51.738Z",
       "content_snippet": "Tonic.ai. Discussion. I keep seeing YouTube adds pop up for this product and it seems interesting. Has anybody used this and can give feedback",
       "engagement": {
         "upvotes": null,
@@ -1739,7 +1715,7 @@
       "title": "Tonic (u/AI_Tonic) - Reddit",
       "url": "https://www.reddit.com/user/AI_Tonic/",
       "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
+      "published_at": "2026-04-24T05:26:51.738Z",
       "content_snippet": "u/AI_Tonic: Just a builder from Paris on Reddit for the the funsies after a long stint away from this place.",
       "engagement": {
         "upvotes": null,
@@ -1763,80 +1739,8 @@
       "title": "Unlocking Secure Data Utility with Databricks + Tonic.ai : r/devops",
       "url": "https://www.reddit.com/r/devops/comments/185bfft/unlocking_secure_data_utility_with_databricks/",
       "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
+      "published_at": "2026-04-24T05:26:51.738Z",
       "content_snippet": "Together, Tonic.ai is helping make Databricks the Intelligent Data Platform by providing better and more efficient ways to share and test data",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_dc3742657ab74253",
-      "channel": "reddit",
-      "source": "r/Atlanta",
-      "competitor": "tonic-ai",
-      "product_line": "syntitan",
-      "title": "tonic.ai is looking to hire a software engineer in Atlanta - Reddit",
-      "url": "https://www.reddit.com/r/Atlanta/comments/b5pgd5/tonicai_is_looking_to_hire_a_software_engineer_in/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
-      "content_snippet": "Hi folks,. This is adam from Tonic (https://tonic.ai). We are looking to hire a software engineer in Atlanta with a few years of experience.",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_4e4edaa5b2fe46e5",
-      "channel": "reddit",
-      "source": "r/AppDevelopers",
-      "competitor": "tonic-ai",
-      "product_line": "syntitan",
-      "title": "synthetic data : r/AppDevelopers - Reddit",
-      "url": "https://www.reddit.com/r/AppDevelopers/comments/1qr0qyf/synthetic_data/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
-      "content_snippet": "Tools like Mockaroo or Synthea are great for quickly generating schema-aware data. At the same time, more advanced solutions like Tonic.ai,",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_3dea061ea6779f15",
-      "channel": "reddit",
-      "source": "r/devops",
-      "competitor": "tonic-ai",
-      "product_line": "syntitan",
-      "title": "Seeking Advice on Using TONIC.AI for Masking Production Data",
-      "url": "https://www.reddit.com/r/devops/comments/1afl36m/seeking_advice_on_using_tonicai_for_masking/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
-      "content_snippet": "Hello, I'm exploring TONIC.AI for masking production data during transfers to our lower environments. Our process involves: Automatically",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1859,7 +1763,7 @@
       "title": "Giving the Tonic app a try : r/Recorder - Reddit",
       "url": "https://www.reddit.com/r/Recorder/comments/1junqe3/giving_the_tonic_app_a_try/",
       "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
+      "published_at": "2026-04-24T05:26:51.738Z",
       "content_snippet": "The Tonic app is a social practicing app designed by violinist Ray Chen. Supposedly you can stream your practice for other people to listen and listen to the",
       "engagement": {
         "upvotes": null,
@@ -1875,40 +1779,16 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_c59376c5590d4384",
+      "id": "reddit_tavily_dc3742657ab74253",
       "channel": "reddit",
-      "source": "r/LLMDevs",
-      "competitor": null,
-      "product_line": null,
-      "title": "Tonic Textual - Secure Data Lakehouse for LLMs, addressing the ...",
-      "url": "https://www.reddit.com/r/LLMDevs/comments/1d2ossj/tonic_textual_secure_data_lakehouse_for_llms/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
-      "content_snippet": "Tonic Textual allows you to build generative AI systems on your own unstructured data without having to spend time extracting and",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_8cc9f923a5266dac",
-      "channel": "reddit",
-      "source": "r/sre",
+      "source": "r/Atlanta",
       "competitor": "tonic-ai",
       "product_line": "syntitan",
-      "title": "How are you generating fake/test data for lower environments? : r/sre",
-      "url": "https://www.reddit.com/r/sre/comments/16081ii/how_are_you_generating_faketest_data_for_lower/",
+      "title": "tonic.ai is looking to hire a software engineer in Atlanta - Reddit",
+      "url": "https://www.reddit.com/r/Atlanta/comments/b5pgd5/tonicai_is_looking_to_hire_a_software_engineer_in/",
       "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
-      "content_snippet": "tonic.ai . Haven't used it but it looks very interesting. It will take your prod data set and create fake data based on the db fields and",
+      "published_at": "2026-04-24T05:26:51.738Z",
+      "content_snippet": "Hi folks,. This is adam from Tonic (https://tonic.ai). We are looking to hire a software engineer in Atlanta with a few years of experience.",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1931,8 +1811,104 @@
       "title": "[D] Sensitive data synthesis with custom entity models with Tonic ...",
       "url": "https://www.reddit.com/r/MachineLearning/comments/18gpv4t/d_sensitive_data_synthesis_with_custom_entity/",
       "author": null,
-      "published_at": "2026-04-24T04:48:24.683Z",
+      "published_at": "2026-04-24T05:26:51.738Z",
       "content_snippet": "Tonic Textual is a sensitive data redaction and synthetic data platform to safeguard your free-text data effortlessly.",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_3dea061ea6779f15",
+      "channel": "reddit",
+      "source": "r/devops",
+      "competitor": "tonic-ai",
+      "product_line": "syntitan",
+      "title": "Seeking Advice on Using TONIC.AI for Masking Production Data",
+      "url": "https://www.reddit.com/r/devops/comments/1afl36m/seeking_advice_on_using_tonicai_for_masking/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:51.738Z",
+      "content_snippet": "Hello, I'm exploring TONIC.AI for masking production data during transfers to our lower environments. Our process involves: Automatically",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_c8e2e93ebfe6fba6",
+      "channel": "reddit",
+      "source": "r/ProgrammerHumor",
+      "competitor": "tonic-ai",
+      "product_line": "syntitan",
+      "title": "burnOutisReal : r/ProgrammerHumor - Reddit",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1qtnl41/burnoutisreal/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:51.738Z",
+      "content_snippet": "It's often AI written posts hyping AI-driven software development as well. ... Seeking Advice on Using TONIC.AI for Masking Production Data · r",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_c59376c5590d4384",
+      "channel": "reddit",
+      "source": "r/LLMDevs",
+      "competitor": null,
+      "product_line": null,
+      "title": "Tonic Textual - Secure Data Lakehouse for LLMs, addressing the ...",
+      "url": "https://www.reddit.com/r/LLMDevs/comments/1d2ossj/tonic_textual_secure_data_lakehouse_for_llms/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:51.738Z",
+      "content_snippet": "Tonic Textual allows you to build generative AI systems on your own unstructured data without having to spend time extracting and",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_8b9ff376f4e731c5",
+      "channel": "reddit",
+      "source": "r/MachineLearning",
+      "competitor": "tonic-ai",
+      "product_line": "syntitan",
+      "title": "[D] Working on RAG? You should be evaluating its performance and ...",
+      "url": "https://www.reddit.com/r/MachineLearning/comments/18ciet5/d_working_on_rag_you_should_be_evaluating_its/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:51.738Z",
+      "content_snippet": "Check out our new open-source tool, Tonic Validate: https://www.tonic.ai/validate We've also been using the tool to evaluate different RAG tools out there.",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -1955,7 +1931,7 @@
       "title": "The \"Atlan\" from Doom: The Dark Ages by McFarlane Is one ... - Reddit",
       "url": "https://www.reddit.com/r/ActionFigures/comments/1nwdykj/the_atlan_from_doom_the_dark_ages_by_mcfarlane_is/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "This figure only has 5 points of articulation. Yes, seriously. A $60 figure, with no knee joints, no elbow joints, the head can't move up and",
       "engagement": {
         "upvotes": null,
@@ -1979,7 +1955,7 @@
       "title": "about the atlan levels : r/Doom - Reddit",
       "url": "https://www.reddit.com/r/Doom/comments/1k0uhho/about_the_atlan_levels/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "My understanding is the 3 Atlan levels are baked into the 22-level total (I.e., there are something like 15 “pure” on-foot levels, 4 levels",
       "engagement": {
         "upvotes": null,
@@ -2003,7 +1979,7 @@
       "title": "Memories from the Planet of Atlan : r/amandaknox - Reddit",
       "url": "https://www.reddit.com/r/amandaknox/comments/1q6u4h4/memories_from_the_planet_of_atlan/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "“Planet of Atlan\" is a reference to a specific user or a group of users who posted extensive content regarding the Amanda Knox case, primarily",
       "engagement": {
         "upvotes": null,
@@ -2027,7 +2003,7 @@
       "title": "Alternatives to Atlan Data Catalog : r/dataengineering - Reddit",
       "url": "https://www.reddit.com/r/dataengineering/comments/1m4e977/alternatives_to_atlan_data_catalog/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "In terms of features and functionalities, I think Atlan's automations are a big differentiator, enabling complex workflows with tools like",
       "engagement": {
         "upvotes": null,
@@ -2051,7 +2027,7 @@
       "title": "How Atlan as a company is!? : r/careeradvice - Reddit",
       "url": "https://www.reddit.com/r/careeradvice/comments/1ecmwny/how_atlan_as_a_company_is/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "Pay is market standard. Culture is fast paced- its a startup. But they have some of the smartest people in the industry working for them and they're all super",
       "engagement": {
         "upvotes": null,
@@ -2075,7 +2051,7 @@
       "title": "Anyone working with Atlan out there as I am looking for some reviews.",
       "url": "https://www.reddit.com/r/developersIndia/comments/1fpio9f/anyone_working_with_atlan_out_there_as_i_am/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "I got an offer with Atlan and would love to get some feedback from anyone who has worked with them. They seem to have a great product and recently raised 100",
       "engagement": {
         "upvotes": null,
@@ -2099,7 +2075,7 @@
       "title": "How would Atlan mech from Doom fare in Armored Core? - Reddit",
       "url": "https://www.reddit.com/r/armoredcore/comments/1knw2dn/how_would_atlan_mech_from_doom_fare_in_armored/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "The Atlan is powerful and definitely larger then an AC. If the Atlan could land land a hit it'd practically one-shot an AC through sheer force.",
       "engagement": {
         "upvotes": null,
@@ -2123,7 +2099,7 @@
       "title": "The \"Atlan\" figure from Doom: the Dark Ages is possibly the worst ...",
       "url": "https://www.reddit.com/r/McFarlaneFigures/comments/1nwh2wx/the_atlan_figure_from_doom_the_dark_ages_is/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "1.This figure only has 5 points of articulation. Yes, seriously. A $60 figure, with no knee joints, no elbow joints, the head can't move up and",
       "engagement": {
         "upvotes": null,
@@ -2147,7 +2123,7 @@
       "title": "Crystal of Atlan Stamina explained : r/crystalofatlan - Reddit",
       "url": "https://www.reddit.com/r/crystalofatlan/comments/1kyih1i/crystal_of_atlan_stamina_explained/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "Why the Stamina System works for dungeon crawlers and in other regions. The stamina system in Crystal of Atlan is a solid mechanic as shown",
       "engagement": {
         "upvotes": null,
@@ -2171,7 +2147,7 @@
       "title": "Does anyone have experience with Atlan forge? I really like ... - Reddit",
       "url": "https://www.reddit.com/r/Warhammer40k/comments/10bwwvy/does_anyone_have_experience_with_atlan_forge_i/",
       "author": null,
-      "published_at": "2026-04-24T04:48:25.734Z",
+      "published_at": "2026-04-24T05:26:53.137Z",
       "content_snippet": "I always think I'm done making space marines, then Atlan forge puts out another set. I've made space sharks and space bear armies just from atlan. Love their",
       "engagement": {
         "upvotes": null,
@@ -2195,152 +2171,8 @@
       "title": "Snowflake AI & ML - Reddit",
       "url": "https://www.reddit.com/r/snowflake/comments/1ocx996/snowflake_ai_ml/",
       "author": null,
-      "published_at": "2026-04-24T04:48:26.895Z",
+      "published_at": "2026-04-24T05:26:55.339Z",
       "content_snippet": "Snowflake is accelerating data value with two powerful, intelligent feature categories: Snowflake Cortex (AI) and Snowflake ML.",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_a49703604ed43b5b",
-      "channel": "reddit",
-      "source": "r/snowflake",
-      "competitor": "snowflake",
-      "product_line": "syntitan",
-      "title": "r/snowflake on Reddit: AI agent for identifying longest running ...",
-      "url": "https://www.reddit.com/r/snowflake/comments/1d3yhea/ai_agent_for_identifying_longest_running_queries/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:26.895Z",
-      "content_snippet": "Identifies the longest running tasks. Offers immediate optimization suggestions. Shares query logs to verify improvements. We used Snowflake",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_dee11310e3798a36",
-      "channel": "reddit",
-      "source": "r/cybersecurity",
-      "competitor": "snowflake",
-      "product_line": "syntitan",
-      "title": "Snowflake's AI Bypasses Access Controls : r/cybersecurity - Reddit",
-      "url": "https://www.reddit.com/r/cybersecurity/comments/1kfwuh3/snowflakes_ai_bypasses_access_controls/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:26.895Z",
-      "content_snippet": "Snowflake's Cortex AI can return data that the requesting user shouldn't have access to — even when proper Row Access Policies and RBAC are in",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_fafbd881ac19683b",
-      "channel": "reddit",
-      "source": "r/snowflake",
-      "competitor": "snowflake",
-      "product_line": "syntitan",
-      "title": "Complete Snowflake Document AI Guide - Reddit",
-      "url": "https://www.reddit.com/r/snowflake/comments/1pnrz76/complete_snowflake_document_ai_guide/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:26.895Z",
-      "content_snippet": "Check out this article for a complete step by step guide to configuring and using Snowflake Document AI =>…",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_6b17ba8675644b6f",
-      "channel": "reddit",
-      "source": "r/snowflake",
-      "competitor": "snowflake",
-      "product_line": "syntitan",
-      "title": "Snowflake just shipped Cortex Code an AI agent that actually ...",
-      "url": "https://www.reddit.com/r/snowflake/comments/1qxeptl/snowflake_just_shipped_cortex_code_an_ai_agent/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:26.895Z",
-      "content_snippet": "Hi All. Snowflake announced Cortex Code this week at BUILD London, and I've been testing it with real enterprise environments.",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_b7ba21dc65f4bd72",
-      "channel": "reddit",
-      "source": "r/snowflake",
-      "competitor": "snowflake",
-      "product_line": "syntitan",
-      "title": "Is snowflake becoming THE solution? - Reddit",
-      "url": "https://www.reddit.com/r/snowflake/comments/1b00aqp/is_snowflake_becoming_the_solution/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:26.895Z",
-      "content_snippet": "Databricks and Microsoft AI is the main challenger. Snowflake needs to address gaps wrt ingestion and orchestration to become THE one stop shop.",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": [],
-      "source_quality": "search_index"
-    },
-    {
-      "id": "reddit_tavily_7fd4003e828c6e78",
-      "channel": "reddit",
-      "source": "r/snowflake",
-      "competitor": "snowflake",
-      "product_line": "syntitan",
-      "title": "Snowflake AI queries - User's vs Agent's/Owner's Access for ... - Reddit",
-      "url": "https://www.reddit.com/r/snowflake/comments/1n8ezzq/snowflake_ai_queries_users_vs_agentsowners_access/",
-      "author": null,
-      "published_at": "2026-04-24T04:48:26.895Z",
-      "content_snippet": "Can anyone point me to how/where Snowflake enables secure AI-based structured data access to users' whose access may vary based on row",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -2363,7 +2195,7 @@
       "title": "Snowflake Cortex experience - Reddit",
       "url": "https://www.reddit.com/r/snowflake/comments/1ol7k39/snowflake_cortex_experience/",
       "author": null,
-      "published_at": "2026-04-24T04:48:26.896Z",
+      "published_at": "2026-04-24T05:26:55.339Z",
       "content_snippet": "Cortex is a broad range of things in Snowflake. It's both their AISQL functions as well as the AI/ML user section. The easiest lift is going",
       "engagement": {
         "upvotes": null,
@@ -2379,16 +2211,160 @@
       "source_quality": "search_index"
     },
     {
-      "id": "reddit_tavily_3e945836300f25ef",
+      "id": "reddit_tavily_7a1bec8c38f806d4",
       "channel": "reddit",
-      "source": "r/dataengineering",
+      "source": "r/snowflake",
       "competitor": "snowflake",
       "product_line": "syntitan",
-      "title": "I can't* understand the hype on Snowflake : r/dataengineering - Reddit",
-      "url": "https://www.reddit.com/r/dataengineering/comments/1o03g0b/i_cant_understand_the_hype_on_snowflake/",
+      "title": "How Are You Integrating AI Tools with Snowflake? Here's ... - Reddit",
+      "url": "https://www.reddit.com/r/snowflake/comments/1pzb3k9/how_are_you_integrating_ai_tools_with_snowflake/",
       "author": null,
-      "published_at": "2026-04-24T04:48:26.896Z",
-      "content_snippet": "snowflake is not just a “data warehouse” for a while now. It has ingestion, transformation, pretty good AI and ML functionality (feature store,",
+      "published_at": "2026-04-24T05:26:55.339Z",
+      "content_snippet": "I'm looking for the most efficient way to enable Claude Code to debug dbt models with complex transformations. One way that would mimic my",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_dee11310e3798a36",
+      "channel": "reddit",
+      "source": "r/cybersecurity",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "Snowflake's AI Bypasses Access Controls : r/cybersecurity - Reddit",
+      "url": "https://www.reddit.com/r/cybersecurity/comments/1kfwuh3/snowflakes_ai_bypasses_access_controls/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:55.339Z",
+      "content_snippet": "Snowflake's Cortex AI can return data that the requesting user shouldn't have access to — even when proper Row Access Policies and RBAC are in",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_30814ff3580b4de9",
+      "channel": "reddit",
+      "source": "r/snowflake",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "Pros and cons of Snowflake-native vs. external AI tools? - Reddit",
+      "url": "https://www.reddit.com/r/snowflake/comments/1oj4lgu/pros_and_cons_of_snowflakenative_vs_external_ai/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:55.339Z",
+      "content_snippet": "Benefit is that, it is secure, scalable, easy to build and most importantly very accurate. Using external tool it is usually very difficult to",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_1096f41e49231544",
+      "channel": "reddit",
+      "source": "r/snowflake",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "Which AI chatbot is most helpful for Snowflake-related questions?",
+      "url": "https://www.reddit.com/r/snowflake/comments/1kg1gyt/which_ai_chatbot_is_most_helpful_for/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:55.339Z",
+      "content_snippet": "The one inbuilt is called snowflake cortex/analyst.Does a pretty decent job. You can also cobble up something together quickly on streamlit.",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_6b17ba8675644b6f",
+      "channel": "reddit",
+      "source": "r/snowflake",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "Snowflake just shipped Cortex Code an AI agent that actually ...",
+      "url": "https://www.reddit.com/r/snowflake/comments/1qxeptl/snowflake_just_shipped_cortex_code_an_ai_agent/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:55.339Z",
+      "content_snippet": "Hi All. Snowflake announced Cortex Code this week at BUILD London, and I've been testing it with real enterprise environments.",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_db10639c7063fbb3",
+      "channel": "reddit",
+      "source": "r/snowflake",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "Snowpark AI/ML use case suggestions : r/snowflake - Reddit",
+      "url": "https://www.reddit.com/r/snowflake/comments/1ibbw9m/snowpark_aiml_use_case_suggestions/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:55.339Z",
+      "content_snippet": "I would say some of the top use cases would be: Fraud Detection, Customer Retention, Investment Recommendations, Credit Risk.",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [],
+      "source_quality": "search_index"
+    },
+    {
+      "id": "reddit_tavily_e27ee9392002f5f5",
+      "channel": "reddit",
+      "source": "r/snowflake",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "My experiment using Snowflake Cortex AI to handle schema drift ...",
+      "url": "https://www.reddit.com/r/snowflake/comments/1q6sran/my_experiment_using_snowflake_cortex_ai_to_handle/",
+      "author": null,
+      "published_at": "2026-04-24T05:26:55.339Z",
+      "content_snippet": "I am trying to use LLMs in various data engineering tasks. One of the tasks I tested was implementing schema drift using Cortex AI directly",
       "engagement": {
         "upvotes": null,
         "comments": null,
@@ -2572,27 +2548,23 @@
       "tags": []
     },
     {
-      "id": "x_aHR0cHM6Ly9tb2Jp",
-      "channel": "x",
-      "source": "x.com/@LakeraAI",
-      "competitor": "lakera",
-      "product_line": "llmcapsule",
-      "title": "6 ways hackers can exploit LLMs & GenAI apps in under 5 minutes ...",
-      "url": "https://mobile.x.com/LakeraAI/status/1840755928133448030",
-      "author": "LakeraAI",
+      "id": "linkedin_aHR0cHM6Ly9seS5s",
+      "channel": "linkedin",
+      "source": "linkedin.com/company/scaleai",
+      "competitor": "scale-ai",
+      "product_line": "syntitan",
+      "title": "Scale AI | LinkedIn",
+      "url": "https://ly.linkedin.com/company/scaleai",
+      "author": "Scale AI",
       "published_at": null,
-      "content_snippet": "Watch Sam Watts from Lakera explain key attack strategies that target AI-powered systems like chatbots & RAG apps. Fast & crucial for AI security! Watch the",
+      "content_snippet": "Overview:\nScale’s mission is to develop reliable AI systems for the world’s most important decisions. We provide the high-quality data and full-stack technologies that power the world’s leading models, and help enterprises and governments build, deploy, and oversee AI applications that deliver real ",
       "engagement": {
         "upvotes": null,
         "comments": null,
         "shares": null
       },
       "media": {
-        "images": [
-          "https://pbs.twimg.com/profile_images/1712396158453035009/fhM3MQtp_400x400.jpg",
-          "https://pbs.twimg.com/media/FwLOBo-WcAMqxup.jpg",
-          "https://pbs.twimg.com/tweet_video_thumb/Gz7kw-VXcAAbgSE.jpg"
-        ],
+        "images": [],
         "videos": [],
         "thumbnails": []
       },
@@ -2626,29 +2598,6 @@
       "tags": []
     },
     {
-      "id": "linkedin_aHR0cHM6Ly9seS5s",
-      "channel": "linkedin",
-      "source": "linkedin.com/company/scaleai",
-      "competitor": "scale-ai",
-      "product_line": "syntitan",
-      "title": "Scale AI | LinkedIn",
-      "url": "https://ly.linkedin.com/company/scaleai",
-      "author": "Scale AI",
-      "published_at": null,
-      "content_snippet": "Overview:\nScale’s mission is to develop reliable AI systems for the world’s most important decisions. We provide the high-quality data and full-stack technologies that power the world’s leading models, and help enterprises and governments build, deploy, and oversee AI applications that deliver real ",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": []
-    },
-    {
       "id": "linkedin_aHR0cHM6Ly9mci5s",
       "channel": "linkedin",
       "source": "linkedin.com/company/scaleai",
@@ -2672,58 +2621,12 @@
       "tags": []
     },
     {
-      "id": "linkedin_aHR0cHM6Ly91eS5s",
-      "channel": "linkedin",
-      "source": "linkedin.com/company/snowflake-computing",
-      "competitor": "snowflake",
-      "product_line": "syntitan",
-      "title": "Snowflake | LinkedIn",
-      "url": "https://uy.linkedin.com/company/snowflake-computing",
-      "author": "Snowflake",
-      "published_at": null,
-      "content_snippet": "Overview:\n**Snowflake is proud to be the Official Data Collaboration Provider for LA28 and Team USA.** Snowflake delivers the AI Data Cloud — a global network where thousands of organizations mobilize data with near-unlimited scale, concurrency, and performance. Inside the AI Data Cloud, organizatio",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": []
-    },
-    {
-      "id": "linkedin_aHR0cHM6Ly9zZS5s",
-      "channel": "linkedin",
-      "source": "linkedin.com/company/snowflake-computing",
-      "competitor": "snowflake",
-      "product_line": "syntitan",
-      "title": "Snowflake | LinkedIn",
-      "url": "https://se.linkedin.com/company/snowflake-computing/life/ce18bf68-3819-45ca-b3f5-9dc1576841fd",
-      "author": "Snowflake",
-      "published_at": null,
-      "content_snippet": "Overview:\n**Snowflake is proud to be the Official Data Collaboration Provider for LA28 and Team USA.** Snowflake delivers the AI Data Cloud — a global network where thousands of organizations mobilize data with near-unlimited scale, concurrency, and performance. Inside the AI Data Cloud, organizatio",
-      "engagement": {
-        "upvotes": null,
-        "comments": null,
-        "shares": null
-      },
-      "media": {
-        "images": [],
-        "videos": [],
-        "thumbnails": []
-      },
-      "tags": []
-    },
-    {
       "id": "linkedin_aHR0cHM6Ly9kay5s",
       "channel": "linkedin",
       "source": "linkedin.com/company/snowflake-computing",
       "competitor": "snowflake",
       "product_line": "syntitan",
-      "title": "Snowflake | LinkedIn",
+      "title": "Snowflake - Where data does more",
       "url": "https://dk.linkedin.com/company/snowflake-computing",
       "author": "Snowflake",
       "published_at": null,
@@ -2746,8 +2649,31 @@
       "source": "linkedin.com/company/snowflake-computing",
       "competitor": "snowflake",
       "product_line": "syntitan",
-      "title": "Snowflake | LinkedIn",
+      "title": "Snowflake - Where data does more",
       "url": "https://it.linkedin.com/company/snowflake-computing",
+      "author": "Snowflake",
+      "published_at": null,
+      "content_snippet": "Overview:\n**Snowflake is proud to be the Official Data Collaboration Provider for LA28 and Team USA.** Snowflake delivers the AI Data Cloud — a global network where thousands of organizations mobilize data with near-unlimited scale, concurrency, and performance. Inside the AI Data Cloud, organizatio",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": []
+    },
+    {
+      "id": "linkedin_aHR0cHM6Ly91eS5s",
+      "channel": "linkedin",
+      "source": "linkedin.com/company/snowflake-computing",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "Snowflake - Where data does more",
+      "url": "https://uy.linkedin.com/company/snowflake-computing",
       "author": "Snowflake",
       "published_at": null,
       "content_snippet": "Overview:\n**Snowflake is proud to be the Official Data Collaboration Provider for LA28 and Team USA.** Snowflake delivers the AI Data Cloud — a global network where thousands of organizations mobilize data with near-unlimited scale, concurrency, and performance. Inside the AI Data Cloud, organizatio",
@@ -2769,8 +2695,31 @@
       "source": "linkedin.com/company/snowflake-computing",
       "competitor": "snowflake",
       "product_line": "syntitan",
-      "title": "Snowflake | LinkedIn",
+      "title": "Snowflake - Where data does more",
       "url": "https://cz.linkedin.com/company/snowflake-computing",
+      "author": "Snowflake",
+      "published_at": null,
+      "content_snippet": "Overview:\n**Snowflake is proud to be the Official Data Collaboration Provider for LA28 and Team USA.** Snowflake delivers the AI Data Cloud — a global network where thousands of organizations mobilize data with near-unlimited scale, concurrency, and performance. Inside the AI Data Cloud, organizatio",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": []
+    },
+    {
+      "id": "linkedin_aHR0cHM6Ly9zZS5s",
+      "channel": "linkedin",
+      "source": "linkedin.com/company/snowflake-computing",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "Snowflake - Where data does more",
+      "url": "https://se.linkedin.com/company/snowflake-computing/life/ce18bf68-3819-45ca-b3f5-9dc1576841fd",
       "author": "Snowflake",
       "published_at": null,
       "content_snippet": "Overview:\n**Snowflake is proud to be the Official Data Collaboration Provider for LA28 and Team USA.** Snowflake delivers the AI Data Cloud — a global network where thousands of organizations mobilize data with near-unlimited scale, concurrency, and performance. Inside the AI Data Cloud, organizatio",
@@ -3215,11 +3164,11 @@
       },
       "media": {
         "images": [
-          "https://opengraph.githubassets.com/6f5c675f72d65368072de21e9e017fe5870ff6bfb80102d368286b1b7f4481ec/TencentCloud/CubeSandbox"
+          "https://opengraph.githubassets.com/7f101963e06cbb44931f1b53597a4a761b1b99657f2bea07ce213cb6b82da70c/TencentCloud/CubeSandbox"
         ],
         "videos": [],
         "thumbnails": [
-          "https://opengraph.githubassets.com/6f5c675f72d65368072de21e9e017fe5870ff6bfb80102d368286b1b7f4481ec/TencentCloud/CubeSandbox"
+          "https://opengraph.githubassets.com/7f101963e06cbb44931f1b53597a4a761b1b99657f2bea07ce213cb6b82da70c/TencentCloud/CubeSandbox"
         ]
       },
       "tags": [
@@ -3392,7 +3341,7 @@
       "published_at": "2026-04-23T13:58:03.000Z",
       "content_snippet": "UK Biobank health data keeps ending up on GitHub",
       "engagement": {
-        "upvotes": 94,
+        "upvotes": 100,
         "comments": 25,
         "shares": null
       },
@@ -4122,7 +4071,7 @@
       "published_at": "2026-04-20T12:23:39.000Z",
       "content_snippet": "Atlassian enables default data collection to train AI",
       "engagement": {
-        "upvotes": 602,
+        "upvotes": 603,
         "comments": 134,
         "shares": null
       },
@@ -5007,7 +4956,7 @@
       "published_at": "2026-04-22T16:25:28.000Z",
       "content_snippet": "Show HN: Agent Vault – Open-source credential proxy and vault for agents",
       "engagement": {
-        "upvotes": 93,
+        "upvotes": 96,
         "comments": 31,
         "shares": null
       },
