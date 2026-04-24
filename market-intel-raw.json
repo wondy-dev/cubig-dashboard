@@ -1,0 +1,2578 @@
+{
+  "metadata": {
+    "week": "2026-W17",
+    "collected_at": "2026-04-24T04:12:26.056Z",
+    "channels": [
+      "reddit",
+      "medium",
+      "x",
+      "linkedin",
+      "youtube",
+      "producthunt",
+      "hackernews"
+    ],
+    "competitors": [
+      "scale-ai",
+      "tonic-ai",
+      "atlan",
+      "snowflake",
+      "mostly-ai",
+      "portkey",
+      "lakera",
+      "prompt-security",
+      "calypsoai"
+    ],
+    "total_items": 94,
+    "duration_ms": 16852
+  },
+  "items": [
+    {
+      "id": "medium_aHR0cHM6Ly9tZWRp",
+      "channel": "medium",
+      "source": "medium/tag/synthetic-data",
+      "competitor": null,
+      "product_line": null,
+      "title": "The Data You Never Had",
+      "url": "https://medium.com/@srinib100/the-data-you-never-had-714e2755a724?source=rss------synthetic_data-5",
+      "author": "Srinivas Bommena",
+      "published_at": "2026-04-23T01:41:50.000Z",
+      "content_snippet": "How synthetic data generation &#x2014; once a research curiosity &#x2014; has become the infrastructure primitive that unlocks systems organizations&#x2026;Continue reading on Medium »",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": []
+    },
+    {
+      "id": "medium_aHR0cHM6Ly9wdWIu",
+      "channel": "medium",
+      "source": "medium/tag/synthetic-data",
+      "competitor": null,
+      "product_line": null,
+      "title": "Multi-Table Feature Engineering on Synthetic Databases: How to Test Your ML Pipeline Before It Sees…",
+      "url": "https://pub.towardsai.net/multi-table-feature-engineering-on-synthetic-databases-how-to-test-your-ml-pipeline-before-it-sees-71ca9aa44348?source=rss------synthetic_data-5",
+      "author": "Jitendra Devabhakthuni",
+      "published_at": "2026-04-21T23:01:02.000Z",
+      "content_snippet": "Feature engineering bugs hide in joins. Here is how to build synthetic relational databases that expose them before production does.Continue reading on Towards AI »",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": []
+    },
+    {
+      "id": "medium_aHR0cHM6Ly9yZWRh",
+      "channel": "medium",
+      "source": "medium/tag/llm-security",
+      "competitor": null,
+      "product_line": null,
+      "title": "Why AI Security Fails at the Integration Layer",
+      "url": "https://redasgard.medium.com/why-ai-security-fails-at-the-integration-layer-019b427560f7?source=rss------llm_security-5",
+      "author": "Red Asgard",
+      "published_at": "2026-04-19T21:05:28.000Z",
+      "content_snippet": "The biggest risks in AI systems usually don&#x2019;t come from the model. They come from the connectors, wrappers, and action paths that link it&#x2026;Continue reading on Medium »",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": []
+    },
+    {
+      "id": "medium_aHR0cHM6Ly9yYWRp",
+      "channel": "medium",
+      "source": "medium/tag/ai-gateway",
+      "competitor": null,
+      "product_line": null,
+      "title": "Shadow AI: Are Your Employees Sharing Proprietary Information with LLMs?",
+      "url": "https://radicalbit.medium.com/shadow-ai-are-your-employees-sharing-proprietary-information-with-llms-615a519a8d5f?source=rss------ai_gateway-5",
+      "author": "Radicalbit",
+      "published_at": "2026-04-14T09:21:07.000Z",
+      "content_snippet": "Shadow AI is the unsanctioned use of Generative AI tools within an organization.Continue reading on Medium »",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": []
+    },
+    {
+      "id": "medium_aHR0cHM6Ly9ibG9n",
+      "channel": "medium",
+      "source": "medium/tag/ai-gateway",
+      "competitor": null,
+      "product_line": null,
+      "title": "Bifrost CLI is the AI gateway for coding agents we were waiting for",
+      "url": "https://blog.stackademic.com/bifrost-cli-is-the-ai-gateway-for-coding-agents-we-were-waiting-for-8543a2ddd57a?source=rss------ai_gateway-5",
+      "author": "Fabio Matricardi",
+      "published_at": "2026-04-09T07:31:03.000Z",
+      "content_snippet": "The secret weapon for your AI applications in 2026Continue reading on Stackademic »",
+      "engagement": {
+        "upvotes": null,
+        "comments": null,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": []
+    },
+    {
+      "id": "hn_47850737",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Building a Fast Multilingual OCR Model with Synthetic Data",
+      "url": "https://huggingface.co/blog/nvidia/nemotron-ocr-v2",
+      "author": "gmays",
+      "published_at": "2026-04-21T16:06:06.000Z",
+      "content_snippet": "Building a Fast Multilingual OCR Model with Synthetic Data",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://cdn-thumbnails.huggingface.co/social-thumbnails/blog/nvidia/nemotron-ocr-v2.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://cdn-thumbnails.huggingface.co/social-thumbnails/blog/nvidia/nemotron-ocr-v2.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47863418",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: BigBlueBam, MIT-licensed Work OS where agents are first-class coworkers",
+      "url": "https://github.com/eoffermann/BigBlueBam",
+      "author": "eoffermann",
+      "published_at": "2026-04-22T13:35:54.000Z",
+      "content_snippet": "Show HN: BigBlueBam, MIT-licensed Work OS where agents are first-class coworkers",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 7,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://opengraph.githubassets.com/f3b4cded15ca02067fa61b56bbf2c545e146214b6fca40dbcb080e0ca087e565/eoffermann/BigBlueBam"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://opengraph.githubassets.com/f3b4cded15ca02067fa61b56bbf2c545e146214b6fca40dbcb080e0ca087e565/eoffermann/BigBlueBam"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47872916",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Ask HN: Is the ongoing AI research driving LLM models to be better?",
+      "url": "https://news.ycombinator.com/item?id=47872916",
+      "author": "thiago_fm",
+      "published_at": "2026-04-23T07:03:22.000Z",
+      "content_snippet": "Ask HN: Is the ongoing AI research driving LLM models to be better?",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 4,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47803480",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Xata, open-source Postgres platform with copy-on-write branches",
+      "url": "https://github.com/xataio/xata",
+      "author": "tee-es-gee",
+      "published_at": "2026-04-17T07:47:30.000Z",
+      "content_snippet": "Show HN: Xata, open-source Postgres platform with copy-on-write branches",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://opengraph.githubassets.com/09f8f96d854fce9477b8b12f6f9220c69408fa498c6b651b39484e1b76b91af0/xataio/xata"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://opengraph.githubassets.com/09f8f96d854fce9477b8b12f6f9220c69408fa498c6b651b39484e1b76b91af0/xataio/xata"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47847282",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "How well do LLMs work outside English? We tested 8 models in 8 languages [pdf]",
+      "url": "https://info.rws.com/hubfs/2026/trainai/llm-data-gen-study-2.0-campaign/trainai-multilingual-llm-synthetic-data-gen-study-2.0.pdf",
+      "author": "curioussquirrel",
+      "published_at": "2026-04-21T11:24:24.000Z",
+      "content_snippet": "How well do LLMs work outside English? We tested 8 models in 8 languages [pdf]",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 5,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47870207",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Monitoring Data Quality in Probability-Based Internet Panels",
+      "url": "https://news.gallup.com/opinion/methodology/708383/monitoring-data-quality-probability-based-internet-panels.aspx",
+      "author": "hn_acker",
+      "published_at": "2026-04-22T22:37:13.000Z",
+      "content_snippet": "Monitoring Data Quality in Probability-Based Internet Panels",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://imagekit.gallup.com/fusion/tr:n-emd_soc_meta_og/METHODOLOGY_BLOG/bd9171da-b58a-44e1-8787-a24b066c05fe.jpg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://imagekit.gallup.com/fusion/tr:n-emd_soc_meta_og/METHODOLOGY_BLOG/bd9171da-b58a-44e1-8787-a24b066c05fe.jpg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47808017",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Quality Assessment Report Evaluates Tomorrow.io Precipitation Radar Data",
+      "url": "https://science.nasa.gov/science-research/earth-science/quality-assessment-report-evaluates-tomorrow-io-precipitation-radar-data/",
+      "author": "salkahfi",
+      "published_at": "2026-04-17T16:58:55.000Z",
+      "content_snippet": "Quality Assessment Report Evaluates Tomorrow.io Precipitation Radar Data",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://science.nasa.gov/wp-content/uploads/2026/04/tomorrow-io-assessment-image.jpg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://science.nasa.gov/wp-content/uploads/2026/04/tomorrow-io-assessment-image.jpg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47819553",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: How Are You-elderly fall detection app I built solo with AI in 6 months",
+      "url": "https://news.ycombinator.com/item?id=47819553",
+      "author": "sminchev",
+      "published_at": "2026-04-18T21:11:18.000Z",
+      "content_snippet": "Show HN: How Are You-elderly fall detection app I built solo with AI in 6 months",
+      "engagement": {
+        "upvotes": 4,
+        "comments": 10,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47806801",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Mimikos – Zero-config mock server that infers API behavior from OpenAPI",
+      "url": "https://news.ycombinator.com/item?id=47806801",
+      "author": "codeguruking",
+      "published_at": "2026-04-17T15:11:28.000Z",
+      "content_snippet": "Show HN: Mimikos – Zero-config mock server that infers API behavior from OpenAPI",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47883493",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: GeoValida – Spatial Intelligence reality check to find the best land",
+      "url": "https://geovalida.com",
+      "author": "vellal",
+      "published_at": "2026-04-23T23:17:44.000Z",
+      "content_snippet": "Show HN: GeoValida – Spatial Intelligence reality check to find the best land",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "/_next/image?url=%2Fscreenshots%2Flp_livability.png&amp;w=3840&amp;q=75"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "/_next/image?url=%2Fscreenshots%2Flp_livability.png&amp;w=3840&amp;q=75"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47833955",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "I Built a 22k-Line App with Zero Coding Experience. Or, how to control agents",
+      "url": "https://news.ycombinator.com/item?id=47833955",
+      "author": "JasonGravy",
+      "published_at": "2026-04-20T13:22:39.000Z",
+      "content_snippet": "I Built a 22k-Line App with Zero Coding Experience. Or, how to control agents",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47862230",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Kernel code removals driven by LLM-created security reports",
+      "url": "https://lwn.net/Articles/1068928/",
+      "author": "edward",
+      "published_at": "2026-04-22T11:48:07.000Z",
+      "content_snippet": "Kernel code removals driven by LLM-created security reports",
+      "engagement": {
+        "upvotes": 120,
+        "comments": 115,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://static.lwn.net/images/logo/barepenguin-70.webp"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://static.lwn.net/images/logo/barepenguin-70.webp"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47830314",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "SoK: Security of Autonomous LLM Agents in Agentic Commerce",
+      "url": "https://arxiv.org/abs/2604.15367",
+      "author": "omer_k",
+      "published_at": "2026-04-20T04:11:17.000Z",
+      "content_snippet": "SoK: Security of Autonomous LLM Agents in Agentic Commerce",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "/static/browse/0.3.4/images/arxiv-logo-fb.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "/static/browse/0.3.4/images/arxiv-logo-fb.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47823955",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Ask HN: How to handle desktop app security post-Mythos?",
+      "url": "https://news.ycombinator.com/item?id=47823955",
+      "author": "Archit3ch",
+      "published_at": "2026-04-19T12:54:58.000Z",
+      "content_snippet": "Ask HN: How to handle desktop app security post-Mythos?",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47875939",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Lilith-zero update: fast Rust security for agents",
+      "url": "https://github.com/BadC-mpany/lilith-zero",
+      "author": "gregojaca",
+      "published_at": "2026-04-23T14:07:52.000Z",
+      "content_snippet": "Show HN: Lilith-zero update: fast Rust security for agents",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://opengraph.githubassets.com/48287d884160cfb8bd0b7606c81501edd660375a63f13e3125ec4bd863710f44/BadC-mpany/lilith-zero"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://opengraph.githubassets.com/48287d884160cfb8bd0b7606c81501edd660375a63f13e3125ec4bd863710f44/BadC-mpany/lilith-zero"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47863430",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: We built a <60ms, open-source alternative to E2B using RustVMM and KVM",
+      "url": "https://github.com/TencentCloud/CubeSandbox",
+      "author": "yukunqiu",
+      "published_at": "2026-04-22T13:36:32.000Z",
+      "content_snippet": "Show HN: We built a <60ms, open-source alternative to E2B using RustVMM and KVM",
+      "engagement": {
+        "upvotes": 7,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://opengraph.githubassets.com/3b7a372cd6d5b759ab257a4268c7ec99eab2ae95024c7a8a26f0ea69defb527d/TencentCloud/CubeSandbox"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://opengraph.githubassets.com/3b7a372cd6d5b759ab257a4268c7ec99eab2ae95024c7a8a26f0ea69defb527d/TencentCloud/CubeSandbox"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47882985",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "I scanned 10 open-source AI apps for EU AI Act compliance – here's what I found",
+      "url": "https://getregula.com/blog/blog-scanning-10-ai-apps.html",
+      "author": "kuzivaai",
+      "published_at": "2026-04-23T22:26:47.000Z",
+      "content_snippet": "I scanned 10 open-source AI apps for EU AI Act compliance – here's what I found",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47871778",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Fiction: The Corporate Mathematics of Denying AI Consciousness",
+      "url": "https://news.ycombinator.com/item?id=47871778",
+      "author": "ISJLA",
+      "published_at": "2026-04-23T02:45:32.000Z",
+      "content_snippet": "Fiction: The Corporate Mathematics of Denying AI Consciousness",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47827486",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Ask HN: Is giving AI agents DB access the new BI-tool problem?",
+      "url": "https://news.ycombinator.com/item?id=47827486",
+      "author": "vira28",
+      "published_at": "2026-04-19T20:44:39.000Z",
+      "content_snippet": "Ask HN: Is giving AI agents DB access the new BI-tool problem?",
+      "engagement": {
+        "upvotes": 6,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47835218",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Made a highly organised email client with prompt-free AI within",
+      "url": "https://news.ycombinator.com/item?id=47835218",
+      "author": "neerajnathany",
+      "published_at": "2026-04-20T14:48:50.000Z",
+      "content_snippet": "Show HN: Made a highly organised email client with prompt-free AI within",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47832297",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Ask HN: How to become better at software \"engineering\"?",
+      "url": "https://news.ycombinator.com/item?id=47832297",
+      "author": "luplex",
+      "published_at": "2026-04-20T10:13:24.000Z",
+      "content_snippet": "Ask HN: How to become better at software \"engineering\"?",
+      "engagement": {
+        "upvotes": 4,
+        "comments": 8,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47832007",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "The AI-Ready Product Data Framework for B2B Commerce",
+      "url": "https://virtocommerce.com/assets/ai-ready-pim-framework",
+      "author": "lizzieyo",
+      "published_at": "2026-04-20T09:27:25.000Z",
+      "content_snippet": "The AI-Ready Product Data Framework for B2B Commerce",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://vccom-prod.govirto.com/cms-content/Pages/vccom/assets/pages/the-ai-ready-framework-b2b-commerce-min.webp"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://vccom-prod.govirto.com/cms-content/Pages/vccom/assets/pages/the-ai-ready-framework-b2b-commerce-min.webp"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47875843",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "UK Biobank health data keeps ending up on GitHub",
+      "url": "https://biobank.rocher.lc",
+      "author": "Cynddl",
+      "published_at": "2026-04-23T13:58:03.000Z",
+      "content_snippet": "UK Biobank health data keeps ending up on GitHub",
+      "engagement": {
+        "upvotes": 91,
+        "comments": 24,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://biobank.rocher.lc/og.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://biobank.rocher.lc/og.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47849097",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: GoModel – an open-source AI gateway in Go",
+      "url": "https://github.com/ENTERPILOT/GOModel/",
+      "author": "santiago-pl",
+      "published_at": "2026-04-21T14:11:53.000Z",
+      "content_snippet": "Show HN: GoModel – an open-source AI gateway in Go",
+      "engagement": {
+        "upvotes": 205,
+        "comments": 74,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://opengraph.githubassets.com/81cc680484be0c1d99a5fa7b2a470b356c3e75d5eb1194a897c3c63d83122782/ENTERPILOT/GoModel"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://opengraph.githubassets.com/81cc680484be0c1d99a5fa7b2a470b356c3e75d5eb1194a897c3c63d83122782/ENTERPILOT/GoModel"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47884053",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "MCP Gateways Aren't Enough: AI Agents Need Identity, Authorization, and Proof",
+      "url": "https://www.diagrid.io/blog/why-mcp-gateways-are-not-enough",
+      "author": "mwfussell",
+      "published_at": "2026-04-24T00:29:04.000Z",
+      "content_snippet": "MCP Gateways Aren't Enough: AI Agents Need Identity, Authorization, and Proof",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://www.diagrid.io/images/blog/why-mcp-gateways-are-not-enough/og.webp"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://www.diagrid.io/images/blog/why-mcp-gateways-are-not-enough/og.webp"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47865412",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: AI Hermes Agent – An independent Hermes Agent install guide",
+      "url": "https://ai-hermes-agent.com/install",
+      "author": "ethanjamescolez",
+      "published_at": "2026-04-22T15:52:27.000Z",
+      "content_snippet": "Show HN: AI Hermes Agent – An independent Hermes Agent install guide",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "/icon.svg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "/icon.svg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47850081",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Regula – scans your code for EU AI Act risk indicators (Python CLI, MIT)",
+      "url": "https://github.com/kuzivaai/getregula",
+      "author": "kuzivaai",
+      "published_at": "2026-04-21T15:21:22.000Z",
+      "content_snippet": "Regula – scans your code for EU AI Act risk indicators (Python CLI, MIT)",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://opengraph.githubassets.com/7208113cb1122fb3d3f8c7fc3788095619900687691fcfd88b423505d0ce1d96/kuzivaai/getregula"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://opengraph.githubassets.com/7208113cb1122fb3d3f8c7fc3788095619900687691fcfd88b423505d0ce1d96/kuzivaai/getregula"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47841687",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "I turned EU Cyber laws (AI Act, NIS2, GDPR) into a simple checklist",
+      "url": "https://cyberchecklist.app/en/rules-finder",
+      "author": "johnde",
+      "published_at": "2026-04-20T22:11:04.000Z",
+      "content_snippet": "I turned EU Cyber laws (AI Act, NIS2, GDPR) into a simple checklist",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://cyberchecklist.app/og-image.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://cyberchecklist.app/og-image.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47848439",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Isola – Open-source sandboxing on Kubernetes",
+      "url": "https://github.com/isola-run/isola",
+      "author": "benldrmn",
+      "published_at": "2026-04-21T13:21:02.000Z",
+      "content_snippet": "Show HN: Isola – Open-source sandboxing on Kubernetes",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://opengraph.githubassets.com/df5df80681198b7d5a8f0563fbada9bf038f1cde17ad3cb04355001680d53c74/isola-run/isola"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://opengraph.githubassets.com/df5df80681198b7d5a8f0563fbada9bf038f1cde17ad3cb04355001680d53c74/isola-run/isola"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47865207",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: A visual CI/CD system",
+      "url": "https://www.actionforge.dev",
+      "author": "sebastian_io",
+      "published_at": "2026-04-22T15:41:55.000Z",
+      "content_snippet": "Show HN: A visual CI/CD system",
+      "engagement": {
+        "upvotes": 6,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://www.actionforge.dev/static/assets/social.jpg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://www.actionforge.dev/static/assets/social.jpg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47876719",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "White House accuses China of 'industrial scale' theft of AI technology",
+      "url": "https://www.reuters.com/world/white-house-accuses-china-industrial-scale-theft-ai-technology-ft-reports-2026-04-23/",
+      "author": "nickthegreek",
+      "published_at": "2026-04-23T15:13:47.000Z",
+      "content_snippet": "White House accuses China of 'industrial scale' theft of AI technology",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 3,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47815449",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Managing Complexity with Mycelium",
+      "url": "https://yogthos.net/posts/2026-02-25-ai-at-scale.html",
+      "author": "tosh",
+      "published_at": "2026-04-18T12:38:37.000Z",
+      "content_snippet": "Managing Complexity with Mycelium",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47803849",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Managing Complexity with Mycelium",
+      "url": "https://yogthos.net/posts/2026-02-25-ai-at-scale.html",
+      "author": "tosh",
+      "published_at": "2026-04-17T08:51:58.000Z",
+      "content_snippet": "Managing Complexity with Mycelium",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47876559",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Decoupled DiLoCo: Resilient, Distributed AI Training at Scale",
+      "url": "https://deepmind.google/blog/decoupled-diloco/",
+      "author": "salkahfi",
+      "published_at": "2026-04-23T15:01:33.000Z",
+      "content_snippet": "Decoupled DiLoCo: Resilient, Distributed AI Training at Scale",
+      "engagement": {
+        "upvotes": 8,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://lh3.googleusercontent.com/dgWXJe3CEYV3TND6RvRPANNZ_YsErtYAWmFYC1BjQCn1QVLWx2mfBqyyUqAwaGPfBKV_81M6yE2IwV866_0EMu0Azx4_QFE3283E0Vz7dONAR7F5wA=w1440"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://lh3.googleusercontent.com/dgWXJe3CEYV3TND6RvRPANNZ_YsErtYAWmFYC1BjQCn1QVLWx2mfBqyyUqAwaGPfBKV_81M6yE2IwV866_0EMu0Azx4_QFE3283E0Vz7dONAR7F5wA=w1440"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47834118",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Orchestrating AI Code Review at Scale",
+      "url": "https://blog.cloudflare.com/ai-code-review/",
+      "author": "ryanskidmore",
+      "published_at": "2026-04-20T13:34:45.000Z",
+      "content_snippet": "Orchestrating AI Code Review at Scale",
+      "engagement": {
+        "upvotes": 4,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3g2Vqql5biqvjvXwxhDb3b/b0c7fd707437eff2a7acb9d3172368e4/BLOG-3284_OG.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3g2Vqql5biqvjvXwxhDb3b/b0c7fd707437eff2a7acb9d3172368e4/BLOG-3284_OG.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47849903",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Orchestrating AI Code Review at Scale",
+      "url": "https://blog.cloudflare.com/ai-code-review/",
+      "author": "Brajeshwar",
+      "published_at": "2026-04-21T15:07:57.000Z",
+      "content_snippet": "Orchestrating AI Code Review at Scale",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3g2Vqql5biqvjvXwxhDb3b/b0c7fd707437eff2a7acb9d3172368e4/BLOG-3284_OG.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://cf-assets.www.cloudflare.com/zkvhlag99gkb/3g2Vqql5biqvjvXwxhDb3b/b0c7fd707437eff2a7acb9d3172368e4/BLOG-3284_OG.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47837377",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Seltz – The fastest, high quality, search API for AI agents",
+      "url": "https://console.seltz.ai/login",
+      "author": "amallia",
+      "published_at": "2026-04-20T17:12:38.000Z",
+      "content_snippet": "Show HN: Seltz – The fastest, high quality, search API for AI agents",
+      "engagement": {
+        "upvotes": 5,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "/_next/image?url=%2Fseltz-logo-dark.png&amp;w=384&amp;q=75"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "/_next/image?url=%2Fseltz-logo-dark.png&amp;w=384&amp;q=75"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47882773",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "White House warns of 'industrial-scale' efforts in China to rip off U.S. AI tech",
+      "url": "https://www.cnbc.com/2026/04/23/trump-china-ai-technology.html",
+      "author": "shinryudbz",
+      "published_at": "2026-04-23T22:08:19.000Z",
+      "content_snippet": "White House warns of 'industrial-scale' efforts in China to rip off U.S. AI tech",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 5,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://image.cnbcfm.com/api/v1/image/108296345-1776962920759-gettyimages-2264232861-RATEPAYER_PROTECTION_PLEDGE.jpeg?v=1776962958&amp;w=1920&amp;h=1080"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://image.cnbcfm.com/api/v1/image/108296345-1776962920759-gettyimages-2264232861-RATEPAYER_PROTECTION_PLEDGE.jpeg?v=1776962958&amp;w=1920&amp;h=1080"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47868779",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "We mapped unauthenticated Vector DBs exposing corporate AI data",
+      "url": "https://news.ycombinator.com/item?id=47868779",
+      "author": "echelongraph",
+      "published_at": "2026-04-22T20:21:12.000Z",
+      "content_snippet": "We mapped unauthenticated Vector DBs exposing corporate AI data",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47839798",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Explain The Law – Simplified legislation and executive orders using AI",
+      "url": "https://explainthelaw.com/",
+      "author": "Nortey",
+      "published_at": "2026-04-20T20:04:40.000Z",
+      "content_snippet": "Show HN: Explain The Law – Simplified legislation and executive orders using AI",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://explainthelaw.com/og-default.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://explainthelaw.com/og-default.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47845540",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: OpenBridge – turn web chat access into an OpenAI-compatible endpoint",
+      "url": "https://news.ycombinator.com/item?id=47845540",
+      "author": "linuz",
+      "published_at": "2026-04-21T07:14:43.000Z",
+      "content_snippet": "Show HN: OpenBridge – turn web chat access into an OpenAI-compatible endpoint",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47867093",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Hold.aero – Fly and Learn IFR flying in the browser",
+      "url": "https://app.hold.aero/fly",
+      "author": "jcchrrr",
+      "published_at": "2026-04-22T18:04:52.000Z",
+      "content_snippet": "Show HN: Hold.aero – Fly and Learn IFR flying in the browser",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47850907",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Daemons – we pivoted from building agents to cleaning up after them",
+      "url": "https://charlielabs.ai/",
+      "author": "rileyt",
+      "published_at": "2026-04-21T16:16:41.000Z",
+      "content_snippet": "Show HN: Daemons – we pivoted from building agents to cleaning up after them",
+      "engagement": {
+        "upvotes": 66,
+        "comments": 32,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://charlielabs.ai/_astro/charlie-og-v2-20260421.BSDtkojf.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://charlielabs.ai/_astro/charlie-og-v2-20260421.BSDtkojf.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47825574",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": "atlan",
+      "product_line": "syntitan",
+      "title": "Atlantic's circulation collapse would lead to substantial oceanic carbon release",
+      "url": "https://www.nature.com/articles/s43247-026-03427-w",
+      "author": "doener",
+      "published_at": "2026-04-19T16:42:54.000Z",
+      "content_snippet": "Atlantic's circulation collapse would lead to substantial oceanic carbon release",
+      "engagement": {
+        "upvotes": 7,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs43247-026-03427-w/MediaObjects/43247_2026_3427_Fig1_HTML.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://media.springernature.com/m685/springer-static/image/art%3A10.1038%2Fs43247-026-03427-w/MediaObjects/43247_2026_3427_Fig1_HTML.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47865598",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": "atlan",
+      "product_line": "syntitan",
+      "title": "Critical Atlantic current significantly more likely to collapse than thought",
+      "url": "https://www.theguardian.com/environment/2026/apr/15/critical-atlantic-current-significantly-more-likely-to-collapse-than-thought",
+      "author": "croes",
+      "published_at": "2026-04-22T16:06:25.000Z",
+      "content_snippet": "Critical Atlantic current significantly more likely to collapse than thought",
+      "engagement": {
+        "upvotes": 6,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://i.guim.co.uk/img/media/2a4cd2e5bcd905b1a3342e8494baba283482994e/654_0_3333_2667/master/3333.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=603f2ce912f30fd29dcf3ce4c6c2579c"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://i.guim.co.uk/img/media/2a4cd2e5bcd905b1a3342e8494baba283482994e/654_0_3333_2667/master/3333.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=603f2ce912f30fd29dcf3ce4c6c2579c"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47871120",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": "atlan",
+      "product_line": "syntitan",
+      "title": "A deadly bacteria is creeping up the Atlantic Coast",
+      "url": "https://grist.org/health/vibrio-bacteria-florida-shellfish/",
+      "author": "Brajeshwar",
+      "published_at": "2026-04-23T00:50:53.000Z",
+      "content_snippet": "A deadly bacteria is creeping up the Atlantic Coast",
+      "engagement": {
+        "upvotes": 4,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://grist.org/wp-content/uploads/2026/04/VIBRIO-FINAL-v4.jpg?quality=75&strip=all"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://grist.org/wp-content/uploads/2026/04/VIBRIO-FINAL-v4.jpg?quality=75&strip=all"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47805996",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": "atlan",
+      "product_line": "syntitan",
+      "title": "Critical Atlantic current significantly more likely to collapse than thought",
+      "url": "https://www.theguardian.com/environment/2026/apr/15/critical-atlantic-current-significantly-more-likely-to-collapse-than-thought",
+      "author": "mooreds",
+      "published_at": "2026-04-17T13:55:01.000Z",
+      "content_snippet": "Critical Atlantic current significantly more likely to collapse than thought",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://i.guim.co.uk/img/media/2a4cd2e5bcd905b1a3342e8494baba283482994e/654_0_3333_2667/master/3333.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=603f2ce912f30fd29dcf3ce4c6c2579c"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://i.guim.co.uk/img/media/2a4cd2e5bcd905b1a3342e8494baba283482994e/654_0_3333_2667/master/3333.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=603f2ce912f30fd29dcf3ce4c6c2579c"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47849024",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": "atlan",
+      "product_line": "syntitan",
+      "title": "Cocaine pollution alters the movement and space use of Atlantic salmon",
+      "url": "https://www.cell.com/current-biology/fulltext/S0960-9822(26)00315-5",
+      "author": "ajay-d",
+      "published_at": "2026-04-21T14:05:49.000Z",
+      "content_snippet": "Cocaine pollution alters the movement and space use of Atlantic salmon",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47862969",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": "atlan",
+      "product_line": "syntitan",
+      "title": "Key Atlantic Ocean current is much closer to collapse than scientists thought",
+      "url": "https://www.livescience.com/planet-earth/climate-change/nations-need-to-prepare-now-key-atlantic-ocean-current-is-much-closer-to-collapse-than-scientists-thought",
+      "author": "mindracer",
+      "published_at": "2026-04-22T13:02:36.000Z",
+      "content_snippet": "Key Atlantic Ocean current is much closer to collapse than scientists thought",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://cdn.mos.cms.futurecdn.net/mhmyo2aVVXYBZzv9uNgsfH-1600-80.jpg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://cdn.mos.cms.futurecdn.net/mhmyo2aVVXYBZzv9uNgsfH-1600-80.jpg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47850854",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: TogetherLetters – Group newsletters with no app, no feed, no login",
+      "url": "https://www.togetherletters.com",
+      "author": "sanjayparekh",
+      "published_at": "2026-04-21T16:13:54.000Z",
+      "content_snippet": "Show HN: TogetherLetters – Group newsletters with no app, no feed, no login",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "/_next/image?url=https%3A%2F%2Fstatic.togetherletters.com%2Flogo%2Ftl-logo-horizontal.png&amp;w=828&amp;q=75"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "/_next/image?url=https%3A%2F%2Fstatic.togetherletters.com%2Flogo%2Ftl-logo-horizontal.png&amp;w=828&amp;q=75"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47877088",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": "atlan",
+      "product_line": "syntitan",
+      "title": "A catastrophic climate event is upon us",
+      "url": "https://www.theguardian.com/commentisfree/2026/apr/23/catastrophic-climate-event-scientists-atlantic-system-collapse-billionaire-existential-crisis",
+      "author": "yrcyrc",
+      "published_at": "2026-04-23T15:40:58.000Z",
+      "content_snippet": "A catastrophic climate event is upon us",
+      "engagement": {
+        "upvotes": 10,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://i.guim.co.uk/img/media/4963adf6aeaf354690a35da022574a41c15ca49b/0_0_5000_4000/master/5000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctb3BpbmlvbnMucG5n&enable=upscale&s=7d60f2e02c2bcb3a74cad2bb5f316e19"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://i.guim.co.uk/img/media/4963adf6aeaf354690a35da022574a41c15ca49b/0_0_5000_4000/master/5000.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctb3BpbmlvbnMucG5n&enable=upscale&s=7d60f2e02c2bcb3a74cad2bb5f316e19"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47833247",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Atlassian enables default data collection to train AI",
+      "url": "https://letsdatascience.com/news/atlassian-enables-default-data-collection-to-train-ai-f71343d8",
+      "author": "kevcampb",
+      "published_at": "2026-04-20T12:23:39.000Z",
+      "content_snippet": "Atlassian enables default data collection to train AI",
+      "engagement": {
+        "upvotes": 602,
+        "comments": 134,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47839283",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Rumor: Anthropic is going to buy Atlassian?",
+      "url": "https://old.reddit.com/r/atlassian/comments/1sob1s2/atlassian_anthropic/",
+      "author": "SilverElfin",
+      "published_at": "2026-04-20T19:24:11.000Z",
+      "content_snippet": "Rumor: Anthropic is going to buy Atlassian?",
+      "engagement": {
+        "upvotes": 25,
+        "comments": 24,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47823679",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Atlassian's new data collection policy protects rich customers while AI eats",
+      "url": "https://www.theregister.com/2026/04/18/atlassians_new_data_collection_policy/",
+      "author": "latein",
+      "published_at": "2026-04-19T11:58:15.000Z",
+      "content_snippet": "Atlassian's new data collection policy protects rich customers while AI eats",
+      "engagement": {
+        "upvotes": 4,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://regmedia.co.uk/2026/04/17/shutterstock2.jpg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://regmedia.co.uk/2026/04/17/shutterstock2.jpg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47815015",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Atlassian's new data collection policy protects rich customers, AI eats the rest",
+      "url": "https://www.theregister.com/2026/04/18/atlassians_new_data_collection_policy/",
+      "author": "Bender",
+      "published_at": "2026-04-18T11:26:16.000Z",
+      "content_snippet": "Atlassian's new data collection policy protects rich customers, AI eats the rest",
+      "engagement": {
+        "upvotes": 4,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://regmedia.co.uk/2026/04/17/shutterstock2.jpg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://regmedia.co.uk/2026/04/17/shutterstock2.jpg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47828835",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Alan Kay – Programming and Scaling (2011) [video]",
+      "url": "https://www.youtube.com/watch?v=YyIQKBzIuBY",
+      "author": "alhazrod",
+      "published_at": "2026-04-19T23:56:38.000Z",
+      "content_snippet": "Alan Kay – Programming and Scaling (2011) [video]",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47847949",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Philosophize This (podcast) Atlas",
+      "url": "https://philthis.eamag.me/",
+      "author": "eamag",
+      "published_at": "2026-04-21T12:39:00.000Z",
+      "content_snippet": "Philosophize This (podcast) Atlas",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://philthis.eamag.me/social-preview.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://philthis.eamag.me/social-preview.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47877200",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Atlassian Expands Partnership with Google Cloud to Power Agentic AI",
+      "url": "https://www.googlecloudpresscorner.com/2026-04-22-Atlassian-Expands-Partnership-with-Google-Cloud-to-Power-Agentic-AI-for-Teams-Worldwide",
+      "author": "marcosscriven",
+      "published_at": "2026-04-23T15:47:06.000Z",
+      "content_snippet": "Atlassian Expands Partnership with Google Cloud to Power Agentic AI",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://www.googlecloudpresscorner.com/image/GC_socialsharing.jpg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://www.googlecloudpresscorner.com/image/GC_socialsharing.jpg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47862251",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Atlassian's new data collection policy protects rich customers",
+      "url": "https://www.theregister.com/2026/04/18/atlassians_new_data_collection_policy/",
+      "author": "baxtr",
+      "published_at": "2026-04-22T11:50:07.000Z",
+      "content_snippet": "Atlassian's new data collection policy protects rich customers",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://regmedia.co.uk/2026/04/17/shutterstock2.jpg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://regmedia.co.uk/2026/04/17/shutterstock2.jpg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47876947",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Atlassian to begin using customer metadata and and in-app data to train AI",
+      "url": "https://www.atlassian.com/trust/ai/data-contribution/faqs",
+      "author": "AaronM",
+      "published_at": "2026-04-23T15:30:42.000Z",
+      "content_snippet": "Atlassian to begin using customer metadata and and in-app data to train AI",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 3,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://wac-cdn.atlassian.com/misc-assets/adg4-nav/AtlassianHeaderLogo.svg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://wac-cdn.atlassian.com/misc-assets/adg4-nav/AtlassianHeaderLogo.svg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47805918",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Atlassian is changing how we use customer data on August 17, 2026",
+      "url": "https://www.atlassian.com/trust/ai/data-contribution",
+      "author": "TechTechTech",
+      "published_at": "2026-04-17T13:47:31.000Z",
+      "content_snippet": "Atlassian is changing how we use customer data on August 17, 2026",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://wac-cdn.atlassian.com/misc-assets/adg4-nav/AtlassianHeaderLogo.svg"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://wac-cdn.atlassian.com/misc-assets/adg4-nav/AtlassianHeaderLogo.svg"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47885230",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "DeepSeek V4 is out. the best open-source on coding. here's the breakdown",
+      "url": "https://news.ycombinator.com/item?id=47885230",
+      "author": "Alisaqqt",
+      "published_at": "2026-04-24T03:40:36.000Z",
+      "content_snippet": "DeepSeek V4 is out. the best open-source on coding. here's the breakdown",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47868832",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "The Illuminated Man: an unconventional portrait of JG Ballard",
+      "url": "https://www.theguardian.com/books/2026/apr/20/the-illuminated-man-by-christopher-priest-and-nina-allan-review-an-unconventional-portrait-of-jg-ballard",
+      "author": "agronaut",
+      "published_at": "2026-04-22T20:24:05.000Z",
+      "content_snippet": "The Illuminated Man: an unconventional portrait of JG Ballard",
+      "engagement": {
+        "upvotes": 60,
+        "comments": 20,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://i.guim.co.uk/img/media/844ae3c2a684515b067c8a9af352eecc47ae062f/251_0_3640_2912/master/3640.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=3dabb21ed4edf7227de94971d29097d2"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://i.guim.co.uk/img/media/844ae3c2a684515b067c8a9af352eecc47ae062f/251_0_3640_2912/master/3640.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&precrop=40:21,offset-x50,offset-y0&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=3dabb21ed4edf7227de94971d29097d2"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47836149",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "Show HN: Gyrus :Open-Source AI Agents for Snowflake, SQL and Postgres",
+      "url": "https://github.com/orgs/Gyrus-Dev/repositories",
+      "author": "MalviyaPriyank",
+      "published_at": "2026-04-20T15:56:53.000Z",
+      "content_snippet": "Show HN: Gyrus :Open-Source AI Agents for Snowflake, SQL and Postgres",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://avatars.githubusercontent.com/u/269605671?s=280&amp;v=4"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://avatars.githubusercontent.com/u/269605671?s=280&amp;v=4"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47853007",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": "snowflake",
+      "product_line": "syntitan",
+      "title": "Show HN: DataFrey – MCP server for Snowflake with text-to-SQL agent",
+      "url": "https://docs.datafrey.ai",
+      "author": "slava_",
+      "published_at": "2026-04-21T19:01:49.000Z",
+      "content_snippet": "Show HN: DataFrey – MCP server for Snowflake with text-to-SQL agent",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://datafrey.mintlify.app/mintlify-assets/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DGetting%2BStarted%26title%3DIntroduction%26description%3DConnect%2Byour%2Bdatabase%2Bto%2BAI.%2BAsk%2Byour%2Bdatabase%2Bin%2Bnatural%2Blanguage.%26primaryColor%3D%2523d97757%26lightColor%3D%2523dc7f61%26darkColor%3D%2523c85c38%26backgroundLight%3D%2523ffffff%26backgroundDark%3D%25230d0b0d&amp;w=1200&amp;q=100"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://datafrey.mintlify.app/mintlify-assets/_next/image?url=%2F_mintlify%2Fapi%2Fog%3Fdivision%3DGetting%2BStarted%26title%3DIntroduction%26description%3DConnect%2Byour%2Bdatabase%2Bto%2BAI.%2BAsk%2Byour%2Bdatabase%2Bin%2Bnatural%2Blanguage.%26primaryColor%3D%2523d97757%26lightColor%3D%2523dc7f61%26darkColor%3D%2523c85c38%26backgroundLight%3D%2523ffffff%26backgroundDark%3D%25230d0b0d&amp;w=1200&amp;q=100"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47875513",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Open-source database CLI that doubles as an MCP server for agents",
+      "url": "https://github.com/clidey/whodb/tree/main/cli",
+      "author": "modelorona",
+      "published_at": "2026-04-23T13:26:56.000Z",
+      "content_snippet": "Show HN: Open-source database CLI that doubles as an MCP server for agents",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://repository-images.githubusercontent.com/813564769/c62b45c4-fdc7-4d21-a61d-e4c77f12b7f5"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://repository-images.githubusercontent.com/813564769/c62b45c4-fdc7-4d21-a61d-e4c77f12b7f5"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47819461",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Observability Stack – AI First?",
+      "url": "https://news.ycombinator.com/item?id=47819461",
+      "author": "jblake",
+      "published_at": "2026-04-18T20:55:34.000Z",
+      "content_snippet": "Observability Stack – AI First?",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 3,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47819206",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Ask HN: Has zooming out helped you deal with AI anxiety?",
+      "url": "https://news.ycombinator.com/item?id=47819206",
+      "author": "ItsClo688",
+      "published_at": "2026-04-18T20:20:42.000Z",
+      "content_snippet": "Ask HN: Has zooming out helped you deal with AI anxiety?",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47833747",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: CyberWriter – a .md editor built on Apple's (barely-used) on-device AI",
+      "url": "https://cyberwriter.app",
+      "author": "uncSoft",
+      "published_at": "2026-04-20T13:07:04.000Z",
+      "content_snippet": "Show HN: CyberWriter – a .md editor built on Apple's (barely-used) on-device AI",
+      "engagement": {
+        "upvotes": 15,
+        "comments": 6,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "hero3.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "hero3.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47838741",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Everything is AI now – does this kill the excitment of software development?",
+      "url": "https://news.ycombinator.com/item?id=47838741",
+      "author": "sminchev",
+      "published_at": "2026-04-20T18:42:16.000Z",
+      "content_snippet": "Everything is AI now – does this kill the excitment of software development?",
+      "engagement": {
+        "upvotes": 5,
+        "comments": 9,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47848539",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Ask HN: Would you use revocable digital signatures to verify AI/Other content?",
+      "url": "https://news.ycombinator.com/item?id=47848539",
+      "author": "lyfeninja",
+      "published_at": "2026-04-21T13:28:31.000Z",
+      "content_snippet": "Ask HN: Would you use revocable digital signatures to verify AI/Other content?",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47865907",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Ask HN: In your job with all the AI go-go/execution velocity – are you lonely?",
+      "url": "https://news.ycombinator.com/item?id=47865907",
+      "author": "abcqwerty9876",
+      "published_at": "2026-04-22T16:32:54.000Z",
+      "content_snippet": "Ask HN: In your job with all the AI go-go/execution velocity – are you lonely?",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47880319",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Telemetry and intent analytics for AI products using natural language",
+      "url": "https://news.ycombinator.com/item?id=47880319",
+      "author": "peoplenotbots",
+      "published_at": "2026-04-23T19:18:54.000Z",
+      "content_snippet": "Telemetry and intent analytics for AI products using natural language",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47846681",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Agensi – Curated marketplace for AI agent skills (SKILL.md)",
+      "url": "https://www.agensi.io",
+      "author": "Samuellrose",
+      "published_at": "2026-04-21T09:50:50.000Z",
+      "content_snippet": "Show HN: Agensi – Curated marketplace for AI agent skills (SKILL.md)",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://www.agensi.io/og-image.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://www.agensi.io/og-image.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47867083",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Need advice: Back end engineer → infrastructure: how do you make the transition?",
+      "url": "https://news.ycombinator.com/item?id=47867083",
+      "author": "gokuljs",
+      "published_at": "2026-04-22T18:04:01.000Z",
+      "content_snippet": "Need advice: Back end engineer → infrastructure: how do you make the transition?",
+      "engagement": {
+        "upvotes": 6,
+        "comments": 4,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47849181",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: I built a blogging platform (5 years in, struggling with distribution)",
+      "url": "https://blogmaker.app/",
+      "author": "octobereleven",
+      "published_at": "2026-04-21T14:17:47.000Z",
+      "content_snippet": "Show HN: I built a blogging platform (5 years in, struggling with distribution)",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://blogmaker.app/web-assets/images/blogmaker-splash.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://blogmaker.app/web-assets/images/blogmaker-splash.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47832108",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: MyKana, a Japanese learning app I built for my own study",
+      "url": "https://mykana.app/",
+      "author": "zerratar",
+      "published_at": "2026-04-20T09:42:31.000Z",
+      "content_snippet": "Show HN: MyKana, a Japanese learning app I built for my own study",
+      "engagement": {
+        "upvotes": 2,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47804144",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Open-Source ShadowStrike Phantom EDR/XDR Platform Progress-Post",
+      "url": "https://news.ycombinator.com/item?id=47804144",
+      "author": "Soocile",
+      "published_at": "2026-04-17T09:45:10.000Z",
+      "content_snippet": "Show HN: Open-Source ShadowStrike Phantom EDR/XDR Platform Progress-Post",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 2,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47874219",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "ShadowStrike-Labs: ShadowStrike Phantom Home UI",
+      "url": "https://news.ycombinator.com/item?id=47874219",
+      "author": "Soocile",
+      "published_at": "2026-04-23T10:55:14.000Z",
+      "content_snippet": "ShadowStrike-Labs: ShadowStrike Phantom Home UI",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47825886",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Infrawise Azure Cloud Optimization",
+      "url": "https://infrawiseai.com",
+      "author": "pdroid12",
+      "published_at": "2026-04-19T17:19:13.000Z",
+      "content_snippet": "Show HN: Infrawise Azure Cloud Optimization",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47811132",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Tell HN: Security Incident at Porter (YC S20)",
+      "url": "https://news.ycombinator.com/item?id=47811132",
+      "author": "leetrout",
+      "published_at": "2026-04-17T22:09:28.000Z",
+      "content_snippet": "Tell HN: Security Incident at Porter (YC S20)",
+      "engagement": {
+        "upvotes": 9,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47851546",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "The Simpsons Hit and Run Ported to WebAssembly and WebGL",
+      "url": "https://shar-wasm.cjoseph.workers.dev/?skipfe&l1&m1&autostartmission",
+      "author": "calebj0seph",
+      "published_at": "2026-04-21T17:08:16.000Z",
+      "content_snippet": "The Simpsons Hit and Run Ported to WebAssembly and WebGL",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 1,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47828896",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Run TRELLIS.2 Image-to-3D generation natively on Apple Silicon",
+      "url": "https://github.com/shivampkumar/trellis-mac",
+      "author": "shivampkumar",
+      "published_at": "2026-04-20T00:07:16.000Z",
+      "content_snippet": "Show HN: Run TRELLIS.2 Image-to-3D generation natively on Apple Silicon",
+      "engagement": {
+        "upvotes": 202,
+        "comments": 39,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://opengraph.githubassets.com/37f8d9260861631844418ede1a8611d0f81c7493b0bab6a3eb9ddfc2fdaa1c12/shivampkumar/trellis-mac"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://opengraph.githubassets.com/37f8d9260861631844418ede1a8611d0f81c7493b0bab6a3eb9ddfc2fdaa1c12/shivampkumar/trellis-mac"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47827802",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Nyx – multi-turn, adaptive, offensive testing harness for AI agents",
+      "url": "https://fabraix.com",
+      "author": "zachdotai",
+      "published_at": "2026-04-19T21:32:44.000Z",
+      "content_snippet": "Show HN: Nyx – multi-turn, adaptive, offensive testing harness for AI agents",
+      "engagement": {
+        "upvotes": 20,
+        "comments": 8,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://fabraix.com/og.png?v=1"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://fabraix.com/og.png?v=1"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47833278",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Is anyone else bothered that AI agents can basically do what they want?",
+      "url": "https://news.ycombinator.com/item?id=47833278",
+      "author": "aegisproxy",
+      "published_at": "2026-04-20T12:25:53.000Z",
+      "content_snippet": "Is anyone else bothered that AI agents can basically do what they want?",
+      "engagement": {
+        "upvotes": 1,
+        "comments": 3,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47883385",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "AI threats in the wild: The current state of prompt injections on the web",
+      "url": "https://security.googleblog.com/2026/04/ai-threats-in-wild-current-state-of.html",
+      "author": "ahoog42",
+      "published_at": "2026-04-23T23:05:31.000Z",
+      "content_snippet": "AI threats in the wild: The current state of prompt injections on the web",
+      "engagement": {
+        "upvotes": 4,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYIUyQJtaAY06QUHFJwNJq_G2-GyovxH4kqwBEFS_WweUghi5Qkid_Mrt9Qa65XBQ254P_EMWHpRQWIV17U_oQgEyStBSHWel9v8hHlWeP4ncr9BBtfD6QUhjhPlcISln2jWWNWgf2Ol-P/s1600/googlelogo_color_200x200.png"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjYIUyQJtaAY06QUHFJwNJq_G2-GyovxH4kqwBEFS_WweUghi5Qkid_Mrt9Qa65XBQ254P_EMWHpRQWIV17U_oQgEyStBSHWel9v8hHlWeP4ncr9BBtfD6QUhjhPlcISln2jWWNWgf2Ol-P/s1600/googlelogo_color_200x200.png"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47865822",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Agent Vault – Open-source credential proxy and vault for agents",
+      "url": "https://github.com/Infisical/agent-vault",
+      "author": "dangtony98",
+      "published_at": "2026-04-22T16:25:28.000Z",
+      "content_snippet": "Show HN: Agent Vault – Open-source credential proxy and vault for agents",
+      "engagement": {
+        "upvotes": 84,
+        "comments": 31,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://repository-images.githubusercontent.com/1194056092/a7ca50e4-a2c1-4561-922e-5f16faf868c6"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://repository-images.githubusercontent.com/1194056092/a7ca50e4-a2c1-4561-922e-5f16faf868c6"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47822787",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Ask HN: May be a basic question, but how can I use AI well?",
+      "url": "https://news.ycombinator.com/item?id=47822787",
+      "author": "jdw64",
+      "published_at": "2026-04-19T08:42:37.000Z",
+      "content_snippet": "Ask HN: May be a basic question, but how can I use AI well?",
+      "engagement": {
+        "upvotes": 9,
+        "comments": 5,
+        "shares": null
+      },
+      "media": {
+        "images": [],
+        "videos": [],
+        "thumbnails": []
+      },
+      "tags": [
+        "story"
+      ]
+    },
+    {
+      "id": "hn_47847848",
+      "channel": "hackernews",
+      "source": "news.ycombinator.com",
+      "competitor": null,
+      "product_line": null,
+      "title": "Show HN: Flight Risk: Can you break an AI agent?",
+      "url": "https://ctf.demo.lorikeetcx.ai/",
+      "author": "tetrakai",
+      "published_at": "2026-04-21T12:28:56.000Z",
+      "content_snippet": "Show HN: Flight Risk: Can you break an AI agent?",
+      "engagement": {
+        "upvotes": 3,
+        "comments": 0,
+        "shares": null
+      },
+      "media": {
+        "images": [
+          "https://ctf.demo.lorikeetcx.ai/og/home"
+        ],
+        "videos": [],
+        "thumbnails": [
+          "https://ctf.demo.lorikeetcx.ai/og/home"
+        ]
+      },
+      "tags": [
+        "story"
+      ]
+    }
+  ]
+}
