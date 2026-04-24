@@ -1499,9 +1499,46 @@ function renderMIIndustryPain(){
 function renderMIConversion(){
   var w=getFilteredWeek();if(!w)return;
   var wrap=document.getElementById('mi-conversion-wrap');if(!wrap)return;
-  var signals=w.conversionSignals||[];
-  if(!signals.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
-  wrap.innerHTML='<ul style="list-style:none;padding:0">'+signals.map(function(s){return'<li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">'+escapeHtml(typeof s==='string'?s:(s.text||s.signal||JSON.stringify(s)))+'</li>';}).join('')+'</ul>';
+  var raw=w.conversionSignals||{};
+  // dict 형태(W17+) 처리: {dissatisfaction:[...], alternative:[...], adoption:[...]}
+  var conv=Array.isArray(raw)?{dissatisfaction:[],alternative:[],adoption:raw}:raw;
+  var stages=[
+    {key:'dissatisfaction',label:'🔴 불만 단계',desc:'뭐가 안 되는지',cls:'n-conv-diss'},
+    {key:'alternative',label:'🟡 대안탐색 단계',desc:'뭘 대신 찾고 있는지',cls:'n-conv-alt'},
+    {key:'adoption',label:'🟢 도입의사 단계',desc:'이미 사는 중',cls:'n-conv-adopt'}
+  ];
+  var isEmpty=stages.every(function(s){return!(conv[s.key]&&conv[s.key].length);});
+  if(isEmpty){wrap.innerHTML='<div class="mi-no-data">전환 신호 데이터가 없습니다</div>';return;}
+  function convItem(it){
+    return'<div style="background:var(--bg);border-radius:6px;padding:8px 10px;margin-bottom:6px;font-size:12px">'+
+      '<div style="font-weight:600;margin-bottom:4px">'+(it.url?'<a href="'+escapeHtml(it.url)+'" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none">'+escapeHtml(it.title||'')+'</a>':escapeHtml(it.title||typeof it==='string'?it:JSON.stringify(it)))+'</div>'+
+      (it.source?'<div style="font-size:11px;color:var(--text-sub)">'+escapeHtml(it.source)+'</div>':'')+
+      (it.customer_voice?'<div style="font-size:11px;color:var(--text-sub);margin-top:4px"><strong>고객 목소리:</strong> '+escapeHtml(it.customer_voice)+'</div>':'')+
+      (it.cubig_response?'<div style="font-size:11px;color:var(--accent);margin-top:4px"><strong>CUBIG 대응:</strong> '+escapeHtml(it.cubig_response)+'</div>':'')+
+    '</div>';
+  }
+  var totalItems=stages.reduce(function(s,st){return s+(conv[st.key]||[]).length;},0);
+  var summaryBar='<div style="display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap">'+
+    stages.map(function(s){
+      var cnt=(conv[s.key]||[]).length;
+      var pct=totalItems>0?Math.round(cnt/totalItems*100):0;
+      var color=s.cls==='n-conv-diss'?'#dc2626':s.cls==='n-conv-alt'?'#b45309':'#059669';
+      return'<div style="display:flex;align-items:center;gap:6px;font-size:12px">'+
+        '<span style="font-weight:700;color:'+color+'">'+cnt+'건</span>'+
+        '<span style="color:var(--text-sub)">('+pct+'%)</span>'+
+        '<span style="font-size:11px">'+s.label+'</span>'+
+      '</div>';
+    }).join('<span style="color:var(--border)"> | </span>')+
+  '</div>';
+  var html=stages.map(function(s){
+    var items=conv[s.key]||[];
+    var cards=items.length?items.map(convItem).join(''):'<div style="font-size:12px;color:var(--text-sub);padding:8px">(해당 단계 신호 없음)</div>';
+    return'<div style="margin-bottom:14px">'+
+      '<div style="font-size:12px;font-weight:700;margin-bottom:8px">'+s.label+' <span style="font-size:11px;font-weight:400;color:var(--text-sub)">('+items.length+'건) — '+s.desc+'</span></div>'+
+      cards+
+    '</div>';
+  }).join('');
+  wrap.innerHTML=summaryBar+html;
 }
 
 function renderMIOpportunity(){
@@ -1515,26 +1552,102 @@ function renderMIOpportunity(){
 function renderMIWeeklySummary(){}// already rendered in renderMarketIntel
 
 function renderMISentiment(){
-  var w=getFilteredWeek();if(!w)return;
+  if(!MI_DATA)return;
+  var weeks=MI_DATA.weeks||[];
+  if(!weeks.length){var sw=document.getElementById('mi-sentiment-wrap');if(sw)sw.innerHTML='';return;}
+  var w=getFilteredWeek()||weeks[0];
   var wrap=document.getElementById('mi-sentiment-wrap');if(!wrap)return;
-  var items=w.marketSentiment||w.sentiment||[];
-  if(!items.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
-  if(typeof items==='string'){wrap.innerHTML='<div style="font-size:13px;line-height:1.7">'+escapeHtml(items)+'</div>';return;}
-  if(Array.isArray(items)){wrap.innerHTML='<ul style="list-style:none;padding:0">'+items.map(function(s){return'<li style="padding:8px 0;border-bottom:1px solid var(--border);font-size:13px">'+escapeHtml(typeof s==='string'?s:(s.text||s.summary||JSON.stringify(s)))+'</li>';}).join('')+'</ul>';return;}
-  wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';
+  var pos=w.positiveSentiments||[];
+  var neg=w.negativeSentiments||[];
+  if(!pos.length&&!neg.length){
+    // fallback: marketSentiment / sentiment
+    var legacy=w.marketSentiment||w.sentiment||[];
+    if(typeof legacy==='string'){wrap.innerHTML='<div style="font-size:13px;line-height:1.7;padding:12px">'+escapeHtml(legacy)+'</div>';return;}
+    if(Array.isArray(legacy)&&legacy.length){
+      var half=Math.ceil(legacy.length/2);
+      pos=legacy.slice(0,half);neg=legacy.slice(half);
+    }
+    if(!pos.length&&!neg.length){wrap.innerHTML='<div class="mi-no-data">Sentiment 데이터 없음</div>';return;}
+  }
+  function makeItems(arr,cls,sign){
+    return arr.slice(0,3).map(function(s){
+      var text=typeof s==='string'?s:(s.text||s.summary||'');
+      var src=typeof s==='object'?(s.source||s.src||''):'';
+      var why=typeof s==='object'?(s.whyImportant||''):'';
+      var rel=typeof s==='object'?(s.cubigRelevance||''):'';
+      var trigger=typeof s==='object'?(s.futureTrigger||''):'';
+      var extra='';
+      if(why)extra+='<div style="font-size:11px;margin-top:3px;color:var(--text-sub)"><strong style="color:#6b7280">Why:</strong> '+escapeHtml(why)+'</div>';
+      if(rel)extra+='<div style="font-size:11px;margin-top:2px;color:var(--accent)"><strong>CUBIG:</strong> '+escapeHtml(rel)+'</div>';
+      if(trigger)extra+='<div style="font-size:11px;margin-top:2px;color:var(--text-sub)"><strong>Trigger:</strong> '+escapeHtml(trigger)+'</div>';
+      return'<div style="background:var(--bg);border-radius:6px;padding:8px 10px;margin-bottom:8px;display:flex;gap:8px">'+
+        '<span style="font-size:13px;flex-shrink:0">'+sign+'</span>'+
+        '<div><div style="font-size:12px;font-weight:600">'+escapeHtml(text)+'</div>'+(src?'<div style="font-size:11px;color:var(--text-sub)">'+escapeHtml(src)+'</div>':'')+extra+'</div>'+
+      '</div>';
+    }).join('');
+  }
+  wrap.innerHTML='<div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">'+
+    '<div style="background:#F0FDF4;border:1px solid rgba(5,150,105,0.2);border-radius:10px;padding:14px"><h4 style="font-size:12px;font-weight:700;color:#065f46;margin:0 0 10px">💚 Positive Signals</h4>'+makeItems(pos,'badge-positive','✅')+'</div>'+
+    '<div style="background:#FEF2F2;border:1px solid rgba(220,38,38,0.2);border-radius:10px;padding:14px"><h4 style="font-size:12px;font-weight:700;color:#991b1b;margin:0 0 10px">🔴 Negative / Concerns</h4>'+makeItems(neg,'badge-negative','⚠️')+'</div>'+
+  '</div>';
 }
 
 function renderMIProfiles(){
-  var w=getFilteredWeek();if(!w)return;
+  if(!MI_DATA)return;
+  var competitors=MI_DATA.competitors||{};
+  var w=getFilteredWeek();
+  var byComp=(w&&w.byCompetitor)||{};
+  var p=MI_FILTER&&MI_FILTER.product||'all';
+  var items=(w&&w.feedItems)||[];
   var wrap=document.getElementById('mi-profiles-grid');if(!wrap)return;
-  var comps=w.competitors||w.marketPlayers||[];
-  var entries=Array.isArray(comps)?comps:(typeof comps==='object'?Object.values(comps):[]);
-  if(!entries.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
-  wrap.innerHTML='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">'+entries.slice(0,12).map(function(c){
-    var name=typeof c==='string'?c:(c.name||c.company||'');
-    var cnt=c.count||c.mentions||'';
-    return'<div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px"><div class="mi-player-initial" style="width:32px;height:32px;border-radius:8px;background:var(--accent-light);color:var(--accent);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:8px">'+escapeHtml(name.slice(0,2).toUpperCase())+'</div><div style="font-size:13px;font-weight:600">'+escapeHtml(name)+'</div>'+(cnt?'<div style="font-size:11px;color:var(--text-sub);margin-top:2px">'+cnt+'건</div>':'')+'</div>';
-  }).join('')+'</div>';
+  var groupMeta={
+    syntitan:{label:'SynTitan (AI-Ready Data Platform) 벤치마킹',emoji:'🗃️'},
+    llmcapsule:{label:'LLM Capsule (AI Gateway) 벤치마킹',emoji:'🛡️'}
+  };
+  function getHighlight(slug){
+    var matches=items.filter(function(it){return it.competitor===slug;}).sort(function(a,b){return(b.relevance_score||0)-(a.relevance_score||0);});
+    return matches[0]?matches[0].title||'':'';
+  }
+  // MI_DATA.competitors가 없으면 byCompetitor에서 동적으로 구성
+  var hasStructured=Object.keys(competitors).some(function(k){return Array.isArray(competitors[k])&&competitors[k].length;});
+  if(hasStructured){
+    var groupsHtml=['syntitan','llmcapsule'].filter(function(line){return p==='all'||p===line;}).map(function(line){
+      var list=(competitors[line]||[]).map(function(c){
+        return{name:c.name,slug:c.slug,count:(byComp[c.slug]||{}).items||0,highlight:getHighlight(c.slug)};
+      }).sort(function(a,b){return b.count-a.count;});
+      if(!list.length)return'';
+      var cardsHtml=list.map(function(c){
+        var initial=(c.name||'?').slice(0,2).toUpperCase();
+        return'<div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px'+(c.count===0?';opacity:0.5':'')+'">'+
+          '<div style="width:32px;height:32px;border-radius:8px;background:var(--accent-light);color:var(--accent);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:8px">'+escapeHtml(initial)+'</div>'+
+          '<div style="font-size:13px;font-weight:600">'+escapeHtml(c.name)+'</div>'+
+          '<div style="font-size:11px;color:var(--text-sub);margin-top:2px">'+c.count+'건</div>'+
+          (c.highlight&&c.count>0?'<div style="font-size:11px;color:var(--text-sub);margin-top:4px">· '+escapeHtml(c.highlight.slice(0,40))+(c.highlight.length>40?'…':'')+'</div>':'')+
+        '</div>';
+      }).join('');
+      return'<details class="player-group" open><summary style="cursor:pointer;font-size:13px;font-weight:700;padding:8px 0;list-style:none">'+(groupMeta[line].emoji||'')+' '+escapeHtml(groupMeta[line].label)+'</summary>'+
+        '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:10px">'+cardsHtml+'</div>'+
+      '</details>';
+    }).join('');
+    wrap.innerHTML=groupsHtml||'<div class="mi-no-data">Market Players 데이터 없음</div>';
+  } else {
+    // fallback: byCompetitor 또는 feedItems의 competitor 집계
+    var compMap={};
+    Object.keys(byComp).forEach(function(slug){compMap[slug]=(byComp[slug].items||0);});
+    if(!Object.keys(compMap).length){
+      items.forEach(function(it){if(it.competitor){compMap[it.competitor]=(compMap[it.competitor]||0)+1;}});
+    }
+    var entries=Object.keys(compMap).sort(function(a,b){return compMap[b]-compMap[a];}).slice(0,12);
+    if(!entries.length){wrap.innerHTML='<div class="mi-no-data">Market Players 데이터 없음</div>';return;}
+    wrap.innerHTML='<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px">'+entries.map(function(slug){
+      var cnt=compMap[slug];
+      return'<div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:12px">'+
+        '<div style="width:32px;height:32px;border-radius:8px;background:var(--accent-light);color:var(--accent);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-bottom:8px">'+escapeHtml(slug.slice(0,2).toUpperCase())+'</div>'+
+        '<div style="font-size:13px;font-weight:600">'+escapeHtml(slug)+'</div>'+
+        '<div style="font-size:11px;color:var(--text-sub);margin-top:2px">'+cnt+'건</div>'+
+      '</div>';
+    }).join('')+'</div>';
+  }
 }
 
 function renderMIFeed(){
@@ -1798,7 +1911,7 @@ function r72RenderSummary(){
   var highlightsEl=document.getElementById('r72-sum-highlights-body');
   if(highlightsEl){var topEvents=(w0.topEvents||w0.top_events||[]).slice(0,5);if(topEvents.length){highlightsEl.innerHTML=topEvents.map(function(e){return'<div class="r72-sum-item"><div class="r72-sum-item-label">하이라이트</div><div class="r72-sum-item-text">'+escapeHtml(e.title||String(e))+'</div>'+(e.cubig_action?'<div style="font-size:11px;color:var(--accent);margin-top:4px;font-weight:600">→ '+escapeHtml(e.cubig_action)+'</div>':'')+'</div>';}).join('');}else{var fallback=allItems.slice().sort(function(a,b){return(b.relevance_score||0)-(a.relevance_score||0);}).slice(0,5);highlightsEl.innerHTML=fallback.length?fallback.map(function(it){return'<div class="r72-sum-item">'+r7SourceBadgeHtml(it.channel||'')+'<div class="r72-sum-item-text" style="margin-top:6px">'+escapeHtml((it.title||'').slice(0,90))+'</div></div>';}).join(''):'<div class="r72-sum-empty">이번 주 데이터 없음</div>';}}
   var trendsEl=document.getElementById('r72-sum-trends-body');
-  if(trendsEl){var ranking=(w0.topicMentionRanking||[]).slice(0,5);var trendItems=[];ranking.forEach(function(t){var mentions=(t.mentions&&t.mentions[0])||{};trendItems.push('<div class="r72-sum-item"><div class="r72-sum-item-label">언급 트렌드</div><div class="r72-sum-item-text"><strong>'+escapeHtml(t.keyword||t.topic||'')+'</strong>'+(mentions.count?' — '+mentions.count+'건':'')+'</div></div>');});trendsEl.innerHTML=trendItems.length?trendItems.join(''):'<div class="r72-sum-empty">트렌드 데이터 없음</div>';}
+  if(trendsEl){var ranking=(w0.topicMentionRanking||[]).slice(0,5);var painPoints=(w0.painPoints||[]).slice(0,3);var communityRx=(w0.communityReactions||[]).slice(0,3);var trendItems=[];ranking.forEach(function(t){var mentions=(t.mentions&&t.mentions[0])||{};var label=t.keyword||t.topic||'';var cnt=mentions.count||0;var src=mentions.source||'';trendItems.push('<div class="r72-sum-item"><div class="r72-sum-item-label">언급 트렌드</div><div class="r72-sum-item-text"><strong>'+escapeHtml(label)+'</strong>'+(cnt?' — '+cnt+'건':'')+(src?' ('+escapeHtml(src)+')':'')+'</div></div>');});if(!trendItems.length){painPoints.slice(0,2).forEach(function(p){trendItems.push('<div class="r72-sum-item"><div class="r72-sum-item-label">페인포인트</div><div class="r72-sum-item-text">'+escapeHtml(typeof p==='string'?p:(p.text||p.title||p.painPoint||String(p)))+'</div></div>');});communityRx.slice(0,2).forEach(function(c){trendItems.push('<div class="r72-sum-item"><div class="r72-sum-item-label">커뮤니티</div><div class="r72-sum-item-text">'+escapeHtml(typeof c==='string'?c:(c.text||c.title||String(c)))+'</div></div>');});}trendsEl.innerHTML=trendItems.length?trendItems.join(''):'<div class="r72-sum-empty">트렌드 데이터 없음</div>';}
   var cubigEl=document.getElementById('r72-sum-cubig-body');
   if(cubigEl){var opps=(w0.opportunityAreas||[]).slice(0,4);var cubigItems=opps.map(function(o){return'<div class="r72-sum-item"><div class="r72-sum-item-label">기회 영역 ['+escapeHtml(String(o.marketDemand||'MEDIUM').toUpperCase())+']</div><div class="r72-sum-item-text"><strong>'+escapeHtml(o.area||'')+'</strong>'+(o.why?'<br><span style="font-size:11px">'+escapeHtml(o.why.slice(0,80))+'</span>':'')+'</div></div>';});if(!cubigItems.length){var withAngle=allItems.filter(function(it){return!!(it.cubig_relevance||it.cubig_angle||it.message_hook);}).slice(0,5);cubigItems=withAngle.map(function(it){var angle=it.cubig_relevance||it.cubig_angle||it.message_hook||'';return'<div class="r72-sum-item">'+r7SourceBadgeHtml(it.channel||'')+'<div class="r72-sum-item-text" style="margin-top:6px">'+escapeHtml((it.title||'').slice(0,60))+'</div><div style="font-size:11px;color:var(--accent);margin-top:4px">'+escapeHtml(angle.slice(0,70))+'</div></div>';});}cubigEl.innerHTML=cubigItems.length?cubigItems.join(''):'<div class="r72-sum-empty">CUBIG 연관 데이터 없음</div>';}
   var chipsEl=document.getElementById('r72-topic-chips');
