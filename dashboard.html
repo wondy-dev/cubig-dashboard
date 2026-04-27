@@ -80,6 +80,103 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
 .insight-box [data-tooltip]:hover::before{border-bottom-color:rgba(255,255,255,.75)}
 @media(max-width:1024px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.chart-row{grid-template-columns:1fr}.content{padding:16px}.header{padding:12px 16px}.tabs{padding:0 16px}}
 
+/* ===== v5.1 신규 컴포넌트 (product_insights · realtime TOP · 신규 섹션) ===== */
+.mi-pi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:16px}
+.mi-pi-card{background:var(--n-card,#fff);border:1px solid var(--n-border,#e5e7eb);border-radius:8px;padding:18px}
+.mi-pi-card h4{font-size:15px;font-weight:700;margin:0 0 12px 0;color:var(--n-text,#111);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.mi-pi-tag{font-size:10px;font-weight:500;background:rgba(35,131,226,0.08);color:#2383E2;padding:3px 8px;border-radius:4px;letter-spacing:0}
+.mi-pi-block{padding:10px 0;border-top:1px solid var(--n-border,#f3f4f6)}
+.mi-pi-block:first-of-type{border-top:none;padding-top:0}
+.mi-pi-label{font-size:11px;font-weight:600;color:var(--n-text2,#6b7280);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px}
+.mi-pi-text{font-size:13px;line-height:1.65;color:var(--n-text,#111)}
+.mi-pi-actions{margin:0;padding-left:18px;font-size:13px;line-height:1.7;color:var(--n-text,#111)}
+.mi-pi-actions li{margin-bottom:4px}
+
+.mi-rt-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.mi-rt-col{background:var(--n-card,#fff);border:1px solid var(--n-border,#e5e7eb);border-radius:8px;padding:14px}
+.mi-rt-h{font-size:12px;font-weight:700;color:var(--n-text2,#6b7280);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--n-border,#f3f4f6)}
+.mi-rt-row{display:flex;align-items:center;gap:8px;padding:7px 0;font-size:13px;border-bottom:1px solid rgba(55,53,47,0.04)}
+.mi-rt-row:last-child{border-bottom:none}
+.mi-rt-rank{font-weight:700;color:var(--n-accent,#2383E2);min-width:28px;font-size:12px}
+.mi-rt-name{flex:1;color:var(--n-text,#111);font-weight:500}
+.mi-rt-cnt{font-size:11px;color:var(--n-text2,#6b7280);font-weight:600}
+.mi-trend-badge{font-size:9px;font-weight:700;color:#fff;padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:0.3px}
+
+.mi-event-list{display:flex;flex-direction:column;gap:10px}
+.mi-event-row{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--n-border,#f3f4f6)}
+.mi-event-row:last-child{border-bottom:none}
+.mi-event-num{font-weight:700;color:var(--n-accent,#2383E2);font-size:14px;min-width:32px}
+.mi-event-title{font-size:14px;font-weight:600;line-height:1.5;margin-bottom:4px}
+.mi-event-badge{display:inline-block;font-size:9px;font-weight:700;color:#fff;padding:2px 6px;border-radius:3px;text-transform:uppercase;margin-left:6px}
+.mi-event-action{font-size:12px;color:var(--n-text2,#6b7280);line-height:1.5}
+
+.mi-bm-list{margin:0;padding-left:20px;font-size:13px;line-height:1.8}
+.mi-bm-list li{margin-bottom:6px;color:var(--n-text,#111)}
+
+.mi-ck-grid,.mi-kr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.mi-ck-card,.mi-kr-card{background:var(--n-card,#fff);border:1px solid var(--n-border,#e5e7eb);border-radius:6px;padding:12px}
+.mi-ck-head,.mi-kr-head{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.mi-ck-kw,.mi-kr-kw{font-weight:700;font-size:14px;color:var(--n-text,#111);flex:1}
+.mi-ck-trend,.mi-kr-density{font-size:9px;font-weight:700;color:#fff;padding:2px 6px;border-radius:3px;text-transform:uppercase}
+.mi-kr-ch{font-size:10px;font-weight:600;background:rgba(35,131,226,0.1);color:#2383E2;padding:2px 6px;border-radius:3px}
+.mi-ck-desc,.mi-kr-rationale{font-size:12px;line-height:1.5;color:var(--n-text2,#6b7280);margin-bottom:6px}
+.mi-ck-guide,.mi-kr-line{font-size:12px;line-height:1.5;background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;padding:6px 8px;border-radius:0 4px 4px 0;color:var(--n-text,#111)}
+
+.mi-pp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.mi-pp-card{background:var(--n-card,#fff);border:1px solid var(--n-border,#e5e7eb);border-radius:6px;padding:12px;border-left:3px solid #ef4444}
+.mi-pp-num{font-size:11px;font-weight:700;color:#ef4444;margin-bottom:4px}
+.mi-pp-pain{font-size:13px;font-weight:600;line-height:1.5;margin-bottom:6px;color:var(--n-text,#111)}
+.mi-pp-src{font-size:11px;color:var(--n-text2,#6b7280);margin-bottom:4px}
+.mi-pp-conn{font-size:12px;line-height:1.5;background:rgba(16,185,129,0.06);border-left:2px solid #10b981;padding:6px 8px;margin-top:6px;color:var(--n-text,#111)}
+
+.mi-cr-list{display:flex;flex-direction:column;gap:12px}
+.mi-cr-card{background:var(--n-card,#fff);border:1px solid var(--n-border,#e5e7eb);border-radius:6px;padding:14px}
+.mi-cr-quote{font-style:italic;font-size:14px;line-height:1.65;color:var(--n-text,#111);margin-bottom:8px;padding-left:12px;border-left:3px solid var(--n-accent,#2383E2)}
+.mi-cr-meta{font-size:11px;color:var(--n-text2,#6b7280);margin-bottom:6px}
+.mi-cr-meta a{color:var(--n-accent,#2383E2);text-decoration:none}
+.mi-cr-why{font-size:12px;line-height:1.5;background:rgba(35,131,226,0.05);padding:8px 10px;border-radius:4px;color:var(--n-text,#111)}
+
+.mi-mm-block{margin-bottom:18px}
+.mi-mm-block:last-child{margin-bottom:0}
+.mi-mm-h{font-size:12px;font-weight:700;color:var(--n-text2,#6b7280);text-transform:uppercase;margin-bottom:8px;letter-spacing:0.5px}
+.mi-mm-list{display:grid;gap:10px}
+.mi-mm-row{background:var(--n-card,#fff);border:1px solid var(--n-border,#e5e7eb);border-radius:6px;padding:12px}
+.mi-mm-co{font-size:14px;font-weight:700;margin-bottom:4px;color:var(--n-text,#111)}
+.mi-mm-type{display:inline-block;font-size:9px;font-weight:700;color:#fff;padding:2px 6px;border-radius:3px;text-transform:uppercase;margin-right:6px}
+.mi-mm-strategy{font-size:13px;line-height:1.5;color:var(--n-text,#111);margin-bottom:4px}
+.mi-mm-impl{font-size:12px;line-height:1.5;color:var(--n-text2,#6b7280)}
+
+.mi-sov-list{display:grid;gap:14px}
+.mi-sov-card{background:var(--n-card,#fff);border:1px solid var(--n-border,#e5e7eb);border-radius:6px;padding:14px}
+.mi-sov-topic{font-size:14px;font-weight:700;margin-bottom:10px;color:var(--n-text,#111)}
+.mi-sov-bar-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12px}
+.mi-sov-co{min-width:120px;color:var(--n-text,#111)}
+.mi-sov-bar{flex:1;height:14px;background:rgba(35,131,226,0.08);border-radius:3px;overflow:hidden}
+.mi-sov-fill{display:block;height:100%;background:linear-gradient(90deg,#2383E2,#60a5fa);transition:width 0.3s}
+.mi-sov-cnt{min-width:30px;text-align:right;font-weight:600;color:var(--n-text,#111)}
+.mi-sov-pos{margin-top:8px;font-size:12px;line-height:1.5;background:rgba(245,158,11,0.06);padding:6px 10px;border-radius:4px;color:var(--n-text,#111)}
+
+.mi-feed-card{background:var(--n-card,#fff);border:1px solid var(--n-border,#e5e7eb);border-radius:8px;padding:16px;margin-bottom:14px;font-size:13px}
+.mi-fc-head{display:flex;align-items:center;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.mi-fc-ch{color:#fff;font-size:9px;font-weight:700;padding:3px 6px;border-radius:3px;letter-spacing:0.3px}
+.mi-fc-comp{font-size:10px;font-weight:600;background:rgba(35,131,226,0.08);color:#2383E2;padding:2px 6px;border-radius:3px}
+.mi-fc-date{font-size:10px;color:var(--n-text2,#6b7280)}
+.mi-fc-rel{font-size:10px;color:var(--n-text2,#6b7280);margin-left:auto;font-weight:600}
+.mi-fc-title{font-size:14px;font-weight:600;line-height:1.5;margin-bottom:8px}
+.mi-fc-title a{color:var(--n-text,#111);text-decoration:none}
+.mi-fc-title a:hover{color:var(--n-accent,#2383E2)}
+.mi-fc-summary{color:var(--n-text2,#6b7280);line-height:1.6;margin-bottom:10px}
+.mi-fc-block{font-size:12px;line-height:1.55;padding:8px 10px;border-radius:0 4px 4px 0;margin-bottom:6px}
+.mi-fc-impl{background:rgba(245,158,11,0.06);border-left:3px solid #f59e0b;color:var(--n-text,#111)}
+.mi-fc-rel{background:rgba(35,131,226,0.06);border-left:3px solid #2383E2;color:var(--n-text,#111)}
+.mi-fc-ang{background:rgba(16,185,129,0.06);border-left:3px solid #10b981;color:var(--n-text,#111)}
+.mi-fc-icon{margin-right:4px}
+.mi-fc-label{font-weight:700;font-size:10px;color:var(--n-text2,#6b7280);text-transform:uppercase;margin-right:4px;letter-spacing:0.3px}
+.mi-fc-foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:8px;border-top:1px solid var(--n-border,#f3f4f6);font-size:11px}
+.mi-fc-eng{color:var(--n-text2,#6b7280)}
+.mi-fc-link{color:var(--n-accent,#2383E2);text-decoration:none;font-weight:600}
+.mi-fc-link:hover{text-decoration:underline}
+
 /* ===== MARKET INTEL TAB — Design Reform v3 (Linear/Attio tone) ===== */
 
 /* ---- Section wrapper spacing ---- */
@@ -1280,10 +1377,58 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
         <div class="n-deepnote-main" id="n-deepnote-main">
 
           <!-- Topic Suggestions (overview-only) -->
+          <!-- ⭐ 최상단: 제품별 주간 핵심 인사이트 (의사결정 카드) -->
+          <div id="n-section-product-insights">
+            <div class="mi-section-wrapper mi-section-bluegray">
+              <div class="mi-section-title">이번 주 제품별 핵심 인사이트 <span class="mi-line"></span></div>
+              <div id="mi-product-insights-wrap"></div>
+            </div>
+          </div>
+
+          <!-- 🔥 실시간 TOP — 키워드/채널/경쟁사 -->
+          <div id="n-section-realtime-top">
+            <div class="mi-section-wrapper mi-section-ivory">
+              <div class="mi-section-title">🔥 실시간 TOP <span class="mi-line"></span></div>
+              <div id="mi-realtime-top-wrap"></div>
+            </div>
+          </div>
+
+          <!-- 주간 이벤트 TOP -->
+          <div id="n-section-top-events">
+            <div class="mi-section-wrapper mi-section-ivory2">
+              <div class="mi-section-title">주간 이벤트 TOP <span class="mi-line"></span></div>
+              <div id="mi-top-events-wrap"></div>
+            </div>
+          </div>
+
           <div id="n-section-topics">
             <div id="mi-section-topic-suggestions" class="mi-section-wrapper mi-section-bluegray">
               <div class="mi-section-title">이번 주 콘텐츠 주제 제안 <span class="mi-line"></span></div>
               <div id="mi-topic-suggestions-wrap"></div>
+            </div>
+          </div>
+
+          <!-- 벤치마크 하이라이트 -->
+          <div id="n-section-benchmark">
+            <div class="mi-section-wrapper mi-section-ivory">
+              <div class="mi-section-title">벤치마크 하이라이트 <span class="mi-line"></span></div>
+              <div id="mi-benchmark-wrap"></div>
+            </div>
+          </div>
+
+          <!-- 콘텐츠 키워드 -->
+          <div id="n-section-content-keywords">
+            <div class="mi-section-wrapper mi-section-white">
+              <div class="mi-section-title">콘텐츠 키워드 <span class="mi-line"></span></div>
+              <div id="mi-content-keywords-wrap"></div>
+            </div>
+          </div>
+
+          <!-- 추천 키워드 -->
+          <div id="n-section-keyword-recommendations">
+            <div class="mi-section-wrapper mi-section-sage">
+              <div class="mi-section-title">추천 키워드 (광고/콘텐츠) <span class="mi-line"></span></div>
+              <div id="mi-keyword-recommendations-wrap"></div>
             </div>
           </div>
 
@@ -1302,11 +1447,43 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
             </div>
           </div>
 
+          <!-- 페인포인트 (전체) -->
+          <div id="n-section-painpoints">
+            <div class="mi-section-wrapper mi-section-salmon">
+              <div class="mi-section-title">페인포인트 → 큐빅 메시지 소스 <span class="mi-line"></span></div>
+              <div id="mi-painpoints-wrap"></div>
+            </div>
+          </div>
+
           <!-- Industry Pain Points (overview-only) -->
           <div id="n-section-pain">
             <div id="mi-section-pain" class="mi-section-wrapper mi-section-salmon">
               <div class="mi-section-title">산업별 Pain Point <span class="mi-line"></span></div>
               <div id="mi-pain-map"></div>
+            </div>
+          </div>
+
+          <!-- 커뮤니티 반응 -->
+          <div id="n-section-community">
+            <div class="mi-section-wrapper mi-section-white">
+              <div class="mi-section-title">커뮤니티 반응 (원문 인용) <span class="mi-line"></span></div>
+              <div id="mi-community-wrap"></div>
+            </div>
+          </div>
+
+          <!-- 시장 흐름 (movement + trend + competitor direction 통합) -->
+          <div id="n-section-market-movement">
+            <div class="mi-section-wrapper mi-section-ivory">
+              <div class="mi-section-title">시장 흐름 (유사 기업 동향) <span class="mi-line"></span></div>
+              <div id="mi-market-movement-wrap"></div>
+            </div>
+          </div>
+
+          <!-- Share of Voice -->
+          <div id="n-section-sov">
+            <div class="mi-section-wrapper mi-section-ivory2">
+              <div class="mi-section-title">Market Share of Voice <span class="mi-line"></span></div>
+              <div id="mi-sov-wrap"></div>
             </div>
           </div>
 
@@ -2245,10 +2422,20 @@ function renderMarketIntel(){
     sumWrap.innerHTML='<div class="mi-weekly-summary-v3"><div class="section-title">이번 주 리서치 요약 — '+escapeHtml(dateRange)+'</div><div class="body">'+escapeHtml(typeof summary==='string'?summary:(summary.body||summary.text||JSON.stringify(summary)))+'</div></div>';
   }
 
-  // Topic suggestions
+  // 신규 — 제품별 핵심 인사이트 + 실시간 TOP + 신규 섹션들
+  renderMIProductInsights&&renderMIProductInsights();
+  renderMIRealtimeTop&&renderMIRealtimeTop();
+  renderMITopEvents&&renderMITopEvents();
   renderMITopicSuggestions&&renderMITopicSuggestions();
+  renderMIBenchmark&&renderMIBenchmark();
+  renderMIContentKeywords&&renderMIContentKeywords();
+  renderMIKeywordRecs&&renderMIKeywordRecs();
   renderMITopicRanking&&renderMITopicRanking();
+  renderMIPainpoints&&renderMIPainpoints();
   renderMIIndustryPain&&renderMIIndustryPain();
+  renderMICommunityReactions&&renderMICommunityReactions();
+  renderMIMarketMovement&&renderMIMarketMovement();
+  renderMISoV&&renderMISoV();
   renderMIConversion&&renderMIConversion();
   renderMIOpportunity&&renderMIOpportunity();
   renderMIWeeklySummary&&renderMIWeeklySummary();
@@ -2257,6 +2444,112 @@ function renderMarketIntel(){
   renderMIFeed&&renderMIFeed();
 
 
+}
+
+// ===== v5.1 신규 렌더 함수 =====
+function _miSummary(){return (MI_ANALYZED&&MI_ANALYZED.weekly_summary)||{};}
+function _miWeek(){return getFilteredWeek()||(MI_DATA&&MI_DATA.weeks&&MI_DATA.weeks[0])||{};}
+
+function renderMIProductInsights(){
+  var wrap=document.getElementById('mi-product-insights-wrap');if(!wrap)return;
+  var pi=(_miSummary().product_insights)||(_miWeek().product_insights)||{};
+  var cards=[];
+  ['syntitan','llmcapsule'].forEach(function(p){
+    var d=pi[p];if(!d){cards.push('<div class="mi-pi-card"><h4>'+(p==='syntitan'?'SynTitan':'LLM Capsule')+'</h4><div class="mi-no-data">데이터 없음</div></div>');return;}
+    var actions=Array.isArray(d.action_takeaway)?d.action_takeaway:(d.action_takeaway?[d.action_takeaway]:[]);
+    cards.push('<div class="mi-pi-card"><h4>'+(p==='syntitan'?'SynTitan':'LLM Capsule')+' <span class="mi-pi-tag">'+(p==='syntitan'?'AI-Ready Data Platform':'Enterprise Data Control Layer')+'</span></h4>'+
+      '<div class="mi-pi-block"><div class="mi-pi-label">📊 시장 동향</div><div class="mi-pi-text">'+escapeHtml(d.market_signal||'')+'</div></div>'+
+      '<div class="mi-pi-block"><div class="mi-pi-label">🎯 큐빅 영향</div><div class="mi-pi-text">'+escapeHtml(d.cubig_impact||'')+'</div></div>'+
+      '<div class="mi-pi-block"><div class="mi-pi-label">⚡ Action 시사점</div><ul class="mi-pi-actions">'+actions.map(function(a){return '<li>'+escapeHtml(a)+'</li>';}).join('')+'</ul></div>'+
+    '</div>');
+  });
+  wrap.innerHTML='<div class="mi-pi-grid">'+cards.join('')+'</div>';
+}
+
+function renderMIRealtimeTop(){
+  var wrap=document.getElementById('mi-realtime-top-wrap');if(!wrap)return;
+  var s=_miSummary(),w=_miWeek();
+  var ck=s.content_keywords||w.content_keywords||[];
+  var byCh=s.by_channel||w.byChannel||{};
+  var byCo=s.by_competitor||w.byCompetitor||{};
+  var compNames={'tonic-ai':'Tonic.ai','mostly-ai':'Mostly AI','gretel':'Gretel','great-expectations':'Great Expectations','atlan':'Atlan','collibra':'Collibra','informatica':'Informatica','lakefs':'lakeFS','delta-lake':'Delta Lake','pachyderm':'Pachyderm','snowflake':'Snowflake','databricks':'Databricks','ms-fabric':'MS Fabric','nightfall-ai':'Nightfall AI','prompt-security':'Prompt Security','f5-ai-guardrails':'F5 AI Guardrails','portal26':'Portal26','aibound':'AIBound','lakera':'Lakera','calypsoai':'CalypsoAI','cloaklm':'CloakLM','aegisproxy':'AegisProxy','privent-ai':'Privent.ai','scale-ai':'Scale AI'};
+  var trendBadge=function(t){var m={HOT:'#ef4444',RISING:'#f59e0b',STEADY:'#6b7280'};return '<span class="mi-trend-badge" style="background:'+(m[t]||'#6b7280')+'">'+escapeHtml(t||'STEADY')+'</span>';};
+  var kwHtml=ck.length?ck.slice(0,6).map(function(k,i){return '<div class="mi-rt-row"><span class="mi-rt-rank">#'+(i+1)+'</span><span class="mi-rt-name">'+escapeHtml(k.keyword||'')+'</span>'+trendBadge(k.trend)+'</div>';}).join(''):'<div class="mi-no-data">데이터 없음</div>';
+  var chSorted=Object.entries(byCh).sort(function(a,b){return (b[1].items||0)-(a[1].items||0);}).slice(0,7);
+  var chHtml=chSorted.length?chSorted.map(function(e,i){return '<div class="mi-rt-row"><span class="mi-rt-rank">#'+(i+1)+'</span><span class="mi-rt-name">'+escapeHtml(e[0])+'</span><span class="mi-rt-cnt">'+(e[1].items||0)+'건</span></div>';}).join(''):'<div class="mi-no-data">데이터 없음</div>';
+  var coSorted=Object.entries(byCo).filter(function(e){return e[0]&&e[0]!=='null';}).sort(function(a,b){return (b[1].items||0)-(a[1].items||0);}).slice(0,8);
+  var coHtml=coSorted.length?coSorted.map(function(e,i){return '<div class="mi-rt-row"><span class="mi-rt-rank">#'+(i+1)+'</span><span class="mi-rt-name">'+escapeHtml(compNames[e[0]]||e[0])+'</span><span class="mi-rt-cnt">'+(e[1].items||0)+'건</span></div>';}).join(''):'<div class="mi-no-data">데이터 없음</div>';
+  wrap.innerHTML='<div class="mi-rt-grid"><div class="mi-rt-col"><div class="mi-rt-h">📈 키워드 TOP</div>'+kwHtml+'</div><div class="mi-rt-col"><div class="mi-rt-h">📡 채널 TOP</div>'+chHtml+'</div><div class="mi-rt-col"><div class="mi-rt-h">🏢 유사 기업 TOP</div>'+coHtml+'</div></div>';
+}
+
+function renderMITopEvents(){
+  var wrap=document.getElementById('mi-top-events-wrap');if(!wrap)return;
+  var ev=(_miSummary().top_events)||(_miWeek().topEvents)||(_miWeek().top_events)||[];
+  if(!ev.length){wrap.innerHTML='<div class="mi-no-data">이벤트 없음</div>';return;}
+  var impactColor={high:'#ef4444',medium:'#f59e0b',low:'#6b7280'};
+  wrap.innerHTML='<div class="mi-event-list">'+ev.map(function(e,i){return '<div class="mi-event-row"><div class="mi-event-num">#'+(i+1)+'</div><div class="mi-event-body"><div class="mi-event-title">'+escapeHtml(e.title||'')+(e.impact?' <span class="mi-event-badge" style="background:'+(impactColor[e.impact]||'#6b7280')+'">'+escapeHtml(e.impact)+'</span>':'')+'</div>'+(e.cubig_action?'<div class="mi-event-action">→ '+escapeHtml(e.cubig_action)+'</div>':'')+'</div></div>';}).join('')+'</div>';
+}
+
+function renderMIBenchmark(){
+  var wrap=document.getElementById('mi-benchmark-wrap');if(!wrap)return;
+  var bm=(_miSummary().benchmark_highlights)||(_miWeek().benchmarkHighlights)||(_miWeek().benchmark_highlights)||[];
+  if(!bm.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  wrap.innerHTML='<ul class="mi-bm-list">'+bm.map(function(b){return '<li>'+escapeHtml(typeof b==='string'?b:(b.text||b.title||JSON.stringify(b)))+'</li>';}).join('')+'</ul>';
+}
+
+function renderMIContentKeywords(){
+  var wrap=document.getElementById('mi-content-keywords-wrap');if(!wrap)return;
+  var ck=(_miSummary().content_keywords)||(_miWeek().contentKeywords)||(_miWeek().content_keywords)||[];
+  if(!ck.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  var trendColor={HOT:'#ef4444',RISING:'#f59e0b',STEADY:'#6b7280'};
+  wrap.innerHTML='<div class="mi-ck-grid">'+ck.map(function(k){return '<div class="mi-ck-card"><div class="mi-ck-head"><span class="mi-ck-kw">'+escapeHtml(k.keyword||'')+'</span><span class="mi-ck-trend" style="background:'+(trendColor[k.trend]||'#6b7280')+'">'+escapeHtml(k.trend||'STEADY')+'</span></div>'+(k.description?'<div class="mi-ck-desc">'+escapeHtml(k.description)+'</div>':'')+(k.guide?'<div class="mi-ck-guide">💡 '+escapeHtml(k.guide)+'</div>':'')+'</div>';}).join('')+'</div>';
+}
+
+function renderMIKeywordRecs(){
+  var wrap=document.getElementById('mi-keyword-recommendations-wrap');if(!wrap)return;
+  var kr=(_miSummary().keywordRecommendations)||(_miWeek().keywordRecommendations)||[];
+  if(!kr.length){wrap.innerHTML='<div class="mi-no-data">추천 없음</div>';return;}
+  var densityColor={low:'#10b981',medium:'#f59e0b',high:'#ef4444'};
+  wrap.innerHTML='<div class="mi-kr-grid">'+kr.map(function(k){return '<div class="mi-kr-card"><div class="mi-kr-head"><span class="mi-kr-kw">'+escapeHtml(k.keyword||'')+'</span>'+(k.competitive_density?'<span class="mi-kr-density" style="background:'+(densityColor[k.competitive_density]||'#6b7280')+'">경쟁 '+escapeHtml(k.competitive_density)+'</span>':'')+(k.channel?'<span class="mi-kr-ch">'+escapeHtml(k.channel)+'</span>':'')+'</div>'+(k.rationale?'<div class="mi-kr-rationale">📋 '+escapeHtml(k.rationale)+'</div>':'')+(k.first_line?'<div class="mi-kr-line">✍️ "'+escapeHtml(k.first_line)+'"</div>':'')+'</div>';}).join('')+'</div>';
+}
+
+function renderMIPainpoints(){
+  var wrap=document.getElementById('mi-painpoints-wrap');if(!wrap)return;
+  var pp=(_miSummary().painPoints)||(_miWeek().painPoints)||[];
+  if(!pp.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  wrap.innerHTML='<div class="mi-pp-grid">'+pp.map(function(p,i){return '<div class="mi-pp-card"><div class="mi-pp-num">#'+(i+1)+'</div><div class="mi-pp-pain">'+escapeHtml(p.painPoint||p.pain||'')+'</div>'+(p.source?'<div class="mi-pp-src">📍 '+escapeHtml(p.source)+'</div>':'')+(p.cubigConnection?'<div class="mi-pp-conn">🎯 '+escapeHtml(p.cubigConnection)+'</div>':'')+'</div>';}).join('')+'</div>';
+}
+
+function renderMICommunityReactions(){
+  var wrap=document.getElementById('mi-community-wrap');if(!wrap)return;
+  var cr=(_miSummary().communityReactions)||(_miWeek().communityReactions)||[];
+  if(!cr.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  wrap.innerHTML='<div class="mi-cr-list">'+cr.map(function(c){return '<div class="mi-cr-card"><div class="mi-cr-quote">"'+escapeHtml(c.quote||'')+'"</div><div class="mi-cr-meta"><span class="mi-cr-src">'+escapeHtml(c.source||'')+'</span>'+(c.url?' · <a href="'+escapeHtml(c.url)+'" target="_blank" rel="noopener">🔗 원문</a>':'')+'</div>'+(c.whyImportant?'<div class="mi-cr-why">💡 '+escapeHtml(c.whyImportant)+'</div>':'')+'</div>';}).join('')+'</div>';
+}
+
+function renderMIMarketMovement(){
+  var wrap=document.getElementById('mi-market-movement-wrap');if(!wrap)return;
+  var s=_miSummary(),w=_miWeek();
+  var cd=s.competitorDirection||w.competitorDirection||[];
+  var mm=s.marketMovement||w.marketMovement||[];
+  var td=s.trendDirection||w.trendDirection||[];
+  var html='';
+  if(cd.length){html+='<div class="mi-mm-block"><div class="mi-mm-h">유사 기업 동향</div><div class="mi-mm-list">'+cd.map(function(c){return '<div class="mi-mm-row"><div class="mi-mm-co">'+escapeHtml(c.company||'')+'</div><div class="mi-mm-strategy">'+escapeHtml(c.strategy||'')+'</div><div class="mi-mm-impl">→ '+escapeHtml(c.cubigImplication||'')+'</div></div>';}).join('')+'</div></div>';}
+  if(mm.length){html+='<div class="mi-mm-block"><div class="mi-mm-h">시장 변화</div><div class="mi-mm-list">'+mm.map(function(m){var tcolor=m.type==='opportunity'?'#10b981':(m.type==='threat'?'#ef4444':'#6b7280');return '<div class="mi-mm-row"><div class="mi-mm-co"><span class="mi-mm-type" style="background:'+tcolor+'">'+escapeHtml(m.type||'')+'</span> '+escapeHtml(m.movement||'')+'</div><div class="mi-mm-impl">→ '+escapeHtml(m.interpretation||'')+'</div></div>';}).join('')+'</div></div>';}
+  if(td.length){html+='<div class="mi-mm-block"><div class="mi-mm-h">시장 흐름</div><div class="mi-mm-list">'+td.map(function(t){return '<div class="mi-mm-row"><div class="mi-mm-co">'+escapeHtml(t.trend||'')+'</div><div class="mi-mm-strategy">CUBIG 포지셔닝: '+escapeHtml(t.cubigPosition||'')+'</div><div class="mi-mm-impl">차별화: '+escapeHtml(t.differentiator||'')+'</div></div>';}).join('')+'</div></div>';}
+  wrap.innerHTML=html||'<div class="mi-no-data">데이터 없음</div>';
+}
+
+function renderMISoV(){
+  var wrap=document.getElementById('mi-sov-wrap');if(!wrap)return;
+  var sov=(_miSummary().marketShareOfVoice)||(_miWeek().marketShareOfVoice)||[];
+  if(!sov.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
+  wrap.innerHTML='<div class="mi-sov-list">'+sov.map(function(s){
+    var bc=Array.isArray(s.by_company)?s.by_company:[];
+    var maxM=Math.max.apply(null,bc.map(function(x){return x.mentions||0;}).concat([1]));
+    var bars=bc.slice(0,8).map(function(x){var pct=Math.round(((x.mentions||0)/maxM)*100);return '<div class="mi-sov-bar-row"><span class="mi-sov-co">'+escapeHtml(x.company||'')+'</span><span class="mi-sov-bar"><span class="mi-sov-fill" style="width:'+pct+'%"></span></span><span class="mi-sov-cnt">'+(x.mentions||0)+'</span></div>';}).join('');
+    return '<div class="mi-sov-card"><div class="mi-sov-topic">'+escapeHtml(s.topic||'')+'</div>'+bars+(s.cubig_position?'<div class="mi-sov-pos">🎯 CUBIG: '+escapeHtml(s.cubig_position)+'</div>':'')+'</div>';
+  }).join('')+'</div>';
 }
 
 function renderMITopicSuggestions(){
@@ -2456,12 +2749,40 @@ function renderMIFeed(){
 }
 
 function buildFeedCard(it){
-  var channel=it.channel||'';var chBgMap={hackernews:'#FF6600',reddit:'#FF4500',medium:'#00AB6C',linkedin:'#0A66C2',x:'#888',producthunt:'#DA552F',youtube:'#FF0000'};
+  var channel=it.channel||'';
+  var chBgMap={hackernews:'#FF6600',reddit:'#FF4500',medium:'#00AB6C',linkedin:'#0A66C2',x:'#888',producthunt:'#DA552F',youtube:'#FF0000'};
   var chBg=chBgMap[channel.toLowerCase()]||'#555';
-  var url=it.url||'#';var title=it.title||'(제목 없음)';
+  var url=it.url||'#';
+  var title=it.title||'(제목 없음)';
   var summary=it.summary_ko||it.content_snippet||'';
   var implication=it.implication||'';
-  return'<div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px;font-size:13px"><div style="display:flex;align-items:center;gap:6px;margin-bottom:8px"><span style="background:'+chBg+';color:#fff;font-size:9px;font-weight:700;padding:2px 5px;border-radius:3px">'+escapeHtml(channel.slice(0,2).toUpperCase()||'MI')+'</span><span style="font-weight:600;color:'+chBg+'">'+escapeHtml(channel)+'</span></div><div style="font-weight:600;margin-bottom:6px"><a href="'+escapeHtml(url)+'" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none">'+escapeHtml(title)+'</a></div>'+(summary?'<div style="color:var(--text-sub);line-height:1.6;margin-bottom:6px">'+escapeHtml(summary.slice(0,150))+'</div>':'')+(implication?'<div style="background:#fffbeb;border-left:3px solid var(--orange);padding:6px 8px;border-radius:0 4px 4px 0;font-size:11px;color:var(--text-sub)"><strong style="color:var(--orange);font-size:10px;text-transform:uppercase">시사점</strong><br>'+escapeHtml(implication.slice(0,100))+'</div>':'')+'</div>';
+  var cubigRel=it.cubig_relevance||'';
+  var cubigAng=it.cubig_angle||'';
+  var competitor=it.competitor||'';
+  var pubDate=it.published_at?String(it.published_at).slice(0,10):'';
+  var rel=it.relevance_score?Math.round(it.relevance_score*100):0;
+  var eng=it.engagement||{};
+  var engStr='';
+  if(eng.upvotes)engStr+='👍 '+eng.upvotes+' ';
+  if(eng.comments)engStr+='💬 '+eng.comments+' ';
+  if(eng.views)engStr+='👁 '+(eng.views>=1000?Math.round(eng.views/100)/10+'K':eng.views)+' ';
+  return '<div class="mi-feed-card">'+
+    '<div class="mi-fc-head">'+
+      '<span class="mi-fc-ch" style="background:'+chBg+'">'+escapeHtml(channel.toUpperCase())+'</span>'+
+      (competitor?'<span class="mi-fc-comp">'+escapeHtml(competitor)+'</span>':'')+
+      (pubDate?'<span class="mi-fc-date">'+pubDate+'</span>':'')+
+      (rel?'<span class="mi-fc-rel">관련도 '+rel+'%</span>':'')+
+    '</div>'+
+    '<div class="mi-fc-title"><a href="'+escapeHtml(url)+'" target="_blank" rel="noopener">'+escapeHtml(title)+'</a></div>'+
+    (summary?'<div class="mi-fc-summary">'+escapeHtml(summary)+'</div>':'')+
+    (implication?'<div class="mi-fc-block mi-fc-impl"><span class="mi-fc-icon">💡</span><span class="mi-fc-label">시사점</span> '+escapeHtml(implication)+'</div>':'')+
+    (cubigRel?'<div class="mi-fc-block mi-fc-rel"><span class="mi-fc-icon">🎯</span><span class="mi-fc-label">큐빅 연관성</span> '+escapeHtml(cubigRel)+'</div>':'')+
+    (cubigAng?'<div class="mi-fc-block mi-fc-ang"><span class="mi-fc-icon">✍️</span><span class="mi-fc-label">콘텐츠 앵글</span> '+escapeHtml(cubigAng)+'</div>':'')+
+    '<div class="mi-fc-foot">'+
+      (engStr?'<span class="mi-fc-eng">'+engStr+'</span>':'')+
+      '<a class="mi-fc-link" href="'+escapeHtml(url)+'" target="_blank" rel="noopener">🔗 원문보기</a>'+
+    '</div>'+
+  '</div>';
 }
 
 function renderMIArchive(){
