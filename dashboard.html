@@ -1417,11 +1417,148 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
 .n-empty-icon{font-size:22px;margin-bottom:8px;opacity:.3}
 .n-empty-title{font-size:14px;font-weight:500;color:var(--n-text2);margin-bottom:4px}
 .n-empty-desc{font-size:12px;color:var(--n-text2);opacity:.6}
+
+/* ===== v5.5 요구사항 1: 섹션 제목 +2pt + 검은색 ===== */
+.mi-section-title{font-size:22px!important;color:#000!important;font-weight:800!important}
+#tab-market-intel .mi-section-title{font-size:22px!important;color:#000!important;font-weight:800!important}
+.mi-pi-label{font-size:14px!important;color:#000!important;font-weight:700!important}
+.mi-rt-h{font-size:14px!important;color:#000!important;font-weight:700!important}
+
+/* ===== v5.5 요구사항 3: 실시간 TOP 롤링 + 카테고리 채널 TOP3 ===== */
+.mi-rt-rolling-wrap{position:relative;overflow:hidden;min-height:220px}
+.mi-rt-page{display:none;animation:rtFadeIn .3s ease}
+.mi-rt-page.active{display:block}
+@keyframes rtFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.mi-rt-nav{display:flex;align-items:center;justify-content:space-between;margin-top:10px;padding-top:8px;border-top:1px solid var(--n-border)}
+.mi-rt-arrow{width:26px;height:26px;border-radius:50%;border:1px solid var(--n-border);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--n-text2);transition:all .15s}
+.mi-rt-arrow:hover{background:var(--n-accent);color:#fff;border-color:var(--n-accent)}
+.mi-rt-dots{display:flex;gap:5px;align-items:center}
+.mi-rt-dot{width:5px;height:5px;border-radius:50%;background:var(--n-border);cursor:pointer;transition:all .2s}
+.mi-rt-dot.active{background:var(--n-accent);width:12px;border-radius:3px}
+.mi-rt-cat-card{background:rgba(55,53,47,0.03);border:1px solid var(--n-border);border-radius:6px;padding:10px 12px;margin-bottom:8px}
+.mi-rt-cat-head{font-size:11px;font-weight:700;color:var(--n-text);text-transform:uppercase;letter-spacing:.4px;margin-bottom:6px;display:flex;align-items:center;justify-content:space-between}
+.mi-rt-cat-cnt{font-size:10px;color:var(--n-text2);font-weight:400;text-transform:none;letter-spacing:0}
+.mi-rt-cat-item{font-size:12px;line-height:1.55;color:var(--n-text2);padding-left:10px;position:relative;margin-bottom:3px}
+.mi-rt-cat-item::before{content:'·';position:absolute;left:0;color:var(--n-accent)}
+
+/* ===== v5.5 요구사항 4: 콘텐츠 주제 모달 ===== */
+.mi-topic-modal-overlay{display:none;position:fixed;inset:0;background:rgba(55,53,47,0.4);z-index:var(--z-modal);align-items:center;justify-content:center}
+.mi-topic-modal-overlay.open{display:flex}
+.mi-topic-modal{background:#fff;border-radius:8px;width:min(720px,92vw);max-height:82vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(55,53,47,0.18);overflow:hidden}
+.mi-topic-modal-head{padding:20px 24px;border-bottom:1px solid var(--n-border);display:flex;align-items:flex-start;justify-content:space-between;flex-shrink:0;gap:12px}
+.mi-topic-modal-title{font-size:16px;font-weight:700;color:#37352F;line-height:1.3;flex:1}
+.mi-topic-modal-close{background:none;border:none;font-size:20px;cursor:pointer;color:var(--n-text2);padding:4px 8px;border-radius:4px;line-height:1;flex-shrink:0}
+.mi-topic-modal-close:hover{background:rgba(55,53,47,0.06)}
+.mi-topic-modal-body{padding:20px 24px;overflow-y:auto;flex:1;display:flex;flex-direction:column;gap:16px}
+.mi-topic-modal-section{font-size:13px;line-height:1.7;color:#37352F}
+.mi-topic-modal-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:rgba(55,53,47,.5);margin-bottom:5px}
+.mi-topic-score-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.mi-topic-score-box{background:rgba(35,131,226,.06);border:1px solid rgba(35,131,226,.12);border-radius:6px;padding:10px;text-align:center}
+.mi-topic-score-num{font-size:20px;font-weight:800;color:var(--n-accent)}
+.mi-topic-score-lbl{font-size:10px;color:var(--n-text2);margin-top:2px}
+.mi-topic-modal-keywords{display:flex;flex-wrap:wrap;gap:6px}
+.mi-topic-modal-kw{font-size:12px;font-weight:600;background:rgba(55,53,47,.06);color:#37352F;padding:3px 8px;border-radius:4px}
+.mi-topic-modal-kw.main{background:var(--n-accent);color:#fff}
+.mi-topic-modal-refs{display:flex;flex-direction:column;gap:5px}
+.mi-topic-modal-ref{font-size:12px;color:var(--n-accent);text-decoration:none;padding-left:12px;position:relative;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.mi-topic-modal-ref::before{content:'↗';position:absolute;left:0;font-size:10px}
+.mi-topic-modal-ref:hover{text-decoration:underline}
+.mi-topic-modal-angle{background:rgba(35,131,226,.06);border-left:3px solid var(--n-accent);border-radius:0 4px 4px 0;padding:10px 12px;font-size:13px;line-height:1.65;color:#37352F}
+.r72-topic-card{cursor:pointer;transition:box-shadow .15s}
+.r72-topic-card:hover{box-shadow:0 4px 16px rgba(55,53,47,.12)}
+
+/* ===== v5.5 요구사항 5: Players 이동 + click 모달 ===== */
+.mi-player-comp-modal-overlay{display:none;position:fixed;inset:0;background:rgba(55,53,47,0.4);z-index:var(--z-modal);align-items:center;justify-content:center}
+.mi-player-comp-modal-overlay.open{display:flex}
+.mi-player-comp-modal{background:#fff;border-radius:8px;width:min(680px,92vw);max-height:80vh;display:flex;flex-direction:column;box-shadow:0 20px 60px rgba(55,53,47,0.18);overflow:hidden}
+.mi-player-comp-modal-head{padding:18px 22px;border-bottom:1px solid var(--n-border);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.mi-player-comp-modal-title{font-size:15px;font-weight:700;color:#37352F}
+.mi-player-comp-modal-close{background:none;border:none;font-size:20px;cursor:pointer;color:var(--n-text2);padding:4px 8px;border-radius:4px;line-height:1}
+.mi-player-comp-modal-close:hover{background:rgba(55,53,47,0.06)}
+.mi-player-comp-modal-body{padding:18px 22px;overflow-y:auto;flex:1}
+.mi-player-comp-item{padding:12px 0;border-bottom:1px solid var(--n-border);display:flex;flex-direction:column;gap:5px}
+.mi-player-comp-item:last-child{border-bottom:none;padding-bottom:0}
+.mi-player-comp-title{font-size:13px;font-weight:600;line-height:1.45;color:#37352F}
+.mi-player-comp-title a{color:inherit;text-decoration:none}
+.mi-player-comp-title a:hover{color:var(--n-accent)}
+.mi-player-comp-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.mi-player-comp-ch{font-size:10px;font-weight:700;color:#fff;padding:2px 6px;border-radius:3px}
+.mi-player-comp-date{font-size:11px;color:var(--n-text2)}
+.mi-player-comp-score{font-size:11px;font-weight:700;color:var(--n-accent)}
+.mi-player-comp-summary{font-size:12px;line-height:1.55;color:rgba(55,53,47,.6)}
+.mi-player-card{cursor:pointer}
+
+/* ===== v5.5 요구사항 6: 기회 영역 archive carousel ===== */
+.n-opp-carousel-wrap{position:relative}
+.n-opp-carousel-track{overflow:hidden}
+.n-opp-carousel-inner{display:flex;transition:transform .35s ease}
+.n-opp-carousel-slide{min-width:100%;box-sizing:border-box;padding:4px}
+.n-opp-carousel-slide .n-opp-card{background:var(--n-card);border:1px solid var(--n-border);border-radius:var(--n-radius);padding:28px;box-shadow:0 2px 8px rgba(55,53,47,0.07)}
+.n-opp-carousel-nav{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px}
+.n-opp-carousel-arrow{width:32px;height:32px;border-radius:50%;border:1px solid var(--n-border);background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--n-text2);transition:all .15s}
+.n-opp-carousel-arrow:hover{background:var(--n-accent);color:#fff;border-color:var(--n-accent)}
+.n-opp-carousel-arrow:disabled{opacity:.3;cursor:not-allowed}
+.n-opp-carousel-dots{display:flex;gap:6px;align-items:center}
+.n-opp-carousel-dot{width:6px;height:6px;border-radius:50%;background:var(--n-border);cursor:pointer;transition:all .2s}
+.n-opp-carousel-dot.active{background:var(--n-accent);width:18px;border-radius:3px}
+.n-opp-counter{font-size:12px;color:var(--n-text2);min-width:36px;text-align:center}
+.n-opp-card-title{font-size:20px;font-weight:800;color:var(--n-text);line-height:1.3;margin-bottom:10px}
+.n-opp-demand-chip{display:inline-block;font-size:12px;font-weight:700;padding:4px 10px;border-radius:4px;margin-bottom:14px}
+.n-opp-demand-high{background:rgba(239,68,68,.10);color:#dc2626}
+.n-opp-demand-medium{background:rgba(245,158,11,.10);color:#b45309}
+.n-opp-demand-low{background:rgba(107,114,128,.10);color:#6b7280}
+.n-opp-hook-quote{font-size:15px;font-weight:600;color:var(--n-accent);line-height:1.55;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--n-border)}
+.n-opp-section{font-size:14px;color:var(--n-text2);line-height:1.7;margin-bottom:12px}
+.n-opp-section-h{font-size:11px;font-weight:700;color:var(--n-text);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+.n-opp-cubig-fit{background:rgba(35,131,226,.06);border-left:3px solid var(--n-accent);border-radius:0 4px 4px 0;padding:10px 14px;margin-bottom:14px}
+.n-opp-cubig-fit .n-opp-section-h{color:var(--n-accent)}
+.n-opp-actions-list{list-style:none;padding:0;margin:0;border-left:2px solid var(--n-border);padding-left:14px}
+.n-opp-actions-list li{font-size:13px;color:var(--n-text2);line-height:1.7;padding-left:4px;position:relative;margin-bottom:5px}
+.n-opp-actions-list li::before{content:'→';position:absolute;left:-18px;color:var(--n-accent);font-weight:700}
+
+/* ===== v5.5 요구사항 7: Sentiment archive 디자인 ===== */
+.r5-sentiment-grid-v55{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:768px){.r5-sentiment-grid-v55{grid-template-columns:1fr}}
+.r5-sent-card{border:1px solid var(--n-border);border-radius:8px;padding:16px}
+.r5-sent-pos{background:#ecfdf5;border-color:#bbf7d0}
+.r5-sent-neg{background:#fef2f2;border-color:#fecaca}
+.r5-sent-head{font-size:13px;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.r5-sent-pos .r5-sent-head{color:#059669}
+.r5-sent-neg .r5-sent-head{color:#dc2626}
+.r5-sent-items{display:flex;flex-direction:column;gap:10px}
+.r5-sent-item{background:rgba(255,255,255,0.7);border:1px solid rgba(0,0,0,0.06);border-radius:6px;padding:10px 12px}
+.r5-sent-item-title{font-size:13px;font-weight:600;line-height:1.45;color:#37352F;margin-bottom:4px}
+.r5-sent-item-src{font-size:11px;color:rgba(55,53,47,.5);margin-bottom:6px}
+.r5-sent-item-tags{display:flex;gap:5px;flex-wrap:wrap}
+.r5-sent-tag{font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;background:rgba(55,53,47,.07);color:rgba(55,53,47,.6)}
+.r5-sent-tag.why{background:rgba(55,53,47,.07);color:#374151}
+.r5-sent-tag.cubig{background:rgba(35,131,226,.10);color:#1d4ed8}
+.r5-sent-tag.trigger{background:rgba(245,158,11,.10);color:#92400e}
+
+/* ===== v5.5 요구사항 8: Feed archive 4-subsection ===== */
+.r5-feed-card-v55{background:var(--n-card);border:1px solid var(--n-border);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px;transition:box-shadow .15s,transform .15s;position:relative;overflow:hidden}
+.r5-feed-card-v55:hover{box-shadow:0 4px 16px rgba(55,53,47,.10);transform:translateY(-2px)}
+.r5-feed-ch-badge-v55{display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;padding:4px 8px;border-radius:4px;letter-spacing:.3px}
+.r5-feed-score-v55{position:absolute;top:12px;right:12px;font-size:11px;font-weight:700;padding:3px 8px;border-radius:10px;white-space:nowrap}
+.r5-feed-score-green{background:#d1fae5;color:#065f46}
+.r5-feed-score-yellow{background:#fef3c7;color:#92400e}
+.r5-feed-score-gray{background:#f3f4f6;color:#6b7280}
+.r5-feed-title-v55{font-size:14px;font-weight:700;line-height:1.45;color:var(--n-text);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.r5-feed-title-v55 a{color:inherit;text-decoration:none}
+.r5-feed-title-v55 a:hover{color:var(--n-accent)}
+.r5-feed-sub-v55{border-radius:0 5px 5px 0;padding:7px 10px;background:rgba(55,53,47,0.03)}
+.r5-feed-sub-v55.s-summary{border-left:3px solid #f59e0b}
+.r5-feed-sub-v55.s-implication{border-left:3px solid #eab308}
+.r5-feed-sub-v55.s-angle{border-left:3px solid #ef4444}
+.r5-feed-sub-v55.s-relevance{border-left:3px solid #10b981}
+.r5-feed-sub-label-v55{display:block;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--n-text2);margin-bottom:2px}
+.r5-feed-sub-body-v55{font-size:12px;line-height:1.6;color:var(--n-text)}
+.r5-feed-foot-v55{display:flex;align-items:center;gap:8px;padding-top:8px;border-top:1px solid var(--n-border);flex-wrap:wrap;margin-top:auto;font-size:11px;color:var(--n-text2)}
 </style>
 </head>
 <body>
 <div class="header">
-  <div class="header-left"><h1>CUBIG Marketing Dashboard</h1><span class="badge">v5.0</span></div>
+  <div class="header-left"><h1>CUBIG Marketing Dashboard</h1><span class="badge">v5.5</span></div>
   <div class="header-right">
     <span class="last-updated" id="lastUpdated"></span>
     <input type="text" class="date-input" id="dateRange" placeholder="최근 7일" readonly style="cursor:pointer">
@@ -1726,6 +1863,28 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
       </details>
 
     </div><!-- /n-page -->
+
+    <!-- v5.5 모달: 콘텐츠 주제 상세 -->
+    <div class="mi-topic-modal-overlay" id="mi-topic-modal-overlay" onclick="if(event.target===this)closeMITopicModal()">
+      <div class="mi-topic-modal" role="dialog" aria-modal="true">
+        <div class="mi-topic-modal-head">
+          <div class="mi-topic-modal-title" id="mi-topic-modal-title-text"></div>
+          <button class="mi-topic-modal-close" onclick="closeMITopicModal()" aria-label="닫기">×</button>
+        </div>
+        <div class="mi-topic-modal-body" id="mi-topic-modal-body-inner"></div>
+      </div>
+    </div>
+
+    <!-- v5.5 모달: 경쟁사 게시글 -->
+    <div class="mi-player-comp-modal-overlay" id="mi-player-comp-modal-overlay" onclick="if(event.target===this)closeMIPlayerModal()">
+      <div class="mi-player-comp-modal" role="dialog" aria-modal="true">
+        <div class="mi-player-comp-modal-head">
+          <div class="mi-player-comp-modal-title" id="mi-player-comp-modal-title-text"></div>
+          <button class="mi-player-comp-modal-close" onclick="closeMIPlayerModal()" aria-label="닫기">×</button>
+        </div>
+        <div class="mi-player-comp-modal-body" id="mi-player-comp-modal-body-inner"></div>
+      </div>
+    </div>
 
     <!-- deprecated hidden (keep for JS compat) -->
     <div id="mi-trend-direction-wrap" style="display:none"></div>
@@ -2785,32 +2944,31 @@ function initMIToc(){
 function reorderMISections(){
   var main=document.getElementById('n-deepnote-main');
   if(!main)return;
-  var hero=document.getElementById('n-hero-section');
-  var productSec=document.getElementById('n-section-product-insights');
-  if(hero&&productSec&&hero.parentNode!==main){
-    main.insertBefore(hero,productSec.nextSibling);
-  }
+  // v5.5: Hero 최상단, Players Feed 하단으로
   ['n-section-top-events','n-section-benchmark','n-section-summary','n-section-community'].forEach(function(id){
     var el=document.getElementById(id);
     if(el)el.style.display='none';
   });
+  // 섹션 순서: Hero(1) → product_insights(2) → topics(3) → realtime_top(4) → ranking(5)
+  // → painpoints(6) → market_movement(7) → pain(8) → conversion(9) → opportunity(10)
+  // → sentiment(11) → sov(12) → feed(13) → players(14) → archive(15)
   [
-    'n-section-product-insights',
     'n-hero-section',
-    'n-section-realtime-top',
+    'n-section-product-insights',
     'n-section-topics',
+    'n-section-realtime-top',
+    'n-section-ranking',
     'n-section-painpoints',
     'n-section-market-movement',
-    'n-section-ranking',
     'n-section-pain',
     'n-section-conversion',
     'n-section-opportunity',
     'n-section-sentiment',
-    'n-section-players',
     'n-section-keyword-recommendations',
     'n-section-content-keywords',
     'n-section-sov',
     'n-section-feed',
+    'n-section-players',
     'n-section-archive'
   ].forEach(function(id){
     var el=document.getElementById(id);
@@ -2870,8 +3028,30 @@ function renderMIHero(){
   var ranking=(w.topicMentionRanking||[])[0]||{};
   var comm=(s.communityReactions||w.communityReactions||[])[0]||{};
   var evt=(s.top_events||w.top_events||w.topEvents||[])[0]||{};
-  var summaryTxt=(w.weeklySummary||w.executiveSummary||w.summary||'');
-  if(typeof summaryTxt!=='string')summaryTxt=summaryTxt.body||summaryTxt.text||'';
+  // v5.5: 동적 종합 인사이트 생성
+  var summaryTxt='';
+  // 1순위: report_md 첫 단락
+  var rm=_miSummary().report_md||_miWeek().report_md||'';
+  if(rm){
+    var parts=rm.replace(/#[^\n]*/g,'').split(/\n\n+/).filter(function(p){return p.trim().length>20;});
+    if(parts.length)summaryTxt=parts[0].replace(/[#*`]/g,'').trim();
+  }
+  // 2순위: product_insights 합성
+  if(!summaryTxt){
+    var pi=(_miSummary().product_insights)||(_miWeek().product_insights)||{};
+    var signals=[
+      (pi.syntitan&&pi.syntitan.market_signal)||'',
+      (pi.llmcapsule&&pi.llmcapsule.market_signal)||''
+    ].filter(Boolean);
+    if(signals.length)summaryTxt='이번 주 핵심 흐름은 '+signals.join(' 또한, ')+'로 요약됩니다.';
+  }
+  // 3순위: 기존 weeklySummary
+  if(!summaryTxt){
+    summaryTxt=(w.weeklySummary||w.executiveSummary||w.summary||'');
+    if(typeof summaryTxt!=='string')summaryTxt=summaryTxt.body||summaryTxt.text||'';
+  }
+  // fallback
+  if(!summaryTxt)summaryTxt=(w.week||'이번 주')+' 주차 데이터 분석 중입니다.';
   var sideItems=[
     {cls:'red',label:'키워드 TOP',text:(ranking.keyword||ranking.topic||'데이터 없음')},
     {cls:'yellow',label:'커뮤니티',text:(comm.quote||comm.whyImportant||'데이터 없음')},
@@ -2882,7 +3062,7 @@ function renderMIHero(){
       '<div>'+
         '<div class="n-hero-kicker">'+escapeHtml(w.dateRange||w.week||'')+'</div>'+
         '<div class="n-hero-headline">'+escapeHtml(w.week||'Weekly')+'</div>'+
-        '<div class="n-hero-body">'+escapeHtml(summaryTxt||'이번 주 핵심 리서치 신호를 정리했습니다.')+'</div>'+
+        '<div class="n-hero-body">'+escapeHtml(String(summaryTxt).slice(0,280))+'</div>'+
       '</div>'+
       '<div class="n-hero-side">'+
         sideItems.map(function(it){
@@ -2921,17 +3101,171 @@ function renderMIProductInsights(){
 function renderMIRealtimeTop(){
   var wrap=document.getElementById('mi-realtime-top-wrap');if(!wrap)return;
   var s=_miSummary(),w=_miWeek();
-  var ck=s.content_keywords||w.content_keywords||[];
-  var byCh=s.by_channel||w.byChannel||{};
-  var byCo=s.by_competitor||w.byCompetitor||{};
+  var ck=s.content_keywords||w.content_keywords||w.contentKeywords||[];
+  var byCh=s.by_channel||w.by_channel||w.byChannel||{};
+  var byCo=s.by_competitor||w.by_competitor||w.byCompetitor||{};
+  var feed=w.feedItems||[];
   var compNames={'tonic-ai':'Tonic.ai','mostly-ai':'Mostly AI','gretel':'Gretel','great-expectations':'Great Expectations','atlan':'Atlan','collibra':'Collibra','informatica':'Informatica','lakefs':'lakeFS','delta-lake':'Delta Lake','pachyderm':'Pachyderm','snowflake':'Snowflake','databricks':'Databricks','ms-fabric':'MS Fabric','nightfall-ai':'Nightfall AI','prompt-security':'Prompt Security','f5-ai-guardrails':'F5 AI Guardrails','portal26':'Portal26','aibound':'AIBound','lakera':'Lakera','calypsoai':'CalypsoAI','cloaklm':'CloakLM','aegisproxy':'AegisProxy','privent-ai':'Privent.ai','scale-ai':'Scale AI'};
-  var trendBadge=function(t){var m={HOT:'#ef4444',RISING:'#f59e0b',STEADY:'#6b7280'};return '<span class="mi-trend-badge" style="background:'+(m[t]||'#6b7280')+'">'+escapeHtml(t||'STEADY')+'</span>';};
-  var kwHtml=ck.length?ck.slice(0,6).map(function(k,i){return '<div class="mi-rt-row"><span class="mi-rt-rank">#'+(i+1)+'</span><span class="mi-rt-name">'+escapeHtml(k.keyword||'')+'</span>'+trendBadge(k.trend)+'</div>';}).join(''):'<div class="mi-no-data">데이터 없음</div>';
-  var chSorted=Object.entries(byCh).sort(function(a,b){return (b[1].items||0)-(a[1].items||0);}).slice(0,7);
-  var chHtml=chSorted.length?chSorted.map(function(e,i){return '<div class="mi-rt-row"><span class="mi-rt-rank">#'+(i+1)+'</span><span class="mi-rt-name">'+escapeHtml(e[0])+'</span><span class="mi-rt-cnt">'+(e[1].items||0)+'건</span></div>';}).join(''):'<div class="mi-no-data">데이터 없음</div>';
-  var coSorted=Object.entries(byCo).filter(function(e){return e[0]&&e[0]!=='null';}).sort(function(a,b){return (b[1].items||0)-(a[1].items||0);}).slice(0,8);
-  var coHtml=coSorted.length?coSorted.map(function(e,i){return '<div class="mi-rt-row"><span class="mi-rt-rank">#'+(i+1)+'</span><span class="mi-rt-name">'+escapeHtml(compNames[e[0]]||e[0])+'</span><span class="mi-rt-cnt">'+(e[1].items||0)+'건</span></div>';}).join(''):'<div class="mi-no-data">데이터 없음</div>';
-  wrap.innerHTML='<div class="mi-rt-grid"><div class="mi-rt-col"><div class="mi-rt-h">📈 키워드 TOP</div>'+kwHtml+'</div><div class="mi-rt-col"><div class="mi-rt-h">📡 채널 TOP</div>'+chHtml+'</div><div class="mi-rt-col"><div class="mi-rt-h">🏢 유사 기업 TOP</div>'+coHtml+'</div></div>';
+  var trendBadgeHtml=function(t){var m={HOT:'#ef4444',RISING:'#f59e0b',STEADY:'#6b7280'};return '<span class="mi-trend-badge" style="background:'+(m[String(t).toUpperCase()]||'#6b7280')+'">'+escapeHtml(t||'STEADY')+'</span>';};
+  var chBgMap={hackernews:'#FF6600',hn:'#FF6600',reddit:'#FF4500',medium:'#00AB6C',linkedin:'#0A66C2',x:'#888',producthunt:'#DA552F',ph:'#DA552F',youtube:'#FF0000'};
+
+  // === 좌: 키워드 TOP 4 ranking-card ===
+  var kwCards='';
+  if(ck.length){
+    kwCards=ck.slice(0,4).map(function(k,i){
+      var mentions=Array.isArray(k.mentions)?k.mentions:[];
+      var total=k.count||mentions.reduce(function(sum,m){return sum+(m.count||0);},0)||0;
+      var chCounts={};
+      mentions.forEach(function(m){var src=String(m.source||'').toLowerCase();if(src)chCounts[src]=(chCounts[src]||0)+(m.count||1);});
+      var chChips=Object.keys(chCounts).slice(0,4).map(function(ch){return '<span class="channel-chip"><span class="n-ch-icon" style="background:'+(chBgMap[ch]||'#555')+'">'+escapeHtml(ch.slice(0,2).toUpperCase())+'</span><b>'+(chCounts[ch]||0)+'</b></span>';}).join('');
+      var sampleQuote=(mentions[0]&&mentions[0].sample_quote)||k.description||'';
+      return '<div class="ranking-card">'+
+        '<div class="ranking-head">'+
+          '<div><div class="ranking-key">'+escapeHtml(k.keyword||k.topic||'키워드')+'</div>'+
+            (trendBadgeHtml(k.trend||'STEADY'))+
+          '</div>'+
+          '<span class="rank-num">#'+(i+1)+'</span>'+
+        '</div>'+
+        (chChips?'<div class="channel-chip-row">'+chChips+'</div>':'')+
+        '<div class="ranking-total">합계 언급 '+(total||0)+'건</div>'+
+        (sampleQuote?'<ul class="mention-list"><li>'+escapeHtml(String(sampleQuote).slice(0,120))+'</li></ul>':'')+
+      '</div>';
+    }).join('');
+  }else{
+    kwCards='<div class="mi-no-data">데이터 없음</div>';
+  }
+
+  // === 중: 카테고리 채널 TOP3 ===
+  var cats=[
+    {key:'고민형',test:function(it){var t=String(it.title||it.summary_ko||'');return /왜|어떻게|고민|막막|어렵|\?/.test(t);}},
+    {key:'문제해결형',test:function(it){var t=String(it.title||'').toLowerCase();return /해결|fix|솔루션|해소|guide/.test(t);}},
+    {key:'기능형',test:function(it){var t=String(it.title||'').toLowerCase();return /feature|기능|출시|launch/.test(t);}},
+    {key:'업데이트',test:function(it){var t=String(it.title||'').toLowerCase();return /update|업데이트|v\d|release/.test(t);}},
+    {key:'이벤트',test:function(it){var t=String(it.title||'');return /이벤트|컨퍼런스|발표|수상|투자/.test(t);}}
+  ];
+  var catCards='';
+  cats.forEach(function(cat){
+    var catItems=feed.filter(cat.test).slice(0,3);
+    if(!catItems.length)return;
+    var chCounts={};
+    catItems.forEach(function(it){var ch=(it.channel||'').toLowerCase();if(ch)chCounts[ch]=(chCounts[ch]||0)+1;});
+    var chChips=Object.keys(chCounts).slice(0,4).map(function(ch){return '<span class="channel-chip"><b>'+escapeHtml(ch.toUpperCase())+'</b> '+(chCounts[ch]||0)+'</span>';}).join('');
+    var itemList=catItems.map(function(it){return '<div class="mi-rt-cat-item">'+escapeHtml(String(it.title||'').slice(0,80))+'</div>';}).join('');
+    catCards+='<div class="mi-rt-cat-card">'+
+      '<div class="mi-rt-cat-head">'+escapeHtml(cat.key)+'<span class="mi-rt-cat-cnt">'+catItems.length+'건</span></div>'+
+      (chChips?'<div class="channel-chip-row" style="margin-bottom:6px">'+chChips+'</div>':'')+
+      itemList+
+    '</div>';
+  });
+  if(!catCards)catCards='<div class="mi-no-data">카테고리 데이터 없음</div>';
+
+  // === 우: 유사 기업 TOP4 ranking-card ===
+  var coSorted=Object.entries(byCo).filter(function(e){return e[0]&&e[0]!=='null';}).sort(function(a,b){return (b[1].items||0)-(a[1].items||0);}).slice(0,4);
+  var coCards='';
+  if(coSorted.length){
+    coCards=coSorted.map(function(e,i){
+      var compData=e[1]||{};
+      var items=Array.isArray(compData.feed_items)?compData.feed_items:[];
+      var chCounts={};
+      items.forEach(function(it){var ch=(it.channel||'').toLowerCase();if(ch)chCounts[ch]=(chCounts[ch]||0)+1;});
+      var chChips=Object.keys(chCounts).slice(0,4).map(function(ch){return '<span class="channel-chip"><b>'+escapeHtml(ch.toUpperCase())+'</b> '+(chCounts[ch]||0)+'</span>';}).join('');
+      var sampleHi=items[0]&&(items[0].summary_ko||items[0].title)||'';
+      return '<div class="ranking-card">'+
+        '<div class="ranking-head">'+
+          '<div class="ranking-card-key">'+escapeHtml(compNames[e[0]]||e[0])+'</div>'+
+          '<span class="rank-num">#'+(i+1)+'</span>'+
+        '</div>'+
+        (chChips?'<div class="channel-chip-row">'+chChips+'</div>':'')+
+        '<div class="ranking-total">'+(compData.items||0)+'건</div>'+
+        (sampleHi?'<ul class="mention-list"><li>'+escapeHtml(String(sampleHi).slice(0,100))+'</li></ul>':'')+
+      '</div>';
+    }).join('');
+  }else{
+    coCards='<div class="mi-no-data">데이터 없음</div>';
+  }
+
+  // 2페이지: 롤링용 추가 데이터
+  var kwCards2=ck.length>4?ck.slice(4,8).map(function(k,i){
+    return '<div class="ranking-card">'+
+      '<div class="ranking-head"><div class="ranking-key">'+escapeHtml(k.keyword||k.topic||'키워드')+'</div><span class="rank-num">#'+(i+5)+'</span></div>'+
+      (k.description?'<div class="ranking-total" style="font-size:11px">'+escapeHtml(k.description.slice(0,80))+'</div>':'')+
+    '</div>';
+  }).join(''):'';
+
+  var coCards2=coSorted.length>0&&Object.entries(byCo).filter(function(e){return e[0]&&e[0]!=='null';}).length>4?
+    Object.entries(byCo).filter(function(e){return e[0]&&e[0]!=='null';}).sort(function(a,b){return (b[1].items||0)-(a[1].items||0);}).slice(4,8).map(function(e,i){
+      return '<div class="ranking-card">'+
+        '<div class="ranking-head"><div class="ranking-card-key">'+escapeHtml(compNames[e[0]]||e[0])+'</div><span class="rank-num">#'+(i+5)+'</span></div>'+
+        '<div class="ranking-total">'+(e[1].items||0)+'건</div>'+
+      '</div>';
+    }).join(''):'';
+
+  // HTML 조립
+  var html=
+    '<div class="r5-top-columns">'+
+      '<div class="r5-top-col">'+
+        '<div class="r5-top-col-title mi-rt-h">📈 키워드 TOP</div>'+
+        '<div id="mi-rt-kw-rolling" class="mi-rt-rolling-wrap">'+
+          '<div class="mi-rt-page active" data-rt-page="0">'+
+            '<div class="ranking-grid" style="grid-template-columns:repeat(2,1fr)">'+kwCards+'</div>'+
+          '</div>'+
+          (kwCards2?'<div class="mi-rt-page" data-rt-page="1"><div class="ranking-grid" style="grid-template-columns:repeat(2,1fr)">'+kwCards2+'</div></div>':'')+
+        '</div>'+
+        (kwCards2?'<div class="mi-rt-nav"><button class="mi-rt-arrow" onclick="miRtNav(\'kw\',-1)">‹</button><div class="mi-rt-dots" id="mi-rt-kw-dots"><span class="mi-rt-dot active"></span><span class="mi-rt-dot"></span></div><button class="mi-rt-arrow" onclick="miRtNav(\'kw\',1)">›</button></div>':'')+
+      '</div>'+
+      '<div class="r5-top-col">'+
+        '<div class="r5-top-col-title mi-rt-h">📡 카테고리 채널 TOP3</div>'+
+        catCards+
+      '</div>'+
+      '<div class="r5-top-col">'+
+        '<div class="r5-top-col-title mi-rt-h">🏢 유사 기업 TOP</div>'+
+        '<div id="mi-rt-co-rolling" class="mi-rt-rolling-wrap">'+
+          '<div class="mi-rt-page active" data-rt-page="0">'+
+            '<div class="ranking-grid" style="grid-template-columns:repeat(2,1fr)">'+coCards+'</div>'+
+          '</div>'+
+          (coCards2?'<div class="mi-rt-page" data-rt-page="1"><div class="ranking-grid" style="grid-template-columns:repeat(2,1fr)">'+coCards2+'</div></div>':'')+
+        '</div>'+
+        (coCards2?'<div class="mi-rt-nav"><button class="mi-rt-arrow" onclick="miRtNav(\'co\',-1)">‹</button><div class="mi-rt-dots" id="mi-rt-co-dots"><span class="mi-rt-dot active"></span><span class="mi-rt-dot"></span></div><button class="mi-rt-arrow" onclick="miRtNav(\'co\',1)">›</button></div>':'')+
+      '</div>'+
+    '</div>';
+
+  wrap.innerHTML=html;
+
+  // 자동 롤링 시작
+  if(window._miRtTimer)clearInterval(window._miRtTimer);
+  window._miRtKwPage=0;window._miRtCoPage=0;
+  window._miRtTimer=setInterval(function(){
+    var kwWrap=document.getElementById('mi-rt-kw-rolling');
+    var coWrap=document.getElementById('mi-rt-co-rolling');
+    if(kwWrap){
+      var pages=kwWrap.querySelectorAll('.mi-rt-page');
+      if(pages.length>1){window._miRtKwPage=(window._miRtKwPage+1)%pages.length;_miRtApply('kw',window._miRtKwPage);}
+    }
+    if(coWrap){
+      var cpages=coWrap.querySelectorAll('.mi-rt-page');
+      if(cpages.length>1){window._miRtCoPage=(window._miRtCoPage+1)%cpages.length;_miRtApply('co',window._miRtCoPage);}
+    }
+  },5000);
+}
+
+function _miRtApply(colKey,idx){
+  var wrap=document.getElementById('mi-rt-'+colKey+'-rolling');
+  if(!wrap)return;
+  wrap.querySelectorAll('.mi-rt-page').forEach(function(p,i){p.classList.toggle('active',i===idx);});
+  var dots=document.getElementById('mi-rt-'+colKey+'-dots');
+  if(dots)dots.querySelectorAll('.mi-rt-dot').forEach(function(d,i){d.classList.toggle('active',i===idx);});
+}
+
+function miRtNav(colKey,dir){
+  var wrap=document.getElementById('mi-rt-'+colKey+'-rolling');
+  if(!wrap)return;
+  var pages=wrap.querySelectorAll('.mi-rt-page');
+  if(pages.length<2)return;
+  var cur=colKey==='kw'?(window._miRtKwPage||0):(window._miRtCoPage||0);
+  cur=(cur+dir+pages.length)%pages.length;
+  if(colKey==='kw')window._miRtKwPage=cur;
+  else window._miRtCoPage=cur;
+  _miRtApply(colKey,cur);
 }
 
 function renderMITopEvents(){
@@ -3033,8 +3367,9 @@ function renderMITopicSuggestions(){
   var w=_miWeek();
   var wrap=document.getElementById('mi-topic-suggestions-wrap');
   if(!wrap)return;
-  var suggs=(w.topicSuggestions||[]).slice(0,3);
+  var suggs=(w.topicSuggestions||[]).slice(0,6);
   if(!suggs.length){wrap.innerHTML='<div class="mi-no-data">주제 제안 없음</div>';return;}
+  window._miTopicSuggs=suggs;
   wrap.innerHTML='<div class="r72-topic-grid">'+suggs.map(function(t,i){
     var icp=t.icp||{};
     var sc=t.scores||{};
@@ -3044,7 +3379,7 @@ function renderMITopicSuggestions(){
       '제품적합 '+(sc.product_fit!=null?sc.product_fit:'-'),
       'ICP도달 '+(sc.icp_reach!=null?sc.icp_reach:'-')
     ];
-    return '<article class="r72-topic-card">'+
+    return '<article class="r72-topic-card" onclick="openMITopicModal('+i+')" title="클릭하여 상세 보기">'+
       '<div class="r72-topic-num">#'+(i+1)+'</div>'+
       '<div class="r72-topic-title">'+escapeHtml(t.title||'주제 없음')+'</div>'+
       (channels.length?'<div class="r72-topic-chips">'+channels.map(function(ch){return'<span class="r72-topic-chip">'+escapeHtml(ch)+'</span>';}).join('')+'</div>':'')+
@@ -3055,6 +3390,71 @@ function renderMITopicSuggestions(){
       '<div class="r72-score-row">'+scorePills.map(function(v){return'<span class="r72-score-pill">'+escapeHtml(v)+'</span>';}).join('')+'</div>'+
     '</article>';
   }).join('')+'</div>';
+}
+
+function openMITopicModal(idx){
+  var t=(window._miTopicSuggs||[])[idx];
+  if(!t)return;
+  var ov=document.getElementById('mi-topic-modal-overlay');
+  if(!ov)return;
+  var icp=t.icp||{};
+  var sc=t.scores||{};
+  var keywords=[t.keyword,t.main_keyword].filter(Boolean).concat(Array.isArray(t.sub_keywords)?t.sub_keywords:[]);
+  var refs=Array.isArray(t.references)?t.references:(t.reference_url?[{url:t.reference_url,title:t.reference_url}]:[]);
+  var html=
+    '<div class="mi-topic-modal-section">'+
+      '<div class="mi-topic-modal-label">ICP 상세</div>'+
+      '<div>'+escapeHtml([icp.industry,icp.role].filter(Boolean).join(' / ')||'미지정')+'</div>'+
+      (icp.pain?'<div style="margin-top:4px;color:rgba(55,53,47,.6);font-size:12px">Pain: '+escapeHtml(icp.pain)+'</div>':'')+
+    '</div>'+
+    '<div class="mi-topic-modal-section">'+
+      '<div class="mi-topic-modal-label">점수</div>'+
+      '<div class="mi-topic-score-row">'+
+        '<div class="mi-topic-score-box"><div class="mi-topic-score-num">'+(sc.mention!=null?sc.mention:'-')+'</div><div class="mi-topic-score-lbl">언급</div></div>'+
+        '<div class="mi-topic-score-box"><div class="mi-topic-score-num">'+(sc.product_fit!=null?sc.product_fit:'-')+'</div><div class="mi-topic-score-lbl">제품 적합</div></div>'+
+        '<div class="mi-topic-score-box"><div class="mi-topic-score-num">'+(sc.icp_reach!=null?sc.icp_reach:'-')+'</div><div class="mi-topic-score-lbl">ICP 도달</div></div>'+
+      '</div>'+
+    '</div>'+
+    (keywords.length?
+      '<div class="mi-topic-modal-section">'+
+        '<div class="mi-topic-modal-label">키워드</div>'+
+        '<div class="mi-topic-modal-keywords">'+
+          keywords.map(function(k,ki){return '<span class="mi-topic-modal-kw'+(ki===0?' main':'')+'">'+escapeHtml(k)+'</span>';}).join('')+
+        '</div>'+
+      '</div>':'')+
+    (t.channels&&t.channels.length?
+      '<div class="mi-topic-modal-section">'+
+        '<div class="mi-topic-modal-label">채널 / 해시태그</div>'+
+        '<div class="mi-topic-modal-keywords">'+
+          t.channels.map(function(c){return'<span class="mi-topic-modal-kw">'+escapeHtml(c)+'</span>';}).join('')+
+          (t.hashtags?t.hashtags.map(function(h){return'<span class="mi-topic-modal-kw" style="background:rgba(35,131,226,.08);color:var(--n-accent)">#'+escapeHtml(h)+'</span>';}).join(''):'')+
+        '</div>'+
+      '</div>':'')+
+    (t.cubig_angle?
+      '<div class="mi-topic-modal-section">'+
+        '<div class="mi-topic-modal-label">CUBIG Angle</div>'+
+        '<div class="mi-topic-modal-angle">'+escapeHtml(t.cubig_angle)+'</div>'+
+      '</div>':'')+
+    (refs.length?
+      '<div class="mi-topic-modal-section">'+
+        '<div class="mi-topic-modal-label">참고 URL</div>'+
+        '<div class="mi-topic-modal-refs">'+
+          refs.map(function(r){
+            var url=typeof r==='string'?r:(r.url||'');
+            var title=typeof r==='string'?r:(r.title||url);
+            return url?'<a class="mi-topic-modal-ref" href="'+escapeHtml(url)+'" target="_blank" rel="noopener">'+escapeHtml(String(title).slice(0,80))+'</a>':'';
+          }).filter(Boolean).join('')+
+        '</div>'+
+      '</div>':'');
+  document.getElementById('mi-topic-modal-title-text').textContent=t.title||'주제 상세';
+  document.getElementById('mi-topic-modal-body-inner').innerHTML=html;
+  ov.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeMITopicModal(){
+  var ov=document.getElementById('mi-topic-modal-overlay');
+  if(ov)ov.classList.remove('open');
+  document.body.style.overflow='';
 }
 
 function renderMITopicRanking(){
@@ -3159,30 +3559,78 @@ function renderMIOpportunity(){
   if(!wrap)return;
   var opps=w.opportunityAreas||[];
   if(!opps.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
-  if(!window.MI_OPP_PAGE)window.MI_OPP_PAGE=1;
-  if(window.MI_OPP_PAGE>opps.length)window.MI_OPP_PAGE=1;
-  var idx=window.MI_OPP_PAGE-1;
-  var o=opps[idx]||{};
-  var actions=(o.actions||[]).slice(0,3);
+  if(!window.MI_OPP_IDX)window.MI_OPP_IDX=0;
+  if(window.MI_OPP_IDX>=opps.length)window.MI_OPP_IDX=0;
+  window._miOpps=opps;
+
+  var slides=opps.map(function(o){
+    var demand=(o.demand||o.demand_level||'medium').toLowerCase();
+    var demandCls=demand==='high'?'n-opp-demand-high':(demand==='low'?'n-opp-demand-low':'n-opp-demand-medium');
+    var demandLabel=demand==='high'?'HIGH':(demand==='low'?'LOW':'MEDIUM');
+    var actions=Array.isArray(o.actions)?o.actions:(o.expected_actions||[]);
+    return '<div class="n-opp-carousel-slide">'+
+      '<div class="n-opp-carousel-slide .n-opp-card" style="background:var(--n-card);border:1px solid var(--n-border);border-radius:var(--n-radius);padding:28px;box-shadow:0 2px 8px rgba(55,53,47,0.07)">'+
+        '<div class="n-opp-card-title">'+escapeHtml(o.area||'기회 영역')+'</div>'+
+        '<span class="n-opp-demand-chip '+demandCls+'">수요 '+demandLabel+'</span>'+
+        (o.hook||o.demand_evidence?'<div class="n-opp-hook-quote">'+escapeHtml(o.hook||o.demand_evidence||'')+'</div>':'')+
+        (o.market_demand||o.demand_evidence?
+          '<div class="n-opp-section">'+
+            '<div class="n-opp-section-h">📊 시장 수요 근거</div>'+
+            escapeHtml(o.market_demand||o.demand_evidence||'')+
+          '</div>':'')+
+        (o.coverage_gap?
+          '<div class="n-opp-section">'+
+            '<div class="n-opp-section-h">🕳️ 커버리지 갭</div>'+
+            escapeHtml(o.coverage_gap)+
+          '</div>':'')+
+        ((o.cubigFit||o.cubig_fit)?
+          '<div class="n-opp-cubig-fit">'+
+            '<div class="n-opp-section-h">🎯 CUBIG FIT</div>'+
+            '<div class="n-opp-section" style="margin-bottom:0">'+escapeHtml(o.cubigFit||o.cubig_fit||'')+'</div>'+
+          '</div>':'')+
+        (actions.length?
+          '<div style="border-top:1px solid var(--n-border);padding-top:14px;margin-top:4px">'+
+            '<div class="n-opp-section-h">→ 예상 액션</div>'+
+            '<ul class="n-opp-actions-list">'+
+              actions.slice(0,4).map(function(a){return'<li>'+escapeHtml(String(a))+'</li>';}).join('')+
+            '</ul>'+
+          '</div>':'')+
+      '</div>'+
+    '</div>';
+  }).join('');
+
+  var dots=opps.map(function(_,i){
+    return '<span class="n-opp-carousel-dot'+(i===window.MI_OPP_IDX?' active':'')+'" onclick="miOppGoV55('+i+')" aria-label="기회 '+(i+1)+'"></span>';
+  }).join('');
+
   wrap.innerHTML=
-    '<div class="r5-opportunity-wrap">'+
-      '<article class="r5-opportunity-card">'+
-        '<h5>'+escapeHtml(o.area||'기회 영역')+'</h5>'+
-        (o.demand_evidence?'<div style="font-size:12px;line-height:1.55;color:var(--n-text2)">📊 '+escapeHtml(o.demand_evidence)+'</div>':'')+
-        (o.coverage_gap?'<div style="font-size:12px;line-height:1.55;color:var(--n-text2);margin-top:6px">🕳️ '+escapeHtml(o.coverage_gap)+'</div>':'')+
-        (o.cubigFit?'<div style="font-size:12px;line-height:1.6;margin-top:8px">'+escapeHtml(o.cubigFit)+'</div>':'')+
-        (actions.length?'<ul>'+actions.map(function(a){return'<li>'+escapeHtml(a)+'</li>';}).join('')+'</ul>':'')+
-      '</article>'+
-    '</div>'+
-    '<div class="r5-pagination">'+opps.map(function(_,i){
-      return '<button class="'+(i===idx?'active':'')+'" onclick="miOppGo('+(i+1)+')">'+(i+1)+'</button>';
-    }).join('')+'</div>';
+    '<div class="n-opp-carousel-wrap">'+
+      '<div class="n-opp-carousel-track"><div class="n-opp-carousel-inner" id="mi-opp-inner" style="transform:translateX(-'+window.MI_OPP_IDX+'00%)">'+slides+'</div></div>'+
+      '<div class="n-opp-carousel-nav">'+
+        '<button class="n-opp-carousel-arrow" onclick="miOppGoV55('+(window.MI_OPP_IDX-1)+')" '+(window.MI_OPP_IDX===0?'disabled':'')+'>‹</button>'+
+        '<div class="n-opp-carousel-dots">'+dots+'</div>'+
+        '<span class="n-opp-counter">'+(window.MI_OPP_IDX+1)+' / '+opps.length+'</span>'+
+        '<button class="n-opp-carousel-arrow" onclick="miOppGoV55('+(window.MI_OPP_IDX+1)+')" '+(window.MI_OPP_IDX===opps.length-1?'disabled':'')+'>›</button>'+
+      '</div>'+
+    '</div>';
 }
 
-function miOppGo(page){
-  window.MI_OPP_PAGE=page;
-  renderMIOpportunity();
+function miOppGoV55(idx){
+  var opps=window._miOpps||[];
+  if(!opps.length)return;
+  window.MI_OPP_IDX=Math.max(0,Math.min(opps.length-1,idx));
+  var inner=document.getElementById('mi-opp-inner');
+  if(inner)inner.style.transform='translateX(-'+window.MI_OPP_IDX+'00%)';
+  document.querySelectorAll('#mi-opportunity-wrap .n-opp-carousel-dot').forEach(function(d,i){d.classList.toggle('active',i===window.MI_OPP_IDX);});
+  var counter=document.querySelector('#mi-opportunity-wrap .n-opp-counter');
+  if(counter)counter.textContent=(window.MI_OPP_IDX+1)+' / '+opps.length;
+  document.querySelectorAll('#mi-opportunity-wrap .n-opp-carousel-arrow').forEach(function(btn,bi){
+    btn.disabled=(bi===0&&window.MI_OPP_IDX===0)||(bi===1&&window.MI_OPP_IDX===opps.length-1);
+  });
 }
+
+// legacy compat
+function miOppGo(page){window.MI_OPP_IDX=(page-1);renderMIOpportunity();}
 
 function renderMIWeeklySummary(){}// already rendered in renderMarketIntel
 
@@ -3190,19 +3638,33 @@ function renderMISentiment(){
   var w=_miWeek();
   var wrap=document.getElementById('mi-sentiment-wrap');
   if(!wrap)return;
-  var pos=(w.positiveSentiments||[]).slice(0,3);
-  var neg=(w.negativeSentiments||[]).slice(0,3);
+  var pos=(w.positiveSentiments||w.positive_sentiments||[]).slice(0,3);
+  var neg=(w.negativeSentiments||w.negative_sentiments||[]).slice(0,3);
   if(!pos.length&&!neg.length){wrap.innerHTML='<div class="mi-no-data">Sentiment 데이터 없음</div>';return;}
-  function li(v){
-    var text=typeof v==='string'?v:(v.text||v.summary||'');
-    var src=typeof v==='object'?(v.source||''):'';
-    return '<li><b>'+escapeHtml(text)+'</b>'+(src?'<br><span style="font-size:11px;color:var(--n-text2)">'+escapeHtml(src)+'</span>':'')+'</li>';
+  function sentCard(items,type){
+    var isPosType=(type==='pos');
+    var items3=items.map(function(v){
+      var text=typeof v==='string'?v:(v.text||v.summary||v.title||'');
+      var src=typeof v==='object'?(v.source||v.channel||''):'';
+      var why=typeof v==='object'?(v.why||v.whyImportant||''):'';
+      var cubigAngle=typeof v==='object'?(v.cubig_angle||v.cubigMessage||''):'';
+      var trigger=typeof v==='object'?(v.trigger||v.trigger_context||''):'';
+      var tags='';
+      if(why)tags+='<span class="r5-sent-tag why">WHY: '+escapeHtml(String(why).slice(0,40))+'</span>';
+      if(cubigAngle)tags+='<span class="r5-sent-tag cubig">CUBIG: '+escapeHtml(String(cubigAngle).slice(0,40))+'</span>';
+      if(trigger)tags+='<span class="r5-sent-tag trigger">Trigger: '+escapeHtml(String(trigger).slice(0,40))+'</span>';
+      return '<div class="r5-sent-item">'+
+        '<div class="r5-sent-item-title">'+escapeHtml(String(text).slice(0,120))+'</div>'+
+        (src?'<div class="r5-sent-item-src">'+escapeHtml(src)+'</div>':'')+
+        (tags?'<div class="r5-sent-item-tags">'+tags+'</div>':'')+
+      '</div>';
+    }).join('');
+    return '<section class="r5-sent-card '+(isPosType?'r5-sent-pos':'r5-sent-neg')+'">'+
+      '<div class="r5-sent-head">'+(isPosType?'✅ Positive Signals':'⚠️ Negative Signals')+'</div>'+
+      '<div class="r5-sent-items">'+(items3||'<div style="font-size:12px;opacity:.6">데이터 없음</div>')+'</div>'+
+    '</section>';
   }
-  wrap.innerHTML=
-    '<div class="r5-sentiment-grid">'+
-      '<section class="r5-sentiment-card r5-pos-card"><h5>Positive</h5><ul>'+(pos.length?pos.map(li).join(''):'<li>데이터 없음</li>')+'</ul></section>'+
-      '<section class="r5-sentiment-card r5-neg-card"><h5>Negative</h5><ul>'+(neg.length?neg.map(li).join(''):'<li>데이터 없음</li>')+'</ul></section>'+
-    '</div>';
+  wrap.innerHTML='<div class="r5-sentiment-grid-v55">'+sentCard(pos,'pos')+sentCard(neg,'neg')+'</div>';
 }
 
 function renderMIProfiles(){
@@ -3235,7 +3697,7 @@ function renderMIProfiles(){
     var list=normalize(competitors[g.key]||[],g.key);
     var cards=list.length?list.map(function(c){
       var initial=(c.name||'?').slice(0,2).toUpperCase();
-      return '<div class="mi-player-card'+(c.count===0?' zero':'')+'">'+
+      return '<div class="mi-player-card'+(c.count===0?' zero':'')+'" onclick="openMIPlayerModal(\''+escapeHtml(c.slug||c.name)+'\',\''+escapeHtml(c.name)+'\')" title="'+escapeHtml(c.name)+' 게시글 보기">'+
         '<div class="mi-player-initial">'+escapeHtml(initial)+'</div>'+
         '<div class="mi-player-name">'+escapeHtml(c.name)+'</div>'+
         '<div class="mi-player-count">'+(c.count||0)+'건</div>'+
@@ -3364,31 +3826,32 @@ function buildFeedCard(it){
   var cubigRel=it.cubig_relevance||'';
   var upvotes=(it.engagement&&it.engagement.upvotes)||it.upvotes||0;
   var comments=(it.engagement&&it.engagement.comments)||it.comments||0;
-  var dateStr=it.published_at?String(it.published_at).slice(0,10):'';
+  var dateStr=it.published_at?String(it.published_at).slice(5,10).replace('-','월 ')+'일':'';
   var scoreInt=it.relevance_score!=null?Math.round(it.relevance_score*100):null;
-  var scoreCls=scoreInt==null?'':'r5-ai-score '+(scoreInt>=85?'score-green':scoreInt>=60?'score-blue':'score-gray');
-  var scoreHtml=scoreInt!=null?'<span class="'+scoreCls+'">AI 점수 '+scoreInt+'</span>':'';
-  function subSec(icon,labelTxt,text,allowHtml){
-    var body=text?(allowHtml?text:escapeHtml(text)):'내용 없음';
-    return '<div class="r5-feed-sub"><span class="r5-feed-sub-label">'+icon+' '+labelTxt+'</span><div style="font-size:12px;line-height:1.55;color:var(--n-text)">'+body+'</div></div>';
+  var scoreCls=scoreInt==null?'':(scoreInt>=90?'r5-feed-score-green':scoreInt>=80?'r5-feed-score-yellow':'r5-feed-score-gray');
+  var scoreHtml=scoreInt!=null?'<span class="r5-feed-score-v55 '+scoreCls+'">AI 적합도 '+scoreInt+'점</span>':'';
+  function subSec(icon,labelTxt,text,extraCls){
+    return '<div class="r5-feed-sub-v55 '+(extraCls||'')+'">'+
+      '<span class="r5-feed-sub-label-v55">'+icon+' '+labelTxt+'</span>'+
+      '<div class="r5-feed-sub-body-v55">'+escapeHtml(text||'내용 없음')+'</div>'+
+    '</div>';
   }
-  var titleHtml='<a href="'+escapeHtml(url)+'" target="_blank" rel="noopener">'+escapeHtml(title)+'</a>';
-  return '<div class="r5-feed-card">'+
+  return '<div class="r5-feed-card-v55">'+
     scoreHtml+
-    '<div style="display:flex;align-items:center;gap:7px;'+(scoreInt!=null?'padding-right:90px;':'')+'">'+
-      '<div style="background:'+chBg+';color:#fff;font-size:9px;font-weight:700;padding:2px 6px;border-radius:3px;flex-shrink:0">'+escapeHtml(chLabel)+'</div>'+
+    '<div style="display:flex;align-items:center;gap:8px;'+(scoreInt!=null?'padding-right:100px;':'')+'">'+
+      '<span class="r5-feed-ch-badge-v55" style="background:'+chBg+'">'+escapeHtml(chLabel)+'</span>'+
       '<span style="font-size:11px;font-weight:600;color:'+chBg+'">'+escapeHtml(channel)+'</span>'+
     '</div>'+
-    '<div style="font-size:13px;font-weight:700;line-height:1.45"><a href="'+escapeHtml(url)+'" target="_blank" rel="noopener" style="color:var(--n-text);text-decoration:none">'+escapeHtml(title)+'</a></div>'+
-    subSec('📝','summary_ko',summary,false)+
-    subSec('💡','implication',implication,false)+
-    subSec('🎯','cubig_angle',cubigAngle,false)+
-    subSec('🔗','cubig_relevance',cubigRel,false)+
-    '<div class="r5-footer">'+
-      (dateStr?'<span style="font-size:11px;color:var(--n-text2)">'+escapeHtml(dateStr)+'</span>':'')+
-      (upvotes?'<span style="font-size:11px;color:var(--n-text2)">▲'+upvotes+'</span>':'')+
-      (comments?'<span style="font-size:11px;color:var(--n-text2)">💬'+comments+'</span>':'')+
-      '<a href="'+escapeHtml(url)+'" target="_blank" rel="noopener" style="font-size:11px;color:var(--n-accent);text-decoration:none;margin-left:auto;">원문 보기</a>'+
+    '<div class="r5-feed-title-v55"><a href="'+escapeHtml(url)+'" target="_blank" rel="noopener">'+escapeHtml(title)+'</a></div>'+
+    subSec('📝','내용 및 댓글 요약',summary,'s-summary')+
+    subSec('💡','시사점',implication,'s-implication')+
+    subSec('🎯','콘텐츠 연계 / 메시지 도출',cubigAngle,'s-angle')+
+    subSec('🔗','CUBIG 연관성',cubigRel,'s-relevance')+
+    '<div class="r5-feed-foot-v55">'+
+      (dateStr?'<span>'+escapeHtml(dateStr)+'</span>':'')+
+      (upvotes?'<span>▲'+upvotes+'</span>':'')+
+      (comments?'<span>💬'+comments+'</span>':'')+
+      '<a href="'+escapeHtml(url)+'" target="_blank" rel="noopener" style="color:var(--n-accent);text-decoration:none;margin-left:auto;font-weight:600;">원문 ↗</a>'+
     '</div>'+
   '</div>';
 }
@@ -3479,6 +3942,48 @@ function openArchiveModal(btnEl,weekKey,type){
   document.body.style.overflow='hidden';
 }
 function closeArchiveModal(){document.getElementById('n-archive-modal').classList.remove('open');document.body.style.overflow='';}
+
+// ===== v5.5 player modal =====
+function openMIPlayerModal(slug,name){
+  var ov=document.getElementById('mi-player-comp-modal-overlay');
+  if(!ov)return;
+  var w=_miWeek();
+  var byCo=w.by_competitor||w.byCompetitor||_miSummary().by_competitor||{};
+  var compData=byCo[slug]||{};
+  var items=Array.isArray(compData.feed_items)?compData.feed_items:[];
+  // fallback: feedItems 전체에서 competitor 필드 매칭
+  if(!items.length){
+    items=(w.feedItems||[]).filter(function(it){
+      return (it.competitor||'').toLowerCase()===slug.toLowerCase()||String(it.title||'').toLowerCase().indexOf(slug.split('-').join(' ').toLowerCase())>=0;
+    });
+  }
+  var chBgMap={hackernews:'#FF6600',hn:'#FF6600',reddit:'#FF4500',medium:'#00AB6C',linkedin:'#0A66C2',x:'#888',producthunt:'#DA552F',ph:'#DA552F',youtube:'#FF0000'};
+  var chAbbr={hackernews:'HN',hn:'HN',reddit:'Re',medium:'Me',linkedin:'Li',x:'X',youtube:'YT',producthunt:'PH',ph:'PH'};
+  var listHtml=items.length?items.slice(0,20).map(function(it){
+    var ch=(it.channel||'').toLowerCase();
+    var chBg=chBgMap[ch]||'#555';
+    var scoreInt=it.relevance_score!=null?Math.round(it.relevance_score*100):null;
+    var dateStr=it.published_at?String(it.published_at).slice(0,10):'';
+    return '<div class="mi-player-comp-item">'+
+      '<div class="mi-player-comp-title"><a href="'+escapeHtml(it.url||'#')+'" target="_blank" rel="noopener">'+escapeHtml(it.title||'(제목 없음)')+'</a></div>'+
+      '<div class="mi-player-comp-meta">'+
+        '<span class="mi-player-comp-ch" style="background:'+chBg+'">'+escapeHtml(chAbbr[ch]||ch.slice(0,2).toUpperCase()||'MI')+'</span>'+
+        (dateStr?'<span class="mi-player-comp-date">'+escapeHtml(dateStr)+'</span>':'')+
+        (scoreInt!=null?'<span class="mi-player-comp-score">rel. '+scoreInt+'</span>':'')+
+      '</div>'+
+      (it.summary_ko?'<div class="mi-player-comp-summary">'+escapeHtml(String(it.summary_ko).slice(0,120))+'</div>':'')+
+    '</div>';
+  }).join(''):'<div class="mi-no-data">'+escapeHtml(name)+' 관련 게시글이 없습니다.</div>';
+  document.getElementById('mi-player-comp-modal-title-text').textContent=name+' 게시글 ('+items.length+'건)';
+  document.getElementById('mi-player-comp-modal-body-inner').innerHTML=listHtml;
+  ov.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeMIPlayerModal(){
+  var ov=document.getElementById('mi-player-comp-modal-overlay');
+  if(ov)ov.classList.remove('open');
+  document.body.style.overflow='';
+}
 
 // ===== v5.4 overrides =====
 function miCountByMentionSources(mentions){
