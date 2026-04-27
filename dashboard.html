@@ -1196,14 +1196,14 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
   </div>
 </div>
 <div class="tabs">
-  <div class="tab active" data-tab="overview">Overview</div>
-  <div class="tab" data-tab="website">Website</div>
-  <div class="tab" data-tab="ads">Ads</div>
-  <div class="tab" data-tab="seo">SEO / Search</div>
-  <div class="tab" data-tab="market-intel">리서치</div>
+  <div class="tab" data-tab="overview" style="display:none">Overview</div>
+  <div class="tab" data-tab="website" style="display:none">Website</div>
+  <div class="tab" data-tab="ads" style="display:none">Ads</div>
+  <div class="tab" data-tab="seo" style="display:none">SEO / Search</div>
+  <div class="tab active" data-tab="market-intel">리서치</div>
 </div>
 <div class="content">
-  <div class="tab-content active" id="tab-overview">
+  <div class="tab-content" id="tab-overview">
     <div class="insight-box" id="insightBox"><h3 data-tooltip="GA4 + GSC + 광고 API 종합 요약">Weekly Insights &mdash; <span id="insightPeriod"></span></h3><ul class="insight-list" id="insightList"></ul></div>
     <div class="kpi-grid" id="kpiGrid"></div>
     <div class="section-header"><span class="tt" data-tooltip="GA4 기준 · 일별 세션 추이">TRAFFIC TREND</span></div>
@@ -1228,7 +1228,7 @@ span.tt:hover::before{content:'';position:absolute;left:12px;top:calc(100% - 2px
   <div class="tab-content" id="tab-website"><div class="insight-box" style="opacity:.7"><h3>Website tab &mdash; coming soon</h3></div></div>
   <div class="tab-content" id="tab-ads"><div class="insight-box" style="opacity:.7"><h3>Ads tab &mdash; coming soon</h3></div></div>
 
-  <div class="tab-content" id="tab-market-intel">
+  <div class="tab-content active" id="tab-market-intel">
 
     <!-- FILTER BAR -->
     <div class="mi-filter-bar n-page">
