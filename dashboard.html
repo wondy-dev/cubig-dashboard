@@ -2235,6 +2235,11 @@ loadData();
       }
     });
   });
+  // v5.1: market-intel이 기본 active일 경우 즉시 로드
+  var activeTab=document.querySelector('.tab.active');
+  if(activeTab&&activeTab.dataset.tab==='market-intel'){
+    setTimeout(function(){loadMarketIntel();},100);
+  }
 })();
 
 var MI_DATA=null,MI_ANALYZED=null;
