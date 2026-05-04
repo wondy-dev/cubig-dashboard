@@ -1998,8 +1998,8 @@ span.tt:hover::before{
 </div>
 <div class="tabs">
   <div class="tab active" data-tab="overview">Overview</div>
-  <div class="tab" data-tab="website">Website</div>
-  <div class="tab" data-tab="ads">Ads</div>
+  <div class="tab" data-tab="website" style="display:none">Website</div>
+  <div class="tab" data-tab="ads" style="display:none">Ads</div>
   <div class="tab" data-tab="seo">SEO / Search</div>
   <div class="tab" data-tab="market-intel">리서치</div>
 </div>
@@ -3434,7 +3434,7 @@ function renderMIHero(){
   var summaryParts=[];
   var rm=s.report_md||w.report_md||'';
   if(rm){
-    rm.replace(/#[^\n]*/g,'').split(/\n\n+/).map(function(p){return p.replace(/[#*`]/g,'').trim();}).filter(function(p){return p.length>20;}).slice(0,2).forEach(function(p){summaryParts.push(p);});
+    rm.replace(/#[^\n]*/g,'').split(/\n\n+/).map(function(p){return p.replace(/[#*`]/g,'').replace(/^\s*\[[^\]]+\]\s*/,'').trim();}).filter(function(p){return p.length>20;}).slice(0,2).forEach(function(p){summaryParts.push(p);});
   }
   var baseSummary=(w.weeklySummary||w.executiveSummary||w.summary||s.summary||'');
   if(baseSummary)summaryParts.push(baseSummary);
@@ -3461,12 +3461,10 @@ function renderMIHero(){
   // 첫 번째 파트 = 리드 문장, 나머지 = 본문 문단 (최대 3개)
   var leadTxt=cleanParts[0]||((w.week||'이번 주')+' 주차 데이터 분석 중입니다.');
   var bodyParts=cleanParts.slice(1,4);
-  // 리드 문장은 최대 200자
-  if(leadTxt.length>200)leadTxt=leadTxt.slice(0,200)+'...';
   var summaryHtml=
     '<div class="n-hero-lead">'+escapeHtml(leadTxt)+'</div>'+
     (bodyParts.length?bodyParts.map(function(p){
-      return '<p class="n-hero-para">'+escapeHtml(miTrimText(p,240))+'</p>';
+      return '<p class="n-hero-para">'+escapeHtml(p)+'</p>';
     }).join(''):'');
 
   var sideItems=[
