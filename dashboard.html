@@ -3244,6 +3244,123 @@ function miDemandMeta(raw){
   return{label:'MEDIUM',priority:'P1'};
 }
 
+function miKnownChannel(key){
+  return ['reddit','hackernews','linkedin','x','medium','producthunt','youtube','github'].indexOf(miNormalizeChannel(key))>=0;
+}
+
+function miCleanSourceUrl(raw,expectedChannel){
+  var url=String(raw||'').trim();
+  if(!url||url==='null'||url==='#'||url.indexOf('...')>=0||/[\s"'<>]/.test(url))return'';
+  if(url.indexOf('/r/')===0)url='https://www.reddit.com'+url;
+  if(url.indexOf('www.')===0)url='https://'+url;
+  if(!/^https?:\/\//i.test(url))return'';
+  try{
+    var parsed=new URL(url);
+    var host=parsed.hostname.replace(/^www\./,'').toLowerCase();
+    var expected=miNormalizeChannel(expectedChannel||'');
+    var actual=miChannelFromUrl(parsed.href);
+    if(host.indexOf('.')<0)return'';
+    if(expected&&miKnownChannel(expected)&&actual&&actual!==expected)return'';
+    if(expected&&miKnownChannel(expected)&&!actual)return'';
+    if(expected==='reddit'||host.indexOf('reddit.com')>=0){
+      if(host.indexOf('reddit.com')<0)return'';
+      if(!/^\/r\/[^\/]+\/comments\/[a-z0-9]+/i.test(parsed.pathname))return'';
+      return 'https://www.reddit.com'+parsed.pathname.replace(/\/?$/,'/')+parsed.search+parsed.hash;
+    }
+    return parsed.href;
+  }catch(_){
+    return'';
+  }
+}
+
+function miTextKey(text){
+  return String(text||'').toLowerCase().replace(/&amp;/g,'&').replace(/[^a-z0-9가-힣]+/g,' ').replace(/\s+/g,' ').trim();
+}
+
+function miTitleScore(a,b){
+  var aa=miTextKey(a),bb=miTextKey(b);
+  if(!aa||!bb)return 0;
+  if(aa===bb)return 1;
+  if(aa.indexOf(bb)>=0||bb.indexOf(aa)>=0)return .9;
+  var aw=aa.split(' ').filter(function(w){return w.length>=3;});
+  var bw=bb.split(' ').filter(function(w){return w.length>=3;});
+  if(!aw.length||!bw.length)return 0;
+  var map={};aw.forEach(function(w){map[w]=1;});
+  var hit=bw.filter(function(w){return map[w];}).length;
+  return hit/Math.max(aw.length,bw.length);
+}
+
+function miResolveConversionUrl(item,week,expectedChannel){
+  var expected=miNormalizeChannel(expectedChannel||item.channel||item.source)||miChannelFromUrl(item.url||'');
+  var direct=miCleanSourceUrl(item.url||item.link||item.permalink||item.source_url,expected);
+  if(direct)return direct;
+  var feed=(week&&week.feedItems)||[];
+  var best=null,bestScore=0;
+  feed.forEach(function(f){
+    var fCh=miNormalizeChannel(f.channel||f.source)||miChannelFromUrl(f.url||'');
+    if(expected&&miKnownChannel(expected)&&fCh&&fCh!==expected)return;
+    var candidate=miCleanSourceUrl(f.url,fCh||expected);
+    if(!candidate)return;
+    var score=miTitleScore(item.title||item.customer_voice,f.title||f.summary_ko||f.content_snippet);
+    if(item.source&&f.source&&String(item.source).toLowerCase().indexOf(String(f.source).toLowerCase())>=0)score+=.08;
+    if(score>bestScore){bestScore=score;best=candidate;}
+  });
+  return bestScore>=.34?best:'';
+}
+
+function miBuildDynamicIndustryPainPoints(week){
+  var feed=(week&&week.feedItems)||[];
+  var rules=[
+    {industry:'개발/엔지니어링',boost:20,rx:/developer|developersindia|software|codebase|rust|langchain|postgres|production|refactor|devops|개발|엔지니어|코드|프로덕션|리팩토링/i,pain:'AI-Ready 전환 요구가 제품 개발과 운영 로드맵을 멈추게 만들고 있습니다.',solution:'SynTitan으로 기존 시스템을 대규모로 뜯어고치지 않고 Raw 데이터를 AI-Ready 상태로 전환하는 메시지를 제안합니다.'},
+    {industry:'데이터/분석',boost:18,rx:/synthetic data|dataset|data quality|etl|elt|pipeline|analytics|fine-?tuning|data science|데이터|합성 데이터|파이프라인|품질|분석/i,pain:'합성 데이터, 파이프라인 품질, 벤치마크 데이터 신뢰성에 대한 검증 부담이 커지고 있습니다.',solution:'SynTitan의 Release State와 데이터 품질 계층을 중심으로 재현 가능한 AI 데이터 준비 방식을 제시합니다.'},
+    {industry:'AI/ML',boost:16,rx:/machinelearning|localllama|llm|agent|model|mlops|prompt|generative ai|fine-?tune|ai agent|모델|에이전트|프롬프트|학습/i,pain:'모델 학습과 AI 에이전트 도입 과정에서 데이터 출처, 권한, 성능 검증 문제가 동시에 발생합니다.',solution:'SynTitan은 학습 데이터 상태를 고정하고 LLM Capsule은 에이전트 접근 통제를 담당하는 조합으로 설명합니다.'},
+    {industry:'보안/IT 운영',boost:8,rx:/shadow ai|security|compliance|access|permission|proxy|gateway|pii|privacy|보안|통제|권한|민감정보|컴플라이언스/i,pain:'Shadow AI와 외부 LLM 사용이 늘면서 민감정보 노출과 감사 대응 공백이 커지고 있습니다.',solution:'LLM Capsule의 Zero Exposure와 감사 가능한 Enterprise Context Control을 핵심 대응 메시지로 사용합니다.'},
+    {industry:'의료/헬스케어',boost:4,rx:/health|medical|medicine|hospital|patient|clinical|hipaa|의료|환자|진료|병원/i,pain:'환자 데이터와 임상 기록이 AI 요약·학습 과정에 섞이면서 동의와 규제 리스크가 커지고 있습니다.',solution:'LLM Capsule로 PHI를 외부 전송 전 캡슐화하고 복원 흐름을 내부 통제하는 구조를 제안합니다.'},
+    {industry:'금융/핀테크',boost:3,rx:/finance|bank|fintech|insurance|payment|fraud|금융|은행|보험|핀테크|결제|사기/i,pain:'AI 자동화가 고객 데이터, 규제 설명 책임, 이상거래 대응 리스크와 직접 맞물리고 있습니다.',solution:'LLM Capsule의 정책 기반 제어와 SynTitan의 재현 가능한 데이터 상태 증명을 함께 제안합니다.'},
+    {industry:'제조/산업',boost:2,rx:/manufact|factory|bom|supply|industrial|iot|제조|공장|설계|공급망|산업/i,pain:'현장 데이터와 설계·BOM 정보가 AI 도입 과정에서 외부 벤더로 흘러갈 수 있다는 우려가 있습니다.',solution:'SynTitan으로 산업 데이터를 AI-Ready로 정리하고 LLM Capsule로 민감정보 노출 경로를 차단합니다.'},
+    {industry:'공공/규제기관',boost:2,rx:/public|government|gov|regulation|eu ai act|policy|공공|정부|기관|규제|정책/i,pain:'AI 규제 대응과 망분리 환경에서의 안전한 LLM 활용 근거가 부족합니다.',solution:'LLM Capsule의 로컬 캡슐화와 감사 로그를 규제 대응 근거로 제시합니다.'}
+  ];
+  var buckets={};
+  rules.forEach(function(r){buckets[r.industry]={rule:r,score:0,cases:[]};});
+  feed.forEach(function(it){
+    var hay=[it.title,it.summary_ko,it.content_snippet,it.benchmark_note,it.implication,it.message_hook,it.cubig_relevance,it.cubig_angle,(it.tags||[]).join(' '),it.source,it.channel].join(' ');
+    rules.forEach(function(rule){
+      if(!rule.rx.test(hay))return;
+      var b=buckets[rule.industry];
+      var eng=(it.engagement&&((Number(it.engagement.upvotes)||0)+(Number(it.engagement.comments)||0)*2))||0;
+      b.score+=1+rule.boost/10+(Number(it.relevance_score)||0)*2+Math.min(6,eng/80);
+      if(b.cases.length<3){
+        b.cases.push({title:it.title||it.summary_ko||'관련 신호',source:miChannelLabel(it.channel||it.source),url:miCleanSourceUrl(it.url,it.channel||it.source)});
+      }
+    });
+  });
+  var generated=Object.keys(buckets).map(function(k){
+    var b=buckets[k],top=b.cases[0]||{};
+    return {
+      industry:k,
+      painPoint:b.rule.pain+(top.title?' 대표 신호: '+top.title:''),
+      demand:b.score>24?'매우 높음':(b.score>10?'높음':'중간'),
+      cubigSolution:b.rule.solution,
+      cases:b.cases.filter(function(c){return c.title;}),
+      _score:b.score+b.rule.boost
+    };
+  }).filter(function(p){return p.cases.length&&p._score>0;}).sort(function(a,b){return b._score-a._score;});
+  var existing=(week&&week.industryPainPoints)||[];
+  existing.forEach(function(p){
+    var name=String(p.industry||'산업');
+    if(generated.some(function(g){return g.industry===name;}))return;
+    generated.push({
+      industry:name,
+      painPoint:p.painPoint||p.text||'',
+      demand:p.demand||p.marketDemand||'중간',
+      cubigSolution:p.cubigSolution||p.cubig_solution||'',
+      cases:(p.cases||[]).map(function(c){return{title:c.title||c.url||'관련 사례',source:c.source||'',url:miCleanSourceUrl(c.url,c.source)};}),
+      _score:0
+    });
+  });
+  return generated.slice(0,4);
+}
+
 function formatMIArchiveLine(key,item){
   if(typeof item==='string')return item;
   if(typeof item==='object'&&item!==null){
@@ -4921,7 +5038,7 @@ function renderMIIndustryPain(){
   var w=_miWeek();
   var wrap=document.getElementById('mi-pain-map');
   if(!wrap)return;
-  var pts=(w.industryPainPoints||[]).slice(0,4);
+  var pts=miBuildDynamicIndustryPainPoints(w);
   if(!pts.length){wrap.innerHTML='<div class="mi-no-data">데이터 없음</div>';return;}
 
   function industryEmoji(name){
@@ -4930,6 +5047,9 @@ function renderMIIndustryPain(){
     if(/finance|bank|금융|보험/.test(n))return'🏦';
     if(/manufact|제조|factory/.test(n))return'🏭';
     if(/public|공공|gov/.test(n))return'🏛️';
+    if(/dev|engineering|software|개발|엔지니어/.test(n))return'💻';
+    if(/data|데이터|분석/.test(n))return'📊';
+    if(/ai|ml|model|모델/.test(n))return'🤖';
     return'🧩';
   }
 
@@ -4937,7 +5057,8 @@ function renderMIIndustryPain(){
     var meta=miDemandMeta(p.demand||p.marketDemand);
     var cases=(p.cases||[]).slice(0,2).map(function(c){
       var title=c.title||c.url||'관련 사례';
-      if(c.url&&c.url!=='null'&&c.url!=='#')return '<a href="'+escapeHtml(c.url)+'" target="_blank" rel="noopener">'+escapeHtml(title)+'</a>';
+      var url=miCleanSourceUrl(c.url,c.source||c.channel);
+      if(url)return '<a href="'+escapeHtml(url)+'" target="_blank" rel="noopener">'+escapeHtml(title)+'</a>';
       return escapeHtml(title);
     }).join('<br>')||'추천 브리프케이스 없음';
     return '<article class="n-industry-card v65">'+
@@ -4973,12 +5094,7 @@ function renderMIConversion(){
     var body=items.slice(0,4).map(function(it){
       var key=miNormalizeChannel(it.channel||it.source)||miChannelFromUrl(it.url||'');
       var source=it.source||it.channel||key||'';
-      // URL 검증 — 사용자 직접 원칙: "원문링크 연결하기전에 제대로된 url인지 검증해"
-      // 규칙: ^https?:// 시작 + 실제 도메인 형식 + "..." 같은 truncated URL 제외
-      // fallback URL 절대 금지 — 검증 실패 시 비활성 처리만
-      var rawUrl=(it.url||it.link||it.permalink||it.source_url||'');
-      // 유효한 URL: https?:// 시작 + 도메인 형식 + "..."없음 + 공백없음
-      var url=(/^https?:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(\/[^\s"'<>]*)?$/.test(rawUrl)&&rawUrl.indexOf('...')<0&&rawUrl.indexOf(' ')<0)?rawUrl:'';
+      var url=miResolveConversionUrl(it,w,key);
       var tag=url?'a':'div';
       var noUrlLabel=!url?'<div class="n-conv-no-url">원문 링크 없음</div>':'';
       var attrs=url?' href="'+escapeHtml(url)+'" target="_blank" rel="noopener" title="원문 열기"':' style="cursor:default"';
