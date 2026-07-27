@@ -1,0 +1,6 @@
+# 줄바꿈 전역 LF 고정 (2026-07-27, 메인 레포와 동일 정책)
+# core.autocrlf=true(Git for Windows 시스템 기본)가 체크아웃마다 CRLF 재유입하는 것 차단.
+* text=auto eol=lf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
